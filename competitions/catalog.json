@@ -37,7 +37,10 @@
           "url": "https://tianchi.aliyun.com/competition/entrance/532510",
           "excerpt": "本次赛事为长期赛"
         }
-      ]
+      ],
+      "short_name": "知乎复杂表格理解挑战",
+      "cost_brief": "Qwen 云调用；课程费待核",
+      "prize_brief": "每季总奖池 2 万"
     },
     {
       "id": "tianchi-532515",
@@ -75,7 +78,10 @@
           "url": "https://tianchi.aliyun.com/competition/entrance/532515",
           "excerpt": "**仿真评测：** 线上提交、自动评测。"
         }
-      ]
+      ],
+      "short_name": "OpenLET 具身智能冬季赛",
+      "cost_brief": "训练算力需核对",
+      "prize_brief": "月/季奖；金额未定"
     },
     {
       "id": "tianchi-231573",
@@ -109,7 +115,10 @@
           "url": "https://tianchi.aliyun.com/competition/entrance/231573",
           "excerpt": "报名和参赛无时间限制，提供永久排行榜。"
         }
-      ]
+      ],
+      "short_name": "资金流入流出预测",
+      "cost_brief": "本地算力自理",
+      "prize_brief": "练习榜，无现金承诺"
     },
     {
       "id": "tianchi-532421",
@@ -147,7 +156,10 @@
           "url": "https://tianchi.aliyun.com/competition/entrance/532421",
           "excerpt": "全年开放赛季"
         }
-      ]
+      ],
+      "short_name": "评论观点挖掘打榜赛",
+      "cost_brief": "本地算力自理",
+      "prize_brief": "当前赛季奖励未核"
     },
     {
       "id": "tianchi-532338",
@@ -181,7 +193,10 @@
           "url": "https://tianchi.aliyun.com/competition/entrance/532338",
           "excerpt": "选手可以单人参赛，也可以组队参赛。"
         }
-      ]
+      ],
+      "short_name": "汉语框架语义解析训练榜",
+      "cost_brief": "仅非营利科研数据",
+      "prize_brief": "训练榜，非原评奖"
     },
     {
       "id": "tianchi-532511",
@@ -215,7 +230,10 @@
           "url": "https://tianchi.aliyun.com/competition/entrance/532511",
           "excerpt": "初赛结束后，**排名前10名的团队进入复赛**。"
         }
-      ]
+      ],
+      "short_name": "SMP 大模型图网络决策",
+      "cost_brief": "评测 API 有支持",
+      "prize_brief": "总奖池 5.5 万"
     },
     {
       "id": "tianchi-532512",
@@ -249,7 +267,10 @@
           "url": "https://tianchi.aliyun.com/competition/entrance/532512",
           "excerpt": "|报名时间|8月20日-9月27日|"
         }
-      ]
+      ],
+      "short_name": "CHIP 患者表型识别",
+      "cost_brief": "会议注册、差旅自理",
+      "prize_brief": "证书与论文"
     },
     {
       "id": "tianchi-532514",
@@ -283,7 +304,10 @@
           "url": "https://tianchi.aliyun.com/competition/entrance/532514",
           "excerpt": "11 月 13 日 — 11月15日"
         }
-      ]
+      ],
+      "short_name": "LingBot 具身模型挑战",
+      "cost_brief": "自备/申请算力",
+      "prize_brief": "总奖池 28 万"
     },
     {
       "id": "tianchi-532508",
@@ -317,7 +341,10 @@
           "url": "https://tianchi.aliyun.com/competition/entrance/532508",
           "excerpt": "截止时间为9月21日"
         }
-      ]
+      ],
+      "short_name": "跨本体具身认知挑战",
+      "cost_brief": "训练/现场成本待核",
+      "prize_brief": "总奖池 10 万"
     },
     {
       "id": "tianchi-532503",
@@ -351,7 +378,10 @@
           "url": "https://tianchi.aliyun.com/competition/entrance/532503",
           "excerpt": "所有团队成员均需报名。"
         }
-      ]
+      ],
+      "short_name": "欧莱雅美妆 AI 管家",
+      "cost_brief": "开发与差旅待核",
+      "prize_brief": "系列总奖池 20 万"
     },
     {
       "id": "tianchi-532460",
@@ -385,7 +415,10 @@
           "url": "https://tianchi.aliyun.com/competition/entrance/532460",
           "excerpt": "本次大赛面向全球公众开放。个人或团队均可参加"
         }
-      ]
+      ],
+      "short_name": "余震预测技术大赛",
+      "cost_brief": "建模算力自理",
+      "prize_brief": "原总奖池 3 万美元"
     },
     {
       "id": "xfyun-spark-x25",
@@ -419,7 +452,10 @@
           "url": "https://challenge.xfyun.cn/topic/info?type=Spark-X25",
           "excerpt": "报名及作品提交：9月11日~11月10日17:00；参赛选手需在【10月11日前】提交初赛所需内容，否则将不具备进入复赛评审的资格。"
         }
-      ]
+      ],
+      "short_name": "Spark-X2.5 端侧创新",
+      "cost_brief": "本地设备与开发自理",
+      "prize_brief": "总奖池 10 万"
     },
     {
       "id": "kingdee-2026-individual",
@@ -453,7 +489,10 @@
           "url": "https://dev.kingdee.com/active/competition/2026",
           "excerpt": "参赛招募4月-6月；初赛海选7月-9月；复赛评选9月-11月。"
         }
-      ]
+      ],
+      "short_name": "金蝶个人创新赛道",
+      "cost_brief": "平台/路演费用待核",
+      "prize_brief": "个人赛道分配未核"
     }
   ],
   "source_checks": [

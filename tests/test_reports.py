@@ -219,7 +219,8 @@ class ReportsTest(unittest.TestCase):
             self.assertTrue((root / 'docs/archive/opportunities.html').exists())
             self.assertTrue((root / 'docs/archive/quarterly.html').exists())
             self.assertTrue((root / 'docs/archive/competitions.html').exists())
-            self.assertIn('官方报名与规则', (root / 'docs/archive/competitions.html').read_text())
+            self.assertIn('<table class="competition-table">', (root / 'docs/archive/competitions.html').read_text())
+            self.assertIn('官方报名与规则', (root / 'docs/competitions/tianchi-test.html').read_text())
 
 
 if __name__ == '__main__':

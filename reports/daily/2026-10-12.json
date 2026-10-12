@@ -37,7 +37,9 @@
           "excerpt": "Today, we’re launching EmbeddingGemma 2, expanding beyond text to unify code, images, video, and audio in a shared embedding space.",
           "checked_at": "2026-10-12T15:01:20+08:00"
         }
-      ]
+      ],
+      "short_headline": "EmbeddingGemma 2：端侧检索走向多模态",
+      "short_summary": "7.4 亿参数统一处理文本、代码与音视频检索，值得评估离线知识库和素材搜索。"
     },
     {
       "event_id": "62d26b448adb5f8d0855",
@@ -56,7 +58,9 @@
           "excerpt": "Brad Smith said there needed to be global safety rules in place, including a legal obligation to tell a \"victim\" if their system is breached by a rogue AI agent as well as deciding when outside evaluators should sign off on an AI product before it is released.",
           "checked_at": "2026-10-12T15:01:20+08:00"
         }
-      ]
+      ],
+      "short_headline": "微软总裁呼吁建立 AI 安全规则",
+      "short_summary": "访谈提出事件通报、独立评估和紧急停止机制；这是监管主张，尚非新法律。"
     },
     {
       "event_id": "88e871d5a8d26738db20",
@@ -76,7 +80,9 @@
           "checked_at": "2026-10-12T16:09:03+08:00"
         }
       ],
-      "context_note": "近七日前沿回看：北京时间 10 月 8 日发布，非今日发布。"
+      "context_note": "近七日前沿回看：北京时间 10 月 8 日发布，非今日发布。",
+      "short_headline": "LiquidAI 开放 d1 端侧决策模型",
+      "short_summary": "单次前向给出多模态判断，面向分类与路由；小版本仍是早期研究发布。"
     },
     {
       "event_id": "f2dd1820d7a7f622c574",
@@ -95,7 +101,9 @@
           "excerpt": "Chancellor John Healey is facing a funding gap of up to £35bn and must set out \"credible\" spending plans in his first Budget on 28 October, an influential think tank has warned.",
           "checked_at": "2026-10-12T15:01:20+08:00"
         }
-      ]
+      ],
+      "short_headline": "英国预算前，350 亿英镑支出压力待解",
+      "short_summary": "IFS 警告防务、医疗支出可能需追加资金；该数字是条件性估算。"
     },
     {
       "event_id": "f361b4758e6f2a1189dc",
@@ -114,7 +122,9 @@
           "excerpt": "Millions of British van drivers face a combined £2.5bn cost to cover the rising price of diesel this year, according to figures, fuelling calls for the government to scrap its planned fuel duty rise.",
           "checked_at": "2026-10-12T16:09:03+08:00"
         }
-      ]
+      ],
+      "short_headline": "英国货车柴油开支或增加 25 亿英镑",
+      "short_summary": "分析提示物流成本压力，燃油税调整呼声升温，政府尚未据此确认措施。"
     },
     {
       "event_id": "0d84bbab316fddb29a83",
@@ -134,7 +144,9 @@
           "excerpt": "The Federal Reserve Board on Friday released the results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families.",
           "checked_at": "2026-10-12T15:01:20+08:00"
         }
-      ]
+      ],
+      "short_headline": "美联储发布 2025 年家庭财务调查",
+      "short_summary": "更新家庭收入、资产与债务资料，可用于结构性研究，不是实时行情。"
     },
     {
       "event_id": "8607dfc2162df5a7dbf0",
@@ -153,7 +165,9 @@
           "excerpt": "A group of seven senators - four Republicans and three Democrats – on Sunday said the deal violated US laws, urging Trump to \"reverse course\".",
           "checked_at": "2026-10-12T15:01:20+08:00"
         }
-      ]
+      ],
+      "short_headline": "美国俄罗斯柴油计划遭跨党派反对",
+      "short_summary": "议员质疑合法性；制裁授权、供给承诺和实际交付仍需分别核查。"
     },
     {
       "event_id": "8e5c070d56ce89685eb2",
@@ -172,7 +186,9 @@
           "excerpt": "President Zardari declared the emergency on the advice of the prime minister, Shehbaz Sharif, after a cabinet decision, the president’s office said.",
           "checked_at": "2026-10-12T16:09:03+08:00"
         }
-      ]
+      ],
+      "short_headline": "巴基斯坦暂停省政府，政治对立升级",
+      "short_summary": "紧急状态引发中央与 PTI 争议，执行范围和完整法律依据仍待核对。"
     },
     {
       "event_id": "052cc5021db1d6fa2d0c",
@@ -191,7 +207,9 @@
           "excerpt": "Police said the six metro stations were closed on Monday for “security reasons” and traffic restrictions and diversions would be imposed in 20 locations.",
           "checked_at": "2026-10-12T16:09:03+08:00"
         }
-      ]
+      ],
+      "short_headline": "德里选民名单争议持续，交通受限",
+      "short_summary": "警方关闭六个地铁站；反对派与选举委员会对名单修订各持立场。"
     }
   ],
   "opportunities": [
@@ -214,7 +232,9 @@
           "excerpt": "Today, we’re launching EmbeddingGemma 2, expanding beyond text to unify code, images, video, and audio in a shared embedding space.",
           "checked_at": "2026-10-12T15:01:20+08:00"
         }
-      ]
+      ],
+      "short_headline": "端侧多模态素材检索",
+      "short_summary": "从本地图片、视频和语音搜索做小型原型，验证检索效果与真实付费需求。"
     },
     {
       "opportunity_id": "ai-agent-permission-observability-service",
@@ -235,7 +255,9 @@
           "excerpt": "Brad Smith said there needed to be global safety rules in place, including a legal obligation to tell a \"victim\" if their system is breached by a rogue AI agent as well as deciding when outside evaluators should sign off on an AI product before it is released.",
           "checked_at": "2026-10-12T15:01:20+08:00"
         }
-      ]
+      ],
+      "short_headline": "AI 自动化权限与审计服务",
+      "short_summary": "用权限清单、运行日志和停用入口切入小团队需求，先访谈再投入。"
     },
     {
       "opportunity_id": "scf-2025-public-data-explorer",
@@ -256,7 +278,9 @@
           "excerpt": "The Federal Reserve Board on Friday released the results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families.",
           "checked_at": "2026-10-12T15:01:20+08:00"
         }
-      ]
+      ],
+      "short_headline": "家庭资产负债数据研究看板",
+      "short_summary": "用 SCF 新数据复现图表，寻找口径解释和特定受众的需求缺口。"
     }
   ]
 }

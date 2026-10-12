@@ -1,5 +1,5 @@
 (() => {
-  const contests = [...document.querySelectorAll('[data-competition-state]')];
+  const contests = [...document.querySelectorAll('.competition-table [data-competition-state]')];
   const contestFilters = [...document.querySelectorAll('[data-competition-filter]')];
   const contestSearch = document.querySelector('#competition-search');
   let contestState = 'eligible';
@@ -8,10 +8,12 @@
     const stale = Date.now() - Date.parse(contest.dataset.checked) > 7 * 24 * 60 * 60 * 1000;
     if (expired) {
       contest.dataset.competitionState = 'closed';
-      contest.querySelector('.competition-status').textContent = '新报名已截止';
+      contest.querySelector('.competition-status').textContent = '已截止';
+      contest.querySelector('.competition-status').dataset.state = 'closed';
     } else if (stale && contest.dataset.competitionState === 'eligible') {
       contest.dataset.competitionState = 'conditional';
-      contest.querySelector('.competition-status').textContent = '需重新核验报名状态';
+      contest.querySelector('.competition-status').textContent = '需确认';
+      contest.querySelector('.competition-status').dataset.state = 'conditional';
     }
   }
   const updateContests = () => {
