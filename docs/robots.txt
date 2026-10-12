@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://unknownparticles.github.io/news/sitemap.xml
+Sitemap: https://alunapp.cn/news/sitemap.xml

@@ -1,6 +1,6 @@
 # 个人情报观察室
 
-公开站点：<https://unknownparticles.github.io/news/>。
+公开站点：<https://alunapp.cn/news/>。本仓库 Pages 继承账号现有自定义域名，GitHub 默认地址 <https://unknownparticles.github.io/news/> 会使用该域名。
 
 主页关联所有日报、周报、月报、季报和年报；支持分类筛选、关键词搜索和历史归档。每条重点包含来源证据、核验状态、相关性和下一步建议。日报最多五条，允许零条。
 

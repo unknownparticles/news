@@ -1,12 +1,13 @@
 """从公开 JSON 报告生成 GitHub Pages 站点。"""
 import html
 import json
+import os
 import shutil
 from pathlib import Path
 
 from .common import CONFIG, KINDS, ROOT, STATUSES, load_reports
 
-SITE_URL = "https://unknownparticles.github.io/news/"
+SITE_URL = os.environ.get("SITE_URL", "https://alunapp.cn/news/").replace("http://", "https://", 1).rstrip("/") + "/"
 
 
 def esc(text):
