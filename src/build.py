@@ -40,14 +40,14 @@ def brief(value, length=65):
 
 
 def frame(title, body, prefix="", reports=None):
-    nav = f'<a href="{prefix}index.html#latest-news">前沿新闻</a><a href="{prefix}index.html#opportunities">机会</a><a href="{prefix}archive/competitions.html">AI 竞赛</a>' + ''.join(f'<a href="{prefix}archive/{kind}.html">{label}</a>' for kind, label in KINDS.items())
+    nav = f'<a href="{prefix}index.html#latest-news">新闻速览</a><a href="{prefix}index.html#opportunities">机会观察</a><a href="{prefix}archive/competitions.html">AI 竞赛</a><details class="nav-archive"><summary>历史报告</summary><div>' + ''.join(f'<a href="{prefix}archive/{kind}.html">{label}归档</a>' for kind, label in KINDS.items()) + '</div></details>'
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="科技前沿、金融市场、政治政策与近期机会，每条内容保留原文、证据、影响和行动建议。">
 <title>{esc(title)} · 情报观察室</title><link rel="stylesheet" href="{prefix}styles.css"></head>
-<body><header class="site-header"><a class="brand" href="{prefix}index.html"><span class="brand-mark">情</span>情报观察室<span class="brand-en">INTELLIGENCE NOTES</span></a>
+<body><a class="skip-link" href="#main-content">跳到正文</a><header class="site-header"><a class="brand" href="{prefix}index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>情报观察室<small>THE DAILY BRIEF</small></span></a>
 <nav aria-label="报告导航">{nav}<a class="github" href="https://github.com/unknownparticles/news">GitHub ↗</a></nav></header>
-<main>{body}</main><footer><span>情报观察室 · 公开来源，可追溯的判断。</span><span>北京时间 · <a href="{prefix}archive/daily.html">历史归档</a> · <a href="https://github.com/unknownparticles/news">项目与纠错 ↗</a></span></footer>
+<main id="main-content">{body}</main><footer><span>情报观察室 · 公开来源，可追溯的判断。</span><span>北京时间 · <a href="{prefix}archive/daily.html">历史归档</a> · <a href="https://github.com/unknownparticles/news">项目与纠错 ↗</a></span></footer>
 <script src="{prefix}app.js" defer></script></body></html>'''
 
 
@@ -108,9 +108,28 @@ def competition_table(entries, prefix=''):
 
 def headline_card(item, report, number, prefix=''):
     return f'''<article class="headline-card" data-news-category="{news_group(item['category'])}">
-<div class="item-meta"><span>{esc(item['category'])}</span><span class="status">{STATUSES[item['verification_status']]}</span></div>
+<span class="story-number" aria-hidden="true">{number:02d}</span><div class="story-body"><div class="item-meta"><span class="status" data-status="{item['verification_status']}">{STATUSES[item['verification_status']]}</span>{'<span class="context-tag">近期回看</span>' if item.get('context_note') else ''}</div>
 <h3><a href="{prefix}{news_url(item, report)}">{esc(item.get('short_headline') or item['headline'])}</a></h3>
-<p>{esc(item.get('short_summary') or brief(item['summary']))}</p><div class="teaser-bottom"><small>{esc(time_label(item.get('published_at')))}{' · 回看' if item.get('context_note') else ''}</small><a href="{prefix}{news_url(item, report)}" aria-label="阅读全文：{esc(item['headline'])}">全文 →</a></div></article>'''
+<p>{esc(item.get('short_summary') or brief(item['summary']))}</p><div class="teaser-bottom"><small>{esc(time_label(item.get('published_at')))}</small><div><a class="source-link" href="{esc(item['sources'][0]['url'])}" target="_blank" rel="noopener noreferrer">{esc(item['sources'][0]['label'])} ↗</a><a href="{prefix}{news_url(item, report)}" aria-label="阅读全文：{esc(item['headline'])}">深入阅读 →</a></div></div></div></article>'''
+
+
+def featured_news(report):
+    if not report or not report['items']:
+        return ''
+    selected = []
+    for domain in NEWS_DOMAINS:
+        entries = [item for item in report['items'] if news_group(item['category']) == domain]
+        if entries:
+            selected.append(max(entries, key=lambda item: item['score']))
+    cards = []
+    for index, item in enumerate(selected):
+        link = news_url(item, report)
+        impact = f'<div class="feature-impact"><span>为什么关注</span><p>{esc(brief(item["relevance"], 90))}</p></div>' if index == 0 else ''
+        cards.append(f'''<article class="feature-card {'feature-lead' if index == 0 else ''}">
+<div class="feature-meta"><span>{esc(item['category'])}</span><span>{STATUSES[item['verification_status']]}</span></div>
+<h3><a href="{link}">{esc(item.get('short_headline') or item['headline'])}</a></h3><p>{esc(item.get('short_summary') or brief(item['summary']))}</p>{impact}
+<div class="feature-bottom"><span>{esc(time_label(item.get('published_at')))}{' · 近期回看' if item.get('context_note') else ''}</span><a href="{link}" aria-label="重点全文：{esc(item['headline'])}">阅读分析 <span aria-hidden="true">↗</span></a></div></article>''')
+    return '<section class="featured-section" aria-labelledby="featured-title"><div class="section-heading"><h2 id="featured-title"><span class="accent-dot" aria-hidden="true"></span>本期重点</h2><span class="section-note">每个领域，先看一条</span></div><div class="feature-grid">' + ''.join(cards) + '</div></section>'
 
 
 def opportunity_state(opportunity, at=None):
@@ -172,25 +191,31 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports", competition_catalo
         target.write_text(frame(title, body, prefix))
         generated.append(path)
 
-    def newspaper(reports_to_show, prefix=''):
+    def news_digest(reports_to_show, prefix=''):
         blocks = []
         for domain, label in NEWS_DOMAINS.items():
             entries = [(item, report, i) for report in reports_to_show for i, item in enumerate(report['items'], 1) if news_domain(item['category']) == domain]
             cards = ''.join(headline_card(item, report, i, prefix) for item, report, i in entries)
-            blocks.append(f'<section class="news-column" id="{domain}"><div class="column-heading"><span>{label}</span><small>{len(entries):02d} 则</small></div>{cards or "<p class=empty>本期暂无通过筛选的新闻。</p>"}</section>')
-        return '<div class="newspaper-columns">' + ''.join(blocks) + '</div>'
+            blocks.append(f'<section class="news-domain" id="{domain}" data-domain="{domain}"><div class="domain-heading"><h3>{label}</h3><small>{len(entries):02d} 条新闻</small></div>{cards or "<p class=empty>本期暂无通过筛选的新闻。</p>"}</section>')
+        return '<div class="news-digest">' + ''.join(blocks) + '</div>'
 
     latest_daily = next((r for r in reports if r['kind'] == 'daily'), None)
     date = latest_daily['period']['end'] if latest_daily else '准备中'
     eligible = [c for c in catalog['competitions'] if competition_state(c) == 'eligible']
     report_filters = '<button class="filter active" data-filter="all" aria-pressed="true">全部</button>' + ''.join(f'<button class="filter" data-filter="{kind}" aria-pressed="false">{label}</button>' for kind, label in KINDS.items())
-    edition = f'''<section class="paper-masthead"><div class="edition-meta"><span>每日观察 · 北京时间</span><span>{esc(date)}</span><span>公开来源 / 有据可查</span></div><h1>情报观察室</h1><p>科技看前沿 · 金融看变化 · 政治看影响 · 机会看行动</p></section>
-<div class="edition-bar"><span>本期 <b>{len(latest_daily['items']) if latest_daily else 0}</b> 则新闻</span><span><b>{len(latest_daily.get('opportunities', [])) if latest_daily else 0}</b> 个机会</span><span><b>{len(eligible)}</b> 项个人线上竞赛</span><a href="{report_url(latest_daily) if latest_daily else '#archive'}">阅读整期日报 →</a></div>'''
+    edition_date = datetime.fromisoformat(date) if latest_daily else None
+    date_title = edition_date.strftime('%m 月 %d 日') if edition_date else '准备中'
+    weekday = '星期' + '一二三四五六日'[edition_date.weekday()] if edition_date else ''
+    updated = time_label(latest_daily['generated_at']) if latest_daily else '等待首期日报'
+    edition = f'''<section class="brief-intro"><div><span class="eyebrow">DAILY INTELLIGENCE / 每日简报</span><h1>每天，读懂重要变化<span>。</span></h1><p>从科技、金融与政策，到值得验证的下一步。</p><div class="edition-stats"><span><b>{len(latest_daily['items']) if latest_daily else 0}</b> 条新闻</span><span><b>{len(latest_daily.get('opportunities', [])) if latest_daily else 0}</b> 个机会</span><span><b>{len(eligible)}</b> 项个人线上竞赛</span></div></div>
+<div class="edition-date"><span>{edition_date.year if edition_date else 'DAILY'} / 本期日报</span><strong>{date_title}</strong><small>{weekday} · 北京时间</small><a href="{report_url(latest_daily) if latest_daily else '#archive'}">阅读完整日报 <span aria-hidden="true">↗</span></a></div></section>'''
     opportunity_cards = ''.join(opportunity_card(o, latest_daily) for o in latest_daily.get('opportunities', [])) if latest_daily else ''
-    body = edition + '<section id="latest-news" class="frontier-section"><div class="paper-section-title"><h2>今日新闻</h2><a href="archive/news.html">新闻归档 →</a></div>' + newspaper([latest_daily] if latest_daily else []) + '</section>'
-    body += f'''<section id="opportunities" class="opportunities-section"><div class="paper-section-title"><h2>机会观察</h2><a href="archive/opportunities.html">全部机会 →</a></div><div class="opportunity-grid">{opportunity_cards or '<p class="empty">本期暂无新机会。</p>'}</div></section>
-<section id="competitions" class="competitions-section"><div class="paper-section-title"><h2>AI 竞赛</h2><a href="archive/competitions.html">全部 {len(catalog['competitions'])} 项 / 筛选 →</a></div><p class="compact-note">个人、社会人士、线上可参与 · 截止日期与参赛条件已核验，详细限制请点赛题查看。</p>{competition_table(eligible[:6]) if eligible else '<p class="empty">暂无已核验符合条件的赛事。</p>'}</section>
-<section id="archive" class="archive-section"><div class="paper-section-title"><h2>报告归档</h2><label class="search-label"><span>搜索报告</span><input id="report-search" type="search" placeholder="搜索报告…"></label></div><div class="filters">{report_filters}<span id="result-count" aria-live="polite"></span></div><div class="report-grid">{''.join(card(r) for r in reports) or '<p class="empty">暂无报告。</p>'}</div><p id="no-results" class="empty" hidden>没有匹配的报告。</p></section>'''
+    news_filters = '<button class="filter active" data-domain-filter="all" aria-pressed="true">全部领域</button>' + ''.join(f'<button class="filter" data-domain-filter="{domain}" aria-pressed="false">{label}</button>' for domain, label in NEWS_DOMAINS.items())
+    body = edition + featured_news(latest_daily) + '<div class="reading-layout"><section id="latest-news" class="frontier-section"><div class="section-heading"><h2>新闻速览</h2><a href="archive/news.html">新闻归档 ↗</a></div><div class="news-filters" aria-label="按新闻领域筛选">' + news_filters + '</div>' + news_digest([latest_daily] if latest_daily else []) + '</section>'
+    body += f'''<aside class="reading-rail"><div class="rail-card"><span class="eyebrow">IN THIS EDITION</span><h2>本期阅读指南</h2><a href="#latest-news"><span>01</span><div>新闻速览<small>科技 / 金融 / 政策</small></div><b>↓</b></a><a href="#opportunities"><span>02</span><div>机会观察<small>从变化信号到验证方向</small></div><b>↓</b></a><a href="#competitions"><span>03</span><div>AI 竞赛<small>资格、截止日与奖励比较</small></div><b>↓</b></a><a href="#archive"><span>04</span><div>历史报告<small>日报 / 周报 / 月报 / 季报 / 年报</small></div><b>↓</b></a></div><div class="rail-note"><span class="accent-dot" aria-hidden="true"></span><h3>信息有出处，判断有边界。</h3><p>每条新闻保留原文与核验标记。近期回看单独注明，机会先验证需求。</p><small>本期更新于 {esc(updated)}</small><a href="{report_url(latest_daily) if latest_daily else '#archive'}">查看本期筛选说明 →</a></div></aside></div>'''
+    body += f'''<section id="opportunities" class="opportunities-section"><div class="section-heading"><h2>机会观察</h2><a href="archive/opportunities.html">全部机会 →</a></div><div class="opportunity-grid">{opportunity_cards or '<p class="empty">本期暂无新机会。</p>'}</div></section>
+<section id="competitions" class="competitions-section"><div class="section-heading"><h2>AI 竞赛</h2><a href="archive/competitions.html">全部 {len(catalog['competitions'])} 项 / 筛选 →</a></div><p class="compact-note">个人、社会人士、线上可参与 · 截止日期与参赛条件已核验，详细限制请点赛题查看。</p>{competition_table(eligible[:6]) if eligible else '<p class="empty">暂无已核验符合条件的赛事。</p>'}</section>
+<section id="archive" class="archive-section"><div class="section-heading"><h2>报告归档</h2><label class="search-label"><span>搜索报告</span><input id="report-search" type="search" placeholder="搜索报告…"></label></div><div class="filters">{report_filters}<span id="result-count" aria-live="polite"></span></div><div class="report-grid">{''.join(card(r) for r in reports) or '<p class="empty">暂无报告。</p>'}</div><p id="no-results" class="empty" hidden>没有匹配的报告。</p></section>'''
     write('index.html', '主页', body)
     for kind, label in KINDS.items():
         subset = [r for r in reports if r['kind'] == kind]
@@ -198,7 +223,7 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports", competition_catalo
         body = f'<section class="archive-hero"><a class="back" href="../index.html">← 返回主页</a><span class="eyebrow">{kind.upper()} ARCHIVE</span><h1>{label}归档 <span>/ {len(subset):02d}</span></h1><p>{timing}，历史不足时注明覆盖范围。</p></section><div class="report-grid">' + (''.join(card(r, '../') for r in subset) or f'<p class="empty">暂无{label}，有日报记录的周期结束后生成。</p>') + '</div>'
         write(f'archive/{kind}.html', label + '归档', body, '../')
     dailies = [r for r in reports if r['kind'] == 'daily']
-    body = '<section class="archive-hero"><a class="back" href="../index.html">← 返回主页</a><span class="eyebrow">NEWS ARCHIVE</span><h1>前沿新闻归档</h1><p>按领域浏览短讯，点击标题阅读完整分析和原文证据。</p></section>' + newspaper(dailies, '../')
+    body = '<section class="archive-hero"><a class="back" href="../index.html">← 返回主页</a><span class="eyebrow">NEWS ARCHIVE</span><h1>前沿新闻归档</h1><p>按领域浏览短讯，点击标题阅读完整分析和原文证据。</p></section>' + news_digest(dailies, '../')
     write('archive/news.html', '新闻归档', body, '../')
     unique_opportunities = {}
     for report in dailies:
@@ -232,7 +257,7 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports", competition_catalo
         body += f'<p class="generated">生成于 {esc(report["generated_at"])} · 公开信息简报。</p>'
         write(report_url(report), report['title'], body, '../../')
         for i, item in enumerate(report['items'], 1):
-            body = f'<div class="detail-shell"><a class="back" href="../index.html#latest-news">← 返回报纸首页</a><p class="detail-edition">收录于 {esc(report["period"]["end"])} · {KINDS[report["kind"]]}</p>' + item_html(item, i, '../') + f'<a class="back detail-return" href="../{report_url(report)}#item-{i}">查看整期报告 →</a></div>'
+            body = f'<div class="detail-shell"><a class="back" href="../index.html#latest-news">← 返回简报首页</a><p class="detail-edition">收录于 {esc(report["period"]["end"])} · {KINDS[report["kind"]]}</p>' + item_html(item, i, '../') + f'<a class="back detail-return" href="../{report_url(report)}#item-{i}">查看整期报告 →</a></div>'
             body = body.replace('<h2>' + esc(item['headline']) + '</h2>', '<h1>' + esc(item['headline']) + '</h1>', 1)
             write(news_url(item, report), item['headline'], body, '../')
         for opportunity in report.get('opportunities', []):
@@ -252,7 +277,7 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports", competition_catalo
     sitemap = [SITE_URL + path for path in generated]
     (output / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{esc(url)}</loc></url>' for url in sitemap) + '</urlset>')
     (output / 'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: ' + SITE_URL + 'sitemap.xml\n')
-    print(f'生成报纸主页、{len(reports)} 份报告与 {len(catalog["competitions"])} 项竞赛详情')
+    print(f'生成简报主页、{len(reports)} 份报告与 {len(catalog["competitions"])} 项竞赛详情')
 
 
 if __name__ == '__main__':

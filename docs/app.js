@@ -1,4 +1,16 @@
 (() => {
+  const domains = [...document.querySelectorAll('[data-domain]')];
+  const domainFilters = [...document.querySelectorAll('[data-domain-filter]')];
+  for (const selected of domainFilters) selected.addEventListener('click', () => {
+    for (const domain of domains) {
+      domain.hidden = selected.dataset.domainFilter !== 'all' && domain.dataset.domain !== selected.dataset.domainFilter;
+    }
+    for (const button of domainFilters) {
+      const active = button === selected;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    }
+  });
   const contests = [...document.querySelectorAll('.competition-table [data-competition-state]')];
   const contestFilters = [...document.querySelectorAll('[data-competition-filter]')];
   const contestSearch = document.querySelector('#competition-search');
