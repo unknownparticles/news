@@ -1,12 +1,12 @@
 {
   "id": "2026-10-12",
   "kind": "daily",
-  "title": "2026-10-12 · 科技、金融、政治与三项机会",
+  "title": "2026-10-12 · 科技、金融、政治各三条与近期机会",
   "period": {
     "start": "2026-10-12",
     "end": "2026-10-12"
   },
-  "generated_at": "2026-10-12T15:01:20+08:00",
+  "generated_at": "2026-10-12T16:09:03+08:00",
   "collection_window": {
     "start": "2026-10-11T14:53:08.067029+08:00",
     "end": "2026-10-12T14:53:08.067029+08:00"
@@ -16,7 +16,7 @@
     "available_days": 1,
     "missing_dates": []
   },
-  "summary": "本期覆盖科技、金融与政治：三条近二十四小时报道，补充两条近七日官方前沿或宏观公告，并明确标注原始发布日期。另列三个从证据信号推导的待验证机会，提供适用人群、第一步与风险。DeepMind 官方 RSS 已恢复正常。",
+  "summary": "科技、金融、政治分别收录三条，共九条新闻，另有三个待验证机会。各领域独立选择，优先新报道，近期回看明确注明日期。全国 AI 竞赛另设独立数据库，核对个人、社会人士、线上阶段和真实报名窗口。",
   "source_failures": [],
   "items": [
     {
@@ -35,44 +35,6 @@
           "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
           "label": "Google DeepMind · 官方公告",
           "excerpt": "Today, we’re launching EmbeddingGemma 2, expanding beyond text to unify code, images, video, and audio in a shared embedding space.",
-          "checked_at": "2026-10-12T15:01:20+08:00"
-        }
-      ]
-    },
-    {
-      "event_id": "f2dd1820d7a7f622c574",
-      "headline": "金融：英国预算前，IFS 警告支出计划可能面临最高 350 亿英镑缺口",
-      "category": "金融市场",
-      "verification_status": "media_reported",
-      "published_at": "2026-10-12T06:23:50+00:00",
-      "score": 83,
-      "summary": "BBC 报道，英国财政研究所认为，要满足防务和医疗等支出承诺，政府可能需要补充最高 350 亿英镑资金，并要求 10 月 28 日预算给出可信计划。这是智库的条件性估算，财政部未确认该数字；不能据此断言某项税收政策必然出台。",
-      "relevance": "预算、通胀和借贷成本的变化可能影响跨境客户支出与经营成本，应关注实际预算文件及其与预测的差异。",
-      "action": "将 10 月 28 日预算列入观察日历，届时对照正式支出与税收措施；当前仅整理可能受影响的成本项，不据此作单向行情预测。",
-      "sources": [
-        {
-          "url": "https://www.bbc.co.uk/news/articles/cm78pwdp3n5qo",
-          "label": "BBC · 英国预算与财政研究所",
-          "excerpt": "Chancellor John Healey is facing a funding gap of up to £35bn and must set out \"credible\" spending plans in his first Budget on 28 October, an influential think tank has warned.",
-          "checked_at": "2026-10-12T15:01:20+08:00"
-        }
-      ]
-    },
-    {
-      "event_id": "8607dfc2162df5a7dbf0",
-      "headline": "政治：美国进口俄罗斯柴油计划引发跨党派反对，能源与制裁政策交织",
-      "category": "政治与政策",
-      "verification_status": "media_reported",
-      "published_at": "2026-10-11T23:18:45+00:00",
-      "score": 87,
-      "summary": "BBC 报道特朗普提出从俄罗斯获取柴油，七名来自两党的参议员反对该安排并认为其违反美国法律。政府与议员对合法性的说法不同；本期尚未逐条核对正式制裁文件，也未验证承诺数量的实际交付。",
-      "relevance": "能源供给、地缘冲突与制裁执行会共同影响运输及跨境经营的不确定性。政治承诺、法律授权和实际执行需要分别跟踪。",
-      "action": "继续核对美国财政部正式制裁或许可文件，以及交付证据；对经营成本做情景分析，避免把政治表态直接转成交易信号。",
-      "sources": [
-        {
-          "url": "https://www.bbc.co.uk/news/articles/cjn5v21py07vo",
-          "label": "BBC · 美国能源与制裁政策",
-          "excerpt": "A group of seven senators - four Republicans and three Democrats – on Sunday said the deal violated US laws, urging Trump to \"reverse course\".",
           "checked_at": "2026-10-12T15:01:20+08:00"
         }
       ]
@@ -97,6 +59,64 @@
       ]
     },
     {
+      "event_id": "88e871d5a8d26738db20",
+      "headline": "LiquidAI 开放 d1 端侧决策模型：用单次前向处理多模态判断",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-07T16:54:33+00:00",
+      "score": 87,
+      "summary": "LiquidAI 在其 Hugging Face 机构博客公开 d1-3B 与 d1-omni-600M，分别面向文本加图像，以及文本加图像或音频的决策任务。文章强调模型以单次前向给出判断，而非逐 token 生成；600M 版本仍是早期研究发布。速度和榜单是发布者自报，本期未独立复测。",
+      "relevance": "可研究结构化分类、路由与边缘设备判断，评估能否减少不必要的完整文本生成。",
+      "action": "先读模型卡、许可和自带代码，用非敏感样本比较准确率、内存与设备兼容，避免把 NVIDIA 测速直接当作其他设备的表现。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1",
+          "label": "LiquidAI · 机构发布说明",
+          "excerpt": "These open d1 decision models are built on our Liquid Foundation Models (LFMs). Unlike our generative models, decision models don’t produce tokens but answer in a single forward pass.",
+          "checked_at": "2026-10-12T16:09:03+08:00"
+        }
+      ],
+      "context_note": "近七日前沿回看：北京时间 10 月 8 日发布，非今日发布。"
+    },
+    {
+      "event_id": "f2dd1820d7a7f622c574",
+      "headline": "金融：英国预算前，IFS 警告支出计划可能面临最高 350 亿英镑缺口",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T06:23:50+00:00",
+      "score": 83,
+      "summary": "BBC 报道，英国财政研究所认为，要满足防务和医疗等支出承诺，政府可能需要补充最高 350 亿英镑资金，并要求 10 月 28 日预算给出可信计划。这是智库的条件性估算，财政部未确认该数字；不能据此断言某项税收政策必然出台。",
+      "relevance": "预算、通胀和借贷成本的变化可能影响跨境客户支出与经营成本，应关注实际预算文件及其与预测的差异。",
+      "action": "将 10 月 28 日预算列入观察日历，届时对照正式支出与税收措施；当前仅整理可能受影响的成本项，不据此作单向行情预测。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cm78pwdp3n5qo",
+          "label": "BBC · 英国预算与财政研究所",
+          "excerpt": "Chancellor John Healey is facing a funding gap of up to £35bn and must set out \"credible\" spending plans in his first Budget on 28 October, an influential think tank has warned.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "f361b4758e6f2a1189dc",
+      "headline": "英国柴油成本压力：分析估算货车车主全年额外支出约 25 亿英镑",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T06:00:49+00:00",
+      "score": 81,
+      "summary": "Guardian 报道援引 Moneysupermarket 分析，英国货车与皮卡车主今年柴油支出可能比去年高约 25 亿英镑，并引发取消燃油税上调的呼声。它是基于里程、耗油量和价格的估算，不是已经结算的实际支出，也不代表政府已经调整税率。",
+      "relevance": "运输成本可能通过物流报价影响商品和小企业毛利，值得把能源费用与政策变动拆开观察。",
+      "action": "对相关业务做燃油成本情景表，核对税率正式文件和最新运输报价，再决定是否调整定价。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/money/2026/oct/12/uk-van-drivers-diesel-costs-fuel-duty",
+          "label": "The Guardian · 能源与经营成本",
+          "excerpt": "Millions of British van drivers face a combined £2.5bn cost to cover the rising price of diesel this year, according to figures, fuelling calls for the government to scrap its planned fuel duty rise.",
+          "checked_at": "2026-10-12T16:09:03+08:00"
+        }
+      ]
+    },
+    {
       "event_id": "0d84bbab316fddb29a83",
       "headline": "宏观数据：美联储发布 2025 年消费者财务调查，提供家庭资产负债研究素材",
       "category": "金融市场",
@@ -113,6 +133,63 @@
           "label": "美联储 · 官方新闻稿",
           "excerpt": "The Federal Reserve Board on Friday released the results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families.",
           "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "8607dfc2162df5a7dbf0",
+      "headline": "政治：美国进口俄罗斯柴油计划引发跨党派反对，能源与制裁政策交织",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-11T23:18:45+00:00",
+      "score": 87,
+      "summary": "BBC 报道特朗普提出从俄罗斯获取柴油，七名来自两党的参议员反对该安排并认为其违反美国法律。政府与议员对合法性的说法不同；本期尚未逐条核对正式制裁文件，也未验证承诺数量的实际交付。",
+      "relevance": "能源供给、地缘冲突与制裁执行会共同影响运输及跨境经营的不确定性。政治承诺、法律授权和实际执行需要分别跟踪。",
+      "action": "继续核对美国财政部正式制裁或许可文件，以及交付证据；对经营成本做情景分析，避免把政治表态直接转成交易信号。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cjn5v21py07vo",
+          "label": "BBC · 美国能源与制裁政策",
+          "excerpt": "A group of seven senators - four Republicans and three Democrats – on Sunday said the deal violated US laws, urging Trump to \"reverse course\".",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "8e5c070d56ce89685eb2",
+      "headline": "巴基斯坦省级政府被暂停：紧急状态引发中央与反对党对立",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T00:22:11+00:00",
+      "score": 80,
+      "summary": "Guardian 报道巴基斯坦宣布开伯尔-普什图省进入紧急状态并暂停省政府，中央政府称安全问题未获解决，PTI 则反对这一措施。措辞和合法性存在政治争议，本期未独立核验完整法律文件与执行范围。",
+      "relevance": "区域治理、边境安全和公共服务的不确定性可能影响当地经营与协作，需要区分政治表态和实际行政措施。",
+      "action": "持续核对政府公报、法院后续与当地公共服务变化，避免将党派评价直接作为事实结论。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/12/imran-khans-party-decries-coup-after-pakistan-suspends-provincial-government",
+          "label": "The Guardian · 巴基斯坦治理",
+          "excerpt": "President Zardari declared the emergency on the advice of the prime minister, Shehbaz Sharif, after a cabinet decision, the president’s office said.",
+          "checked_at": "2026-10-12T16:09:03+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "052cc5021db1d6fa2d0c",
+      "headline": "印度选民名单争议持续：德里关闭地铁站并实施交通限制",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T05:51:48+00:00",
+      "score": 79,
+      "summary": "Guardian 报道，围绕选民名单修订的抗议活动持续，德里警方关闭六个地铁站并提示交通管制。反对派与选举委员会对名单修订的公平性说法不同；本期只记录报道所述争议和措施，不把任何一方指控当作已证实事实。",
+      "relevance": "对当地出行、项目交付和跨境协作，政治事件带来的交通与运行扰动应单独评估。",
+      "action": "如有当地安排，核对官方交通通知和安全信息；继续观察司法程序与选举委员会的正式说明。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/12/india-election-protests-delhi-police-shut-metro-stations-ahead-march",
+          "label": "The Guardian · 印度政治与公共运行",
+          "excerpt": "Police said the six metro stations were closed on Monday for “security reasons” and traffic restrictions and diversions would be imposed in 20 locations.",
+          "checked_at": "2026-10-12T16:09:03+08:00"
         }
       ]
     }

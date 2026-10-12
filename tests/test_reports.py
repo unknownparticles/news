@@ -13,6 +13,7 @@ from src.common import canonical_url, save_report, validate_report
 from src.collect import collect, feed_items, fetch
 from src.periods import aggregate, bounds, period_id, run
 from src.build import build, opportunity_state
+from src.competitions import competition_state, validate_catalog
 
 
 def daily(day="2026-10-12", identity="event-12345678"):
@@ -30,6 +31,16 @@ def opportunity():
             "audience": "开发者", "first_step": "验证原型", "risks": "需求尚未验证", "time_window": "本周",
             "category": "AI 编程", "status": "research", "score": 80, "verification_status": "official_confirmed",
             "sources": copy.deepcopy(daily()['items'][0]['sources'])}
+
+
+def competition():
+    return {'id':'tianchi-test','name':'测试竞赛','organizer':'测试组织方','platform':'天池','topic':'AI 测试赛题',
+            'eligibility':'社会人士单人','format':'线上','cost':'资源成本待核对','prizes':'无承诺','first_step':'阅读规则','cautions':'测试记录，不发布',
+            'qualification_status':'confirmed','registration_status':'open','kind':'practice','mode':'online',
+            'individual_allowed':True,'non_student_allowed':True,'rules_consistent':True,
+            'checked_at':'2026-10-12T08:30:00+08:00','registration_deadline':'2026-10-20T23:59:59+08:00',
+            'url':'https://tianchi.aliyun.com/competition/entrance/1','registration_url':'https://tianchi.aliyun.com/competition/entrance/1',
+            'evidence':[{'url':'https://tianchi.aliyun.com/competition/entrance/1','excerpt':'面向社会人士、允许单人、线上提交'}]}
 
 
 class ReportsTest(unittest.TestCase):
@@ -102,6 +113,39 @@ class ReportsTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             validate_report(report)
 
+    def test_each_news_domain_has_independent_capacity(self):
+        report = daily()
+        item = report['items'][0]
+        report['items'] = []
+        for category in ['科技前沿','金融市场','政治与政策']:
+            for i in range(5):
+                row = copy.deepcopy(item)
+                row.update(category=category,event_id=f'event-{len(report["items"]):08d}',published_at='2026-10-12T07:00:00+08:00')
+                report['items'].append(row)
+        validate_report(report)
+        report['items'][5]['category'] = '科技前沿'
+        with self.assertRaises(ValueError):
+            validate_report(report)
+
+    def test_competition_qualification_requires_confirmed_rules(self):
+        entry = competition()
+        catalog = {'checked_at':entry['checked_at'],'competitions':[entry],'source_checks':[]}
+        validate_catalog(catalog)
+        for field,value in [('individual_allowed',False),('non_student_allowed',False),('mode','offline_required'),('rules_consistent',False)]:
+            with self.subTest(field=field):
+                altered=copy.deepcopy(catalog);altered['competitions'][0][field]=value
+                with self.assertRaises(ValueError):validate_catalog(altered)
+        catalog['profile']={'private':True}
+        with self.assertRaises(ValueError):validate_catalog(catalog)
+
+    def test_competition_expiry_conflict_and_stale_checks(self):
+        entry=competition();at=datetime.fromisoformat('2026-10-12T09:00:00+08:00')
+        self.assertEqual(competition_state(entry,at),'eligible')
+        self.assertEqual(competition_state(dict(entry,registration_status='uncertain'),at),'conditional')
+        self.assertEqual(competition_state(dict(entry,qualification_status='excluded'),at),'excluded')
+        self.assertEqual(competition_state(entry,datetime.fromisoformat('2026-10-21T00:00:00+08:00')),'closed')
+        self.assertEqual(competition_state(entry,datetime.fromisoformat('2026-10-20T08:31:00+08:00')),'conditional')
+
     def test_period_opportunities_preserve_latest_and_close_expired_window(self):
         earlier, later = daily('2026-10-12'), daily('2026-10-13')
         earlier['opportunities'] = [opportunity()]
@@ -162,7 +206,7 @@ class ReportsTest(unittest.TestCase):
             report = daily()
             report['opportunities'] = [opportunity()]
             save_report(report, root / 'reports')
-            build(root / 'docs', root / 'reports')
+            build(root / 'docs', root / 'reports', {'checked_at':'2026-10-12T08:30:00+08:00','competitions':[competition()],'source_checks':[]})
             page = (root / 'docs/reports/daily/2026-10-12.html').read_text()
             self.assertNotIn('<script>alert(1)</script>', page)
             self.assertIn('&lt;script&gt;', page)
@@ -174,6 +218,8 @@ class ReportsTest(unittest.TestCase):
             self.assertIn('id="opportunities"', home)
             self.assertTrue((root / 'docs/archive/opportunities.html').exists())
             self.assertTrue((root / 'docs/archive/quarterly.html').exists())
+            self.assertTrue((root / 'docs/archive/competitions.html').exists())
+            self.assertIn('官方报名与规则', (root / 'docs/archive/competitions.html').read_text())
 
 
 if __name__ == '__main__':

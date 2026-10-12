@@ -1,0 +1,489 @@
+{
+  "checked_at": "2026-10-12T16:05:17+08:00",
+  "competitions": [
+    {
+      "id": "tianchi-532510",
+      "name": "知乎知学堂大模型挑战赛：大模型复杂表格识别与内容理解",
+      "platform": "阿里云天池",
+      "organizer": "知乎知学堂 / 天池平台",
+      "url": "https://tianchi.aliyun.com/competition/entrance/532510",
+      "registration_url": "https://tianchi.aliyun.com/competition/entrance/532510",
+      "qualification_status": "confirmed",
+      "registration_status": "open",
+      "mode": "online",
+      "kind": "prize",
+      "individual_allowed": true,
+      "non_student_allowed": true,
+      "rules_consistent": true,
+      "registration_deadline": "2026-12-31T23:59:59+08:00",
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "图片和 PDF 复杂表格识别、内容抽取与推理。",
+      "eligibility": "面向社会人士，明确要求个人参赛，不允许多人组队；须实名认证。",
+      "format": "长期线上赛，每季度一个赛季，提交 Excel 结果。",
+      "cost": "只允许阿里云 Qwen 和阿里云云端产品；模型调用及前置课程费用先核对。",
+      "prizes": "每季度总奖金 2 万元、六个名额；赛题方与阿里员工无获奖资格。",
+      "first_step": "先读题目清单，跑少量表格样本估算云费用，再核对前置课程要求。",
+      "cautions": "现有其他网关和本地模型不能直接替代指定阿里云服务；报名和获奖还需本人实名认证及协议确认。",
+      "evidence": [
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532510",
+          "excerpt": "本赛题不允许多人组队。"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532510",
+          "excerpt": "个人、高等院校、科研单位、企业和创客团队等均可报名参赛。"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532510",
+          "excerpt": "本次赛事为长期赛"
+        }
+      ]
+    },
+    {
+      "id": "tianchi-532515",
+      "name": "OpenLET 具身智能挑战赛",
+      "platform": "阿里云天池",
+      "organizer": "开放原子开源基金会 / OpenLET 社区",
+      "url": "https://tianchi.aliyun.com/competition/entrance/532515",
+      "registration_url": "https://tianchi.aliyun.com/competition/entrance/532515",
+      "qualification_status": "confirmed",
+      "registration_status": "open",
+      "mode": "online_stage",
+      "kind": "prize",
+      "individual_allowed": true,
+      "non_student_allowed": true,
+      "rules_consistent": true,
+      "registration_deadline": "2026-12-31T23:59:59+08:00",
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "具身智能，当前冬季仿真阶段可在线提交与自动评测。",
+      "eligibility": "面向全社会个人开发者，每队 1—5 人，可单人；须实名认证。",
+      "format": "冬季仿真赛 2026-09-29 至 12-31 线上参与；后续年度总决赛规则另算。",
+      "cost": "训练、推理和算力资源需先核对，未确认统一免费资源。",
+      "prizes": "设月度和赛季奖；具体奖金金额和发放办法尚待正式公布。",
+      "first_step": "阅读官方基线与数据，复现一次仿真评测，确认资源开销后参与冬季阶段。",
+      "cautions": "推荐仅覆盖当前冬季线上阶段，不保证年度真机总决赛也能远程完成。",
+      "evidence": [
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532515",
+          "excerpt": "每支队伍由 **1—5 人**组成。"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532515",
+          "excerpt": "赛季内持续开放报名。"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532515",
+          "excerpt": "**仿真评测：** 线上提交、自动评测。"
+        }
+      ]
+    },
+    {
+      "id": "tianchi-231573",
+      "name": "资金流入流出预测-挑战Baseline",
+      "platform": "阿里云天池",
+      "organizer": "阿里云天池",
+      "url": "https://tianchi.aliyun.com/competition/entrance/231573",
+      "registration_url": "https://tianchi.aliyun.com/competition/entrance/231573",
+      "qualification_status": "confirmed",
+      "registration_status": "open",
+      "mode": "online",
+      "kind": "practice",
+      "individual_allowed": true,
+      "non_student_allowed": true,
+      "rules_consistent": true,
+      "registration_deadline": "2027-05-06T23:59:59+08:00",
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "资金流入流出预测与时间序列建模，适合算法练手。",
+      "eligibility": "全社会开放、参赛对象不限，要求个人形式。",
+      "format": "本地调试、在线实时评测；规则写长期开放，平台当前显示至 2027-05-06。",
+      "cost": "未确认报名费用；本地建模与算力成本自行评估。",
+      "prizes": "长期基线练习和排行榜，不承诺现金奖励。",
+      "first_step": "先跑简单时间序列基线，检查指标、样例和结果提交格式。",
+      "cautions": "经典练习赛，不是今天新发布的现金赛事，使用数据须遵守参赛条款。",
+      "evidence": [
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/231573",
+          "excerpt": "大赛面向全社会开放，参赛对象不限，要求以个人形式参赛。"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/231573",
+          "excerpt": "报名和参赛无时间限制，提供永久排行榜。"
+        }
+      ]
+    },
+    {
+      "id": "tianchi-532421",
+      "name": "【天池经典打榜赛】赛道六-评论观点挖掘赛",
+      "platform": "阿里云天池",
+      "organizer": "阿里云天池",
+      "url": "https://tianchi.aliyun.com/competition/entrance/532421",
+      "registration_url": "https://tianchi.aliyun.com/competition/entrance/532421",
+      "qualification_status": "confirmed",
+      "registration_status": "open",
+      "mode": "online",
+      "kind": "practice",
+      "individual_allowed": true,
+      "non_student_allowed": true,
+      "rules_consistent": true,
+      "registration_deadline": "2026-11-30T15:59:59+08:00",
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "电商评论属性、观点与情感抽取，适合 NLP 与业务工具练习。",
+      "eligibility": "全社会开放、参赛对象不限，个人形式、不允许组队；提交前实名认证。",
+      "format": "全年开放的经典打榜赛，本地调试、在线提交。",
+      "cost": "算力成本自行评估，当前赛季费用未完整确认。",
+      "prizes": "旧规则列 2025 年赛季奖品，2026 年奖励未核实；本期只推荐练习用途。",
+      "first_step": "阅读标签和评测说明，做一份评论观点抽取基线。",
+      "cautions": "平台显示报名到 2026-11-30，旧赛季奖品不能直接套用到当前赛季。",
+      "evidence": [
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532421",
+          "excerpt": "大赛面向全社会开放，参赛对象不限，要求以个人形式参与比赛"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532421",
+          "excerpt": "本比赛不允许组队"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532421",
+          "excerpt": "全年开放赛季"
+        }
+      ]
+    },
+    {
+      "id": "tianchi-532338",
+      "name": "【打榜赛】CCL25-Eval  任务2：第三届汉语框架语义解析评测",
+      "platform": "阿里云天池",
+      "organizer": "赛事官方组织方，详见规则",
+      "url": "https://tianchi.aliyun.com/competition/entrance/532338",
+      "registration_url": "https://tianchi.aliyun.com/competition/entrance/532338",
+      "qualification_status": "conditional",
+      "registration_status": "open",
+      "mode": "online",
+      "kind": "practice",
+      "individual_allowed": true,
+      "non_student_allowed": true,
+      "rules_consistent": false,
+      "registration_deadline": "2027-05-24T23:59:59+08:00",
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "汉语框架语义解析，原评测转长期训练榜。",
+      "eligibility": "允许单人；公告欢迎大家参与，但社会人士当前报名要求需再次核对。",
+      "format": "长期训练榜线上提交，原 2025 年评奖与会议不视作当前窗口。",
+      "cost": "数据仅限非营利科研；商业使用需联系版权方。",
+      "prizes": "奖励须按当前赛季正式规则核对，不按旧公告保证发放。",
+      "first_step": "先核对新报名资格和有效提交窗口，再决定投入。",
+      "cautions": "原赛程与长期更新并存，身份和有效训练提交窗口仍待确认。",
+      "evidence": [
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532338",
+          "excerpt": "本次任务的A榜、B榜将作为训练赛道长期对外开放，欢迎大家报名提交打榜"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532338",
+          "excerpt": "选手可以单人参赛，也可以组队参赛。"
+        }
+      ]
+    },
+    {
+      "id": "tianchi-532511",
+      "name": "2026 SMP第十四届全国社会媒体处理大会-大模型图网络决策挑战赛",
+      "platform": "阿里云天池",
+      "organizer": "赛事官方组织方，详见规则",
+      "url": "https://tianchi.aliyun.com/competition/entrance/532511",
+      "registration_url": "https://tianchi.aliyun.com/competition/entrance/532511",
+      "qualification_status": "conditional",
+      "registration_status": "uncertain",
+      "mode": "offline_required",
+      "kind": "prize",
+      "individual_allowed": true,
+      "non_student_allowed": true,
+      "rules_consistent": false,
+      "registration_deadline": "2026-10-25T23:59:59+08:00",
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "大模型图网络决策，当前可能仅供已晋级复赛的队伍。",
+      "eligibility": "允许社会人士单人，但新选手是否仍能入场存在规则日期冲突。",
+      "format": "线上代码评测，部分获奖者须线下参加会议。",
+      "cost": "未完整核验费用、算力或差旅开销。",
+      "prizes": "奖励须按当前赛季正式规则核对，不按旧公告保证发放。",
+      "first_step": "先核对新报名资格和有效提交窗口，再决定投入。",
+      "cautions": "列表写 10-25 可报名，正文写 9-30 截止，初赛前十名晋级复赛；不推荐直接作为新报名机会。",
+      "evidence": [
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532511",
+          "excerpt": "选手可以单人参赛，也可以组队参赛。"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532511",
+          "excerpt": "初赛结束后，**排名前10名的团队进入复赛**。"
+        }
+      ]
+    },
+    {
+      "id": "tianchi-532512",
+      "name": "CHIP2026-面向生物医学全文的特定患者表型概念识别任务",
+      "platform": "阿里云天池",
+      "organizer": "赛事官方组织方，详见规则",
+      "url": "https://tianchi.aliyun.com/competition/entrance/532512",
+      "registration_url": "https://tianchi.aliyun.com/competition/entrance/532512",
+      "qualification_status": "conditional",
+      "registration_status": "closed",
+      "mode": "offline_required",
+      "kind": "academic",
+      "individual_allowed": true,
+      "non_student_allowed": true,
+      "rules_consistent": false,
+      "registration_deadline": "2026-09-27T23:59:59+08:00",
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "生物医学患者表型概念识别。",
+      "eligibility": "企业人员可以参赛，个人须依托单位，获奖需注册并参加会议。",
+      "format": "具体线上阶段和线下要求须按正式规则核对。",
+      "cost": "未完整核验费用、算力或差旅开销。",
+      "prizes": "奖励须按当前赛季正式规则核对，不按旧公告保证发放。",
+      "first_step": "先核对新报名资格和有效提交窗口，再决定投入。",
+      "cautions": "正文报名截止 9-27，B 榜结束 10-01；平台 2029 年字段不能视为新报名仍开放。",
+      "evidence": [
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532512",
+          "excerpt": "国内外在校生及企业人员均可参赛，个人须依托单位报名参赛"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532512",
+          "excerpt": "|报名时间|8月20日-9月27日|"
+        }
+      ]
+    },
+    {
+      "id": "tianchi-532514",
+      "name": "蚂蚁灵波具身大模型挑战赛",
+      "platform": "阿里云天池",
+      "organizer": "赛事官方组织方，详见规则",
+      "url": "https://tianchi.aliyun.com/competition/entrance/532514",
+      "registration_url": "https://tianchi.aliyun.com/competition/entrance/532514",
+      "qualification_status": "excluded",
+      "registration_status": "open",
+      "mode": "offline_required",
+      "kind": "prize",
+      "individual_allowed": false,
+      "non_student_allowed": true,
+      "rules_consistent": true,
+      "registration_deadline": "2026-10-26T23:59:59+08:00",
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "LingBot-VLA 2.0 具身模型与上海真机黑客马拉松。",
+      "eligibility": "需要 2—5 人组队，不能保持单人参赛。",
+      "format": "线上初赛与上海线下真机决赛。",
+      "cost": "未完整核验费用、算力或差旅开销。",
+      "prizes": "奖励须按当前赛季正式规则核对，不按旧公告保证发放。",
+      "first_step": "先核对新报名资格和有效提交窗口，再决定投入。",
+      "cautions": "虽然报名仍开放，但人数和线下决赛不符合当前个人线上筛选条件。",
+      "evidence": [
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532514",
+          "excerpt": "每队 2–5 人"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532514",
+          "excerpt": "11 月 13 日 — 11月15日"
+        }
+      ]
+    },
+    {
+      "id": "tianchi-532508",
+      "name": "2026-跨本体具身认知极限联合挑战赛",
+      "platform": "阿里云天池",
+      "organizer": "赛事官方组织方，详见规则",
+      "url": "https://tianchi.aliyun.com/competition/entrance/532508",
+      "registration_url": "https://tianchi.aliyun.com/competition/entrance/532508",
+      "qualification_status": "conditional",
+      "registration_status": "uncertain",
+      "mode": "offline_required",
+      "kind": "prize",
+      "individual_allowed": true,
+      "non_student_allowed": true,
+      "rules_consistent": false,
+      "registration_deadline": "2026-10-21T13:59:59+08:00",
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "跨本体机器人操作与真机验证。",
+      "eligibility": "单人或组队允许，当前新入场资格需核对。",
+      "format": "具体线上阶段和线下要求须按正式规则核对。",
+      "cost": "未完整核验费用、算力或差旅开销。",
+      "prizes": "奖励须按当前赛季正式规则核对，不按旧公告保证发放。",
+      "first_step": "先核对新报名资格和有效提交窗口，再决定投入。",
+      "cautions": "正文报名截止 9-21，平台字段却为 10-21；复赛、线下决赛不等于新报名开放。",
+      "evidence": [
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532508",
+          "excerpt": "选手可以单人参赛，也可以组队参赛"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532508",
+          "excerpt": "截止时间为9月21日"
+        }
+      ]
+    },
+    {
+      "id": "tianchi-532503",
+      "name": "欧莱雅第二届美妆科技黑客松 - 赛题1 数据共情者 - 消费者的AI管家",
+      "platform": "阿里云天池",
+      "organizer": "赛事官方组织方，详见规则",
+      "url": "https://tianchi.aliyun.com/competition/entrance/532503",
+      "registration_url": "https://tianchi.aliyun.com/competition/entrance/532503",
+      "qualification_status": "conditional",
+      "registration_status": "open",
+      "mode": "offline_required",
+      "kind": "prize",
+      "individual_allowed": true,
+      "non_student_allowed": false,
+      "rules_consistent": true,
+      "registration_deadline": "2026-10-20T23:59:59+08:00",
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "欧莱雅美妆 AI 客服管家。",
+      "eligibility": "限全日制在校生或 2026 届毕业生；普通在职身份不足以确认。",
+      "format": "线上提交，入围后线下决赛。",
+      "cost": "未完整核验费用、算力或差旅开销。",
+      "prizes": "三个赛题共用 20 万元奖金池，不是各赛题分别 20 万。",
+      "first_step": "先核对新报名资格和有效提交窗口，再决定投入。",
+      "cautions": "需核毕业年份和线下决赛要求，不作为无条件个人线上推荐。",
+      "evidence": [
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532503",
+          "excerpt": "全日制在校本科生、硕士及博士研究生（含 2026 届毕业生）"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532503",
+          "excerpt": "所有团队成员均需报名。"
+        }
+      ]
+    },
+    {
+      "id": "tianchi-532460",
+      "name": "余震预测技术国际大赛",
+      "platform": "阿里云天池",
+      "organizer": "赛事官方组织方，详见规则",
+      "url": "https://tianchi.aliyun.com/competition/entrance/532460",
+      "registration_url": "https://tianchi.aliyun.com/competition/entrance/532460",
+      "qualification_status": "conditional",
+      "registration_status": "closed",
+      "mode": "online",
+      "kind": "prize",
+      "individual_allowed": true,
+      "non_student_allowed": true,
+      "rules_consistent": true,
+      "registration_deadline": "2026-06-01T08:00:00+08:00",
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "余震震级与发生时间预测。",
+      "eligibility": "原赛允许全球公众、个人或团队。",
+      "format": "具体线上阶段和线下要求须按正式规则核对。",
+      "cost": "未完整核验费用、算力或差旅开销。",
+      "prizes": "奖励须按当前赛季正式规则核对，不按旧公告保证发放。",
+      "first_step": "关注下一届，当前不推荐新报名。",
+      "cautions": "重要通知明确北京时间 6 月 1 日 08:00 截止，优先于列表显示的 10 月窗口。",
+      "evidence": [
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532460",
+          "excerpt": "报名截止时间为 UTC 5月31日24时"
+        },
+        {
+          "url": "https://tianchi.aliyun.com/competition/entrance/532460",
+          "excerpt": "本次大赛面向全球公众开放。个人或团队均可参加"
+        }
+      ]
+    },
+    {
+      "id": "xfyun-spark-x25",
+      "name": "Spark-X2.5 端侧模型创新挑战赛",
+      "platform": "讯飞 AI 开发者大赛",
+      "organizer": "词元星火科技有限公司",
+      "url": "https://challenge.xfyun.cn/topic/info?type=Spark-X25",
+      "registration_url": "https://challenge.xfyun.cn/topic/info?type=Spark-X25",
+      "qualification_status": "conditional",
+      "registration_status": "uncertain",
+      "mode": "online_stage",
+      "kind": "prize",
+      "individual_allowed": true,
+      "non_student_allowed": true,
+      "rules_consistent": false,
+      "registration_deadline": "2026-11-10T17:00:00+08:00",
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "指定端侧模型的应用或软硬件创新。",
+      "eligibility": "个人开发者、企业和高校可参加；单人或不超过五人组队。",
+      "format": "初赛提交作品，决赛线上或线下路演形式需确认。",
+      "cost": "指定 Spark-X2.5-4B/1.7B，开发与设备成本自理。",
+      "prizes": "总奖金 10 万元、十个名额，税前。",
+      "first_step": "先核对初赛材料 10 月 11 日截止是否已经延期。",
+      "cautions": "页面同时写报名及作品提交至 11-10、初赛材料须在 10-11 前提交；目前不能保证新报名具备评审资格。",
+      "evidence": [
+        {
+          "url": "https://challenge.xfyun.cn/topic/info?type=Spark-X25",
+          "excerpt": "个人开发者、企业团队、高校学生；选手可单人或自由组队参赛，每支参赛队伍人数不超过 5 人。"
+        },
+        {
+          "url": "https://challenge.xfyun.cn/topic/info?type=Spark-X25",
+          "excerpt": "报名及作品提交：9月11日~11月10日17:00；参赛选手需在【10月11日前】提交初赛所需内容，否则将不具备进入复赛评审的资格。"
+        }
+      ]
+    },
+    {
+      "id": "kingdee-2026-individual",
+      "name": "金蝶 AI 苍穹追光者大赛 · 个人创新赛道",
+      "platform": "金蝶开发者门户",
+      "organizer": "金蝶",
+      "url": "https://dev.kingdee.com/active/competition/2026",
+      "registration_url": "https://dev.kingdee.com/active/competition/2026",
+      "qualification_status": "conditional",
+      "registration_status": "uncertain",
+      "mode": "unknown",
+      "kind": "prize",
+      "individual_allowed": true,
+      "non_student_allowed": true,
+      "rules_consistent": false,
+      "registration_deadline": null,
+      "checked_at": "2026-10-12T16:05:17+08:00",
+      "topic": "苍穹平台 Skill、工具与可复用组件。",
+      "eligibility": "个人创新赛道面向全社会独立开发者和小团队。",
+      "format": "已处复赛月份，新作品是否仍可进入评选需确认。",
+      "cost": "开发环境、模型额度及路演开销须核对。",
+      "prizes": "官网列总奖金池超 150 万，个人赛道分配未核实。",
+      "first_step": "确认是否接受新个人作品及是否必须已有初赛资格。",
+      "cautions": "页面上传按钮不代表新报名开放；招募 4—6 月、初赛 7—9 月、复赛 9—11 月。",
+      "evidence": [
+        {
+          "url": "https://dev.kingdee.com/active/competition/2026",
+          "excerpt": "个人创新赛道：全社会独立开发者、小团队。"
+        },
+        {
+          "url": "https://dev.kingdee.com/active/competition/2026",
+          "excerpt": "参赛招募4月-6月；初赛海选7月-9月；复赛评选9月-11月。"
+        }
+      ]
+    }
+  ],
+  "source_checks": [
+    {
+      "name": "阿里云天池",
+      "url": "https://tianchi.aliyun.com/competition",
+      "status": "verified",
+      "detail_count": 11
+    },
+    {
+      "name": "DataFountain",
+      "url": "https://www.datafountain.cn/competitions",
+      "status": "listing_only"
+    },
+    {
+      "name": "讯飞 AI 开发者大赛",
+      "url": "https://challenge.xfyun.cn/competition",
+      "status": "verified",
+      "detail_count": 1
+    },
+    {
+      "name": "百度 AI Studio",
+      "url": "https://aistudio.baidu.com/competition",
+      "status": "browser_required"
+    },
+    {
+      "name": "金蝶 AI 苍穹开发者大赛",
+      "url": "https://dev.kingdee.com/active/competition/2026",
+      "status": "verified",
+      "detail_count": 1
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "sources": [
+    {"name": "阿里云天池", "url": "https://tianchi.aliyun.com/competition", "adapter": "tianchi"},
+    {"name": "DataFountain", "url": "https://www.datafountain.cn/competitions", "adapter": "html"},
+    {"name": "讯飞 AI 开发者大赛", "url": "https://challenge.xfyun.cn/competition", "adapter": "browser"},
+    {"name": "百度 AI Studio", "url": "https://aistudio.baidu.com/competition", "adapter": "browser"},
+    {"name": "金蝶 AI 苍穹开发者大赛", "url": "https://dev.kingdee.com/active/competition/2026", "adapter": "browser"}
+  ],
+  "official_domains": ["tianchi.aliyun.com", "www.datafountain.cn", "challenge.xfyun.cn", "aistudio.baidu.com", "openlet.openatom.tech", "cacc.ccf.org.cn", "dev.kingdee.com"],
+  "max_detail_requests": 40
+}

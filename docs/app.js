@@ -1,4 +1,40 @@
 (() => {
+  const contests = [...document.querySelectorAll('[data-competition-state]')];
+  const contestFilters = [...document.querySelectorAll('[data-competition-filter]')];
+  const contestSearch = document.querySelector('#competition-search');
+  let contestState = 'eligible';
+  for (const contest of contests) {
+    const expired = contest.dataset.deadline && Date.parse(contest.dataset.deadline) < Date.now();
+    const stale = Date.now() - Date.parse(contest.dataset.checked) > 7 * 24 * 60 * 60 * 1000;
+    if (expired) {
+      contest.dataset.competitionState = 'closed';
+      contest.querySelector('.competition-status').textContent = '新报名已截止';
+    } else if (stale && contest.dataset.competitionState === 'eligible') {
+      contest.dataset.competitionState = 'conditional';
+      contest.querySelector('.competition-status').textContent = '需重新核验报名状态';
+    }
+  }
+  const updateContests = () => {
+    let count = 0;
+    const search = contestSearch?.value.trim().toLocaleLowerCase() || '';
+    for (const contest of contests) {
+      contest.hidden = contestState !== 'all' && contest.dataset.competitionState !== contestState || !contest.dataset.search.toLocaleLowerCase().includes(search);
+      if (!contest.hidden) count++;
+    }
+    const empty = document.querySelector('#no-competitions');
+    if (empty) empty.hidden = count > 0;
+  };
+  for (const selected of contestFilters) selected.addEventListener('click', () => {
+    contestState = selected.dataset.competitionFilter;
+    for (const button of contestFilters) {
+      button.classList.toggle('active', button === selected);
+      button.setAttribute('aria-pressed', String(button === selected));
+    }
+    updateContests();
+  });
+  contestSearch?.addEventListener('input', updateContests);
+  if (contestFilters.length) updateContests();
+  else for (const contest of contests) contest.hidden = contest.dataset.competitionState !== 'eligible';
   const headlines = [...document.querySelectorAll('[data-news-category]')];
   const newsFilters = [...document.querySelectorAll('[data-news-filter]')];
   for (const selected of newsFilters) selected.addEventListener('click', () => {

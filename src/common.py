@@ -11,6 +11,11 @@ KINDS = {"daily": "日报", "weekly": "周报", "monthly": "月报", "quarterly"
 CONFIG = json.loads((ROOT / "config/sources.json").read_text())
 STATUSES = {"official_confirmed": "官方已确认", "media_reported": "媒体报道", "project_documented": "项目文档支持", "unverified": "尚未核实", "conflicting": "信息存在冲突"}
 FRONTIER_CATEGORIES = {"科技前沿", "金融市场", "政治与政策"}
+NEWS_DOMAINS = {"technology": "科技", "finance": "金融", "politics": "政治"}
+
+
+def news_domain(category):
+    return {"金融市场": "finance", "政治与政策": "politics"}.get(category, "technology")
 
 
 def validate_evidence(entry):
@@ -81,8 +86,11 @@ def validate_report(report):
     if any(not start <= date.fromisoformat(day) <= end for day in missing):
         raise ValueError("缺失日期超出报告范围")
     items = report["items"]
-    if not isinstance(items, list) or len(items) > (5 if report["kind"] == "daily" else 15):
+    per_domain = 5 if report["kind"] == "daily" else 15
+    if not isinstance(items, list) or len(items) > per_domain * len(NEWS_DOMAINS):
         raise ValueError("报告条数超出限制")
+    if any(sum(news_domain(item["category"]) == domain for item in items) > per_domain for domain in NEWS_DOMAINS):
+        raise ValueError("单个新闻领域条数超出限制")
     seen = set()
     for item in items:
         identity = item["event_id"]

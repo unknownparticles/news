@@ -2,7 +2,7 @@
 
 公开站点：<https://alunapp.cn/news/>。本仓库 Pages 继承账号现有自定义域名，GitHub 默认地址 <https://unknownparticles.github.io/news/> 会使用该域名。
 
-主页直接展示科技前沿、金融市场、政治与政策，以及近期机会，并关联所有日报、周报、月报、季报和年报；支持新闻领域筛选、报告分类、关键词搜索和历史归档。每条新闻在正文和主页均展示“阅读原文”链接，证据摘录单独展开。日报最多五条新闻、三个机会，允许某个栏目没有内容。
+主页直接展示科技前沿、金融市场、政治与政策、近期机会和全国 AI 竞赛，并关联所有日报、周报、月报、季报和年报。每个新闻领域独立收录，目标每日三至五条，每领域最多五条、合计最多十五条；机会最多三个，竞赛有独立数据库。原文链接直接展示，新闻不足时注明覆盖，不能凑数。
 
 ## 运行与发布
 
@@ -10,6 +10,7 @@
 
 ```bash
 python3 -m src.collect
+python3 -m src.competitions --discover
 # 分析 .local/candidates.json，核对原文后，按下方结构写入 .local/daily.json
 python3 -m src.publish_report .local/daily.json
 python3 -m src.periods
@@ -59,6 +60,16 @@ python3 -m src.build
 
 三类前沿新闻必须提供带时区的 `published_at`，超过二十四小时的内容须用 `context_note` 明确说明回看或补采原因。默认优先近二十四小时新增内容，可从近七日重要官方公告补充前沿背景；禁止把旧报道改写为今日发布。
 
+## 全国 AI 竞赛
+
+`competitions/catalog.json` 存储经过官方规则核验的公开赛题；`config/competitions.json` 配置天池、DataFountain、讯飞、百度 AI Studio 和金蝶等来源。采集命令将公开候选保存到 `.local/competition-candidates.json`，原始候选不直接成为报名推荐。公开竞赛库需校验后才生成 `docs/archive/competitions.html`。
+
+首页优先展示允许社会人士、单人、线上参与且报名窗口有效的赛题。奖励赛、长期练习、学术评测分别标注；线上初赛不代表决赛也在线上。核对正式规则中的首轮报名、必须提交的材料截止与晋级条件，不能把复赛重新开放入口当作新选手可报名。官方字段与规则正文冲突时标为待确认；核验超过七天则停止作为可报名推荐。平台列表、详细规则、当前报名状态的覆盖程度分别标明。
+
+竞赛字段包括 `registration_deadline`、`qualification_status`、`registration_status`、`individual_allowed`、`non_student_allowed`、`mode`、`rules_consistent`、费用、奖励、第一步和官方证据。当前报名或获奖的具体条件仍由本人在官网确认。公开数据库不能包含个人资料，个人筛选条件保留在 `.local/competition-profile.json`，不提交、不上传。采集与发布流程只搜集信息，不代为注册、报名、缴费、接受协议或提交作品。
+
+数据库包含核验来源和局限，不能宣称已经穷尽全国所有赛事。百度、讯飞等需要浏览器加载的来源继续按官方页面补查；只读取到平台列表不等于确认了全部赛事资格。
+
 `opportunities` 为独立列表，日报最多三个、周期报告最多十个。每个机会提供 `opportunity_id`、`headline`、`category`、`score`、`status`、`verification_status`、`signal`、`audience`、`first_step`、`risks`、`time_window` 和 `sources`。`status` 是 `research`（待验证）、`actionable`（可以开始验证）或 `closed`（窗口结束）。真实申请或活动有截止日时提供带时区的 `deadline`，不得把已经结束的窗口标为可行动。机会证据证明变化信号，不证明付费需求或投资回报；公开截止日、已上线状态和许可证也不能由模型编造。重复机会复用原编号，只有提供实质 `update_reason` 才再次收录。
 
 同一事件跨来源合并，并复用稳定的 `event_id`；仅删除追踪参数不能自动识别同一事件。重复新闻默认拒绝导入，确有实质变化时提供 `update_reason`。许可证未知的仓库只作为研究候选；商业推荐需 `commercial_status: eligible` 和公开 `license_evidence`，并明确未验证的部署成本与依赖限制。
@@ -73,7 +84,7 @@ python3 -m src.build
 - 季报：一、四、七、十月首日汇总上一季度。
 - 年报：一月一日汇总上一年。
 - 错过首日后下次运行补齐已结束且有日报的周期；不生成从未有任何日报的历史周期。
-- 汇总从已经归档的日报去重整理，保留证据与日报索引。当前自动汇总是重点事件回顾，不宣称得出了长期趋势。缺失日报日期显式列出。
+- 汇总从已经归档的日报去重整理，每个新闻领域最多十五条、共最多四十五条，并保留证据与日报索引。当前自动汇总是重点事件回顾，不宣称得出了长期趋势。缺失日报日期显式列出。
 
 本地自动化需要 Mac 开机、应用运行及可用的网络与 GitHub 写权限。GitHub Pages 部署由云端 Actions 执行。自动化失败时保留现有网页，不发布伪造成功内容。采集器只记录限流状态和 Retry-After；自动化在总截止时间内选择稍后重试或跳过该来源，不无限等待。
 

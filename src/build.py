@@ -7,7 +7,8 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from .common import CONFIG, KINDS, ROOT, STATUSES, load_reports
+from .common import CONFIG, KINDS, NEWS_DOMAINS, ROOT, STATUSES, load_reports, news_domain
+from .competitions import competition_state, load_catalog
 
 SITE_URL = os.environ.get("SITE_URL", "https://alunapp.cn/news/").replace("http://", "https://", 1).rstrip("/") + "/"
 
@@ -21,7 +22,7 @@ def report_url(report):
 
 
 def frame(title, body, prefix="", reports=None):
-    nav = f'<a href="{prefix}index.html#latest-news">前沿新闻</a><a href="{prefix}index.html#opportunities">机会</a>' + ''.join(f'<a href="{prefix}archive/{kind}.html">{label}</a>' for kind, label in KINDS.items())
+    nav = f'<a href="{prefix}index.html#latest-news">前沿新闻</a><a href="{prefix}index.html#opportunities">机会</a><a href="{prefix}archive/competitions.html">AI 竞赛</a>' + ''.join(f'<a href="{prefix}archive/{kind}.html">{label}</a>' for kind, label in KINDS.items())
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="科技前沿、金融市场、政治政策与近期机会，每条内容保留原文、证据、影响和行动建议。">
@@ -42,10 +43,11 @@ def card(report, prefix=""):
 <div class="card-bottom"><span>{esc(report['period']['start'])} — {esc(report['period']['end'])}</span><span>{len(report['items'])} 条新闻 · {len(report.get('opportunities', []))} 个机会 <b>↗</b></span></div></a>'''
 
 
-def time_label(value):
+def time_label(value, include_year=False):
     if not value:
         return "发布时间未记录"
-    return datetime.fromisoformat(value).astimezone(ZoneInfo('Asia/Shanghai')).strftime('%m-%d %H:%M') + ' 北京时间'
+    pattern = '%Y-%m-%d %H:%M' if include_year else '%m-%d %H:%M'
+    return datetime.fromisoformat(value).astimezone(ZoneInfo('Asia/Shanghai')).strftime(pattern) + ' 北京时间'
 
 
 def original_links(entry):
@@ -53,7 +55,20 @@ def original_links(entry):
 
 
 def news_group(category):
-    return {'金融市场': 'finance', '政治与政策': 'politics'}.get(category, 'technology')
+    return news_domain(category)
+
+
+def competition_card(entry):
+    state = competition_state(entry)
+    labels = {'eligible': '符合个人线上参赛条件', 'conditional': '时间或资格需核对', 'excluded': '不符合当前筛选条件', 'closed': '新报名已截止'}
+    kind = {'prize': '奖励赛事', 'practice': '长期练习 / 打榜', 'academic': '学术评测'}[entry['kind']]
+    deadline = time_label(entry.get('registration_deadline'), True) if entry.get('registration_deadline') else '截止时间待核对'
+    evidence = ''.join(f'<li><a href="{esc(e["url"])}" target="_blank" rel="noopener noreferrer">官方规则 ↗</a><blockquote>{esc(e["excerpt"])}</blockquote></li>' for e in entry['evidence'])
+    return f'''<article class="competition-card" id="competition-{entry['id']}" data-competition-state="{state}" data-deadline="{esc(entry.get('registration_deadline') or '')}" data-checked="{esc(entry['checked_at'])}" data-search="{esc(entry['name'] + ' ' + entry['topic'] + ' ' + entry['platform'])}">
+<div class="item-meta"><span>{esc(entry['platform'])} · {kind}</span><span class="competition-status status">{labels[state]}</span></div><h3>{esc(entry['name'])}</h3>
+<p class="competition-topic">{esc(entry['topic'])}</p><p class="competition-deadline">报名截止：{esc(deadline)}</p>
+<dl><dt>参赛条件</dt><dd>{esc(entry['eligibility'])}</dd><dt>参与方式</dt><dd>{esc(entry['format'])}</dd><dt>费用与算力</dt><dd>{esc(entry['cost'])}</dd><dt>奖励</dt><dd>{esc(entry['prizes'])}</dd><dt>先做什么</dt><dd>{esc(entry['first_step'])}</dd></dl>
+<p class="competition-caution">{esc(entry['cautions'])}</p><div class="original-links"><a href="{esc(entry['registration_url'])}" target="_blank" rel="noopener noreferrer">官方报名与规则 ↗</a></div><details><summary>资格与日期证据 · 核验于 {esc(time_label(entry['checked_at']))}</summary><ul class="evidence">{evidence}</ul></details></article>'''
 
 
 def headline_card(item, report, number, prefix=''):
@@ -110,8 +125,9 @@ def item_html(item, number, prefix="", daily=False):
 {license_note}<details><summary>证据摘录与核验时间 · {len(item['sources'])} 个</summary><ul class="evidence">{sources}</ul></details>{backlink}</div></article>'''
 
 
-def build(output=ROOT / "docs", report_root=ROOT / "reports"):
+def build(output=ROOT / "docs", report_root=ROOT / "reports", competition_catalog=None):
     reports = load_reports(report_root)
+    catalog = load_catalog() if competition_catalog is None else competition_catalog
     output.mkdir(parents=True, exist_ok=True)
     expected_pages = {output / report_url(r) for r in reports}
     for obsolete in (output / "reports").glob("*/*.html"):
@@ -131,15 +147,17 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports"):
     news_cards = ''.join(headline_card(item, latest_daily, i) for i, item in enumerate(latest_daily['items'], 1)) if latest_daily else ''
     opportunity_cards = ''.join(opportunity_card(opportunity, latest_daily) for opportunity in latest_daily.get('opportunities', [])) if latest_daily else ''
     content = f'''<section id="latest-news" class="frontier-section"><div class="section-heading"><div><span class="eyebrow">THE FRONTIER / {esc(latest_daily['period']['end']) if latest_daily else '持续更新'}</span><h2>科技、金融与政治前沿</h2></div><a class="text-link" href="archive/news.html">全部新闻 →</a></div>
-<div class="news-filters" aria-label="新闻领域筛选"><button class="filter active" data-news-filter="all" aria-pressed="true">全部新闻</button><button class="filter" data-news-filter="technology" aria-pressed="false">科技</button><button class="filter" data-news-filter="finance" aria-pressed="false">金融</button><button class="filter" data-news-filter="politics" aria-pressed="false">政治</button></div>
+<div class="news-filters" aria-label="新闻领域筛选"><button class="filter active" data-news-filter="all" aria-pressed="true">全部新闻</button>{''.join(f'<button class="filter" data-news-filter="{domain}" aria-pressed="false">{label} · {sum(news_domain(i["category"]) == domain for i in latest_daily["items"]) if latest_daily else 0}</button>' for domain, label in NEWS_DOMAINS.items())}</div><p class="section-note">每个领域独立收录，目标每日三至五条；数量不足时注明原因。</p>
 <div class="headline-grid">{news_cards or '<p class="empty">暂无通过核验的新闻。</p>'}</div><p id="no-news" class="empty" hidden>本期没有该领域通过筛选的新闻。</p></section>
 <section id="opportunities" class="opportunities-section"><div class="section-heading"><div><span class="eyebrow">OPPORTUNITY WATCH</span><h2>近期机会，先小步验证。</h2></div><a class="text-link" href="archive/opportunities.html">机会归档 →</a></div><p class="section-note">从公开变化寻找产品、服务与开发提效的切入点。证据支持变化信号，实际需求与回报仍需验证。</p><div class="opportunity-grid">{opportunity_cards or '<p class="empty">本期暂无足够证据支持的机会；不为凑数推荐。</p>'}</div></section>'''
+    eligible = [entry for entry in catalog['competitions'] if competition_state(entry) == 'eligible']
+    content += f'''<section id="competitions" class="competitions-section"><div class="section-heading"><div><span class="eyebrow">AI COMPETITIONS / 全国赛事观察</span><h2>个人可以参与的 AI 竞赛</h2></div><a class="text-link" href="archive/competitions.html">全部 {len(catalog['competitions'])} 项与资格筛选 →</a></div><p class="section-note">优先社会人士、单人、线上参赛；当前核验符合条件 {len(eligible)} 项。奖励赛、练习赛和仅线上阶段的赛事分别注明。</p><div class="competition-grid">{''.join(competition_card(entry) for entry in eligible[:6]) or '<p class="empty">暂无已核验符合个人线上条件的赛事，待核对的名单见竞赛页面。</p>'}</div></section>'''
     body = f'''<section class="hero"><div class="hero-copy"><span class="eyebrow"><span class="live-dot"></span> PERSONAL INTELLIGENCE / 持续更新</span><h1>看见前沿，<br>找到<span>机会。</span></h1><p>科技、金融、政治，每天抓住值得关注的变化。<br>直达新闻原文，分清事实与推测，再决定下一步。</p>{cta}<a class="hero-opportunity-link" href="#opportunities">研究近期机会 ↓</a></div>
 <aside class="hero-note"><span class="note-index">最新速览 / {esc(latest_daily['period']['end']) if latest_daily else '准备中'}</span><h2>{len(latest_daily['items']) if latest_daily else 0} 条新闻<br>{len(latest_daily.get('opportunities', [])) if latest_daily else 0} 个机会</h2><p>科技 · 金融 · 政治<br>原文、发布时间与影响分析<br>机会附验证步骤和不确定性</p><a class="note-footer" href="#latest-news">浏览最新前沿 ↓</a></aside></section>
 {content}<section class="period-stats" aria-label="各类报告数量">{stats}</section>{latest_block}
 <section id="archive"><div class="section-heading"><div><span class="eyebrow">THE ARCHIVE</span><h2>从今天，看到更远。</h2></div><label class="search-label"><span>搜索报告</span><input id="report-search" type="search" placeholder="搜索主题、标题或日期…"></label></div>
 <div class="filters" aria-label="筛选报告类型">{filter_buttons}<span id="result-count" aria-live="polite"></span></div><div class="report-grid">{cards}</div><p id="no-results" class="empty" hidden>没有匹配的报告，请换一个关键词。</p></section>
-<section class="topics"><span class="eyebrow">FOCUS AREAS / 关注领域</span><div>{''.join(f'<span>{esc(c)}</span>' for c in CONFIG['categories'])}</div><p>日报保留最多五条新闻与三个机会；周期报告汇总已归档内容，并明确标注缺失日期。</p></section>'''
+<section class="topics"><span class="eyebrow">FOCUS AREAS / 关注领域</span><div>{''.join(f'<span>{esc(c)}</span>' for c in CONFIG['categories'])}</div><p>科技、金融、政治各最多五条新闻，另有三个机会和独立竞赛库；周期报告汇总已归档内容。</p></section>'''
     (output / "index.html").write_text(frame("主页", body))
     for kind, label in KINDS.items():
         target = output / "archive" / (kind + ".html")
@@ -158,6 +176,11 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports"):
             unique_opportunities.setdefault(opportunity['opportunity_id'], (opportunity, report))
     archive_header = '<section class="archive-hero"><a class="back" href="../index.html">← 返回主页</a><span class="eyebrow">OPPORTUNITY ARCHIVE</span><h1>机会观察归档</h1><p>保留发现日期、证据、验证步骤和不确定性。历史窗口不代表当前仍然开放。</p></section>'
     (output / 'archive/opportunities.html').write_text(frame('机会归档', archive_header + '<div class="opportunity-grid">' + (''.join(opportunity_card(opportunity, report, '../') for opportunity, report in unique_opportunities.values()) or '<p class="empty">暂无机会。</p>') + '</div>', '../'))
+    filters = ''.join(f'<button class="filter {"active" if state == "eligible" else ""}" data-competition-filter="{state}" aria-pressed="{"true" if state == "eligible" else "false"}">{label}</button>' for state, label in [('eligible', '个人线上可参与'), ('conditional', '需确认'), ('closed', '报名已截止'), ('excluded', '不符合'), ('all', '全部')])
+    source_labels = {'verified': '已核对赛事详情', 'collected': '已采集待核规则', 'listing_only': '已查平台列表', 'browser_required': '详情待补查', 'failed': '本次访问失败'}
+    source_table = '<table class="source-coverage"><thead><tr><th>官方来源</th><th>覆盖情况</th></tr></thead><tbody>' + ''.join(f'<tr><td><a href="{esc(s["url"])}" target="_blank" rel="noopener noreferrer">{esc(s["name"])}</a></td><td>{source_labels.get(s["status"], "待核对")}</td></tr>' for s in catalog.get('source_checks', [])) + '</tbody></table>'
+    competition_body = f'<section class="archive-hero"><a class="back" href="../index.html">← 返回主页</a><span class="eyebrow">AI COMPETITIONS</span><h1>全国 AI 竞赛观察</h1><p>优先列出面向社会人士、允许单人线上参与的赛题。报名状态、规则冲突和阶段晋级要求分别核对。</p><p>核验时间：{esc(time_label(catalog["checked_at"]))} · {len(catalog["competitions"])} 项记录 · {len(eligible)} 项符合公开参赛条件</p></section><label class="search-label"><span>搜索竞赛</span><input id="competition-search" type="search" placeholder="搜索赛题、方向或平台…"></label><div class="competition-filters">{filters}</div><div class="competition-grid">' + ''.join(competition_card(entry) for entry in catalog['competitions']) + '</div><p id="no-competitions" class="empty" hidden>没有符合当前筛选的赛事。</p><section class="topics"><h2>已查官方来源</h2>' + source_table + '<p>覆盖全国主要赛事平台，尚不代表穷尽所有赛事。只查到列表的来源不会标记为完整核验，报名仍须本人在官网确认。</p></section>'
+    (output / 'archive/competitions.html').write_text(frame('全国 AI 竞赛', competition_body, '../'))
     for report in reports:
         target = output / report_url(report)
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -181,7 +204,8 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports"):
     data_dir = output / "data"
     data_dir.mkdir(exist_ok=True)
     (data_dir / "reports.json").write_text(json.dumps(reports, ensure_ascii=False, indent=2) + "\n")
-    sitemap = [SITE_URL] + [SITE_URL + 'archive/' + kind + '.html' for kind in [*KINDS, 'news', 'opportunities']] + [SITE_URL + report_url(r) for r in reports]
+    (data_dir / 'competitions.json').write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + '\n')
+    sitemap = [SITE_URL] + [SITE_URL + 'archive/' + kind + '.html' for kind in [*KINDS, 'news', 'opportunities', 'competitions']] + [SITE_URL + report_url(r) for r in reports]
     (output / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{esc(url)}</loc></url>' for url in sitemap) + '</urlset>')
     (output / 'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: ' + SITE_URL + 'sitemap.xml\n')
     print(f"生成站点：{len(reports)} 份报告、五类归档与主页")

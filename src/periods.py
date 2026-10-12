@@ -5,7 +5,7 @@ import calendar
 from datetime import date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from .common import KINDS, load_reports, save_report
+from .common import KINDS, NEWS_DOMAINS, load_reports, save_report, news_domain
 
 
 def bounds(day, kind):
@@ -55,7 +55,8 @@ def aggregate(dailies, kind, start, end, generated_at):
             if current.get("deadline") and datetime.fromisoformat(current["deadline"]) < datetime.fromisoformat(generated_at):
                 current["status"] = "closed"
             opportunities[opportunity["opportunity_id"]] = current
-    selected = sorted(events.values(), key=lambda item: item["score"], reverse=True)[:15]
+    ranked = sorted(events.values(), key=lambda item: item["score"], reverse=True)
+    selected = [item for domain in NEWS_DOMAINS for item in [x for x in ranked if news_domain(x["category"]) == domain][:15]]
     identifier = period_id(start, kind)
     return {"id": identifier, "kind": kind, "title": f"{identifier.upper()} · {KINDS[kind]}",
             "period": {"start": start.isoformat(), "end": end.isoformat()}, "generated_at": generated_at,
