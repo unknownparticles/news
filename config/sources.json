@@ -1,0 +1,25 @@
+{
+  "timezone": "Asia/Shanghai",
+  "categories": ["AI 编程", "可商用 AI", "工作室业务", "Solana 基础设施", "移动开发", "模型与基础设施"],
+  "rss": [
+    {"name": "OpenAI News", "url": "https://openai.com/news/rss.xml"},
+    {"name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml"},
+    {"name": "Hugging Face", "url": "https://huggingface.co/blog/feed.xml"},
+    {"name": "GitHub Blog", "url": "https://github.blog/feed/"}
+  ],
+  "aihot": [
+    "https://aihot.news/api/v1/items?mode=selected&window=24h&limit=20",
+    "https://aihot.news/api/v1/dailies/latest"
+  ],
+  "github_queries": [
+    "topic:ai-agent", "topic:image-processing", "topic:crm", "topic:solana", "topic:flutter"
+  ],
+  "official_url_prefixes": [
+    "https://openai.com/index/", "https://openai.com/news/", "https://developers.openai.com/",
+    "https://deepmind.google/discover/blog/", "https://deepmind.google/blog/", "https://blog.google/",
+    "https://huggingface.co/blog/", "https://github.blog/", "https://docs.github.com/",
+    "https://solana.com/news/", "https://solana.com/changelog", "https://developers.jup.ag/", "https://dev.jup.ag/",
+    "https://www.anthropic.com/news/", "https://cursor.com/changelog/", "https://flutter.dev/",
+    "https://github.com/flutter/flutter/releases/", "https://github.com/anza-xyz/agave/releases/"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": "2026-10-12",
+  "kind": "daily",
+  "title": "2026-10-12 · MCP、摄影工具与多语言开发",
+  "period": {
+    "start": "2026-10-12",
+    "end": "2026-10-12"
+  },
+  "generated_at": "2026-10-12T14:35:11+08:00",
+  "collection_window": {
+    "start": "2026-10-11T08:30:00+08:00",
+    "end": "2026-10-12T14:35:11+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "首期手动发布：从近三十天新建仓库中筛选四个研究候选，核对项目说明与许可证。它们并非全部在今天发布；没有把 Star 当作商业价值，也未宣称已验证运行效果。",
+  "source_failures": [
+    "Google DeepMind RSS（返回非订阅内容）"
+  ],
+  "items": [
+    {
+      "event_id": "e06cd6bc5ced46f4ba81",
+      "headline": "CodePier：自托管 MCP 将开发电脑接入 AI 工作流",
+      "summary": "首次项目发现：仓库创建于九月二十日。项目文档描述了 Hub 与本机 Agent 的结构，可读取项目、运行测试并继续编码会话；MIT 许可证文件可查。源码、命令结果和会话会按流程传给 Hub 或客户端，Shell 权限也不等于项目目录沙箱。当前仅核对文档，未安装或验证执行效果。",
+      "category": "AI 编程",
+      "verification_status": "project_documented",
+      "score": 86,
+      "relevance": "可用于研究远程开发与 AI 工具接入，评估价值时应同时衡量运维成本和授权边界，不能只比较功能列表。",
+      "action": "先阅读 SECURITY.md 和第三方依赖声明，再用合成项目验证只读访问；部署到公网前核对 HTTPS、身份认证和执行权限。",
+      "commercial_status": "unknown",
+      "license_evidence": "https://github.com/cyeinfpro/codepier/blob/main/LICENSE",
+      "sources": [
+        {
+          "label": "cyeinfpro/codepier · README",
+          "url": "https://github.com/cyeinfpro/codepier",
+          "excerpt": "CodePier 是自托管的 MCP 服务和开发面板。",
+          "checked_at": "2026-10-12T14:35:11+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "d5f93dc894e6a07e4265",
+      "headline": "SnapLink：Flutter 摄影助手，蓝牙与跨平台能力仍需区分",
+      "summary": "首次项目发现：仓库创建于十月七日。README 描述了纯 Dart PTP/IP 协议、尼康相机连接、取景监看、照片下载和水印功能，并明确 Android 为主要已验证平台，蓝牙功能规划中，iOS 与桌面端未完整验证。仓库提供 MIT 许可证；本次未进行设备实测。",
+      "category": "移动开发",
+      "verification_status": "project_documented",
+      "score": 82,
+      "relevance": "适合研究移动端相机互联和摄影工作流，尤其是协议层、传输与界面分离；项目的自述能力不能直接当作全部机型的兼容保证。",
+      "action": "先核查目标相机机型和手机平台，用测试照片验证连接稳定性、RAW 传输和 EXIF 保留；商业复用前检查依赖与品牌素材。",
+      "commercial_status": "unknown",
+      "license_evidence": "https://github.com/lyb82ndkf-lab/Nikon-SnapLink/blob/master/LICENSE",
+      "sources": [
+        {
+          "label": "lyb82ndkf-lab/Nikon-SnapLink · README",
+          "url": "https://github.com/lyb82ndkf-lab/Nikon-SnapLink",
+          "excerpt": "平台：以 Android 为主要目标平台（已验证），iOS / 桌面端理论可编译但未完整验证。",
+          "checked_at": "2026-10-12T14:35:11+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "3577c1550946d502cc60",
+      "headline": "i18n-inline.nvim：在 Neovim 中检查 Flutter 与 Web 翻译不一致",
+      "summary": "首次项目发现：仓库创建于十月八日。项目文档称支持 Flutter gen-l10n、i18next、next-intl、vue-i18n 与 gettext，可在编辑器中显示翻译并标注缺失或不一致。要求 Neovim 0.10 及以上；动态拼接的键和部分命名空间布局不在覆盖范围内。MIT 许可证文件可查，未实际运行插件。",
+      "category": "移动开发",
+      "verification_status": "project_documented",
+      "score": 79,
+      "relevance": "对使用 Neovim 的多语言应用开发者，可减少代码默认文案与翻译文件不同步的问题；其他编辑器工作流需要自行评估接入成本。",
+      "action": "用一个包含 .arb 或 JSON 翻译的小型测试项目验证缺失键、默认文案和动态键的表现，确认误报率后再考虑纳入检查流程。",
+      "commercial_status": "unknown",
+      "license_evidence": "https://github.com/BitYoungjae/i18n-inline.nvim/blob/master/LICENSE",
+      "sources": [
+        {
+          "label": "BitYoungjae/i18n-inline.nvim · README",
+          "url": "https://github.com/BitYoungjae/i18n-inline.nvim",
+          "excerpt": "It works with i18next, next-intl, vue-i18n, Flutter gen-l10n and gettext,",
+          "checked_at": "2026-10-12T14:35:11+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "065c36482432048a9038",
+      "headline": "greycard：面向 Apple silicon 的 RAW 编辑器研究候选",
+      "summary": "首次项目发现：仓库创建于九月二十二日。README 描述了 RAW 编辑、场景线性色彩流程、GPU 显示和本地处理，并说明提供 Linux、Apple silicon Mac 与 Windows 构建，0.x 版本是测试构建。许可证为 GPL 系列，二次开发分发需要评估相应义务；性能、画质和学习功能均未在本次实测。",
+      "category": "可商用 AI",
+      "verification_status": "project_documented",
+      "score": 76,
+      "relevance": "可作为图片处理与摄影工具的研究样本，评估本地 RAW 工作流和批量导出思路。不能因开源就推定适合直接嵌入闭源产品。",
+      "action": "先审阅许可证及依赖，用备份的 RAW 样本比较导出一致性和内存占用；在决定采用前，核查发布包来源与平台限制。",
+      "commercial_status": "unknown",
+      "license_evidence": "https://github.com/jessolmstead/greycard/blob/master/LICENSE",
+      "sources": [
+        {
+          "label": "jessolmstead/greycard · README",
+          "url": "https://github.com/jessolmstead/greycard",
+          "excerpt": "Releases in 0.x are test builds.",
+          "checked_at": "2026-10-12T14:35:11+08:00"
+        }
+      ]
+    }
+  ]
+}
