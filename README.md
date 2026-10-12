@@ -2,7 +2,7 @@
 
 公开站点：<https://alunapp.cn/news/>。本仓库 Pages 继承账号现有自定义域名，GitHub 默认地址 <https://unknownparticles.github.io/news/> 会使用该域名。
 
-主页关联所有日报、周报、月报、季报和年报；支持分类筛选、关键词搜索和历史归档。每条重点包含来源证据、核验状态、相关性和下一步建议。日报最多五条，允许零条。
+主页直接展示科技前沿、金融市场、政治与政策，以及近期机会，并关联所有日报、周报、月报、季报和年报；支持新闻领域筛选、报告分类、关键词搜索和历史归档。每条新闻在正文和主页均展示“阅读原文”链接，证据摘录单独展开。日报最多五条新闻、三个机会，允许某个栏目没有内容。
 
 ## 运行与发布
 
@@ -55,7 +55,11 @@ python3 -m src.build
 }
 ```
 
-分类和官方来源地址范围见 `config/sources.json`。核验状态：`official_confirmed`（官方已确认）、`project_documented`（项目文档支持）、`unverified`（未核实）、`conflicting`（冲突）。地址范围校验只能防止误填，不能证明摘录支持全部结论；发布者仍需核对具体事实。官方来源只证明其明确陈述的内容，性能和商业效果不能由此推定。
+分类和官方来源地址范围见 `config/sources.json`。核验状态：`official_confirmed`（官方已确认）、`media_reported`（媒体报道）、`project_documented`（项目文档支持）、`unverified`（未核实）、`conflicting`（冲突）。地址范围校验只能防止误填，不能证明摘录支持全部结论；发布者仍需核对具体事实。官方来源只证明其明确陈述的内容，性能和商业效果不能由此推定。政治表态、智库估算和已经生效的政策要分开表述，注明媒体归属。
+
+三类前沿新闻必须提供带时区的 `published_at`，超过二十四小时的内容须用 `context_note` 明确说明回看或补采原因。默认优先近二十四小时新增内容，可从近七日重要官方公告补充前沿背景；禁止把旧报道改写为今日发布。
+
+`opportunities` 为独立列表，日报最多三个、周期报告最多十个。每个机会提供 `opportunity_id`、`headline`、`category`、`score`、`status`、`verification_status`、`signal`、`audience`、`first_step`、`risks`、`time_window` 和 `sources`。`status` 是 `research`（待验证）、`actionable`（可以开始验证）或 `closed`（窗口结束）。真实申请或活动有截止日时提供带时区的 `deadline`，不得把已经结束的窗口标为可行动。机会证据证明变化信号，不证明付费需求或投资回报；公开截止日、已上线状态和许可证也不能由模型编造。重复机会复用原编号，只有提供实质 `update_reason` 才再次收录。
 
 同一事件跨来源合并，并复用稳定的 `event_id`；仅删除追踪参数不能自动识别同一事件。重复新闻默认拒绝导入，确有实质变化时提供 `update_reason`。许可证未知的仓库只作为研究候选；商业推荐需 `commercial_status: eligible` 和公开 `license_evidence`，并明确未验证的部署成本与依赖限制。
 
@@ -73,7 +77,7 @@ python3 -m src.build
 
 本地自动化需要 Mac 开机、应用运行及可用的网络与 GitHub 写权限。GitHub Pages 部署由云端 Actions 执行。自动化失败时保留现有网页，不发布伪造成功内容。采集器只记录限流状态和 Retry-After；自动化在总截止时间内选择稍后重试或跳过该来源，不无限等待。
 
-采集器支持可选环境变量 `GITHUB_TOKEN` 或 `GH_TOKEN`，仅向 GitHub API 使用令牌。`src.collect` 不自动加载 `.env`。AIHOT 结构和日期需运行时检查，过期的 latest 结果不能当作今天的新闻。GitHub Star 快照在 `.local/state.sqlite3`，无七天历史时增量为未知。模型使用当前 Codex 自动化的能力，不需要本项目另行配置模型网关。
+采集器支持可选环境变量 `GITHUB_TOKEN` 或 `GH_TOKEN`，仅向 GitHub API 使用令牌。`src.collect` 不自动加载 `.env`。支持 gzip 和 deflate 解压，解压前后都限制响应大小；DeepMind 的压缩 RSS 能正确解析，HTTP 成功但非 RSS/Atom 的网页会明确报错。AIHOT 结构和日期需运行时检查，过期的 latest 结果不能当作今天的新闻。GitHub Star 快照在 `.local/state.sqlite3`，无七天历史时增量为未知。模型使用当前 Codex 自动化的能力，不需要本项目另行配置模型网关。
 
 个人反馈暂不采集 iMessage 回复。后续本地反馈必须使用固定报告编号加条目编号，影响推荐排序但不改变可信度；不得上传私人反馈或个人业务资料。
 

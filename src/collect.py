@@ -1,5 +1,7 @@
 """采集公开候选资料；失败显式记录，绝不伪造新闻。"""
 import argparse
+import gzip
+import io
 import json
 import os
 import re
@@ -7,6 +9,7 @@ import sqlite3
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
+import zlib
 from datetime import datetime, timedelta
 from email.utils import parsedate_to_datetime
 from zoneinfo import ZoneInfo
@@ -15,7 +18,7 @@ from .common import CONFIG, ROOT, canonical_url, event_id
 
 
 def fetch(url, token=None):
-    headers = {"User-Agent": "PersonalIntelligence/1.0", "Accept": "application/json, application/rss+xml, application/atom+xml, text/xml"}
+    headers = {"User-Agent": "PersonalIntelligence/1.0", "Accept": "application/json, application/rss+xml, application/atom+xml, text/xml", "Accept-Encoding": "gzip, deflate"}
     if token:
         headers["Authorization"] = "Bearer " + token
     request = urllib.request.Request(url, headers=headers)
@@ -23,11 +26,30 @@ def fetch(url, token=None):
         raw = response.read(3_000_001)
         if len(raw) > 3_000_000:
             raise ValueError("响应超过大小限制")
+        encoding = response.headers.get("Content-Encoding", "").lower().strip()
+        if encoding == "gzip" or raw.startswith(b"\x1f\x8b"):
+            with gzip.GzipFile(fileobj=io.BytesIO(raw)) as compressed:
+                raw = compressed.read(3_000_001)
+        elif encoding == "deflate":
+            try:
+                decoder = zlib.decompressobj()
+                raw = decoder.decompress(raw, 3_000_001)
+            except zlib.error:
+                decoder = zlib.decompressobj(-zlib.MAX_WBITS)
+                raw = decoder.decompress(raw, 3_000_001)
+            if not decoder.eof and len(raw) <= 3_000_000:
+                raise ValueError("压缩响应不完整")
+        elif encoding not in {"", "identity"}:
+            raise ValueError("不支持的响应压缩格式")
+        if len(raw) > 3_000_000:
+            raise ValueError("解压响应超过大小限制")
         return raw
 
 
-def feed_items(raw, name, start, end):
+def feed_items(raw, name, start, end, category=None):
     root = ET.fromstring(raw)
+    if root.tag.split("}")[-1] not in {"rss", "RDF", "feed"}:
+        raise ValueError("来源返回的不是 RSS 或 Atom")
     out = []
     for node in root.iter():
         if node.tag.split("}")[-1] not in {"item", "entry"}:
@@ -56,7 +78,8 @@ def feed_items(raw, name, start, end):
             continue
         text = fields.get("description") or fields.get("summary") or fields.get("content") or ""
         out.append({"event_id": event_id(url), "title": fields.get("title", ""), "url": url,
-                    "source": name, "published_at": stamp.isoformat(), "content": re.sub(r"<[^>]+>", " ", text)[:12000]})
+                    "source": name, "published_at": stamp.isoformat(), "category": category,
+                    "content": re.sub(r"<[^>]+>", " ", text)[:12000]})
     return out[:30]
 
 
@@ -78,7 +101,7 @@ def collect(now, output, since=None):
             result["source_results"].append(failure)
     for source in CONFIG["rss"]:
         def add_feed(raw, source=source):
-            items = feed_items(raw, source["name"], start, now)
+            items = feed_items(raw, source["name"], start, now, source.get("category"))
             result["articles"].extend(items)
             return len(items)
         attempt(source["name"], source["url"], add_feed)

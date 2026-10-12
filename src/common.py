@@ -2,14 +2,33 @@
 import hashlib
 import json
 import re
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 KINDS = {"daily": "日报", "weekly": "周报", "monthly": "月报", "quarterly": "季报", "yearly": "年报"}
 CONFIG = json.loads((ROOT / "config/sources.json").read_text())
-STATUSES = {"official_confirmed": "官方已确认", "project_documented": "项目文档支持", "unverified": "尚未核实", "conflicting": "信息存在冲突"}
+STATUSES = {"official_confirmed": "官方已确认", "media_reported": "媒体报道", "project_documented": "项目文档支持", "unverified": "尚未核实", "conflicting": "信息存在冲突"}
+FRONTIER_CATEGORIES = {"科技前沿", "金融市场", "政治与政策"}
+
+
+def validate_evidence(entry):
+    sources = entry["sources"]
+    if not isinstance(sources, list) or not sources:
+        raise ValueError("内容必须有证据链接")
+    if entry["verification_status"] not in STATUSES:
+        raise ValueError("核验状态错误")
+    for source in sources:
+        safe_url(source["url"])
+        if not source["label"].strip() or not source.get("excerpt", "").strip():
+            raise ValueError("证据必须有名称和支持结论的原文摘录")
+        if datetime.fromisoformat(source["checked_at"]).tzinfo is None:
+            raise ValueError("核验时间必须包含时区")
+    if entry["verification_status"] == "official_confirmed" and not any(
+        s["url"].startswith(tuple(CONFIG["official_url_prefixes"])) for s in sources
+    ):
+        raise ValueError("官方确认需要已配置的官方证据地址；还需人工核对具体结论")
 
 
 def safe_url(url):
@@ -77,23 +96,46 @@ def validate_report(report):
                 raise ValueError("每条新闻必须包含标题、摘要、影响与行动建议")
         if isinstance(item["score"], bool) or not isinstance(item["score"], (int, float)) or not 0 <= item["score"] <= 100:
             raise ValueError("评分必须在零至一百分之间")
-        sources = item["sources"]
-        if not sources:
-            raise ValueError("新闻必须有证据链接")
-        for source in sources:
-            safe_url(source["url"])
-            if not source["label"].strip() or not source.get("excerpt", "").strip():
-                raise ValueError("证据必须有名称和支持结论的原文摘录")
-            if datetime.fromisoformat(source["checked_at"]).tzinfo is None:
-                raise ValueError("核验时间必须包含时区")
-        if item["verification_status"] == "official_confirmed" and not any(
-            s["url"].startswith(tuple(CONFIG["official_url_prefixes"])) for s in sources
-        ):
-            raise ValueError("官方确认需要已配置的官方证据地址；还需人工核对具体结论")
+        validate_evidence(item)
+        if item["category"] in FRONTIER_CATEGORIES or item.get("published_at"):
+            published = datetime.fromisoformat(item["published_at"])
+            if published.tzinfo is None or published > stamp:
+                raise ValueError("新闻发布时间必须带时区且不能晚于报告生成时间")
+            if report["kind"] == "daily" and stamp - published > timedelta(hours=24) and not item.get("context_note"):
+                raise ValueError("超过二十四小时的新闻必须说明回看或补采原因")
         if item.get("commercial_status") == "eligible" and not item.get("license_evidence"):
             raise ValueError("商业推荐必须提供许可证证据")
         if item.get("license_evidence"):
             safe_url(item["license_evidence"])
+    opportunities = report.get("opportunities", [])
+    if not isinstance(opportunities, list) or len(opportunities) > (3 if report["kind"] == "daily" else 10):
+        raise ValueError("机会条数超出限制")
+    identities = set()
+    for opportunity in opportunities:
+        identity = opportunity["opportunity_id"]
+        if not re.fullmatch(r"[a-z0-9-]{8,80}", identity) or identity in identities:
+            raise ValueError("机会编号错误或重复")
+        identities.add(identity)
+        for key in ("headline", "signal", "audience", "first_step", "risks", "time_window"):
+            if not isinstance(opportunity[key], str) or not opportunity[key].strip():
+                raise ValueError("机会必须说明信号、适用人群、第一步、风险与时间窗口")
+        if opportunity["category"] not in CONFIG["categories"]:
+            raise ValueError("机会分类错误")
+        if opportunity.get("status") not in {"research", "actionable", "closed"}:
+            raise ValueError("机会状态错误")
+        if isinstance(opportunity["score"], bool) or not isinstance(opportunity["score"], (int, float)) or not 0 <= opportunity["score"] <= 100:
+            raise ValueError("机会评分错误")
+        validate_evidence(opportunity)
+        if opportunity.get("deadline"):
+            deadline = datetime.fromisoformat(opportunity["deadline"])
+            if deadline.tzinfo is None:
+                raise ValueError("机会截止时间必须带时区")
+            if deadline < stamp and opportunity["status"] != "closed":
+                raise ValueError("已截止的机会不能标记为可行动")
+        if opportunity.get("commercial_status") == "eligible" and not opportunity.get("license_evidence"):
+            raise ValueError("商业机会必须提供许可证证据")
+        if opportunity.get("license_evidence"):
+            safe_url(opportunity["license_evidence"])
     return report
 
 

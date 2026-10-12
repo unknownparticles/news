@@ -3,7 +3,9 @@ import html
 import json
 import os
 import shutil
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from .common import CONFIG, KINDS, ROOT, STATUSES, load_reports
 
@@ -19,10 +21,10 @@ def report_url(report):
 
 
 def frame(title, body, prefix="", reports=None):
-    nav = ''.join(f'<a href="{prefix}archive/{kind}.html">{label}</a>' for kind, label in KINDS.items())
+    nav = f'<a href="{prefix}index.html#latest-news">前沿新闻</a><a href="{prefix}index.html#opportunities">机会</a>' + ''.join(f'<a href="{prefix}archive/{kind}.html">{label}</a>' for kind, label in KINDS.items())
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="聚焦 AI 编程、开源项目、工作室业务、Solana 基础设施与移动开发的公开情报简报。">
+<meta name="description" content="科技前沿、金融市场、政治政策与近期机会，每条内容保留原文、证据、影响和行动建议。">
 <title>{esc(title)} · 情报观察室</title><link rel="stylesheet" href="{prefix}styles.css"></head>
 <body><header class="site-header"><a class="brand" href="{prefix}index.html"><span class="brand-mark">情</span>情报观察室<span class="brand-en">INTELLIGENCE NOTES</span></a>
 <nav aria-label="报告导航">{nav}<a class="github" href="https://github.com/unknownparticles/news">GitHub ↗</a></nav></header>
@@ -34,10 +36,59 @@ def card(report, prefix=""):
     coverage = report["coverage"]
     partial = coverage["available_days"] < coverage["expected_days"]
     text = f"覆盖 {coverage['available_days']}/{coverage['expected_days']} 天" if partial else "日期覆盖完整"
-    return f'''<a class="report-card" href="{prefix}{report_url(report)}" data-kind="{report['kind']}" data-search="{esc(report['title'] + ' ' + report['summary'] + ' ' + ' '.join(i['headline'] for i in report['items']))}">
+    return f'''<a class="report-card" href="{prefix}{report_url(report)}" data-kind="{report['kind']}" data-search="{esc(report['title'] + ' ' + report['summary'] + ' ' + ' '.join(i['headline'] for i in report['items'] + report.get('opportunities', [])))}">
 <div class="card-top"><span class="type-label">{KINDS[report['kind']]}</span><span class="coverage {'partial' if partial else ''}">{text}</span></div>
 <h3>{esc(report['title'])}</h3><p>{esc(report['summary'])}</p>
-<div class="card-bottom"><span>{esc(report['period']['start'])} — {esc(report['period']['end'])}</span><span>{len(report['items'])} 条 <b>↗</b></span></div></a>'''
+<div class="card-bottom"><span>{esc(report['period']['start'])} — {esc(report['period']['end'])}</span><span>{len(report['items'])} 条新闻 · {len(report.get('opportunities', []))} 个机会 <b>↗</b></span></div></a>'''
+
+
+def time_label(value):
+    if not value:
+        return "发布时间未记录"
+    return datetime.fromisoformat(value).astimezone(ZoneInfo('Asia/Shanghai')).strftime('%m-%d %H:%M') + ' 北京时间'
+
+
+def original_links(entry):
+    return '<div class="original-links" aria-label="原文链接">' + ''.join(f'<a href="{esc(source["url"])}" target="_blank" rel="noopener noreferrer">阅读原文 · {esc(source["label"])} ↗</a>' for source in entry['sources']) + '</div>'
+
+
+def news_group(category):
+    return {'金融市场': 'finance', '政治与政策': 'politics'}.get(category, 'technology')
+
+
+def headline_card(item, report, number, prefix=''):
+    return f'''<article class="headline-card" data-news-category="{news_group(item['category'])}">
+<div class="item-meta"><span>{esc(item['category'])}</span><span class="status">{STATUSES[item['verification_status']]}</span></div>
+<h3><a href="{prefix}{report_url(report)}#item-{number}">{esc(item['headline'])}</a></h3>
+<p>{esc(item['summary'])}</p><small>{esc(time_label(item.get('published_at')))}</small>
+{f'<p class="context-note">{esc(item["context_note"])}</p>' if item.get('context_note') else ''}
+{original_links(item)}<a class="text-link" href="{prefix}{report_url(report)}#item-{number}">查看影响与行动建议 →</a></article>'''
+
+
+def opportunity_state(opportunity, at=None):
+    at = at or datetime.now(ZoneInfo('Asia/Shanghai'))
+    if opportunity.get('deadline') and datetime.fromisoformat(opportunity['deadline']) < at:
+        return 'closed'
+    return opportunity['status']
+
+
+def opportunity_card(opportunity, report, prefix=''):
+    labels = {'research': '待验证机会', 'actionable': '可开始验证', 'closed': '窗口已结束'}
+    return f'''<article class="opportunity-card"><div class="item-meta"><span>{esc(opportunity['category'])}</span><span class="status">{labels[opportunity_state(opportunity)]}</span></div>
+<h3><a href="{prefix}{report_url(report)}#opportunity-{opportunity['opportunity_id']}">{esc(opportunity['headline'])}</a></h3>
+<p>{esc(opportunity['signal'])}</p><div class="opportunity-step"><b>第一步</b><p>{esc(opportunity['first_step'])}</p></div>
+<p class="opportunity-risk"><b>风险：</b>{esc(opportunity['risks'])}</p><small>{esc(opportunity['time_window'])} · 发现于 {esc(report['period']['end'])}</small>
+{original_links(opportunity)}<a class="text-link" href="{prefix}{report_url(report)}#opportunity-{opportunity['opportunity_id']}">查看适用人群与完整分析 →</a></article>'''
+
+
+def opportunity_html(opportunity, prefix=''):
+    labels = {'research': '待验证机会', 'actionable': '可开始验证', 'closed': '窗口已结束'}
+    sources = ''.join(f'<li><a href="{esc(s["url"])}" target="_blank" rel="noopener noreferrer">{esc(s["label"])} ↗</a><blockquote>{esc(s["excerpt"])}</blockquote><small>核验于 {esc(time_label(s["checked_at"]))}</small></li>' for s in opportunity['sources'])
+    backlink = f'<a href="{prefix}reports/daily/{esc(opportunity["daily_report"])}.html">查看收录日报 →</a>' if opportunity.get('daily_report') else ''
+    return f'''<article class="opportunity-detail" id="opportunity-{opportunity['opportunity_id']}"><div class="item-meta"><span>{esc(opportunity['category'])}</span><span class="status">{labels[opportunity_state(opportunity)]}</span><span>证据信号：{STATUSES[opportunity['verification_status']]}</span></div>
+<h3>{esc(opportunity['headline'])}</h3><p>{esc(opportunity['signal'])}</p>{original_links(opportunity)}
+<dl><dt>适合谁</dt><dd>{esc(opportunity['audience'])}</dd><dt>第一步</dt><dd>{esc(opportunity['first_step'])}</dd><dt>窗口</dt><dd>{esc(opportunity['time_window'])}</dd><dt>风险与不确定性</dt><dd>{esc(opportunity['risks'])}</dd></dl>
+<details><summary>支持信号的原文摘录</summary><ul class="evidence">{sources}</ul></details>{backlink}</article>'''
 
 
 def item_html(item, number, prefix="", daily=False):
@@ -53,8 +104,10 @@ def item_html(item, number, prefix="", daily=False):
     return f'''<article class="news-item" id="item-{number}"><div class="item-number">{number:02d}</div><div class="item-content">
 <div class="item-meta"><span>{esc(item['category'])}</span><span class="status">{STATUSES[item['verification_status']]}</span><span>相关度 {item['score']}</span></div>
 <h2>{esc(item['headline'])}</h2><p>{esc(item['summary'])}</p>{note}
+<p class="published-at">原文发布：{esc(time_label(item.get('published_at')))}</p>
+{f'<p class="context-note">{esc(item["context_note"])}</p>' if item.get('context_note') else ''}{original_links(item)}
 <div class="analysis"><div><h4>为什么值得关注</h4><p>{esc(item['relevance'])}</p></div><div><h4>下一步</h4><p>{esc(item['action'])}</p></div></div>
-{license_note}<details><summary>来源与证据 · {len(item['sources'])} 个</summary><ul class="evidence">{sources}</ul></details>{backlink}</div></article>'''
+{license_note}<details><summary>证据摘录与核验时间 · {len(item['sources'])} 个</summary><ul class="evidence">{sources}</ul></details>{backlink}</div></article>'''
 
 
 def build(output=ROOT / "docs", report_root=ROOT / "reports"):
@@ -75,12 +128,18 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports"):
     latest_block = f'<section class="latest"><div><span class="eyebrow">LATEST BRIEF / 最新简报</span><h2>{esc(latest_daily["title"])}</h2><p>{esc(latest_daily["summary"])}</p></div><a class="text-link" href="{report_url(latest_daily)}">展开阅读 ↗</a></section>' if latest_daily else '<section class="latest"><div><span class="eyebrow">LATEST BRIEF / 最新简报</span><h2>首份日报准备中</h2><p>完成公开来源采集与核验后，将在这里更新。</p></div></section>'
     filter_buttons = '<button class="filter active" data-filter="all" aria-pressed="true">全部</button>' + ''.join(f'<button class="filter" data-filter="{kind}" aria-pressed="false">{label}</button>' for kind, label in KINDS.items())
     cards = ''.join(card(r) for r in reports) or '<p class="empty">暂无已发布报告。后续各期将自动关联到这里。</p>'
-    body = f'''<section class="hero"><div class="hero-copy"><span class="eyebrow"><span class="live-dot"></span> PERSONAL INTELLIGENCE / 持续更新</span><h1>把信息，<br>变成<span>下一步。</span></h1><p>每天少一点噪声，多一点值得行动的判断。<br>从 AI 工具到开源项目，记录变化，也追踪长期趋势。</p>{cta}</div>
-<aside class="hero-note"><span class="note-index">01 / 观察原则</span><h2>相关。<br>可信。<br>能行动。</h2><p>保留原文与证据<br>区分事实和推测<br>有价值，才值得占用注意力</p><span class="note-footer">DAILY → YEARLY ↗</span></aside></section>
-<section class="period-stats" aria-label="各类报告数量">{stats}</section>{latest_block}
+    news_cards = ''.join(headline_card(item, latest_daily, i) for i, item in enumerate(latest_daily['items'], 1)) if latest_daily else ''
+    opportunity_cards = ''.join(opportunity_card(opportunity, latest_daily) for opportunity in latest_daily.get('opportunities', [])) if latest_daily else ''
+    content = f'''<section id="latest-news" class="frontier-section"><div class="section-heading"><div><span class="eyebrow">THE FRONTIER / {esc(latest_daily['period']['end']) if latest_daily else '持续更新'}</span><h2>科技、金融与政治前沿</h2></div><a class="text-link" href="archive/news.html">全部新闻 →</a></div>
+<div class="news-filters" aria-label="新闻领域筛选"><button class="filter active" data-news-filter="all" aria-pressed="true">全部新闻</button><button class="filter" data-news-filter="technology" aria-pressed="false">科技</button><button class="filter" data-news-filter="finance" aria-pressed="false">金融</button><button class="filter" data-news-filter="politics" aria-pressed="false">政治</button></div>
+<div class="headline-grid">{news_cards or '<p class="empty">暂无通过核验的新闻。</p>'}</div><p id="no-news" class="empty" hidden>本期没有该领域通过筛选的新闻。</p></section>
+<section id="opportunities" class="opportunities-section"><div class="section-heading"><div><span class="eyebrow">OPPORTUNITY WATCH</span><h2>近期机会，先小步验证。</h2></div><a class="text-link" href="archive/opportunities.html">机会归档 →</a></div><p class="section-note">从公开变化寻找产品、服务与开发提效的切入点。证据支持变化信号，实际需求与回报仍需验证。</p><div class="opportunity-grid">{opportunity_cards or '<p class="empty">本期暂无足够证据支持的机会；不为凑数推荐。</p>'}</div></section>'''
+    body = f'''<section class="hero"><div class="hero-copy"><span class="eyebrow"><span class="live-dot"></span> PERSONAL INTELLIGENCE / 持续更新</span><h1>看见前沿，<br>找到<span>机会。</span></h1><p>科技、金融、政治，每天抓住值得关注的变化。<br>直达新闻原文，分清事实与推测，再决定下一步。</p>{cta}<a class="hero-opportunity-link" href="#opportunities">研究近期机会 ↓</a></div>
+<aside class="hero-note"><span class="note-index">最新速览 / {esc(latest_daily['period']['end']) if latest_daily else '准备中'}</span><h2>{len(latest_daily['items']) if latest_daily else 0} 条新闻<br>{len(latest_daily.get('opportunities', [])) if latest_daily else 0} 个机会</h2><p>科技 · 金融 · 政治<br>原文、发布时间与影响分析<br>机会附验证步骤和不确定性</p><a class="note-footer" href="#latest-news">浏览最新前沿 ↓</a></aside></section>
+{content}<section class="period-stats" aria-label="各类报告数量">{stats}</section>{latest_block}
 <section id="archive"><div class="section-heading"><div><span class="eyebrow">THE ARCHIVE</span><h2>从今天，看到更远。</h2></div><label class="search-label"><span>搜索报告</span><input id="report-search" type="search" placeholder="搜索主题、标题或日期…"></label></div>
 <div class="filters" aria-label="筛选报告类型">{filter_buttons}<span id="result-count" aria-live="polite"></span></div><div class="report-grid">{cards}</div><p id="no-results" class="empty" hidden>没有匹配的报告，请换一个关键词。</p></section>
-<section class="topics"><span class="eyebrow">FOCUS AREAS / 关注领域</span><div>{''.join(f'<span>{esc(c)}</span>' for c in CONFIG['categories'])}</div><p>日报保留最多五条重点；周、月、季、年报告汇总已归档内容，并明确标注缺失日期。</p></section>'''
+<section class="topics"><span class="eyebrow">FOCUS AREAS / 关注领域</span><div>{''.join(f'<span>{esc(c)}</span>' for c in CONFIG['categories'])}</div><p>日报保留最多五条新闻与三个机会；周期报告汇总已归档内容，并明确标注缺失日期。</p></section>'''
     (output / "index.html").write_text(frame("主页", body))
     for kind, label in KINDS.items():
         target = output / "archive" / (kind + ".html")
@@ -89,6 +148,16 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports"):
         timing = {"daily": "每日早晨更新", "weekly": "每周一汇总上一自然周", "monthly": "每月首日汇总上月", "quarterly": "每季首日汇总上一季度", "yearly": "每年首日汇总上一年"}[kind]
         body = f'<section class="archive-hero"><a class="back" href="../index.html">← 返回主页</a><span class="eyebrow">{kind.upper()} ARCHIVE</span><h1>{label}归档<span> / {len(subset):02d}</span></h1><p>{timing}。周期结束后生成；历史不足时展示实际覆盖范围。</p></section><div class="report-grid">' + (''.join(card(r, '../') for r in subset) or f'<p class="empty">暂无{label}。首个有日报记录的周期结束后，将生成本期汇总。</p>') + '</div>'
         target.write_text(frame(label + "归档", body, "../"))
+    daily_reports = [r for r in reports if r['kind'] == 'daily']
+    all_news = ''.join(headline_card(item, report, i, '../') for report in daily_reports for i, item in enumerate(report['items'], 1))
+    archive_header = '<section class="archive-hero"><a class="back" href="../index.html">← 返回主页</a><span class="eyebrow">NEWS ARCHIVE</span><h1>前沿新闻归档</h1><p>按日报日期回溯新闻，直接阅读原文或查看影响分析。</p></section>'
+    (output / 'archive/news.html').write_text(frame('前沿新闻归档', archive_header + '<div class="headline-grid">' + (all_news or '<p class="empty">暂无新闻。</p>') + '</div>', '../'))
+    unique_opportunities = {}
+    for report in daily_reports:
+        for opportunity in report.get('opportunities', []):
+            unique_opportunities.setdefault(opportunity['opportunity_id'], (opportunity, report))
+    archive_header = '<section class="archive-hero"><a class="back" href="../index.html">← 返回主页</a><span class="eyebrow">OPPORTUNITY ARCHIVE</span><h1>机会观察归档</h1><p>保留发现日期、证据、验证步骤和不确定性。历史窗口不代表当前仍然开放。</p></section>'
+    (output / 'archive/opportunities.html').write_text(frame('机会归档', archive_header + '<div class="opportunity-grid">' + (''.join(opportunity_card(opportunity, report, '../') for opportunity, report in unique_opportunities.values()) or '<p class="empty">暂无机会。</p>') + '</div>', '../'))
     for report in reports:
         target = output / report_url(report)
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -101,7 +170,8 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports"):
             window = f'<p class="collection-window">采集窗口：{esc(report["collection_window"]["start"])} 至 {esc(report["collection_window"]["end"])}</p>'
         source_failures = report.get("source_failures", [])
         failures = f'<p class="coverage-warning">部分来源未能采集：{esc("、".join(source_failures))}。本期信息覆盖有限。</p>' if source_failures else ''
-        body = f'<div class="report-header"><a class="back" href="../../archive/{report["kind"]}.html">← 返回{KINDS[report["kind"]]}归档</a><span class="eyebrow">{report["kind"].upper()} BRIEF / {KINDS[report["kind"]]}</span><h1>{esc(report["title"])}</h1><p class="report-date">{esc(report["period"]["start"])} — {esc(report["period"]["end"])} · {len(report["items"])} 条重点</p><p class="report-summary">{esc(report["summary"])}</p>{window}{warning}{failures}</div><div class="news-list">' + (''.join(item_html(item, i, '../../', report['kind'] == 'daily') for i, item in enumerate(report['items'], 1)) or '<p class="empty">本期没有通过筛选的重点新闻。</p>') + '</div>'
+        body = f'<div class="report-header"><a class="back" href="../../archive/{report["kind"]}.html">← 返回{KINDS[report["kind"]]}归档</a><span class="eyebrow">{report["kind"].upper()} BRIEF / {KINDS[report["kind"]]}</span><h1>{esc(report["title"])}</h1><p class="report-date">{esc(report["period"]["start"])} — {esc(report["period"]["end"])} · {len(report["items"])} 条新闻 · {len(report.get("opportunities", []))} 个机会</p><p class="report-summary">{esc(report["summary"])}</p>{window}{warning}{failures}<nav class="report-sections" aria-label="日报章节"><a href="#frontier-news">前沿新闻 ↓</a><a href="#report-opportunities">近期机会 ↓</a></nav></div><section id="frontier-news"><h2 class="report-section-title">前沿新闻</h2><div class="news-list">' + (''.join(item_html(item, i, '../../', report['kind'] == 'daily') for i, item in enumerate(report['items'], 1)) or '<p class="empty">本期没有通过筛选的重点新闻。</p>') + '</div></section>'
+        body += '<section id="report-opportunities" class="report-opportunities"><h2 class="report-section-title">近期机会与验证步骤</h2>' + (''.join(opportunity_html(opportunity, '../../') for opportunity in report.get('opportunities', [])) or '<p class="empty">本期没有足够证据支持的新机会。</p>') + '</section>'
         if report.get('daily_reports'):
             body += '<section class="daily-links"><h2>本期日报索引</h2>' + ''.join(f'<a href="../daily/{esc(identity)}.html">{esc(identity)} →</a>' for identity in report['daily_reports']) + '</section>'
         if report.get('analysis'):
@@ -111,7 +181,7 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports"):
     data_dir = output / "data"
     data_dir.mkdir(exist_ok=True)
     (data_dir / "reports.json").write_text(json.dumps(reports, ensure_ascii=False, indent=2) + "\n")
-    sitemap = [SITE_URL] + [SITE_URL + 'archive/' + kind + '.html' for kind in KINDS] + [SITE_URL + report_url(r) for r in reports]
+    sitemap = [SITE_URL] + [SITE_URL + 'archive/' + kind + '.html' for kind in [*KINDS, 'news', 'opportunities']] + [SITE_URL + report_url(r) for r in reports]
     (output / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{esc(url)}</loc></url>' for url in sitemap) + '</urlset>')
     (output / 'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: ' + SITE_URL + 'sitemap.xml\n')
     print(f"生成站点：{len(reports)} 份报告、五类归档与主页")

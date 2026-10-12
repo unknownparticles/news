@@ -1,103 +1,183 @@
 {
   "id": "2026-10-12",
   "kind": "daily",
-  "title": "2026-10-12 · MCP、摄影工具与多语言开发",
+  "title": "2026-10-12 · 科技、金融、政治与三项机会",
   "period": {
     "start": "2026-10-12",
     "end": "2026-10-12"
   },
-  "generated_at": "2026-10-12T14:35:11+08:00",
+  "generated_at": "2026-10-12T15:01:20+08:00",
   "collection_window": {
-    "start": "2026-10-11T08:30:00+08:00",
-    "end": "2026-10-12T14:35:11+08:00"
+    "start": "2026-10-11T14:53:08.067029+08:00",
+    "end": "2026-10-12T14:53:08.067029+08:00"
   },
   "coverage": {
     "expected_days": 1,
     "available_days": 1,
     "missing_dates": []
   },
-  "summary": "首期手动发布：从近三十天新建仓库中筛选四个研究候选，核对项目说明与许可证。它们并非全部在今天发布；没有把 Star 当作商业价值，也未宣称已验证运行效果。",
-  "source_failures": [
-    "Google DeepMind RSS（返回非订阅内容）"
-  ],
+  "summary": "本期覆盖科技、金融与政治：三条近二十四小时报道，补充两条近七日官方前沿或宏观公告，并明确标注原始发布日期。另列三个从证据信号推导的待验证机会，提供适用人群、第一步与风险。DeepMind 官方 RSS 已恢复正常。",
+  "source_failures": [],
   "items": [
     {
-      "event_id": "e06cd6bc5ced46f4ba81",
-      "headline": "CodePier：自托管 MCP 将开发电脑接入 AI 工作流",
-      "summary": "首次项目发现：仓库创建于九月二十日。项目文档描述了 Hub 与本机 Agent 的结构，可读取项目、运行测试并继续编码会话；MIT 许可证文件可查。源码、命令结果和会话会按流程传给 Hub 或客户端，Shell 权限也不等于项目目录沙箱。当前仅核对文档，未安装或验证执行效果。",
-      "category": "AI 编程",
-      "verification_status": "project_documented",
-      "score": 86,
-      "relevance": "可用于研究远程开发与 AI 工具接入，评估价值时应同时衡量运维成本和授权边界，不能只比较功能列表。",
-      "action": "先阅读 SECURITY.md 和第三方依赖声明，再用合成项目验证只读访问；部署到公网前核对 HTTPS、身份认证和执行权限。",
-      "commercial_status": "unknown",
-      "license_evidence": "https://github.com/cyeinfpro/codepier/blob/main/LICENSE",
+      "event_id": "2ee55c894d54d6ef378c",
+      "headline": "EmbeddingGemma 2：7.4 亿参数，把文本、图像、音视频放进同一检索空间",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-06T19:57:04+00:00",
+      "context_note": "近七日前沿回看：官网日期为 10 月 6 日，对应北京时间 10 月 7 日，非今日发布。",
+      "score": 94,
+      "summary": "DeepMind 官方发布 EmbeddingGemma 2，基于 Gemma 4，支持代码、图像、视频、音频与文本的统一嵌入，参数量为 7.4 亿，公告声明采用 Apache 2.0 许可。端侧检索与离线 RAG 是其目标用途；实际效果和设备开销仍需自行测试。",
+      "relevance": "多模态素材库、代码检索和本地知识助手可以共用检索模型，值得评估能否减少外部 API 调用与多模型维护成本。",
+      "action": "先用非敏感的文本、图片和短音频构建小型检索样本，比较召回质量、延迟、内存与现有方案，再决定是否接入。",
       "sources": [
         {
-          "label": "cyeinfpro/codepier · README",
-          "url": "https://github.com/cyeinfpro/codepier",
-          "excerpt": "CodePier 是自托管的 MCP 服务和开发面板。",
-          "checked_at": "2026-10-12T14:35:11+08:00"
+          "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+          "label": "Google DeepMind · 官方公告",
+          "excerpt": "Today, we’re launching EmbeddingGemma 2, expanding beyond text to unify code, images, video, and audio in a shared embedding space.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
         }
       ]
     },
     {
-      "event_id": "d5f93dc894e6a07e4265",
-      "headline": "SnapLink：Flutter 摄影助手，蓝牙与跨平台能力仍需区分",
-      "summary": "首次项目发现：仓库创建于十月七日。README 描述了纯 Dart PTP/IP 协议、尼康相机连接、取景监看、照片下载和水印功能，并明确 Android 为主要已验证平台，蓝牙功能规划中，iOS 与桌面端未完整验证。仓库提供 MIT 许可证；本次未进行设备实测。",
-      "category": "移动开发",
-      "verification_status": "project_documented",
-      "score": 82,
-      "relevance": "适合研究移动端相机互联和摄影工作流，尤其是协议层、传输与界面分离；项目的自述能力不能直接当作全部机型的兼容保证。",
-      "action": "先核查目标相机机型和手机平台，用测试照片验证连接稳定性、RAW 传输和 EXIF 保留；商业复用前检查依赖与品牌素材。",
-      "commercial_status": "unknown",
-      "license_evidence": "https://github.com/lyb82ndkf-lab/Nikon-SnapLink/blob/master/LICENSE",
+      "event_id": "f2dd1820d7a7f622c574",
+      "headline": "金融：英国预算前，IFS 警告支出计划可能面临最高 350 亿英镑缺口",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T06:23:50+00:00",
+      "score": 83,
+      "summary": "BBC 报道，英国财政研究所认为，要满足防务和医疗等支出承诺，政府可能需要补充最高 350 亿英镑资金，并要求 10 月 28 日预算给出可信计划。这是智库的条件性估算，财政部未确认该数字；不能据此断言某项税收政策必然出台。",
+      "relevance": "预算、通胀和借贷成本的变化可能影响跨境客户支出与经营成本，应关注实际预算文件及其与预测的差异。",
+      "action": "将 10 月 28 日预算列入观察日历，届时对照正式支出与税收措施；当前仅整理可能受影响的成本项，不据此作单向行情预测。",
       "sources": [
         {
-          "label": "lyb82ndkf-lab/Nikon-SnapLink · README",
-          "url": "https://github.com/lyb82ndkf-lab/Nikon-SnapLink",
-          "excerpt": "平台：以 Android 为主要目标平台（已验证），iOS / 桌面端理论可编译但未完整验证。",
-          "checked_at": "2026-10-12T14:35:11+08:00"
+          "url": "https://www.bbc.co.uk/news/articles/cm78pwdp3n5qo",
+          "label": "BBC · 英国预算与财政研究所",
+          "excerpt": "Chancellor John Healey is facing a funding gap of up to £35bn and must set out \"credible\" spending plans in his first Budget on 28 October, an influential think tank has warned.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
         }
       ]
     },
     {
-      "event_id": "3577c1550946d502cc60",
-      "headline": "i18n-inline.nvim：在 Neovim 中检查 Flutter 与 Web 翻译不一致",
-      "summary": "首次项目发现：仓库创建于十月八日。项目文档称支持 Flutter gen-l10n、i18next、next-intl、vue-i18n 与 gettext，可在编辑器中显示翻译并标注缺失或不一致。要求 Neovim 0.10 及以上；动态拼接的键和部分命名空间布局不在覆盖范围内。MIT 许可证文件可查，未实际运行插件。",
-      "category": "移动开发",
-      "verification_status": "project_documented",
-      "score": 79,
-      "relevance": "对使用 Neovim 的多语言应用开发者，可减少代码默认文案与翻译文件不同步的问题；其他编辑器工作流需要自行评估接入成本。",
-      "action": "用一个包含 .arb 或 JSON 翻译的小型测试项目验证缺失键、默认文案和动态键的表现，确认误报率后再考虑纳入检查流程。",
-      "commercial_status": "unknown",
-      "license_evidence": "https://github.com/BitYoungjae/i18n-inline.nvim/blob/master/LICENSE",
+      "event_id": "8607dfc2162df5a7dbf0",
+      "headline": "政治：美国进口俄罗斯柴油计划引发跨党派反对，能源与制裁政策交织",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-11T23:18:45+00:00",
+      "score": 87,
+      "summary": "BBC 报道特朗普提出从俄罗斯获取柴油，七名来自两党的参议员反对该安排并认为其违反美国法律。政府与议员对合法性的说法不同；本期尚未逐条核对正式制裁文件，也未验证承诺数量的实际交付。",
+      "relevance": "能源供给、地缘冲突与制裁执行会共同影响运输及跨境经营的不确定性。政治承诺、法律授权和实际执行需要分别跟踪。",
+      "action": "继续核对美国财政部正式制裁或许可文件，以及交付证据；对经营成本做情景分析，避免把政治表态直接转成交易信号。",
       "sources": [
         {
-          "label": "BitYoungjae/i18n-inline.nvim · README",
-          "url": "https://github.com/BitYoungjae/i18n-inline.nvim",
-          "excerpt": "It works with i18next, next-intl, vue-i18n, Flutter gen-l10n and gettext,",
-          "checked_at": "2026-10-12T14:35:11+08:00"
+          "url": "https://www.bbc.co.uk/news/articles/cjn5v21py07vo",
+          "label": "BBC · 美国能源与制裁政策",
+          "excerpt": "A group of seven senators - four Republicans and three Democrats – on Sunday said the deal violated US laws, urging Trump to \"reverse course\".",
+          "checked_at": "2026-10-12T15:01:20+08:00"
         }
       ]
     },
     {
-      "event_id": "065c36482432048a9038",
-      "headline": "greycard：面向 Apple silicon 的 RAW 编辑器研究候选",
-      "summary": "首次项目发现：仓库创建于九月二十二日。README 描述了 RAW 编辑、场景线性色彩流程、GPU 显示和本地处理，并说明提供 Linux、Apple silicon Mac 与 Windows 构建，0.x 版本是测试构建。许可证为 GPL 系列，二次开发分发需要评估相应义务；性能、画质和学习功能均未在本次实测。",
+      "event_id": "62d26b448adb5f8d0855",
+      "headline": "科技治理：微软总裁呼吁 AI 安全规则、事件通报与独立评估",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-11T23:07:35+00:00",
+      "score": 89,
+      "summary": "微软总裁 Brad Smith 在 BBC 访谈中主张为 AI 建立安全规则，讨论失控事件通报、独立评估和紧急停止机制。这是行业人士的监管主张，报道本身不能证明某项新法律已经生效。",
+      "relevance": "对准备部署能够写文件、执行命令或调用外部系统的 AI 团队，权限边界、可停止性和审计记录已经是实际产品设计问题。",
+      "action": "梳理现有 AI 自动化的权限、日志和停用入口，在测试环境验证错误操作如何中止与回溯；法律义务以正式法规为准。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6rmy7zmvx3lo",
+          "label": "BBC · 微软总裁访谈",
+          "excerpt": "Brad Smith said there needed to be global safety rules in place, including a legal obligation to tell a \"victim\" if their system is breached by a rogue AI agent as well as deciding when outside evaluators should sign off on an AI product before it is released.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "0d84bbab316fddb29a83",
+      "headline": "宏观数据：美联储发布 2025 年消费者财务调查，提供家庭资产负债研究素材",
+      "category": "金融市场",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-09T14:00:00+00:00",
+      "context_note": "近七日重要数据回看：10 月 9 日发布，调查对应 2025 年，非今日行情。",
+      "score": 78,
+      "summary": "美联储发布 2025 年消费者财务调查及 2022—2025 年变化报告，覆盖家庭收入、净资产、资产、债务和财务脆弱性，并提供交互图表和研究数据。它是结构性统计资料，不是实时价格数据；本期未逐项验证报告里的数值结论。",
+      "relevance": "可用于研究不同家庭的财务结构、验证宏观叙事，也为公开数据解释工具提供素材；分析应考虑样本、权重和统计口径。",
+      "action": "先阅读官方摘要、数据说明和图表，把每个结论对应到指标定义与年份，再决定是否做可复现的可视化原型。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+          "label": "美联储 · 官方新闻稿",
+          "excerpt": "The Federal Reserve Board on Friday released the results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "local-multimodal-search-embeddinggemma-2",
+      "headline": "产品机会：端侧多模态素材检索，把图片、视频与语音备忘录连起来",
       "category": "可商用 AI",
-      "verification_status": "project_documented",
-      "score": 76,
-      "relevance": "可作为图片处理与摄影工具的研究样本，评估本地 RAW 工作流和批量导出思路。不能因开源就推定适合直接嵌入闭源产品。",
-      "action": "先审阅许可证及依赖，用备份的 RAW 样本比较导出一致性和内存占用；在决定采用前，核查发布包来源与平台限制。",
-      "commercial_status": "unknown",
-      "license_evidence": "https://github.com/jessolmstead/greycard/blob/master/LICENSE",
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "score": 92,
+      "signal": "EmbeddingGemma 2 的官方多模态与端侧检索能力，为小型素材库、离线知识助手和本地代码检索提供新的实现候选。模型发布是事实，付费需求仍是待验证假设。",
+      "audience": "做图片与视频工具、知识库或小型工作室自动化的开发者。",
+      "first_step": "在本周用一组公开或自有测试素材做离线检索原型，再让三位目标用户试用，记录找素材耗时、失败例子与是否愿意付费。",
+      "risks": "召回质量、设备内存与延迟尚未实测；需要单独核查模型文件、依赖与素材授权，不能仅凭公告推断可直接商业上线。",
+      "time_window": "未来一周做原型验证；没有公开申请截止日或保证收益。",
       "sources": [
         {
-          "label": "jessolmstead/greycard · README",
-          "url": "https://github.com/jessolmstead/greycard",
-          "excerpt": "Releases in 0.x are test builds.",
-          "checked_at": "2026-10-12T14:35:11+08:00"
+          "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+          "label": "Google DeepMind · 官方公告",
+          "excerpt": "Today, we’re launching EmbeddingGemma 2, expanding beyond text to unify code, images, video, and audio in a shared embedding space.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "ai-agent-permission-observability-service",
+      "headline": "服务机会：给小团队的 AI 自动化补上权限、停用与审计能力",
+      "category": "工作室业务",
+      "status": "research",
+      "verification_status": "media_reported",
+      "score": 84,
+      "signal": "微软总裁关于事件通报、独立评估和紧急停止的公开主张，提示 AI 自动化的可控性值得关注。由此推导的小团队技术服务需求尚未得到客户验证。",
+      "audience": "已经使用编码代理、MCP 或自动化工作流，并需要明确执行边界的小团队。",
+      "first_step": "制作一个只读检查样例，展示权限清单、运行日志与停用入口；访谈三家潜在客户，验证他们的实际故障、现有解决方案和预算。",
+      "risks": "行业发言不等于新法规或刚性采购需求；没有认证或客户证据时，不能宣称提供法规合规认证。",
+      "time_window": "接下来两周先验证需求与技术样例，不承诺成交。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6rmy7zmvx3lo",
+          "label": "BBC · 微软总裁访谈",
+          "excerpt": "Brad Smith said there needed to be global safety rules in place, including a legal obligation to tell a \"victim\" if their system is breached by a rogue AI agent as well as deciding when outside evaluators should sign off on an AI product before it is released.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "scf-2025-public-data-explorer",
+      "headline": "数据工具机会：把最新家庭资产负债调查做成可复现的研究看板",
+      "category": "金融市场",
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "score": 79,
+      "signal": "美联储新发布的 SCF 数据与官方交互图表，为家庭财务结构研究提供更新材料。增量价值可能在口径解释、可复现分析和特定受众需求，而非重复已有图表。",
+      "audience": "金融内容研究者、数据产品开发者以及需要比较家庭财务结构的分析团队。",
+      "first_step": "先核对数据使用说明、抽样权重和官方指标，复现一个公开图表，再访问目标研究者确认现有工具缺少什么。",
+      "risks": "官方已有交互图表，通用看板可能没有付费差异；误用权重或把历史统计当作实时行情会造成误导，不提供收益预测。",
+      "time_window": "未来一周做一个可复现的小样本研究原型。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+          "label": "美联储 · 官方新闻稿",
+          "excerpt": "The Federal Reserve Board on Friday released the results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
         }
       ]
     }

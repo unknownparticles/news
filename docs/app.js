@@ -1,4 +1,19 @@
 (() => {
+  const headlines = [...document.querySelectorAll('[data-news-category]')];
+  const newsFilters = [...document.querySelectorAll('[data-news-filter]')];
+  for (const selected of newsFilters) selected.addEventListener('click', () => {
+    let visible = 0;
+    for (const headline of headlines) {
+      headline.hidden = selected.dataset.newsFilter !== 'all' && headline.dataset.newsCategory !== selected.dataset.newsFilter;
+      if (!headline.hidden) visible++;
+    }
+    for (const button of newsFilters) {
+      button.classList.toggle('active', button === selected);
+      button.setAttribute('aria-pressed', String(button === selected));
+    }
+    const empty = document.querySelector('#no-news');
+    if (empty) empty.hidden = visible > 0;
+  });
   const input = document.querySelector('#report-search');
   if (!input) return;
   const cards = [...document.querySelectorAll('.report-card')];

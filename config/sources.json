@@ -1,11 +1,16 @@
 {
   "timezone": "Asia/Shanghai",
-  "categories": ["AI 编程", "可商用 AI", "工作室业务", "Solana 基础设施", "移动开发", "模型与基础设施"],
+  "categories": ["科技前沿", "金融市场", "政治与政策", "AI 编程", "可商用 AI", "工作室业务", "Solana 基础设施", "移动开发", "模型与基础设施"],
   "rss": [
-    {"name": "OpenAI News", "url": "https://openai.com/news/rss.xml"},
-    {"name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml"},
-    {"name": "Hugging Face", "url": "https://huggingface.co/blog/feed.xml"},
-    {"name": "GitHub Blog", "url": "https://github.blog/feed/"}
+    {"name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "category": "科技前沿"},
+    {"name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "category": "科技前沿"},
+    {"name": "Hugging Face", "url": "https://huggingface.co/blog/feed.xml", "category": "科技前沿"},
+    {"name": "GitHub Blog", "url": "https://github.blog/feed/", "category": "科技前沿"},
+    {"name": "BBC 科技", "url": "https://feeds.bbci.co.uk/news/technology/rss.xml", "category": "科技前沿"},
+    {"name": "BBC 财经", "url": "https://feeds.bbci.co.uk/news/business/rss.xml", "category": "金融市场"},
+    {"name": "BBC 国际", "url": "https://feeds.bbci.co.uk/news/world/rss.xml", "category": "政治与政策"},
+    {"name": "The Guardian 国际", "url": "https://www.theguardian.com/world/rss", "category": "政治与政策"},
+    {"name": "美联储公告", "url": "https://www.federalreserve.gov/feeds/press_all.xml", "category": "金融市场"}
   ],
   "aihot": [
     "https://aihot.news/api/v1/items?mode=selected&window=24h&limit=20",
@@ -20,6 +25,7 @@
     "https://huggingface.co/blog/", "https://github.blog/", "https://docs.github.com/",
     "https://solana.com/news/", "https://solana.com/changelog", "https://developers.jup.ag/", "https://dev.jup.ag/",
     "https://www.anthropic.com/news/", "https://cursor.com/changelog/", "https://flutter.dev/",
-    "https://github.com/flutter/flutter/releases/", "https://github.com/anza-xyz/agave/releases/"
+    "https://github.com/flutter/flutter/releases/", "https://github.com/anza-xyz/agave/releases/",
+    "https://www.federalreserve.gov/newsevents/", "https://www.ecb.europa.eu/press/"
   ]
 }

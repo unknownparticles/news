@@ -43,18 +43,26 @@ def aggregate(dailies, kind, start, end, generated_at):
             missing.append(day.isoformat())
         day += timedelta(days=1)
     events = {}
+    opportunities = {}
     for report in sorted(relevant, key=lambda r: r["generated_at"]):
         for item in report["items"]:
             current = copy.deepcopy(item)
             current["daily_report"] = report["id"]
             events[item["event_id"]] = current
+        for opportunity in report.get("opportunities", []):
+            current = copy.deepcopy(opportunity)
+            current["daily_report"] = report["id"]
+            if current.get("deadline") and datetime.fromisoformat(current["deadline"]) < datetime.fromisoformat(generated_at):
+                current["status"] = "closed"
+            opportunities[opportunity["opportunity_id"]] = current
     selected = sorted(events.values(), key=lambda item: item["score"], reverse=True)[:15]
     identifier = period_id(start, kind)
     return {"id": identifier, "kind": kind, "title": f"{identifier.upper()} · {KINDS[kind]}",
             "period": {"start": start.isoformat(), "end": end.isoformat()}, "generated_at": generated_at,
             "coverage": {"expected_days": (end - start).days + 1, "available_days": len(dates), "missing_dates": missing},
-            "summary": f"本期已有 {len(dates)} 天日报，去重后收录 {len(events)} 个事件，按相关度展示前 {len(selected)} 条。内容来自已保存的日报；缺失日期不补造新闻。",
+            "summary": f"本期已有 {len(dates)} 天日报，去重后收录 {len(events)} 个新闻事件，展示前 {len(selected)} 条，并整理 {len(opportunities)} 个机会，最多展示十个。内容来自已保存日报；已截止的机会标明关闭，缺失日期不补造新闻。",
             "items": selected,
+            "opportunities": sorted(opportunities.values(), key=lambda item: item["score"], reverse=True)[:10],
             "daily_reports": [r["id"] for r in sorted(relevant, key=lambda r: r["period"]["start"])]}
 
 
@@ -72,7 +80,7 @@ def run(today, root=None):
                 continue
             report = aggregate(dailies, kind, start, end, now)
             previous = next((r for r in reports if r["kind"] == kind and r["id"] == report["id"]), None)
-            if previous and all(previous.get(k) == report.get(k) for k in ("items", "coverage", "daily_reports", "summary")):
+            if previous and all(previous.get(k) == report.get(k) for k in ("items", "opportunities", "coverage", "daily_reports", "summary")):
                 continue
             # 日报内容变更后重新汇总，旧的人工周期分析须重新核对，故不沿用。
             saved.append(str(save_report(report) if root is None else save_report(report, root)))
