@@ -1,0 +1,304 @@
+{
+  "id": "2026-10-13",
+  "kind": "daily",
+  "title": "2026-10-13 · 编码上下文、能源风险与欧洲贸易政策",
+  "period": {
+    "start": "2026-10-13",
+    "end": "2026-10-13"
+  },
+  "generated_at": "2026-10-13T08:39:18+08:00",
+  "collection_window": {
+    "start": "2026-10-12T14:53:08.067029+08:00",
+    "end": "2026-10-13T08:30:34.316498+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "从上一期采集截止继续至北京时间 08:30：科技四条、金融三条、政治三条，共十条；均核对公开原文，未重复昨日已收录事件。另列三个待验证机会。金融栏目本期侧重经营与消费风险，未取得新的官方宏观公告；竞赛详情与报名状态另行更新。",
+  "source_failures": [],
+  "items": [
+    {
+      "event_id": "91597643c193a9c7e9c9",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-12T17:43:59+00:00",
+      "score": 91,
+      "headline": "GitHub 发布 Copilot 项目上下文指南：分别使用仓库指令、Skills、Agents 与 MCP",
+      "short_headline": "GitHub：让编码助手读懂项目约定",
+      "summary": "GitHub 官方新教程说明如何通过 .github/copilot-instructions.md 写入项目通用约定，通过 .github/skills 封装重复流程、.github/agents 定义专门角色，并用 MCP 连接外部工具。它是配置与使用指南，不代表这些功能均在本日首次推出；也没有证明配置后一定提高成功率。",
+      "short_summary": "官方教程拆分项目约定、重复流程、专门角色和外部工具，便于团队减少重复提示与交接。",
+      "relevance": "多仓库开发团队可以把测试入口、命名规则和交付要求写成可维护的项目资料，降低新成员与编码助手的上下文缺失。",
+      "action": "选一个测试项目先补充仓库指令与一个质量检查流程，再对照没有这些资料时的任务结果；外部工具只配置必要权限。",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase",
+          "label": "GitHub Blog · 官方使用指南",
+          "excerpt": "Repository custom instructions give Copilot that baseline context. Add a .github/copilot-instructions.md file to define guidance that applies across the repository, such as your preferred architecture, naming conventions, or expectations for testing and validation.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "7bed39b4c5111057bc1f",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-12T17:36:18+00:00",
+      "score": 92,
+      "headline": "AWS 研究 priming：复用 Transformer 权重探索混合状态空间架构",
+      "short_headline": "AWS priming：复用权重探索更高效架构",
+      "summary": "Amazon Science 发布 AWS 团队研究，提出 priming 方法，复用预训练 Transformer 权重构建混合状态空间模型。作者报告其测试中的改造预训练成本下降逾 99%，并发布 8B/32B 模型、训练代码、内核及 vLLM 插件。速度、精度和成本均是特定实验口径，本期未独立复现，不能推断所有现有模型都能获得相同改善。",
+      "short_summary": "研究尝试用已有权重降低混合架构探索成本，公开模型与代码；具体收益仍需复现。",
+      "relevance": "长上下文推理的内存与成本可能有新的优化路径，适合自托管推理或模型研究团队作为技术候选。",
+      "action": "先读论文、模型卡和硬件要求，在固定上下文长度与任务集上比较吞吐、显存和质量；核对代码与权重许可证后再考虑部署。",
+      "sources": [
+        {
+          "url": "https://www.amazon.science/blog/can-we-change-an-ai-models-architecture-without-retraining-it-from-scratch",
+          "label": "Amazon Science · AWS 研究发布",
+          "excerpt": "To foster further research on hybrid architectures, we have released a zoo of primed hybrid models at the eight-billion-parameter and 32-billion-parameter scales for long-context reasoning and instruction following, together with training code, optimized kernels, and a vLLM-serving plugin under the Apache 2.0 License.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "b9412986ffa5d3dc31bc",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T20:59:50+00:00",
+      "score": 84,
+      "headline": "Epic 被报道转向 AI 优先开发，迪士尼合作游戏延期；公司确认加速采用 AI",
+      "short_headline": "Epic 加速采用 AI，合作项目进度承压",
+      "summary": "Ars Technica 转述 Bloomberg 对 Epic 与迪士尼合作项目的报道，称团队调整为 AI 优先的代码和美术流程，原计划 2027 年 3 月发布的射击游戏被无限期推迟。Epic 发言人确认拥抱 AI 加速开发，但报道中的全部代码、美术和延期细节仍属媒体援引内部材料的说法。采用 AI 与延期之间不能仅凭报道认定单一因果。",
+      "short_summary": "媒体披露开发流程调整与延期；公司确认 AI 加速方向，具体效果尚缺独立证据。",
+      "relevance": "AI 游戏工具的商业价值需要通过交付速度、可维护性和内容质量评估，采用比例本身不是成果指标。",
+      "action": "在一个小场景中比较手工、辅助生成和自动编排的返工量与交付时间，保留人工审查和素材授权记录。",
+      "sources": [
+        {
+          "url": "https://arstechnica.com/gaming/2026/10/report-epic-games-goes-all-in-on-ai-for-disney-collaboration/",
+          "label": "Ars Technica · 游戏开发报道",
+          "excerpt": "“We’re embracing AI-accelerated development, led by Epic developers who are the visionaries and creative drivers for everything we do,” an Epic spokesperson said in a statement.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "263217067047ebe9415b",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T18:31:32+00:00",
+      "score": 88,
+      "headline": "法国超市冷柜遭网络攻击：旧设备软件风险波及实体库存",
+      "short_headline": "法国冷柜攻击：旧系统风险波及库存",
+      "summary": "BBC 报道法国多家连锁超市的冷柜控制软件遭攻击，部分设备异常升温、食品被移除或丢弃。供应商 Danfoss 称受影响的是安全软件无法继续更新的旧型号。损失、数量与最高温度来自不同企业陈述和报道，完整攻击范围与技术原因仍在调查。",
+      "short_summary": "报道指旧冷柜控制系统遭攻击，异常温度造成库存损失；完整范围仍待调查。",
+      "relevance": "联网设备的支持期限、网络隔离和异常监控直接关系到运营损失，不能只关注系统是否仍能开机。",
+      "action": "经设备所有者授权，盘点控制器型号与支持期限，验证温度告警和人工处置流程；不要直接在生产控制系统尝试未知改动。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/crq5nzxv9q4yo",
+          "label": "BBC · 冷链网络安全报道",
+          "excerpt": "Danfoss said the affected cold units were older models whose security software could not be updated to ward off a risk they had identified.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "95aec211ed9ddd6f102b",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T23:02:24+00:00",
+      "score": 83,
+      "headline": "英国承诺加强取暖油市场监管，消费者仍面临冬季价格压力",
+      "short_headline": "英国拟加强取暖油监管，生效时间未定",
+      "summary": "BBC 报道英国政府承诺强化取暖油市场规则、竞争与补偿渠道，并审查部分客户的最低订购量。报道同时指出尚未见到将气电价格上限扩展到取暖油的方案，也没有确定新规则生效时间。不能把监管承诺当作已经降价或已经获得补偿。",
+      "short_summary": "政府承诺调整监管与补偿渠道，但取暖油价格上限和规则生效时间仍未确认。",
+      "relevance": "能源价格与监管保护不同步，企业和家庭应分别核算成本、合同风险与实际补偿条件。",
+      "action": "涉及该市场时，核对供应合同、正式监管文件和补偿资格，按实际报价做成本预算，而非假设政策一定压低油价。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cxnv0z09r882o",
+          "label": "BBC · 能源消费与监管",
+          "excerpt": "But there is no sign of the government proposing such a change, nor when the stricter rules will take effect.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "a21772374669d0c13576",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T23:01:45+00:00",
+      "score": 81,
+      "headline": "短视频切片出现按传播表现付费的生意，采访同时提示收入高度分化",
+      "short_headline": "短视频切片生意：传播计费，收入分化",
+      "summary": "BBC 采访为品牌、播客等制作短视频的剪辑者，介绍将长内容裁成短片、按传播表现获得报酬的模式。报道中的高收入是受访者自述，分析人士同时指出大多数参与者收入很少甚至没有收入，观看素材和寻找客户耗时可能被低估。个案不能作为普遍收益或国内平台可复制性的证明。",
+      "short_summary": "品牌和播客需要短片分发，但高收入只是采访个案，多数从业者收入很少。",
+      "relevance": "内容服务的需求可能在素材筛选、字幕、审核和效果复盘，而不仅是自动裁剪工具本身。",
+      "action": "先选择有明确素材授权的客户做小规模样例，核算编辑工时、获客成本与验收条件，再评估是否值得提供服务。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c84g12v3lk20o",
+          "label": "BBC · 创作者经济采访",
+          "excerpt": "Yet while some clippers can make good money, social media consultant Lia Haberman cautions that there are very few of them. \"It mirrors the creator economy more broadly. The vast majority make little to nothing,\" she says.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "03872769d8ed450dead8",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T09:11:46+00:00",
+      "score": 76,
+      "headline": "英国信用卡欠款压力上升，债务建议服务的收费与授权需核查",
+      "short_headline": "信用卡欠款压力上升，警惕速清债务收费",
+      "summary": "BBC 报道援引英格兰银行称拖欠信用卡还款的人数增加，贷款机构预计秋季未付债务继续上升。文章提醒消费者核对债务咨询机构授权，并说明英国存在免费的中立债务建议渠道；“快速抹掉债务”的广告与预付费用可能误导消费者。这些英国制度安排不能直接套用到其他地区。",
+      "short_summary": "报道提示信用卡还款压力与收费咨询陷阱，核验授权和免费建议渠道尤为重要。",
+      "relevance": "个人财务压力也会影响消费与小企业回款，金融服务应透明说明费用与适用条件。",
+      "action": "当地用户先通过官方监管与公益渠道核查咨询机构；企业关注逾期与回款变化，避免用单一报道推断总体违约率。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c84g1xz1l9ddo",
+          "label": "BBC · 信用卡还款与债务建议",
+          "excerpt": "An increasing number of people are missing credit card repayments as finances are stretched by rising bills, according to the Bank of England.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "0916073d991c450ec875",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T11:23:55+00:00",
+      "score": 90,
+      "headline": "Guardian 报道欧盟拟限制中国混合动力汽车进口，预计十二月实施",
+      "short_headline": "欧盟混合动力汽车配额影响跨境贸易",
+      "summary": "Guardian 报道称欧盟委员会确认中国混合动力汽车年进口限额为 35 万辆，预计十二月生效，使用 WTO 保障措施；文中称欧盟境内组装车辆与部分在中国生产车辆的适用范围不同。本期已读媒体原文，但尚未独立核对欧盟正式法律文本、车型定义和实施细则，因此保留媒体报道标记。",
+      "short_summary": "报道指年度进口配额预计十二月实施，组装地点与车型范围将影响企业实际适用。",
+      "relevance": "涉及中国汽车出口、供应链与欧洲市场的企业应评估规则适用边界，而非仅依据标题调整订单。",
+      "action": "核对欧盟正式公告、车型范围、原产地与配额分配，再做交付和产能情景分析；不据此作确定行情预测。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/environment/2026/oct/12/eu-deal-china-limit-imports-hybrid-electric-vehicles",
+          "label": "The Guardian · 欧洲贸易政策",
+          "excerpt": "The EU is to limit the number of hybrid electric vehicles imported from China to 350,000 cars a year, the European Commission has confirmed.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "2cd7dbcdd90cb729d595",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T21:20:51+00:00",
+      "score": 85,
+      "headline": "泽连斯基称能源停火宣布后六处设施遭袭，停火表态与执行仍有落差",
+      "short_headline": "乌方称六处能源设施遭袭，停火执行待核",
+      "summary": "BBC 报道泽连斯基称，特朗普宣布能源停火后俄罗斯仍袭击六处乌克兰能源设施；文章引述乌电网运营商报告新的停电和供电限制，并记录俄方官员立场。具体攻击数量属于乌方说法，本期未独立验证全部现场证据，也没有发现可据此确认双方都已接受的完整停火协议。",
+      "short_summary": "乌方陈述持续袭击，运营商报告停电；外交宣布与实际供电、安全状况需要分开跟踪。",
+      "relevance": "地缘冲突对能源供给和交付造成持续不确定性，经营计划不宜把政治宣布直接当作风险解除。",
+      "action": "继续跟踪双方正式文件、独立现场核验和电网运营通知，涉及当地安排时保留应急方案。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cvlyd4pdlwkxo",
+          "label": "BBC · 能源停火与执行报道",
+          "excerpt": "On Monday, Ukraine's state-owned grid operator Ukrenergo reported \"new power cuts\" in Kharkiv, Donetsk and Zaporizhzhia due to damage caused to energy equipment by Russian attacks.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "2de171f17e887f72138b",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T20:54:09+00:00",
+      "score": 82,
+      "headline": "沙特能源部长对机场及能源设施袭击承诺严肃回应，地区安全风险持续",
+      "short_headline": "沙特承诺回应胡塞袭击，地区风险持续",
+      "summary": "BBC 报道沙特能源部长在利雅得能源会议上称，将对近期机场和油气设施遭胡塞袭击作出严肃回应。报道同时记录沙特方面和胡塞方面的不同陈述。回应表态不等于已经执行的具体军事行动，伤亡与攻击细节仍依赖各方报告。",
+      "short_summary": "能源部长公开回应袭击事件，具体后续措施尚待确认，机场与基础设施风险持续。",
+      "relevance": "航空、能源和跨境物流可能受到地区安全事件扰动，应关注实际运行通知与保险条件。",
+      "action": "有相关经营或出行需求时，核对航空公司、机场与主管部门的最新通知，不仅依据外交或军事表态决策。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cjly0zqq27e4o",
+          "label": "BBC · 沙特与区域安全报道",
+          "excerpt": "\"The events of recent weeks are serious. Our response must be equally serious,\" Prince Abdul Aziz bin Salman told the WPC Energy Congress in Riyadh.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "repository-context-onboarding-pack",
+      "headline": "开发服务机会：把项目约定与重复流程整理成编码助手可用的入门包",
+      "short_headline": "项目上下文入门包",
+      "category": "AI 编程",
+      "score": 87,
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "signal": "GitHub 最新指南提供仓库指令、Skills、Agents 和 MCP 的分工，支持将项目知识整理成可维护资产。由此推导的小团队交接与入门服务是待验证需求，不是已确认订单。",
+      "short_summary": "围绕真实项目交接，提供可维护的约定与检查流程，先验证是否减少重复沟通。",
+      "audience": "维护多仓库、经常交接或引入编码助手的小团队。",
+      "first_step": "在合成项目做一个含测试入口、约定和单一检查流程的样例，请两位开发者完成同一任务，记录沟通次数和错误，随后确认客户是否需要此类服务。",
+      "risks": "指南可免费自学，单纯文件模板可能缺乏付费差异；项目规则会过时，须明确维护成本，不能承诺配置即可提高效率。",
+      "time_window": "本周做一个小样例，无官方申请截止。",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase",
+          "label": "GitHub Blog · 官方使用指南",
+          "excerpt": "Repository custom instructions give Copilot that baseline context. Add a .github/copilot-instructions.md file to define guidance that applies across the repository, such as your preferred architecture, naming conventions, or expectations for testing and validation.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "authorized-short-video-clipping-workflow",
+      "headline": "内容服务机会：经授权的短视频筛选、字幕与交付流程",
+      "short_headline": "授权内容切片与字幕服务",
+      "category": "工作室业务",
+      "score": 80,
+      "status": "research",
+      "verification_status": "media_reported",
+      "signal": "BBC 采访记录品牌和播客采购短视频服务的案例，但多数从业者收入很少。可研究在合法授权素材上的筛选、字幕与质量审核流程，需求和本地平台可复制性仍需验证。",
+      "short_summary": "从客户已授权的长内容做切片与字幕样例，核算工时和验收条件，不用高收入个案预测收益。",
+      "audience": "有内容编辑能力、能获取客户素材授权的小型工作室与工具开发者。",
+      "first_step": "让潜在客户提供已授权素材，交付三条不同用途的短片样例，核算人工审查、字幕校正与修改时间，再商议可验证的交付指标。",
+      "risks": "素材版权、品牌使用许可、平台分发与付费规则均需核查；播放量不保证收入，不能直接搬用采访中的海外结算模式。",
+      "time_window": "未来一周先试做与访谈，无公开竞赛或申请窗口。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c84g12v3lk20o",
+          "label": "BBC · 创作者经济采访",
+          "excerpt": "Yet while some clippers can make good money, social media consultant Lia Haberman cautions that there are very few of them. \"It mirrors the creator economy more broadly. The vast majority make little to nothing,\" she says.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "legacy-cold-chain-monitoring-assessment",
+      "headline": "运营工具机会：旧冷链设备支持期限与温度异常监控",
+      "short_headline": "旧冷链设备监控与盘点",
+      "category": "工作室业务",
+      "score": 79,
+      "status": "research",
+      "verification_status": "media_reported",
+      "signal": "法国冷柜事件说明旧控制系统故障可能直接造成库存损失。由此可研究经授权的设备支持期限盘点、温度监控和处置看板，但客户需求和接入条件尚未验证。",
+      "short_summary": "将设备支持期限、温度告警与人工处置记录关联，先用模拟数据验证监控闭环。",
+      "audience": "为商店或小型仓储提供设备运维、可视化工具的团队。",
+      "first_step": "先访谈一位冷链运维负责人，用模拟温度数据做只读告警与工单样例；明确设备供应商允许的接口后才讨论实际接入。",
+      "risks": "不同控制器接口与权限差异大；监控工具不能替代安全升级、设备检修或食品安全责任，也不能在未授权生产系统测试。",
+      "time_window": "本周只做需求访谈与模拟原型，没有已确认项目订单。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/crq5nzxv9q4yo",
+          "label": "BBC · 冷链网络安全报道",
+          "excerpt": "Danfoss said the affected cold units were older models whose security software could not be updated to ward off a risk they had identified.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ]
+    }
+  ]
+}

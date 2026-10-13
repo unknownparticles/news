@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T16:05:17+08:00",
+  "checked_at": "2026-10-13T08:40:15+08:00",
   "competitions": [
     {
       "id": "tianchi-532510",
@@ -16,7 +16,7 @@
       "non_student_allowed": true,
       "rules_consistent": true,
       "registration_deadline": "2026-12-31T23:59:59+08:00",
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "图片和 PDF 复杂表格识别、内容抽取与推理。",
       "eligibility": "面向社会人士，明确要求个人参赛，不允许多人组队；须实名认证。",
       "format": "长期线上赛，每季度一个赛季，提交 Excel 结果。",
@@ -57,7 +57,7 @@
       "non_student_allowed": true,
       "rules_consistent": true,
       "registration_deadline": "2026-12-31T23:59:59+08:00",
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "具身智能，当前冬季仿真阶段可在线提交与自动评测。",
       "eligibility": "面向全社会个人开发者，每队 1—5 人，可单人；须实名认证。",
       "format": "冬季仿真赛 2026-09-29 至 12-31 线上参与；后续年度总决赛规则另算。",
@@ -98,7 +98,7 @@
       "non_student_allowed": true,
       "rules_consistent": true,
       "registration_deadline": "2027-05-06T23:59:59+08:00",
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "资金流入流出预测与时间序列建模，适合算法练手。",
       "eligibility": "全社会开放、参赛对象不限，要求个人形式。",
       "format": "本地调试、在线实时评测；规则写长期开放，平台当前显示至 2027-05-06。",
@@ -135,7 +135,7 @@
       "non_student_allowed": true,
       "rules_consistent": true,
       "registration_deadline": "2026-11-30T15:59:59+08:00",
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "电商评论属性、观点与情感抽取，适合 NLP 与业务工具练习。",
       "eligibility": "全社会开放、参赛对象不限，个人形式、不允许组队；提交前实名认证。",
       "format": "全年开放的经典打榜赛，本地调试、在线提交。",
@@ -176,7 +176,7 @@
       "non_student_allowed": true,
       "rules_consistent": false,
       "registration_deadline": "2027-05-24T23:59:59+08:00",
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "汉语框架语义解析，原评测转长期训练榜。",
       "eligibility": "允许单人；公告欢迎大家参与，但社会人士当前报名要求需再次核对。",
       "format": "长期训练榜线上提交，原 2025 年评奖与会议不视作当前窗口。",
@@ -213,7 +213,7 @@
       "non_student_allowed": true,
       "rules_consistent": false,
       "registration_deadline": "2026-10-25T23:59:59+08:00",
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "大模型图网络决策，当前可能仅供已晋级复赛的队伍。",
       "eligibility": "允许社会人士单人，但新选手是否仍能入场存在规则日期冲突。",
       "format": "线上代码评测，部分获奖者须线下参加会议。",
@@ -250,7 +250,7 @@
       "non_student_allowed": true,
       "rules_consistent": false,
       "registration_deadline": "2026-09-27T23:59:59+08:00",
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "生物医学患者表型概念识别。",
       "eligibility": "企业人员可以参赛，个人须依托单位，获奖需注册并参加会议。",
       "format": "具体线上阶段和线下要求须按正式规则核对。",
@@ -287,7 +287,7 @@
       "non_student_allowed": true,
       "rules_consistent": true,
       "registration_deadline": "2026-10-26T23:59:59+08:00",
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "LingBot-VLA 2.0 具身模型与上海真机黑客马拉松。",
       "eligibility": "需要 2—5 人组队，不能保持单人参赛。",
       "format": "线上初赛与上海线下真机决赛。",
@@ -324,7 +324,7 @@
       "non_student_allowed": true,
       "rules_consistent": false,
       "registration_deadline": "2026-10-21T13:59:59+08:00",
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "跨本体机器人操作与真机验证。",
       "eligibility": "单人或组队允许，当前新入场资格需核对。",
       "format": "具体线上阶段和线下要求须按正式规则核对。",
@@ -361,7 +361,7 @@
       "non_student_allowed": false,
       "rules_consistent": true,
       "registration_deadline": "2026-10-20T23:59:59+08:00",
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "欧莱雅美妆 AI 客服管家。",
       "eligibility": "限全日制在校生或 2026 届毕业生；普通在职身份不足以确认。",
       "format": "线上提交，入围后线下决赛。",
@@ -398,7 +398,7 @@
       "non_student_allowed": true,
       "rules_consistent": true,
       "registration_deadline": "2026-06-01T08:00:00+08:00",
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "余震震级与发生时间预测。",
       "eligibility": "原赛允许全球公众、个人或团队。",
       "format": "具体线上阶段和线下要求须按正式规则核对。",
@@ -435,7 +435,7 @@
       "non_student_allowed": true,
       "rules_consistent": false,
       "registration_deadline": "2026-11-10T17:00:00+08:00",
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "指定端侧模型的应用或软硬件创新。",
       "eligibility": "个人开发者、企业和高校可参加；单人或不超过五人组队。",
       "format": "初赛提交作品，决赛线上或线下路演形式需确认。",
@@ -472,7 +472,7 @@
       "non_student_allowed": true,
       "rules_consistent": false,
       "registration_deadline": null,
-      "checked_at": "2026-10-12T16:05:17+08:00",
+      "checked_at": "2026-10-13T08:40:15+08:00",
       "topic": "苍穹平台 Skill、工具与可复用组件。",
       "eligibility": "个人创新赛道面向全社会独立开发者和小团队。",
       "format": "已处复赛月份，新作品是否仍可进入评选需确认。",
@@ -493,6 +493,43 @@
       "short_name": "金蝶个人创新赛道",
       "cost_brief": "平台/路演费用待核",
       "prize_brief": "个人赛道分配未核"
+    },
+    {
+      "id": "aistudio-video-highlights-672",
+      "name": "千言数据集：视频看点抽取",
+      "short_name": "千言视频看点抽取",
+      "platform": "百度 AI Studio",
+      "organizer": "百度搜索内容技术部任务组织者，详见官方页面",
+      "url": "https://aistudio.baidu.com/competition/detail/672/0/introduction",
+      "registration_url": "https://aistudio.baidu.com/competition/detail/672/0/introduction",
+      "qualification_status": "conditional",
+      "registration_status": "uncertain",
+      "mode": "online",
+      "kind": "practice",
+      "individual_allowed": null,
+      "non_student_allowed": null,
+      "rules_consistent": false,
+      "registration_deadline": null,
+      "checked_at": "2026-10-13T08:40:15+08:00",
+      "topic": "给定视频、标题和带时间的字幕，输出看点起始位置和摘要，用 F1 与 ROUGE-L 组合评测。",
+      "eligibility": "官方公开页未明确写出社会人士或单人队伍要求，尚不能确认资格；需要登录后核对正式报名规则。",
+      "format": "在线提交评测，页面显示比赛期至 2026-10-29；比赛结束日期不等于明确的新报名截止。",
+      "cost": "页面列算力赠送，但当前领取资格、有效额度和资源限制仍需登录核对；未确认报名费用。",
+      "cost_brief": "算力赠送条款待核",
+      "prizes": "页面列千言定制大礼包，没有承诺现金；具体领取与评奖条件需核对。",
+      "prize_brief": "定制礼包，非现金承诺",
+      "first_step": "先读作品产权条款，再核对单人、社会人士和新报名截止；符合后用基线训练样例验证格式，不能直接提交基线预测。",
+      "cautions": "长期任务不包装成新奖励赛事；页面要求授予主办方广泛的成果使用许可，当前身份和入场窗口尚待确认。",
+      "evidence": [
+        {
+          "url": "https://aistudio.baidu.com/competition/detail/672/0/introduction",
+          "excerpt": "本任务会给出视频、视频标题、视频字幕，要求参赛选手基于提供的信息提取出视频的所有看点，并给出所有看点的起始时间和看点摘要。"
+        },
+        {
+          "url": "https://aistudio.baidu.com/competition/detail/672/0/introduction",
+          "excerpt": "参赛者同意授予举办方在全球范围内、无限期、不受限制的免费使用前款成果的权利，包括但不限于用于服务提供、进一步开发服务、用于商业用途及分许可他人使用。"
+        }
+      ]
     }
   ],
   "source_checks": [
@@ -500,29 +537,36 @@
       "name": "阿里云天池",
       "url": "https://tianchi.aliyun.com/competition",
       "status": "verified",
-      "detail_count": 11
+      "detail_count": 11,
+      "checked_at": "2026-10-13T08:40:15+08:00",
+      "candidate_count": 38
     },
     {
       "name": "DataFountain",
       "url": "https://www.datafountain.cn/competitions",
-      "status": "listing_only"
+      "status": "listing_only",
+      "checked_at": "2026-10-13T08:40:15+08:00"
     },
     {
       "name": "讯飞 AI 开发者大赛",
       "url": "https://challenge.xfyun.cn/competition",
       "status": "verified",
-      "detail_count": 1
+      "detail_count": 1,
+      "checked_at": "2026-10-13T08:40:15+08:00"
     },
     {
       "name": "百度 AI Studio",
       "url": "https://aistudio.baidu.com/competition",
-      "status": "browser_required"
+      "status": "verified",
+      "checked_at": "2026-10-13T08:40:15+08:00",
+      "detail_count": 1
     },
     {
       "name": "金蝶 AI 苍穹开发者大赛",
       "url": "https://dev.kingdee.com/active/competition/2026",
       "status": "verified",
-      "detail_count": 1
+      "detail_count": 1,
+      "checked_at": "2026-10-13T08:40:15+08:00"
     }
   ]
 }
