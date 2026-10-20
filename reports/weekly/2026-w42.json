@@ -1,0 +1,595 @@
+{
+  "id": "2026-w42",
+  "kind": "weekly",
+  "title": "2026-W42 · 周报",
+  "period": {
+    "start": "2026-10-12",
+    "end": "2026-10-18"
+  },
+  "generated_at": "2026-10-20T10:01:30.837392+08:00",
+  "coverage": {
+    "expected_days": 7,
+    "available_days": 2,
+    "missing_dates": [
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18"
+    ]
+  },
+  "summary": "本期已有 2 天日报，去重后收录 19 个新闻事件，展示前 19 条，并整理 6 个机会，最多展示十个。内容来自已保存日报；已截止的机会标明关闭，缺失日期不补造新闻。",
+  "items": [
+    {
+      "event_id": "2ee55c894d54d6ef378c",
+      "headline": "EmbeddingGemma 2：7.4 亿参数，把文本、图像、音视频放进同一检索空间",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-06T19:57:04+00:00",
+      "context_note": "近七日前沿回看：官网日期为 10 月 6 日，对应北京时间 10 月 7 日，非今日发布。",
+      "score": 94,
+      "summary": "DeepMind 官方发布 EmbeddingGemma 2，基于 Gemma 4，支持代码、图像、视频、音频与文本的统一嵌入，参数量为 7.4 亿，公告声明采用 Apache 2.0 许可。端侧检索与离线 RAG 是其目标用途；实际效果和设备开销仍需自行测试。",
+      "relevance": "多模态素材库、代码检索和本地知识助手可以共用检索模型，值得评估能否减少外部 API 调用与多模型维护成本。",
+      "action": "先用非敏感的文本、图片和短音频构建小型检索样本，比较召回质量、延迟、内存与现有方案，再决定是否接入。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+          "label": "Google DeepMind · 官方公告",
+          "excerpt": "Today, we’re launching EmbeddingGemma 2, expanding beyond text to unify code, images, video, and audio in a shared embedding space.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ],
+      "short_headline": "EmbeddingGemma 2：端侧检索走向多模态",
+      "short_summary": "7.4 亿参数统一处理文本、代码与音视频检索，值得评估离线知识库和素材搜索。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "event_id": "7bed39b4c5111057bc1f",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-12T17:36:18+00:00",
+      "score": 92,
+      "headline": "AWS 研究 priming：复用 Transformer 权重探索混合状态空间架构",
+      "short_headline": "AWS priming：复用权重探索更高效架构",
+      "summary": "Amazon Science 发布 AWS 团队研究，提出 priming 方法，复用预训练 Transformer 权重构建混合状态空间模型。作者报告其测试中的改造预训练成本下降逾 99%，并发布 8B/32B 模型、训练代码、内核及 vLLM 插件。速度、精度和成本均是特定实验口径，本期未独立复现，不能推断所有现有模型都能获得相同改善。",
+      "short_summary": "研究尝试用已有权重降低混合架构探索成本，公开模型与代码；具体收益仍需复现。",
+      "relevance": "长上下文推理的内存与成本可能有新的优化路径，适合自托管推理或模型研究团队作为技术候选。",
+      "action": "先读论文、模型卡和硬件要求，在固定上下文长度与任务集上比较吞吐、显存和质量；核对代码与权重许可证后再考虑部署。",
+      "sources": [
+        {
+          "url": "https://www.amazon.science/blog/can-we-change-an-ai-models-architecture-without-retraining-it-from-scratch",
+          "label": "Amazon Science · AWS 研究发布",
+          "excerpt": "To foster further research on hybrid architectures, we have released a zoo of primed hybrid models at the eight-billion-parameter and 32-billion-parameter scales for long-context reasoning and instruction following, together with training code, optimized kernels, and a vLLM-serving plugin under the Apache 2.0 License.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "91597643c193a9c7e9c9",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-12T17:43:59+00:00",
+      "score": 91,
+      "headline": "GitHub 发布 Copilot 项目上下文指南：分别使用仓库指令、Skills、Agents 与 MCP",
+      "short_headline": "GitHub：让编码助手读懂项目约定",
+      "summary": "GitHub 官方新教程说明如何通过 .github/copilot-instructions.md 写入项目通用约定，通过 .github/skills 封装重复流程、.github/agents 定义专门角色，并用 MCP 连接外部工具。它是配置与使用指南，不代表这些功能均在本日首次推出；也没有证明配置后一定提高成功率。",
+      "short_summary": "官方教程拆分项目约定、重复流程、专门角色和外部工具，便于团队减少重复提示与交接。",
+      "relevance": "多仓库开发团队可以把测试入口、命名规则和交付要求写成可维护的项目资料，降低新成员与编码助手的上下文缺失。",
+      "action": "选一个测试项目先补充仓库指令与一个质量检查流程，再对照没有这些资料时的任务结果；外部工具只配置必要权限。",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase",
+          "label": "GitHub Blog · 官方使用指南",
+          "excerpt": "Repository custom instructions give Copilot that baseline context. Add a .github/copilot-instructions.md file to define guidance that applies across the repository, such as your preferred architecture, naming conventions, or expectations for testing and validation.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "62d26b448adb5f8d0855",
+      "headline": "科技治理：微软总裁呼吁 AI 安全规则、事件通报与独立评估",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-11T23:07:35+00:00",
+      "score": 89,
+      "summary": "微软总裁 Brad Smith 在 BBC 访谈中主张为 AI 建立安全规则，讨论失控事件通报、独立评估和紧急停止机制。这是行业人士的监管主张，报道本身不能证明某项新法律已经生效。",
+      "relevance": "对准备部署能够写文件、执行命令或调用外部系统的 AI 团队，权限边界、可停止性和审计记录已经是实际产品设计问题。",
+      "action": "梳理现有 AI 自动化的权限、日志和停用入口，在测试环境验证错误操作如何中止与回溯；法律义务以正式法规为准。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6rmy7zmvx3lo",
+          "label": "BBC · 微软总裁访谈",
+          "excerpt": "Brad Smith said there needed to be global safety rules in place, including a legal obligation to tell a \"victim\" if their system is breached by a rogue AI agent as well as deciding when outside evaluators should sign off on an AI product before it is released.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ],
+      "short_headline": "微软总裁呼吁建立 AI 安全规则",
+      "short_summary": "访谈提出事件通报、独立评估和紧急停止机制；这是监管主张，尚非新法律。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "event_id": "263217067047ebe9415b",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T18:31:32+00:00",
+      "score": 88,
+      "headline": "法国超市冷柜遭网络攻击：旧设备软件风险波及实体库存",
+      "short_headline": "法国冷柜攻击：旧系统风险波及库存",
+      "summary": "BBC 报道法国多家连锁超市的冷柜控制软件遭攻击，部分设备异常升温、食品被移除或丢弃。供应商 Danfoss 称受影响的是安全软件无法继续更新的旧型号。损失、数量与最高温度来自不同企业陈述和报道，完整攻击范围与技术原因仍在调查。",
+      "short_summary": "报道指旧冷柜控制系统遭攻击，异常温度造成库存损失；完整范围仍待调查。",
+      "relevance": "联网设备的支持期限、网络隔离和异常监控直接关系到运营损失，不能只关注系统是否仍能开机。",
+      "action": "经设备所有者授权，盘点控制器型号与支持期限，验证温度告警和人工处置流程；不要直接在生产控制系统尝试未知改动。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/crq5nzxv9q4yo",
+          "label": "BBC · 冷链网络安全报道",
+          "excerpt": "Danfoss said the affected cold units were older models whose security software could not be updated to ward off a risk they had identified.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "88e871d5a8d26738db20",
+      "headline": "LiquidAI 开放 d1 端侧决策模型：用单次前向处理多模态判断",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-07T16:54:33+00:00",
+      "score": 87,
+      "summary": "LiquidAI 在其 Hugging Face 机构博客公开 d1-3B 与 d1-omni-600M，分别面向文本加图像，以及文本加图像或音频的决策任务。文章强调模型以单次前向给出判断，而非逐 token 生成；600M 版本仍是早期研究发布。速度和榜单是发布者自报，本期未独立复测。",
+      "relevance": "可研究结构化分类、路由与边缘设备判断，评估能否减少不必要的完整文本生成。",
+      "action": "先读模型卡、许可和自带代码，用非敏感样本比较准确率、内存与设备兼容，避免把 NVIDIA 测速直接当作其他设备的表现。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/LiquidAI/open-d1",
+          "label": "LiquidAI · 机构发布说明",
+          "excerpt": "These open d1 decision models are built on our Liquid Foundation Models (LFMs). Unlike our generative models, decision models don’t produce tokens but answer in a single forward pass.",
+          "checked_at": "2026-10-12T16:09:03+08:00"
+        }
+      ],
+      "context_note": "近七日前沿回看：北京时间 10 月 8 日发布，非今日发布。",
+      "short_headline": "LiquidAI 开放 d1 端侧决策模型",
+      "short_summary": "单次前向给出多模态判断，面向分类与路由；小版本仍是早期研究发布。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "event_id": "b9412986ffa5d3dc31bc",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T20:59:50+00:00",
+      "score": 84,
+      "headline": "Epic 被报道转向 AI 优先开发，迪士尼合作游戏延期；公司确认加速采用 AI",
+      "short_headline": "Epic 加速采用 AI，合作项目进度承压",
+      "summary": "Ars Technica 转述 Bloomberg 对 Epic 与迪士尼合作项目的报道，称团队调整为 AI 优先的代码和美术流程，原计划 2027 年 3 月发布的射击游戏被无限期推迟。Epic 发言人确认拥抱 AI 加速开发，但报道中的全部代码、美术和延期细节仍属媒体援引内部材料的说法。采用 AI 与延期之间不能仅凭报道认定单一因果。",
+      "short_summary": "媒体披露开发流程调整与延期；公司确认 AI 加速方向，具体效果尚缺独立证据。",
+      "relevance": "AI 游戏工具的商业价值需要通过交付速度、可维护性和内容质量评估，采用比例本身不是成果指标。",
+      "action": "在一个小场景中比较手工、辅助生成和自动编排的返工量与交付时间，保留人工审查和素材授权记录。",
+      "sources": [
+        {
+          "url": "https://arstechnica.com/gaming/2026/10/report-epic-games-goes-all-in-on-ai-for-disney-collaboration/",
+          "label": "Ars Technica · 游戏开发报道",
+          "excerpt": "“We’re embracing AI-accelerated development, led by Epic developers who are the visionaries and creative drivers for everything we do,” an Epic spokesperson said in a statement.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "f2dd1820d7a7f622c574",
+      "headline": "金融：英国预算前，IFS 警告支出计划可能面临最高 350 亿英镑缺口",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T06:23:50+00:00",
+      "score": 83,
+      "summary": "BBC 报道，英国财政研究所认为，要满足防务和医疗等支出承诺，政府可能需要补充最高 350 亿英镑资金，并要求 10 月 28 日预算给出可信计划。这是智库的条件性估算，财政部未确认该数字；不能据此断言某项税收政策必然出台。",
+      "relevance": "预算、通胀和借贷成本的变化可能影响跨境客户支出与经营成本，应关注实际预算文件及其与预测的差异。",
+      "action": "将 10 月 28 日预算列入观察日历，届时对照正式支出与税收措施；当前仅整理可能受影响的成本项，不据此作单向行情预测。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cm78pwdp3n5qo",
+          "label": "BBC · 英国预算与财政研究所",
+          "excerpt": "Chancellor John Healey is facing a funding gap of up to £35bn and must set out \"credible\" spending plans in his first Budget on 28 October, an influential think tank has warned.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ],
+      "short_headline": "英国预算前，350 亿英镑支出压力待解",
+      "short_summary": "IFS 警告防务、医疗支出可能需追加资金；该数字是条件性估算。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "event_id": "95aec211ed9ddd6f102b",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T23:02:24+00:00",
+      "score": 83,
+      "headline": "英国承诺加强取暖油市场监管，消费者仍面临冬季价格压力",
+      "short_headline": "英国拟加强取暖油监管，生效时间未定",
+      "summary": "BBC 报道英国政府承诺强化取暖油市场规则、竞争与补偿渠道，并审查部分客户的最低订购量。报道同时指出尚未见到将气电价格上限扩展到取暖油的方案，也没有确定新规则生效时间。不能把监管承诺当作已经降价或已经获得补偿。",
+      "short_summary": "政府承诺调整监管与补偿渠道，但取暖油价格上限和规则生效时间仍未确认。",
+      "relevance": "能源价格与监管保护不同步，企业和家庭应分别核算成本、合同风险与实际补偿条件。",
+      "action": "涉及该市场时，核对供应合同、正式监管文件和补偿资格，按实际报价做成本预算，而非假设政策一定压低油价。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cxnv0z09r882o",
+          "label": "BBC · 能源消费与监管",
+          "excerpt": "But there is no sign of the government proposing such a change, nor when the stricter rules will take effect.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "f361b4758e6f2a1189dc",
+      "headline": "英国柴油成本压力：分析估算货车车主全年额外支出约 25 亿英镑",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T06:00:49+00:00",
+      "score": 81,
+      "summary": "Guardian 报道援引 Moneysupermarket 分析，英国货车与皮卡车主今年柴油支出可能比去年高约 25 亿英镑，并引发取消燃油税上调的呼声。它是基于里程、耗油量和价格的估算，不是已经结算的实际支出，也不代表政府已经调整税率。",
+      "relevance": "运输成本可能通过物流报价影响商品和小企业毛利，值得把能源费用与政策变动拆开观察。",
+      "action": "对相关业务做燃油成本情景表，核对税率正式文件和最新运输报价，再决定是否调整定价。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/money/2026/oct/12/uk-van-drivers-diesel-costs-fuel-duty",
+          "label": "The Guardian · 能源与经营成本",
+          "excerpt": "Millions of British van drivers face a combined £2.5bn cost to cover the rising price of diesel this year, according to figures, fuelling calls for the government to scrap its planned fuel duty rise.",
+          "checked_at": "2026-10-12T16:09:03+08:00"
+        }
+      ],
+      "short_headline": "英国货车柴油开支或增加 25 亿英镑",
+      "short_summary": "分析提示物流成本压力，燃油税调整呼声升温，政府尚未据此确认措施。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "event_id": "a21772374669d0c13576",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T23:01:45+00:00",
+      "score": 81,
+      "headline": "短视频切片出现按传播表现付费的生意，采访同时提示收入高度分化",
+      "short_headline": "短视频切片生意：传播计费，收入分化",
+      "summary": "BBC 采访为品牌、播客等制作短视频的剪辑者，介绍将长内容裁成短片、按传播表现获得报酬的模式。报道中的高收入是受访者自述，分析人士同时指出大多数参与者收入很少甚至没有收入，观看素材和寻找客户耗时可能被低估。个案不能作为普遍收益或国内平台可复制性的证明。",
+      "short_summary": "品牌和播客需要短片分发，但高收入只是采访个案，多数从业者收入很少。",
+      "relevance": "内容服务的需求可能在素材筛选、字幕、审核和效果复盘，而不仅是自动裁剪工具本身。",
+      "action": "先选择有明确素材授权的客户做小规模样例，核算编辑工时、获客成本与验收条件，再评估是否值得提供服务。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c84g12v3lk20o",
+          "label": "BBC · 创作者经济采访",
+          "excerpt": "Yet while some clippers can make good money, social media consultant Lia Haberman cautions that there are very few of them. \"It mirrors the creator economy more broadly. The vast majority make little to nothing,\" she says.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "0d84bbab316fddb29a83",
+      "headline": "宏观数据：美联储发布 2025 年消费者财务调查，提供家庭资产负债研究素材",
+      "category": "金融市场",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-09T14:00:00+00:00",
+      "context_note": "近七日重要数据回看：10 月 9 日发布，调查对应 2025 年，非今日行情。",
+      "score": 78,
+      "summary": "美联储发布 2025 年消费者财务调查及 2022—2025 年变化报告，覆盖家庭收入、净资产、资产、债务和财务脆弱性，并提供交互图表和研究数据。它是结构性统计资料，不是实时价格数据；本期未逐项验证报告里的数值结论。",
+      "relevance": "可用于研究不同家庭的财务结构、验证宏观叙事，也为公开数据解释工具提供素材；分析应考虑样本、权重和统计口径。",
+      "action": "先阅读官方摘要、数据说明和图表，把每个结论对应到指标定义与年份，再决定是否做可复现的可视化原型。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+          "label": "美联储 · 官方新闻稿",
+          "excerpt": "The Federal Reserve Board on Friday released the results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ],
+      "short_headline": "美联储发布 2025 年家庭财务调查",
+      "short_summary": "更新家庭收入、资产与债务资料，可用于结构性研究，不是实时行情。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "event_id": "03872769d8ed450dead8",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T09:11:46+00:00",
+      "score": 76,
+      "headline": "英国信用卡欠款压力上升，债务建议服务的收费与授权需核查",
+      "short_headline": "信用卡欠款压力上升，警惕速清债务收费",
+      "summary": "BBC 报道援引英格兰银行称拖欠信用卡还款的人数增加，贷款机构预计秋季未付债务继续上升。文章提醒消费者核对债务咨询机构授权，并说明英国存在免费的中立债务建议渠道；“快速抹掉债务”的广告与预付费用可能误导消费者。这些英国制度安排不能直接套用到其他地区。",
+      "short_summary": "报道提示信用卡还款压力与收费咨询陷阱，核验授权和免费建议渠道尤为重要。",
+      "relevance": "个人财务压力也会影响消费与小企业回款，金融服务应透明说明费用与适用条件。",
+      "action": "当地用户先通过官方监管与公益渠道核查咨询机构；企业关注逾期与回款变化，避免用单一报道推断总体违约率。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c84g1xz1l9ddo",
+          "label": "BBC · 信用卡还款与债务建议",
+          "excerpt": "An increasing number of people are missing credit card repayments as finances are stretched by rising bills, according to the Bank of England.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "0916073d991c450ec875",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T11:23:55+00:00",
+      "score": 90,
+      "headline": "Guardian 报道欧盟拟限制中国混合动力汽车进口，预计十二月实施",
+      "short_headline": "欧盟混合动力汽车配额影响跨境贸易",
+      "summary": "Guardian 报道称欧盟委员会确认中国混合动力汽车年进口限额为 35 万辆，预计十二月生效，使用 WTO 保障措施；文中称欧盟境内组装车辆与部分在中国生产车辆的适用范围不同。本期已读媒体原文，但尚未独立核对欧盟正式法律文本、车型定义和实施细则，因此保留媒体报道标记。",
+      "short_summary": "报道指年度进口配额预计十二月实施，组装地点与车型范围将影响企业实际适用。",
+      "relevance": "涉及中国汽车出口、供应链与欧洲市场的企业应评估规则适用边界，而非仅依据标题调整订单。",
+      "action": "核对欧盟正式公告、车型范围、原产地与配额分配，再做交付和产能情景分析；不据此作确定行情预测。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/environment/2026/oct/12/eu-deal-china-limit-imports-hybrid-electric-vehicles",
+          "label": "The Guardian · 欧洲贸易政策",
+          "excerpt": "The EU is to limit the number of hybrid electric vehicles imported from China to 350,000 cars a year, the European Commission has confirmed.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "8607dfc2162df5a7dbf0",
+      "headline": "政治：美国进口俄罗斯柴油计划引发跨党派反对，能源与制裁政策交织",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-11T23:18:45+00:00",
+      "score": 87,
+      "summary": "BBC 报道特朗普提出从俄罗斯获取柴油，七名来自两党的参议员反对该安排并认为其违反美国法律。政府与议员对合法性的说法不同；本期尚未逐条核对正式制裁文件，也未验证承诺数量的实际交付。",
+      "relevance": "能源供给、地缘冲突与制裁执行会共同影响运输及跨境经营的不确定性。政治承诺、法律授权和实际执行需要分别跟踪。",
+      "action": "继续核对美国财政部正式制裁或许可文件，以及交付证据；对经营成本做情景分析，避免把政治表态直接转成交易信号。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cjn5v21py07vo",
+          "label": "BBC · 美国能源与制裁政策",
+          "excerpt": "A group of seven senators - four Republicans and three Democrats – on Sunday said the deal violated US laws, urging Trump to \"reverse course\".",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ],
+      "short_headline": "美国俄罗斯柴油计划遭跨党派反对",
+      "short_summary": "议员质疑合法性；制裁授权、供给承诺和实际交付仍需分别核查。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "event_id": "2cd7dbcdd90cb729d595",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T21:20:51+00:00",
+      "score": 85,
+      "headline": "泽连斯基称能源停火宣布后六处设施遭袭，停火表态与执行仍有落差",
+      "short_headline": "乌方称六处能源设施遭袭，停火执行待核",
+      "summary": "BBC 报道泽连斯基称，特朗普宣布能源停火后俄罗斯仍袭击六处乌克兰能源设施；文章引述乌电网运营商报告新的停电和供电限制，并记录俄方官员立场。具体攻击数量属于乌方说法，本期未独立验证全部现场证据，也没有发现可据此确认双方都已接受的完整停火协议。",
+      "short_summary": "乌方陈述持续袭击，运营商报告停电；外交宣布与实际供电、安全状况需要分开跟踪。",
+      "relevance": "地缘冲突对能源供给和交付造成持续不确定性，经营计划不宜把政治宣布直接当作风险解除。",
+      "action": "继续跟踪双方正式文件、独立现场核验和电网运营通知，涉及当地安排时保留应急方案。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cvlyd4pdlwkxo",
+          "label": "BBC · 能源停火与执行报道",
+          "excerpt": "On Monday, Ukraine's state-owned grid operator Ukrenergo reported \"new power cuts\" in Kharkiv, Donetsk and Zaporizhzhia due to damage caused to energy equipment by Russian attacks.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "2de171f17e887f72138b",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T20:54:09+00:00",
+      "score": 82,
+      "headline": "沙特能源部长对机场及能源设施袭击承诺严肃回应，地区安全风险持续",
+      "short_headline": "沙特承诺回应胡塞袭击，地区风险持续",
+      "summary": "BBC 报道沙特能源部长在利雅得能源会议上称，将对近期机场和油气设施遭胡塞袭击作出严肃回应。报道同时记录沙特方面和胡塞方面的不同陈述。回应表态不等于已经执行的具体军事行动，伤亡与攻击细节仍依赖各方报告。",
+      "short_summary": "能源部长公开回应袭击事件，具体后续措施尚待确认，机场与基础设施风险持续。",
+      "relevance": "航空、能源和跨境物流可能受到地区安全事件扰动，应关注实际运行通知与保险条件。",
+      "action": "有相关经营或出行需求时，核对航空公司、机场与主管部门的最新通知，不仅依据外交或军事表态决策。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cjly0zqq27e4o",
+          "label": "BBC · 沙特与区域安全报道",
+          "excerpt": "\"The events of recent weeks are serious. Our response must be equally serious,\" Prince Abdul Aziz bin Salman told the WPC Energy Congress in Riyadh.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "8e5c070d56ce89685eb2",
+      "headline": "巴基斯坦省级政府被暂停：紧急状态引发中央与反对党对立",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T00:22:11+00:00",
+      "score": 80,
+      "summary": "Guardian 报道巴基斯坦宣布开伯尔-普什图省进入紧急状态并暂停省政府，中央政府称安全问题未获解决，PTI 则反对这一措施。措辞和合法性存在政治争议，本期未独立核验完整法律文件与执行范围。",
+      "relevance": "区域治理、边境安全和公共服务的不确定性可能影响当地经营与协作，需要区分政治表态和实际行政措施。",
+      "action": "持续核对政府公报、法院后续与当地公共服务变化，避免将党派评价直接作为事实结论。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/12/imran-khans-party-decries-coup-after-pakistan-suspends-provincial-government",
+          "label": "The Guardian · 巴基斯坦治理",
+          "excerpt": "President Zardari declared the emergency on the advice of the prime minister, Shehbaz Sharif, after a cabinet decision, the president’s office said.",
+          "checked_at": "2026-10-12T16:09:03+08:00"
+        }
+      ],
+      "short_headline": "巴基斯坦暂停省政府，政治对立升级",
+      "short_summary": "紧急状态引发中央与 PTI 争议，执行范围和完整法律依据仍待核对。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "event_id": "052cc5021db1d6fa2d0c",
+      "headline": "印度选民名单争议持续：德里关闭地铁站并实施交通限制",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T05:51:48+00:00",
+      "score": 79,
+      "summary": "Guardian 报道，围绕选民名单修订的抗议活动持续，德里警方关闭六个地铁站并提示交通管制。反对派与选举委员会对名单修订的公平性说法不同；本期只记录报道所述争议和措施，不把任何一方指控当作已证实事实。",
+      "relevance": "对当地出行、项目交付和跨境协作，政治事件带来的交通与运行扰动应单独评估。",
+      "action": "如有当地安排，核对官方交通通知和安全信息；继续观察司法程序与选举委员会的正式说明。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/12/india-election-protests-delhi-police-shut-metro-stations-ahead-march",
+          "label": "The Guardian · 印度政治与公共运行",
+          "excerpt": "Police said the six metro stations were closed on Monday for “security reasons” and traffic restrictions and diversions would be imposed in 20 locations.",
+          "checked_at": "2026-10-12T16:09:03+08:00"
+        }
+      ],
+      "short_headline": "德里选民名单争议持续，交通受限",
+      "short_summary": "警方关闭六个地铁站；反对派与选举委员会对名单修订各持立场。",
+      "daily_report": "2026-10-12"
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "local-multimodal-search-embeddinggemma-2",
+      "headline": "产品机会：端侧多模态素材检索，把图片、视频与语音备忘录连起来",
+      "category": "可商用 AI",
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "score": 92,
+      "signal": "EmbeddingGemma 2 的官方多模态与端侧检索能力，为小型素材库、离线知识助手和本地代码检索提供新的实现候选。模型发布是事实，付费需求仍是待验证假设。",
+      "audience": "做图片与视频工具、知识库或小型工作室自动化的开发者。",
+      "first_step": "在本周用一组公开或自有测试素材做离线检索原型，再让三位目标用户试用，记录找素材耗时、失败例子与是否愿意付费。",
+      "risks": "召回质量、设备内存与延迟尚未实测；需要单独核查模型文件、依赖与素材授权，不能仅凭公告推断可直接商业上线。",
+      "time_window": "未来一周做原型验证；没有公开申请截止日或保证收益。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+          "label": "Google DeepMind · 官方公告",
+          "excerpt": "Today, we’re launching EmbeddingGemma 2, expanding beyond text to unify code, images, video, and audio in a shared embedding space.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ],
+      "short_headline": "端侧多模态素材检索",
+      "short_summary": "从本地图片、视频和语音搜索做小型原型，验证检索效果与真实付费需求。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "opportunity_id": "repository-context-onboarding-pack",
+      "headline": "开发服务机会：把项目约定与重复流程整理成编码助手可用的入门包",
+      "short_headline": "项目上下文入门包",
+      "category": "AI 编程",
+      "score": 87,
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "signal": "GitHub 最新指南提供仓库指令、Skills、Agents 和 MCP 的分工，支持将项目知识整理成可维护资产。由此推导的小团队交接与入门服务是待验证需求，不是已确认订单。",
+      "short_summary": "围绕真实项目交接，提供可维护的约定与检查流程，先验证是否减少重复沟通。",
+      "audience": "维护多仓库、经常交接或引入编码助手的小团队。",
+      "first_step": "在合成项目做一个含测试入口、约定和单一检查流程的样例，请两位开发者完成同一任务，记录沟通次数和错误，随后确认客户是否需要此类服务。",
+      "risks": "指南可免费自学，单纯文件模板可能缺乏付费差异；项目规则会过时，须明确维护成本，不能承诺配置即可提高效率。",
+      "time_window": "本周做一个小样例，无官方申请截止。",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase",
+          "label": "GitHub Blog · 官方使用指南",
+          "excerpt": "Repository custom instructions give Copilot that baseline context. Add a .github/copilot-instructions.md file to define guidance that applies across the repository, such as your preferred architecture, naming conventions, or expectations for testing and validation.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "opportunity_id": "ai-agent-permission-observability-service",
+      "headline": "服务机会：给小团队的 AI 自动化补上权限、停用与审计能力",
+      "category": "工作室业务",
+      "status": "research",
+      "verification_status": "media_reported",
+      "score": 84,
+      "signal": "微软总裁关于事件通报、独立评估和紧急停止的公开主张，提示 AI 自动化的可控性值得关注。由此推导的小团队技术服务需求尚未得到客户验证。",
+      "audience": "已经使用编码代理、MCP 或自动化工作流，并需要明确执行边界的小团队。",
+      "first_step": "制作一个只读检查样例，展示权限清单、运行日志与停用入口；访谈三家潜在客户，验证他们的实际故障、现有解决方案和预算。",
+      "risks": "行业发言不等于新法规或刚性采购需求；没有认证或客户证据时，不能宣称提供法规合规认证。",
+      "time_window": "接下来两周先验证需求与技术样例，不承诺成交。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6rmy7zmvx3lo",
+          "label": "BBC · 微软总裁访谈",
+          "excerpt": "Brad Smith said there needed to be global safety rules in place, including a legal obligation to tell a \"victim\" if their system is breached by a rogue AI agent as well as deciding when outside evaluators should sign off on an AI product before it is released.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ],
+      "short_headline": "AI 自动化权限与审计服务",
+      "short_summary": "用权限清单、运行日志和停用入口切入小团队需求，先访谈再投入。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "opportunity_id": "authorized-short-video-clipping-workflow",
+      "headline": "内容服务机会：经授权的短视频筛选、字幕与交付流程",
+      "short_headline": "授权内容切片与字幕服务",
+      "category": "工作室业务",
+      "score": 80,
+      "status": "research",
+      "verification_status": "media_reported",
+      "signal": "BBC 采访记录品牌和播客采购短视频服务的案例，但多数从业者收入很少。可研究在合法授权素材上的筛选、字幕与质量审核流程，需求和本地平台可复制性仍需验证。",
+      "short_summary": "从客户已授权的长内容做切片与字幕样例，核算工时和验收条件，不用高收入个案预测收益。",
+      "audience": "有内容编辑能力、能获取客户素材授权的小型工作室与工具开发者。",
+      "first_step": "让潜在客户提供已授权素材，交付三条不同用途的短片样例，核算人工审查、字幕校正与修改时间，再商议可验证的交付指标。",
+      "risks": "素材版权、品牌使用许可、平台分发与付费规则均需核查；播放量不保证收入，不能直接搬用采访中的海外结算模式。",
+      "time_window": "未来一周先试做与访谈，无公开竞赛或申请窗口。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c84g12v3lk20o",
+          "label": "BBC · 创作者经济采访",
+          "excerpt": "Yet while some clippers can make good money, social media consultant Lia Haberman cautions that there are very few of them. \"It mirrors the creator economy more broadly. The vast majority make little to nothing,\" she says.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "opportunity_id": "scf-2025-public-data-explorer",
+      "headline": "数据工具机会：把最新家庭资产负债调查做成可复现的研究看板",
+      "category": "金融市场",
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "score": 79,
+      "signal": "美联储新发布的 SCF 数据与官方交互图表，为家庭财务结构研究提供更新材料。增量价值可能在口径解释、可复现分析和特定受众需求，而非重复已有图表。",
+      "audience": "金融内容研究者、数据产品开发者以及需要比较家庭财务结构的分析团队。",
+      "first_step": "先核对数据使用说明、抽样权重和官方指标，复现一个公开图表，再访问目标研究者确认现有工具缺少什么。",
+      "risks": "官方已有交互图表，通用看板可能没有付费差异；误用权重或把历史统计当作实时行情会造成误导，不提供收益预测。",
+      "time_window": "未来一周做一个可复现的小样本研究原型。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+          "label": "美联储 · 官方新闻稿",
+          "excerpt": "The Federal Reserve Board on Friday released the results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ],
+      "short_headline": "家庭资产负债数据研究看板",
+      "short_summary": "用 SCF 新数据复现图表，寻找口径解释和特定受众的需求缺口。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "opportunity_id": "legacy-cold-chain-monitoring-assessment",
+      "headline": "运营工具机会：旧冷链设备支持期限与温度异常监控",
+      "short_headline": "旧冷链设备监控与盘点",
+      "category": "工作室业务",
+      "score": 79,
+      "status": "research",
+      "verification_status": "media_reported",
+      "signal": "法国冷柜事件说明旧控制系统故障可能直接造成库存损失。由此可研究经授权的设备支持期限盘点、温度监控和处置看板，但客户需求和接入条件尚未验证。",
+      "short_summary": "将设备支持期限、温度告警与人工处置记录关联，先用模拟数据验证监控闭环。",
+      "audience": "为商店或小型仓储提供设备运维、可视化工具的团队。",
+      "first_step": "先访谈一位冷链运维负责人，用模拟温度数据做只读告警与工单样例；明确设备供应商允许的接口后才讨论实际接入。",
+      "risks": "不同控制器接口与权限差异大；监控工具不能替代安全升级、设备检修或食品安全责任，也不能在未授权生产系统测试。",
+      "time_window": "本周只做需求访谈与模拟原型，没有已确认项目订单。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/crq5nzxv9q4yo",
+          "label": "BBC · 冷链网络安全报道",
+          "excerpt": "Danfoss said the affected cold units were older models whose security software could not be updated to ward off a risk they had identified.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    }
+  ],
+  "daily_reports": [
+    "2026-10-12",
+    "2026-10-13"
+  ]
+}
