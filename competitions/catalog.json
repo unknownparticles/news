@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-20T10:01:30+08:00",
+  "checked_at": "2026-10-21T16:06:32+08:00",
   "competitions": [
     {
       "id": "tianchi-532510",
@@ -16,7 +16,7 @@
       "non_student_allowed": true,
       "rules_consistent": true,
       "registration_deadline": "2026-12-31T23:59:59+08:00",
-      "checked_at": "2026-10-20T10:01:30+08:00",
+      "checked_at": "2026-10-21T16:06:32+08:00",
       "topic": "图片和 PDF 复杂表格识别、内容抽取与推理。",
       "eligibility": "面向社会人士，明确要求个人参赛，不允许多人组队；须实名认证。",
       "format": "长期线上赛，每季度一个赛季，提交 Excel 结果。",
@@ -57,7 +57,7 @@
       "non_student_allowed": true,
       "rules_consistent": true,
       "registration_deadline": "2026-12-31T23:59:59+08:00",
-      "checked_at": "2026-10-20T10:01:30+08:00",
+      "checked_at": "2026-10-21T16:06:32+08:00",
       "topic": "具身智能，当前冬季仿真阶段可在线提交与自动评测。",
       "eligibility": "面向全社会个人开发者，每队 1—5 人，可单人；须实名认证。",
       "format": "冬季仿真赛 2026-09-29 至 12-31 线上参与；后续年度总决赛规则另算。",
@@ -98,7 +98,7 @@
       "non_student_allowed": true,
       "rules_consistent": true,
       "registration_deadline": "2027-05-06T23:59:59+08:00",
-      "checked_at": "2026-10-20T10:01:30+08:00",
+      "checked_at": "2026-10-21T16:06:32+08:00",
       "topic": "资金流入流出预测与时间序列建模，适合算法练手。",
       "eligibility": "全社会开放、参赛对象不限，要求个人形式。",
       "format": "本地调试、在线实时评测；规则写长期开放，平台当前显示至 2027-05-06。",
@@ -135,7 +135,7 @@
       "non_student_allowed": true,
       "rules_consistent": true,
       "registration_deadline": "2026-11-30T15:59:59+08:00",
-      "checked_at": "2026-10-20T10:01:30+08:00",
+      "checked_at": "2026-10-21T16:06:32+08:00",
       "topic": "电商评论属性、观点与情感抽取，适合 NLP 与业务工具练习。",
       "eligibility": "全社会开放、参赛对象不限，个人形式、不允许组队；提交前实名认证。",
       "format": "全年开放的经典打榜赛，本地调试、在线提交。",
@@ -176,7 +176,7 @@
       "non_student_allowed": true,
       "rules_consistent": false,
       "registration_deadline": "2027-05-24T23:59:59+08:00",
-      "checked_at": "2026-10-20T10:01:30+08:00",
+      "checked_at": "2026-10-21T16:06:32+08:00",
       "topic": "汉语框架语义解析，原评测转长期训练榜。",
       "eligibility": "允许单人；公告欢迎大家参与，但社会人士当前报名要求需再次核对。",
       "format": "长期训练榜线上提交，原 2025 年评奖与会议不视作当前窗口。",
@@ -213,7 +213,7 @@
       "non_student_allowed": true,
       "rules_consistent": false,
       "registration_deadline": "2026-10-25T23:59:59+08:00",
-      "checked_at": "2026-10-20T10:01:30+08:00",
+      "checked_at": "2026-10-21T16:06:32+08:00",
       "topic": "大模型图网络决策，当前可能仅供已晋级复赛的队伍。",
       "eligibility": "允许社会人士单人，但新选手是否仍能入场存在规则日期冲突。",
       "format": "线上代码评测，部分获奖者须线下参加会议。",
@@ -250,7 +250,7 @@
       "non_student_allowed": true,
       "rules_consistent": false,
       "registration_deadline": "2026-09-27T23:59:59+08:00",
-      "checked_at": "2026-10-20T10:01:30+08:00",
+      "checked_at": "2026-10-21T16:06:32+08:00",
       "topic": "生物医学患者表型概念识别。",
       "eligibility": "企业人员可以参赛，个人须依托单位，获奖需注册并参加会议。",
       "format": "具体线上阶段和线下要求须按正式规则核对。",
@@ -317,14 +317,14 @@
       "url": "https://tianchi.aliyun.com/competition/entrance/532508",
       "registration_url": "https://tianchi.aliyun.com/competition/entrance/532508",
       "qualification_status": "conditional",
-      "registration_status": "uncertain",
+      "registration_status": "closed",
       "mode": "offline_required",
       "kind": "prize",
       "individual_allowed": true,
       "non_student_allowed": true,
       "rules_consistent": false,
       "registration_deadline": "2026-10-21T13:59:59+08:00",
-      "checked_at": "2026-10-20T10:01:30+08:00",
+      "checked_at": "2026-10-21T16:06:32+08:00",
       "topic": "跨本体机器人操作与真机验证。",
       "eligibility": "单人或组队允许，当前新入场资格需核对。",
       "format": "具体线上阶段和线下要求须按正式规则核对。",
@@ -354,14 +354,14 @@
       "url": "https://tianchi.aliyun.com/competition/entrance/532503",
       "registration_url": "https://tianchi.aliyun.com/competition/entrance/532503",
       "qualification_status": "conditional",
-      "registration_status": "open",
+      "registration_status": "closed",
       "mode": "offline_required",
       "kind": "prize",
       "individual_allowed": true,
       "non_student_allowed": false,
       "rules_consistent": true,
       "registration_deadline": "2026-10-20T23:59:59+08:00",
-      "checked_at": "2026-10-20T10:01:30+08:00",
+      "checked_at": "2026-10-21T16:06:32+08:00",
       "topic": "欧莱雅美妆 AI 客服管家。",
       "eligibility": "限全日制在校生或 2026 届毕业生；普通在职身份不足以确认。",
       "format": "线上提交，入围后线下决赛。",
@@ -398,7 +398,7 @@
       "non_student_allowed": true,
       "rules_consistent": true,
       "registration_deadline": "2026-06-01T08:00:00+08:00",
-      "checked_at": "2026-10-20T10:01:30+08:00",
+      "checked_at": "2026-10-21T16:06:32+08:00",
       "topic": "余震震级与发生时间预测。",
       "eligibility": "原赛允许全球公众、个人或团队。",
       "format": "具体线上阶段和线下要求须按正式规则核对。",
@@ -547,7 +547,7 @@
       "non_student_allowed": null,
       "rules_consistent": false,
       "registration_deadline": "2026-10-25T23:59:59+08:00",
-      "checked_at": "2026-10-20T10:01:30+08:00",
+      "checked_at": "2026-10-21T16:06:32+08:00",
       "topic": "提交完整 AI 竞赛方案、数据集和可验证的评测程序。",
       "eligibility": "规则允许单人或最多五人组队；当前首轮入场日期与社会人士资格须核对。",
       "format": "方案和材料在线提交，入围后开发评测；不把报名按钮当作新入场许可。",
@@ -574,28 +574,28 @@
       "name": "阿里云天池",
       "url": "https://tianchi.aliyun.com/competition",
       "status": "verified",
-      "detail_count": 10,
-      "checked_at": "2026-10-20T10:01:30+08:00",
-      "candidate_count": 36
+      "detail_count": 11,
+      "checked_at": "2026-10-21T08:37:53.296836+08:00",
+      "candidate_count": 35
     },
     {
       "name": "DataFountain",
       "url": "https://www.datafountain.cn/competitions",
       "status": "listing_only",
-      "checked_at": "2026-10-20T10:01:30+08:00"
+      "checked_at": "2026-10-21T08:37:53.296836+08:00"
     },
     {
       "name": "讯飞 AI 开发者大赛",
       "url": "https://challenge.xfyun.cn/competition",
       "status": "browser_required",
       "detail_count": 1,
-      "checked_at": "2026-10-20T10:01:30+08:00"
+      "checked_at": "2026-10-21T08:37:53.296836+08:00"
     },
     {
       "name": "百度 AI Studio",
       "url": "https://aistudio.baidu.com/competition",
       "status": "browser_required",
-      "checked_at": "2026-10-20T10:01:30+08:00",
+      "checked_at": "2026-10-21T08:37:53.296836+08:00",
       "detail_count": 1
     },
     {
@@ -603,7 +603,7 @@
       "url": "https://dev.kingdee.com/active/competition/2026",
       "status": "browser_required",
       "detail_count": 1,
-      "checked_at": "2026-10-20T10:01:30+08:00"
+      "checked_at": "2026-10-21T08:37:53.296836+08:00"
     }
   ]
 }
