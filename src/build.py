@@ -106,6 +106,18 @@ def competition_table(entries, prefix=''):
     return '<div class="table-scroll" tabindex="0" aria-label="竞赛比较表，可左右滚动"><table class="competition-table"><caption>AI 竞赛速览</caption><thead><tr><th scope="col">赛题</th><th scope="col">状态</th><th scope="col">报名截止</th><th scope="col">类型</th><th scope="col">方式</th><th scope="col">费用 / 算力</th><th scope="col">奖励</th><th scope="col">详情</th></tr></thead><tbody>' + ''.join(rows) + '</tbody></table></div>'
 
 
+def trending_html(report):
+    value = report.get('github_trending') if report else None
+    if value is None:
+        return ''
+    def stars(count):
+        return '未知' if count is None else f'{count:,}'
+    rows = ''.join(f'''<tr><td>{item['rank']}</td><th scope="row"><a href="{esc(item['url'])}" target="_blank" rel="noopener noreferrer">{esc(item['repository'])} ↗</a><small>{esc(item['summary'])}</small></th><td>{esc(item['direction'])}</td><td>{stars(item.get('stars_today'))}</td><td>{stars(item.get('total_stars'))}</td></tr>''' for item in value['items'])
+    note = f'<p class="coverage-warning">{esc(value["coverage_note"])}</p>' if value.get('coverage_note') else ''
+    analysis = ''.join(f'<p>{esc(p)}</p>' for p in value['analysis'])
+    return f'''<section id="github-trending" class="opportunities-section"><div class="section-heading"><h2>GitHub 每日热榜前十</h2><a href="{esc(value['source_url'])}" target="_blank" rel="noopener noreferrer">官方日榜 ↗</a></div><p>全语言榜单 · 核验于 {esc(time_label(value['checked_at'], True))} · 排名反映近期关注度，上榜不代表新发布、研究质量或商业许可。</p>{note}<div class="table-scroll" tabindex="0" aria-label="GitHub 热榜，可左右滚动"><table class="competition-table"><caption>当日关注项目 · {len(value['items'])} / 10</caption><thead><tr><th scope="col">排名</th><th scope="col">项目与用途</th><th scope="col">研究方向</th><th scope="col">今日新增 Star</th><th scope="col">总 Star</th></tr></thead><tbody>{rows}</tbody></table></div><h3>值得关注的研究方向</h3>{analysis}</section>'''
+
+
 def headline_card(item, report, number, prefix=''):
     return f'''<article class="headline-card" data-news-category="{news_group(item['category'])}">
 <span class="story-number" aria-hidden="true">{number:02d}</span><div class="story-body"><div class="item-meta"><span class="status" data-status="{item['verification_status']}">{STATUSES[item['verification_status']]}</span>{'<span class="context-tag">近期回看</span>' if item.get('context_note') else ''}</div>
@@ -213,6 +225,7 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports", competition_catalo
     news_filters = '<button class="filter active" data-domain-filter="all" aria-pressed="true">全部领域</button>' + ''.join(f'<button class="filter" data-domain-filter="{domain}" aria-pressed="false">{label}</button>' for domain, label in NEWS_DOMAINS.items())
     body = edition + featured_news(latest_daily) + '<div class="reading-layout"><section id="latest-news" class="frontier-section"><div class="section-heading"><h2>新闻速览</h2><a href="archive/news.html">新闻归档 ↗</a></div><div class="news-filters" aria-label="按新闻领域筛选">' + news_filters + '</div>' + news_digest([latest_daily] if latest_daily else []) + '</section>'
     body += f'''<aside class="reading-rail"><div class="rail-card"><span class="eyebrow">IN THIS EDITION</span><h2>本期阅读指南</h2><a href="#latest-news"><span>01</span><div>新闻速览<small>科技 / 金融 / 政策</small></div><b>↓</b></a><a href="#opportunities"><span>02</span><div>机会观察<small>从变化信号到验证方向</small></div><b>↓</b></a><a href="#competitions"><span>03</span><div>AI 竞赛<small>资格、截止日与奖励比较</small></div><b>↓</b></a><a href="#archive"><span>04</span><div>历史报告<small>日报 / 周报 / 月报 / 季报 / 年报</small></div><b>↓</b></a></div><div class="rail-note"><span class="accent-dot" aria-hidden="true"></span><h3>信息有出处，判断有边界。</h3><p>每条新闻保留原文与核验标记。近期回看单独注明，机会先验证需求。</p><small>本期更新于 {esc(updated)}</small><a href="{report_url(latest_daily) if latest_daily else '#archive'}">查看本期筛选说明 →</a></div></aside></div>'''
+    body += trending_html(latest_daily)
     body += f'''<section id="opportunities" class="opportunities-section"><div class="section-heading"><h2>机会观察</h2><a href="archive/opportunities.html">全部机会 →</a></div><div class="opportunity-grid">{opportunity_cards or '<p class="empty">本期暂无新机会。</p>'}</div></section>
 <section id="competitions" class="competitions-section"><div class="section-heading"><h2>AI 竞赛</h2><a href="archive/competitions.html">全部 {len(catalog['competitions'])} 项 / 筛选 →</a></div><p class="compact-note">个人、社会人士、线上可参与 · 截止日期与参赛条件已核验，详细限制请点赛题查看。</p>{competition_table(eligible[:6]) if eligible else '<p class="empty">暂无已核验符合条件的赛事。</p>'}</section>
 <section id="archive" class="archive-section"><div class="section-heading"><h2>报告归档</h2><label class="search-label"><span>搜索报告</span><input id="report-search" type="search" placeholder="搜索报告…"></label></div><div class="filters">{report_filters}<span id="result-count" aria-live="polite"></span></div><div class="report-grid">{''.join(card(r) for r in reports) or '<p class="empty">暂无报告。</p>'}</div><p id="no-results" class="empty" hidden>没有匹配的报告。</p></section>'''
@@ -250,6 +263,7 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports", competition_catalo
         intro = f'<div class="report-header"><a class="back" href="../../archive/{report["kind"]}.html">← 返回{KINDS[report["kind"]]}归档</a><span class="eyebrow">{report["kind"].upper()} BRIEF</span><h1>{esc(report["title"])}</h1><p class="report-date">{esc(report["period"]["start"])} — {esc(report["period"]["end"])} · {len(report["items"])} 条新闻 · {len(report.get("opportunities", []))} 个机会</p><p class="report-summary">{esc(report["summary"])}</p>{warning}{failures}{window}<nav class="report-sections"><a href="#frontier-news">新闻 ↓</a><a href="#report-opportunities">机会 ↓</a><a href="../../archive/competitions.html">竞赛比较表 →</a></nav></div>'
         body = intro + '<section id="frontier-news"><h2 class="report-section-title">本期新闻</h2><div class="news-list">' + (''.join(item_html(item, i, '../../', report['kind'] == 'daily') for i, item in enumerate(report['items'], 1)) or '<p class="empty">暂无新闻。</p>') + '</div></section>'
         body += '<section id="report-opportunities" class="report-opportunities"><h2 class="report-section-title">本期机会</h2>' + (''.join(opportunity_html(o, '../../') for o in report.get('opportunities', [])) or '<p class="empty">暂无机会。</p>') + '</section>'
+        body += trending_html(report)
         if report.get('daily_reports'):
             body += '<section class="daily-links"><h2>本期日报索引</h2>' + ''.join(f'<a href="../daily/{esc(identity)}.html">{esc(identity)} →</a>' for identity in report['daily_reports']) + '</section>'
         if report.get('analysis'):

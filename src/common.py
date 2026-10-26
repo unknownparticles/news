@@ -76,6 +76,9 @@ def validate_report(report):
             raise ValueError("采集窗口必须包含时区且起止时间正确")
     if report.get("analysis") is not None and (not isinstance(report["analysis"], list) or any(not isinstance(p, str) or not p.strip() for p in report["analysis"])):
         raise ValueError("周期分析必须是非空段落的列表")
+    if 'github_trending' in report:
+        from .trending import validate_trending
+        validate_trending(report['github_trending'], report)
     coverage = report["coverage"]
     expected = (end - start).days + 1
     if coverage["expected_days"] != expected or not 0 <= coverage["available_days"] <= expected:

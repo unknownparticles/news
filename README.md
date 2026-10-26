@@ -68,6 +68,32 @@ python3 scripts/automation.py publish
 
 三类前沿新闻必须提供带时区的 `published_at`，超过二十四小时的内容须用 `context_note` 明确说明回看或补采原因。默认优先近二十四小时新增内容，可从近七日重要官方公告补充前沿背景；禁止把旧报道改写为今日发布。
 
+## 每日 GitHub 热榜与研究方向
+
+每天北京时间 08:30 的现有自动化新增独立栏目：直接核对 [GitHub Trending 全语言日榜](https://github.com/trending?since=daily) 前十，保留原始排名、中文用途、研究方向、今日新增 Star、总 Star 和仓库链接。归纳三至五个方向并提供对应项目依据与学习或验证步骤。榜单反映近期关注度，上榜不代表新发布、学术质量或商业许可；不占新闻与机会名额。首页与当日日报展示，历史快照保留在日报。已有日报不补造历史热榜。
+
+日报可选字段 `github_trending` 的结构如下（仅为格式，不是真实榜单；实际完整榜单需要十项及三至五段分析）：
+
+```json
+{
+  "source_url": "https://github.com/trending?since=daily",
+  "checked_at": "2026-10-27T08:25:00+08:00",
+  "coverage_note": "格式示例，仅展示一项；实际不足十项时填写真实原因。",
+  "items": [{
+    "rank": 1,
+    "repository": "example/project",
+    "url": "https://github.com/example/project",
+    "summary": "核对仓库文档后填写中文用途。",
+    "direction": "核对后填写研究方向",
+    "stars_today": null,
+    "total_stars": null
+  }],
+  "analysis": ["点名对应仓库，说明方向、关注信号和下一步验证方法。"]
+}
+```
+
+`checked_at` 必须属于日报的北京时间日期且不晚于生成时间。Star 未展示时填 `null`，不能填零或估算。不足十条必须写 `coverage_note`；完全失败保留空列表并记录来源失败，不用旧榜、周榜、关键词检索或总 Star 排名补齐。自动化由助手直接核验官方页面和项目文档，现有候选采集器的仓库搜索不等于 Trending。
+
 ## 全国 AI 竞赛
 
 `competitions/catalog.json` 存储经过官方规则核验的公开赛题；`config/competitions.json` 配置天池、DataFountain、讯飞、百度 AI Studio 和金蝶等来源。采集命令将公开候选保存到 `.local/competition-candidates.json`，原始候选不直接成为报名推荐。公开竞赛库需校验后才生成 `docs/archive/competitions.html`。
