@@ -1,0 +1,276 @@
+{
+  "id": "2026-10-24",
+  "kind": "daily",
+  "title": "2026-10-24 · 新模型、AI 就业与数据服务",
+  "period": {
+    "start": "2026-10-24",
+    "end": "2026-10-24"
+  },
+  "generated_at": "2026-10-24T18:03:11+08:00",
+  "collection_window": {
+    "start": "2026-10-23T08:29:40.432045+08:00",
+    "end": "2026-10-24T08:29:25.223314+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证机会。连续采集至北京时间 08:29，随后核对原文；所有配置的订阅本次均成功返回，零新增不视为故障。机构模型与研究结论保留自述边界，政策区分成文、公开与实施。中国政府网原文已核对；Ofcom 原报告未能读取，相应条目仅作为媒体报道。竞赛发现一项新闻推荐学习赛：单人及社会人士资格、奖励和正式提交通道尚不明确，列为待确认，不增加可报名推荐。现有四项推荐中两项为长期练习；列表十月二十五日截止的两项赛事仍有首轮日期冲突，不催促新报名。",
+  "source_failures": [
+    "Ofcom 原报告读取失败；保留 Guardian 媒体报道标记，未作为监管原文核实。"
+  ],
+  "items": [
+    {
+      "event_id": "a39c44d95d805fec22ec",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-23T16:00:00+00:00",
+      "score": 90,
+      "headline": "Kimi K3.1 Pro 上线，完整权重仍待十一月发布",
+      "short_headline": "Kimi K3.1 Pro 上线，完整权重仍待十一月发布",
+      "short_summary": "官方称新模型支持百万上下文，现已提供产品与 API 入口；完整权重计划十一月四日前发布，尚非已经开放。",
+      "summary": "月之暗面介绍 Kimi K3.1 Pro 与 Highspeed 版本，称支持一百万 token 上下文，已通过 Kimi 产品和 API 提供访问。官网明确完整模型权重将在十一月四日前发布，不能把公告中的 open-weight 定位写成今日已经可以下载完整权重。编程、三维与金融研究表现及速度提升来自机构自述，本期没有独立复测或核实全部计费条款。",
+      "relevance": "评估长上下文任务多了一个服务候选，当前 API 可用性、后续权重及许可是不同问题。",
+      "action": "先用公开样例评估长文任务、延迟、失败率和成本；等待权重与正式许可发布后再判断本地部署及商业使用。",
+      "sources": [
+        {
+          "url": "https://www.kimi.com/blog/kimi-k3-1-pro",
+          "label": "Kimi · 模型发布",
+          "excerpt": "Kimi K3.1 Pro and Kimi K3.1 Pro Highspeed are available today on Kimi.com, Kimi Work, Kimi Code, and the Kimi API. The full model weights will be released by Nov 4.",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "5d794c3788a3a4be0d42",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-23T16:15:50+00:00",
+      "score": 86,
+      "headline": "LitPivot 把论文摘录与研究提案修改连接起来",
+      "short_headline": "LitPivot 把论文摘录与研究提案修改连接起来",
+      "short_summary": "Ai2 与宾大研究者开发按问题、贡献和评估检索论文的工具；十七人研究结果不能证明想法必然新颖。",
+      "summary": "Ai2 与宾夕法尼亚大学合作者介绍 LitPivot：围绕提案的问题、贡献和评估计划组织相关论文，用原文摘录支持批评与修改建议，研究者可接受、编辑或拒绝建议。在十七名研究者的实验中，专家对提案文献依据的评分更高；新颖性与有用性的部分提升来自参与者自评，不能当作自动证明创新或论文成功的能力。",
+      "relevance": "研究辅助工具可以把证据选择与写作迭代连接，价值仍取决于检索覆盖、引用正确性和人工判断。",
+      "action": "用一组公开论文检验摘录是否支持建议，并记录遗漏与错误引证；不把工具评分替代正式文献审查。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/litpivot",
+          "label": "Ai2 · LitPivot 研究",
+          "excerpt": "With collaborators at the University of Pennsylvania, we developed LitPivot, a system that helps researchers navigate these pivots. Using papers retrieved through Asta Paper Finder, LitPivot organizes literature around the part of a proposal being edited, offers critiques supported by excerpts from selected studies, and suggests revisions that researchers can accept, edit, or reject. LitPivot is intended to be used for early-stage research ideation, but the idea could possibly extend to longer writing tasks (i.e., writing the introduction section of a paper).",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "003e3f15686d52c51977",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-23T12:00:25+00:00",
+      "score": 87,
+      "headline": "PHP 紧急修补考验运维，攻击传闻需分开核验",
+      "short_headline": "PHP 紧急修补考验运维，攻击传闻需分开核验",
+      "short_summary": "BBC 采访描述跨版本修补与兼容压力，同时指出部分攻击警报曾撤回；严重漏洞不等于已证实大规模失窃。",
+      "summary": "BBC 采访处理 PHP 安全应急的 IT 人员，记录多种部署、停止支持的版本和升级回归带来的负担，并报道 PHP Foundation 已发布修复。文章同时指出部分关于可用攻击方法的警报被撤回，当时尚无大规模数据泄露或攻击的证据。本期只核对媒体原文，未独立核查公告版本、漏洞编号或任何特定网站是否受影响。",
+      "relevance": "软件资产清单、支持周期和升级演练影响修补速度；应急沟通还要区分漏洞严重性与已确认利用。",
+      "action": "维护者应从官方安全公告核对自身版本和依赖，按既有备份与回归流程修补，记录证据时间；不依据传闻认定已遭攻击。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cxnv025d8qpmo",
+          "label": "BBC · PHP 应急采访",
+          "excerpt": "The PHP Foundation, which manages the programming language, released its software fix and there was a scramble for people to download it.",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "6e021d913e165294aecd",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-23T22:54:57+00:00",
+      "score": 86,
+      "headline": "美国拟调整部分加拿大商品关税，十月三十日起执行",
+      "short_headline": "美国拟调整部分加拿大商品关税，十月三十日起执行",
+      "short_summary": "BBC 称部分机械、纸品等获减免，同时另一些品类新增关税；这不是全面取消对加拿大的征税。",
+      "summary": "BBC 引述白宫称，十月三十日起将放宽胶合板、部分纸品、某些机械与制冷设备等加拿大商品关税，同时对地毯等其他品类新增征税。报道也记录双方谈判与美国中期选举背景；政治动机分析与正式适用品类应分开判断。本期未直接核对完整税则附件，不能把局部豁免写成全面贸易协议。",
+      "relevance": "跨境采购应按税号、原产地和生效时间核算，笼统的降税标题不足以证明具体订单成本会降低。",
+      "action": "查阅正式税则和海关执行文件，对照具体产品与入境日期，再更新报价及合同情景。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c60qk573yzz8o",
+          "label": "BBC · 加拿大商品关税",
+          "excerpt": "Starting on 30 October, tariffs will be eased on products including \"plywood sheets, some paper products, certain machinery and refrigeration equipment,\" the White House said on Friday.",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "d74ee4e8aad1791cb398",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-23T11:48:04+00:00",
+      "score": 80,
+      "headline": "英国首套房贷款计划收入门槛仍待预算确认",
+      "short_headline": "英国首套房贷款计划收入门槛仍待预算确认",
+      "short_summary": "BBC 报道英格兰拟推政府支持的产权贷款，收入上限和细则预期下周确认；贷款不是无偿补贴。",
+      "summary": "BBC 报道 Your First Home 计划拟向购买指定开发商英格兰新房的首套房家庭提供房价百分之二十的政府支持产权贷款。报道称收入上限拟为伦敦十四万英镑、其他地区十一万英镑，预期下周预算确认。产权贷款与房产价值变化关联，不能当作固定金额赠款；资金来源、费用和最终资格仍待正式文件。",
+      "relevance": "住房支持计划可能影响新房需求和开发商成本，但政策预告不能代替贷款合同及偿还条件。",
+      "action": "跟踪预算和官方申请细则，分别核对收入、房型、利息和偿还机制，不据媒体预告认定已经可以申请。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6n8dex0zeg9o",
+          "label": "BBC · 首套房贷款计划",
+          "excerpt": "As first reported by The Times, external, the earnings limits are expected to be confirmed at the Budget next week.",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "8a6c148ab8a7425fa074",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-23T08:04:17+00:00",
+      "score": 84,
+      "headline": "具身 AI 数据采购催生录制作业，收入与授权差异显著",
+      "short_headline": "具身 AI 数据采购催生录制作业，收入与授权差异显著",
+      "short_summary": "BBC 记录印度工人拍摄工作供机器人训练；不同企业报酬差别很大，不能推成统一兼职收入。",
+      "summary": "BBC 采访印度劳动者与数据企业，描述采集手部或多摄像头工作视频并售给技术机构、用于具身 AI 训练的链条。不同受访者给出的报酬口径差异明显，企业还强调清洗、标注、验证与场景覆盖的重要性。这是媒体案例及受访者陈述，不证明国内开放了同样合同，也不能保证录制者收入或仅模糊人脸就实现匿名。",
+      "relevance": "数据服务的价值可能从原始视频转向质量控制与结构化；劳动同意、客户资料和工作场景授权同样影响成本。",
+      "action": "研究公开授权数据的质量指标，访谈明确有需求的机构并核查合同、用途和支付条款，不先录制真实客户或工作场所。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/ckvgyml6pdm9o",
+          "label": "BBC · 具身数据供应链",
+          "excerpt": "That video is then sold on to technology companies and research organisations who use it to train artificial intelligence - in particular so-called physical AI, a type of artificial intelligence that can control robots in the real world.",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ],
+      "context_note": "采集窗口内较早报道，原始发布时间已保留；本期核验时超过二十四小时，作为补采背景。"
+    },
+    {
+      "event_id": "bd1e1bd350cbb9246c06",
+      "category": "政治与政策",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-23T09:17:16.350000+00:00",
+      "score": 91,
+      "headline": "国办发布 AI 就业意见，兼顾创业支持与替代风险",
+      "short_headline": "国办发布 AI 就业意见，兼顾创业支持与替代风险",
+      "short_summary": "中国政府网公布就业友好型 AI 发展意见，提出轻量化升级、转岗培训和权益保护；具体项目仍需实施细则。",
+      "summary": "中国政府网公开国办发〔2026〕29号意见，成文日期为十月十六日、发布日期为十月二十三日。文件提出人工智能中小企业创业支持计划、低成本轻量化升级、专项培训、就业风险评估与劳动者权益保护，并鼓励企业探索失业缓冲期。原则性意见不等于所有企业或个人已获得贷款、补贴或可立即提交申请，具体执行仍需地方和部门措施。",
+      "relevance": "小微企业 AI 工具与服务可关注低门槛、提升工作质量和人机协作，同时量化就业影响与培训需求。",
+      "action": "按所在业务领域跟进主管部门正式细则，做公开政策条件清单；没有明确渠道和资格前不承诺可领补贴。",
+      "sources": [
+        {
+          "url": "https://www.gov.cn/zhengce/content/202610/content_7084107.htm",
+          "label": "中国政府网 · 国办就业意见",
+          "excerpt": "（二）培育中小微企业稳岗扩岗新动能。实施人工智能中小企业创业支持计划，以开源生态促进中小企业创新创业。加强数字化转型公共服务供给，鼓励开发“小快轻准”数字化产品和解决方案，保障中小微企业和个体工商户依法平等使用数据、算法等智能生产要素，支持中小微企业探索低成本、轻量化智能升级路径，进一步降低人工智能应用门槛，提升吸纳就业能力。",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        },
+        {
+          "url": "https://www.ithome.com/1/017/113.htm",
+          "label": "IT之家 · 当日政策消息",
+          "excerpt": "IT之家 10 月 23 日消息，国务院办公厅今日印发《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》。以人工智能赋能高质量发展为契机，以适应技术发展促进高质量充分就业为目标，以构建就业友好型发展方式为方向，积极增强人工智能创造就业机会、赋能传统岗位、提升就业质量、激发创业活力的正面效应，有效减缓人工智能应用就业替代影响，努力实现技术进步、产业升级与就业促进、民生改善相协调的包容性发展。",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ],
+      "context_note": "官网列发布日期为二〇二六年十月二十三日，未标具体时分；published_at 沿用本期 IT之家消息的发布时间，不代表政府文件精确上网时刻。成文日期另为十月十六日。"
+    },
+    {
+      "event_id": "54fa33209d8b79e70579",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-23T16:35:48+00:00",
+      "score": 83,
+      "headline": "西班牙竞选深伪广告引争议，标注与合法性仍有分歧",
+      "short_headline": "西班牙竞选深伪广告引争议，标注与合法性仍有分歧",
+      "short_summary": "报道指反对党使用 AI 模拟人物讲话，引发投诉与专家争论；合成人物台词不能作为真实自白传播。",
+      "summary": "Guardian 报道西班牙人民党竞选视频使用与首相所属政党相关人士的 AI 肖像，模拟承认不当行为，引发批评及一名当事人的法律投诉。视频据报道有细小的 AI 标注，受访专家对合法性和伦理适当性的判断并非同一问题。合成台词不是本人承认事实，相关指控、否认与诉讼均应归属明确，本期未核对裁决或完整案卷。",
+      "relevance": "政治内容的来源、合成标记、可理解性及传播语境需要一起审查，存在标签不代表受众必然不会误解。",
+      "action": "转述时清楚标明合成与报道归属，保留原文和时间；关注正式司法或监管决定，不转载虚假自白片段。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/23/opposition-deepfake-video-spain-election",
+          "label": "The Guardian · 西班牙竞选视频",
+          "excerpt": "Launched this week across the social media channels of the conservative People’s party (PP), the video used artificial intelligence to manipulate the likenesses of various people linked to Pedro Sánchez’s Socialist party and appeared to show them admitting to acts such as soliciting prostitutes and taking kickbacks.",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "8ea7bf9a78cd1ecb766a",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-23T22:51:50+00:00",
+      "score": 84,
+      "headline": "英国网络安全措施评估未见儿童受害比例显著下降",
+      "short_headline": "英国网络安全措施评估未见儿童受害比例显著下降",
+      "short_summary": "Guardian 引述 Ofcom 九个月评估，称有害内容接触比例未显著变化；本期未能读取监管原报告。",
+      "summary": "Guardian 引述 Ofcom 对儿童安全义务实施后九个月的评估，称儿童接触有害内容的比例在总体上没有显著变化，也未见伤害严重程度改变的证据。报道所述研究包含八至十七岁儿童接触情况、安全工具及影响，并讨论推荐流问题。本期监管原报告读取失败，因此保持媒体报道标记，不能推断所有措施毫无效果或给出已证实的单一因果。",
+      "relevance": "产品安全评估要区分规则存在、执行覆盖、接触比例和伤害指标；推荐系统需有持续测量。",
+      "action": "进一步取得监管原报告核对样本与统计定义，分别记录产品措施和结果指标，不把媒体标题替代完整评估。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/society/2026/oct/23/uk-children-just-as-likely-to-have-suffered-harm-on-social-media-despite-crackdown-ofcom-online-safety-act",
+          "label": "The Guardian · 儿童安全评估",
+          "excerpt": "But Ofcom found that “at a total level there was no significant change in the proportion of children encountering harmful content over the first nine months after the children’s safety duties came into force in July 2025”.",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "literature-linked-proposal-review",
+      "headline": "研究提案的证据链接与修改审查",
+      "short_headline": "研究提案的证据链接与修改审查",
+      "short_summary": "LitPivot 展示把论文摘录与提案修改绑定的工作流，可研究面向公开文献的引用审查工具。",
+      "category": "AI 编程",
+      "score": 82,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "LitPivot 展示把论文摘录与提案修改绑定的工作流，可研究面向公开文献的引用审查工具。 这是待验证方向，尚无付费需求、补贴资格或回报保证。",
+      "audience": "具备相关 AI 应用或信息检索开发经验的独立开发者和小团队。",
+      "first_step": "选十篇公开论文与一页提案，逐条检查建议对应的摘录、覆盖和错误引用，与人工审查耗时比较。",
+      "risks": "样本研究不能保证跨领域效果；检索遗漏与错误摘录会误导，论文许可和访问权限仍须核对。",
+      "time_window": "未来一周先做小样本与需求访谈，没有明确的官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/litpivot",
+          "label": "Ai2 · LitPivot 研究",
+          "excerpt": "With collaborators at the University of Pennsylvania, we developed LitPivot, a system that helps researchers navigate these pivots. Using papers retrieved through Asta Paper Finder, LitPivot organizes literature around the part of a proposal being edited, offers critiques supported by excerpts from selected studies, and suggests revisions that researchers can accept, edit, or reject. LitPivot is intended to be used for early-stage research ideation, but the idea could possibly extend to longer writing tasks (i.e., writing the introduction section of a paper).",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "lightweight-ai-job-friendly-discovery",
+      "headline": "小微企业轻量 AI 升级的需求验证",
+      "short_headline": "小微企业轻量 AI 升级的需求验证",
+      "short_summary": "国办意见明确鼓励低成本轻量化 AI 升级和人机协作，可关注减少重复劳动并提升岗位质量的工具。",
+      "category": "工作室业务",
+      "score": 82,
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "signal": "国办意见明确鼓励低成本轻量化 AI 升级和人机协作，可关注减少重复劳动并提升岗位质量的工具。 这是待验证方向，尚无付费需求、补贴资格或回报保证。",
+      "audience": "具备相关 AI 应用或信息检索开发经验的独立开发者和小团队。",
+      "first_step": "用公开虚构流程制作一个小样本演示，访谈三家潜在使用方的任务、培训与预算，再跟踪正式政策细则。",
+      "risks": "原则性意见不等于订单或补贴资格；真实数据授权、岗位影响、维护成本和当地执行条件须验证。",
+      "time_window": "未来一周先做小样本与需求访谈，没有明确的官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://www.gov.cn/zhengce/content/202610/content_7084107.htm",
+          "label": "中国政府网 · 国办就业意见",
+          "excerpt": "（二）培育中小微企业稳岗扩岗新动能。实施人工智能中小企业创业支持计划，以开源生态促进中小企业创新创业。加强数字化转型公共服务供给，鼓励开发“小快轻准”数字化产品和解决方案，保障中小微企业和个体工商户依法平等使用数据、算法等智能生产要素，支持中小微企业探索低成本、轻量化智能升级路径，进一步降低人工智能应用门槛，提升吸纳就业能力。",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        },
+        {
+          "url": "https://www.ithome.com/1/017/113.htm",
+          "label": "IT之家 · 当日政策消息",
+          "excerpt": "IT之家 10 月 23 日消息，国务院办公厅今日印发《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》。以人工智能赋能高质量发展为契机，以适应技术发展促进高质量充分就业为目标，以构建就业友好型发展方式为方向，积极增强人工智能创造就业机会、赋能传统岗位、提升就业质量、激发创业活力的正面效应，有效减缓人工智能应用就业替代影响，努力实现技术进步、产业升级与就业促进、民生改善相协调的包容性发展。",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ]
+    }
+  ]
+}
