@@ -1,6 +1,36 @@
 (() => {
+  const archiveMenu = document.querySelector('.nav-archive');
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && archiveMenu?.open) {
+      archiveMenu.open = false;
+      archiveMenu.querySelector('summary').focus();
+    }
+  });
+  document.addEventListener('click', event => {
+    if (archiveMenu?.open && !archiveMenu.contains(event.target)) archiveMenu.open = false;
+  });
+  const navLinks = [...document.querySelectorAll('.site-header nav > a')];
+  const markLocation = () => {
+    for (const link of navLinks) {
+      const url = new URL(link.href);
+      const current = url.pathname === location.pathname && url.hash === location.hash && (url.hash || location.pathname.endsWith('competitions.html'));
+      if (current) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    }
+  };
+  markLocation();
+  window.addEventListener('hashchange', markLocation);
   const domains = [...document.querySelectorAll('[data-domain]')];
   const domainFilters = [...document.querySelectorAll('[data-domain-filter]')];
+  const updateDomainCount = () => {
+    const count = document.querySelector('#news-result-count');
+    if (!count) return;
+    const visible = domains.filter(domain => !domain.hidden);
+    const total = visible.reduce((sum, domain) => sum + domain.querySelectorAll('[data-news-category]').length, 0);
+    const selected = domainFilters.find(button => button.getAttribute('aria-pressed') === 'true');
+    count.textContent = `${selected?.textContent || '全部领域'} · ${total} 条新闻`;
+  };
+  updateDomainCount();
   for (const selected of domainFilters) selected.addEventListener('click', () => {
     for (const domain of domains) {
       domain.hidden = selected.dataset.domainFilter !== 'all' && domain.dataset.domain !== selected.dataset.domainFilter;
@@ -10,6 +40,7 @@
       button.classList.toggle('active', active);
       button.setAttribute('aria-pressed', String(active));
     }
+    updateDomainCount();
   });
   const contests = [...document.querySelectorAll('.competition-table [data-competition-state]')];
   const contestFilters = [...document.querySelectorAll('[data-competition-filter]')];
@@ -37,6 +68,8 @@
     }
     const empty = document.querySelector('#no-competitions');
     if (empty) empty.hidden = count > 0;
+    const resultCount = document.querySelector('#competition-result-count');
+    if (resultCount) resultCount.textContent = `显示 ${count} 项赛事 · 共 ${contests.length} 项记录`;
   };
   for (const selected of contestFilters) selected.addEventListener('click', () => {
     contestState = selected.dataset.competitionFilter;
@@ -47,6 +80,11 @@
     updateContests();
   });
   contestSearch?.addEventListener('input', updateContests);
+  document.querySelector('[data-reset-competitions]')?.addEventListener('click', () => {
+    if (contestSearch) contestSearch.value = '';
+    contestFilters.find(button => button.dataset.competitionFilter === 'all')?.click();
+    contestSearch?.focus();
+  });
   if (contestFilters.length) updateContests();
   else for (const contest of contests) contest.hidden = contest.dataset.competitionState !== 'eligible';
   const headlines = [...document.querySelectorAll('[data-news-category]')];
@@ -80,6 +118,11 @@
     document.querySelector('#no-results').hidden = count > 0 || cards.length === 0;
   };
   input.addEventListener('input', update);
+  document.querySelector('[data-reset-reports]')?.addEventListener('click', () => {
+    input.value = '';
+    buttons.find(button => button.dataset.filter === 'all')?.click();
+    input.focus();
+  });
   for (const button of buttons) button.addEventListener('click', () => {
     kind = button.dataset.filter;
     for (const current of buttons) {
