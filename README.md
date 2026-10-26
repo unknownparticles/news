@@ -13,14 +13,18 @@
 使用 Python 3.10 及以上，仅依赖标准库：
 
 ```bash
-python3 -m src.collect
-python3 -m src.competitions --discover
-# 分析 .local/candidates.json，核对原文后，按下方结构写入 .local/daily.json
-python3 -m src.publish_report .local/daily.json
-python3 -m src.periods
-python3 -m unittest discover -s tests
-python3 -m src.build
+python3 scripts/automation.py prepare
+python3 scripts/automation.py read https://新闻原文地址
+# 核对候选和原文，生成 .local/daily.json
+# 竞赛人工核验结果可保存为 .local/competition-reviewed.json
+python3 scripts/automation.py publish
 ```
+
+固定脚本统一增量采集、竞赛发现、日期校验、周期汇总、测试构建、内部链接检查、中文提交、推送及部署核验。原文保存在 `.local/evidence/`，助手仍须判断证据是否支持结论。脚本不接受任意 Shell 命令，不执行新闻正文，不自动替用户报名。`check` 子命令只做本地检查；`verify` 只重试已推送内容的部署核验。公共页面必须与本次构建相符，不能只凭成功状态码宣称上线。
+
+自动化使用固定入口可避免每天更换临时脚本导致重新授权。权限仍由运行时沙箱、命令规则和自动审查决定，skill 不能替代授权。优先在项目可写的沙箱运行本地操作，联网受限时只申请固定入口的具体子命令，不需要开放整个 Python 或全盘访问。首次允许的规则是否复用取决于宿主是否保存并加载；详细约定见 [自动化流程](AUTOMATION.md)。
+
+原有 `python3 -m src.collect`、`src.competitions`、`src.publish_report`、`src.periods`、`src.build` 入口仍可用于独立排错。
 
 `reports/` 是公开报告的唯一内容来源；`docs/` 是生成的网页。推送 `main` 后，GitHub Actions 自动验证并部署 GitHub Pages。需要仓库 Pages 设置选择 GitHub Actions；流程只上传 `docs/`，不上传本地候选池、反馈或数据库。
 
