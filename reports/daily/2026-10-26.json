@@ -1,0 +1,263 @@
+{
+  "id": "2026-10-26",
+  "kind": "daily",
+  "title": "2026-10-26 · 算力扩张、产业布局与选举变化",
+  "period": {
+    "start": "2026-10-26",
+    "end": "2026-10-26"
+  },
+  "generated_at": "2026-10-26T10:29:48+08:00",
+  "collection_window": {
+    "start": "2026-10-24T08:29:25.223314+08:00",
+    "end": "2026-10-26T10:23:13.466722+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证机会，其中代理权限机会有新增证据与实质步骤更新。十月二十五日未发布日报，本次从二十四日截止连续补采至二十六日 10:23，不补造缺失日报。科技订阅新增较少，包含二十五日指南补采和二十二日官方研究背景，均标注日期。所有配置来源本次成功返回；AIHOT 当日日报为空。竞赛维持四项推荐，其中两项长期练习；无新增合格赛事。灵波初赛二十六日截止，但仍需二至五人组队和上海线下决赛，不列为单人线上推荐。其他平台规则覆盖限制保留。",
+  "source_failures": [],
+  "items": [
+    {
+      "event_id": "15574f18d18dc55c4db3",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-25T23:44:34+00:00",
+      "score": 86,
+      "headline": "AI 数据中心扩张遇到电力与地方反对压力",
+      "short_headline": "AI 数据中心扩张遇到电力与地方反对压力",
+      "short_summary": "BBC 梳理数据中心扩张、电力和环境争议；选举讨论影响建设预期，不等于项目已被统一叫停。",
+      "summary": "BBC 发布数据中心解释性报道，讨论 AI 算力需求增长带来的电力、用水、环境及地方反对压力，并记录美国中期选举前不同阵营对建设的争议。报道的站点统计混合运营与筹备口径，不能直接当作已运行容量或新增算力；本期未独立核验全部项目审批与能源数据。",
+      "relevance": "基础设施交付还受电力接入、地方规则和社区条件影响。",
+      "action": "核对运营状态、电力合同、扩容与审批时间，不用站点数量直接推导计算能力或成本。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cq2e9we7w2ejo",
+          "label": "BBC · 数据中心解释性报道",
+          "excerpt": "But the speed at which they're growing, the enormous amount of electricity they consume and concerns about their environmental impact are fuelling a public backlash around the world.",
+          "checked_at": "2026-10-26T10:24:44.848641+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "c1d6733daadf786e8486",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-25T00:00:00+00:00",
+      "score": 83,
+      "headline": "已登录浏览器接入指南强调会话与授权范围差异",
+      "short_headline": "已登录浏览器接入指南强调会话与授权范围差异",
+      "short_summary": "Browser Use 比较复用登录会话的接入方式，单标签授权和整个浏览器访问差异大；本文未实测兼容性。",
+      "summary": "Browser Use 比较编码代理复用已登录 Chrome 的方案，区分扩展选择标签页、连接现有浏览器及独立配置文件等方式，并讨论设备绑定会话为何不能简单复制。作者销售相关产品，属于厂商指南；其他产品的支持与权限说明未逐项独立核对，不作为通用安装或扩大权限的指令。",
+      "relevance": "登录会话、标签范围与撤销能力要分别核对，减少重复登录不等于无限扩大访问。",
+      "action": "用测试账户与公开页面确认可见范围、撤销及退出行为，不导出真实会话凭据或降低浏览器保护。",
+      "sources": [
+        {
+          "url": "https://browser-use.com/posts/coding-agent-logged-in-chrome",
+          "label": "Browser Use · 浏览器接入比较",
+          "excerpt": "Any MCP client: Playwright MCP in extension mode gives the agent tabs you pick. Chrome DevTools MCP in auto-connect mode or our Browser Harness give it your whole running Chrome.",
+          "checked_at": "2026-10-26T10:24:45.884249+08:00"
+        }
+      ],
+      "context_note": "补采十月二十五日指南，非今日发布。原文只标日期，published_at 沿用 AIHOT 的零时字段，不代表已核实的精确上网时刻；各产品细节仍需查其官方文档。"
+    },
+    {
+      "event_id": "f6a301346a05e615cdbc",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-22T00:00:00+00:00",
+      "score": 89,
+      "headline": "Anthropic 展示受明确假设约束的汇编级形式化证明",
+      "short_headline": "Anthropic 展示受明确假设约束的汇编级形式化证明",
+      "short_summary": "研究覆盖一百二十三个库的部分入口，但限定输入、架构与执行条件，不能推成所有代码已无漏洞。",
+      "summary": "Anthropic 与 Theorem 介绍利用 Claude 为一百二十三个开源库、二百三十九个入口生成形式化证明的研究，针对小于 64 MB 的输入，在指定 RISC-V 与 Linux 模型、单线程静态二进制及固定内存等假设下证明特定属性。文章公开部分证明，结果属于作者报告；不证明全部平台、业务语义、依赖链或任意输入安全。",
+      "relevance": "测试覆盖与证明范围不同，安全价值需要展示规格、前提及未覆盖部分。",
+      "action": "先读公开证明及语义假设，为小型解析器整理入口与规格，不运行未知仓库，不将研究数字当作生产安全认证。",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/research/formal-verification",
+          "label": "Anthropic · 形式化验证研究",
+          "excerpt": "But LLMs are making it far easier. Frontier models can now produce correctness proofs for real-world software fully autonomously. To demonstrate this, we asked Claude to prove useful security properties across 123 open-source libraries, including showing that some of their executable artifacts can never crash under certain conditions. Specifically, Claude proved that these programs will always exit normally without triggering memory-safety errors or failing assertions, for every input less than 64 MB and every modeled Linux operating system (OS) response and memory layout, under certain assumptions (namely that the program runs as a single-threaded static binary with a fixed memory budget on a RISC-V1 CPU using Linux OS). This is still far away from fixing all possible bugs, but it does get us much closer than before and provides a roadmap toward that end.",
+          "checked_at": "2026-10-26T10:24:47.560753+08:00"
+        }
+      ],
+      "context_note": "近期官方研究背景：原文元数据为十月二十二日，早于本期连续采集窗口。科技新发布较少，补充近七日重要研究，未改写为今日突破。"
+    },
+    {
+      "event_id": "097ce32a83063d9a7579",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-25T13:43:19+00:00",
+      "score": 85,
+      "headline": "奥迪宣布四十亿美元美国工厂计划",
+      "short_headline": "奥迪宣布四十亿美元美国工厂计划",
+      "short_summary": "Guardian 报道奥迪拟在佐治亚州建厂，目标年产二十万辆并创造四千五百岗位；投资目标尚非实际投产。",
+      "summary": "Guardian 报道奥迪拟投资四十亿美元在美国佐治亚州 Macon 建设工厂，规划生产 Q7、Q8、Q9 等 SUV，目标年产二十万辆、创造四千五百岗位。报道将计划放在关税、德国裁员和汽车转型背景下；投资宣布、建设完成、实际就业与投产是不同阶段，本期未取得全部公司和监管文件。",
+      "relevance": "贸易成本可能推动生产布局变化，规划产能不能计入当期供给。",
+      "action": "跟踪公司投资披露、许可与开工投产节点，分别记录承诺、已支出和实际产量。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/business/2026/oct/25/volkswagen-to-build-4bn-audi-suv-factory-in-us-despite-job-cuts-at-home",
+          "label": "The Guardian · 奥迪美国投资",
+          "excerpt": "It said it aims to build 200,000 SUVs at the new US factory, creating 4,500 jobs. The factory will build the Q7, Q8 and Q9 SUVs, shifting some production from Bratislava in Slovakia.",
+          "checked_at": "2026-10-26T10:24:49.315039+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "953a793ef3d2fba40210",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-25T07:12:21+00:00",
+      "score": 80,
+      "headline": "英国乡村取暖油涨价，批量采购缓解部分账单",
+      "short_headline": "英国乡村取暖油涨价，批量采购缓解部分账单",
+      "short_summary": "BBC 记录 Teesdale 等地居民取暖油支出与团购案例；地方报价不等于全国统一价格或全球油价。",
+      "summary": "BBC 报道英国 Upper Teesdale 等乡村居民面临取暖油费用上涨，引用五百升约六百英镑的当地交付报价及居民对同比翻倍的描述。地方组织通过合并订单争取每升约三便士优惠。地区、交付规模和时点不同，居民经历与整体统计应分开，本期未独立核查供应商发票。",
+      "relevance": "无管道燃气地区的成本受燃料、运输和订购量共同影响，不能等同原油价格变化。",
+      "action": "按地点、升数、交付费和日期比较报价，核对实际合同再作采购决定。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6n8de1jgrdvo",
+          "label": "BBC · 地区取暖油成本",
+          "excerpt": "Recent figures suggest households across rural areas including Teesdale, Weardale, Northumberland and parts of North Yorkshire are currently paying around £600 for a 500-litre delivery of heating oil, equivalent to about £1.19 per litre.",
+          "checked_at": "2026-10-26T10:24:50.237930+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "bb6ba79cf5ef2d7ab437",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-25T07:06:12+00:00",
+      "score": 81,
+      "headline": "英国小企业称用工成本拖慢招聘，预算诉求待回应",
+      "short_headline": "英国小企业称用工成本拖慢招聘，预算诉求待回应",
+      "short_summary": "BBC 采访 Devon 企业关于用工税费与招聘的诉求；个案不构成全国就业统计，也不代表税率将下调。",
+      "summary": "BBC 采访 Devon 商展上的企业，部分经营者称雇主国民保险缴费及工资成本影响新增岗位，一家出版商表示暂缓填补两个职位，并希望预算减轻成本。这是企业诉求与经历，不是具有代表性的全国招聘调查；预算未公布，不能写成政府已经答应减税。",
+      "relevance": "扩张决策涉及人工总成本、订单与现金流，采访个案和宏观统计需分开。",
+      "action": "核对正式预算及费率，用公开或虚构业务数据测算岗位完整成本，不把诉求当作实施方案。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c62kep355q02o",
+          "label": "BBC · 企业招聘采访",
+          "excerpt": "A publisher from Tavistock, Devon, said he was \"holding back\" from filling two new positions at his firm because of the cost of taking on new employees.",
+          "checked_at": "2026-10-26T10:24:51.399395+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "ab6893d051ad7ae13afc",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-26T00:19:05+00:00",
+      "score": 87,
+      "headline": "媒体报道卢拉赢得巴西总统第二轮投票",
+      "short_headline": "媒体报道卢拉赢得巴西总统第二轮投票",
+      "short_summary": "Guardian 报道近百分之九十九选票统计时卢拉领先，结果应继续对照选举机构公布，不等于政策已落地。",
+      "summary": "Guardian 报道卢拉在巴西总统第二轮选举击败 Flávio Bolsonaro，列出接近百分之九十九计票时双方约 51.75% 与 48.25% 的比例。本期依据媒体原文，未独立核对最终认证、异议处理和完整选举机构数据；计票、认证与后续政策执行分别记录。",
+      "relevance": "政治结果可能影响财政、环境和对外关系预期，政策仍需正式文件和实施程序。",
+      "action": "对照巴西选举主管机关最终公布与后续政策文件，避免用选举结果保证资产表现。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/26/lula-wins-brazil-election",
+          "label": "The Guardian · 巴西第二轮选举",
+          "excerpt": "With nearly 99% of votes counted the 80-year-old leftist received 51.75% of the vote to his 45-year-old rival’s 48.25%.",
+          "checked_at": "2026-10-26T10:24:52.668734+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "c15e9b1a31d6cda99bb5",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-26T01:07:05+00:00",
+      "score": 85,
+      "headline": "武契奇承认议会选举失利，最终结果仍待公布",
+      "short_headline": "武契奇承认议会选举失利，最终结果仍待公布",
+      "short_summary": "BBC 报道学生运动支持的名单取得胜势，武契奇承认失利；不能写成全部组阁与权力移交已完成。",
+      "summary": "BBC 报道塞尔维亚领导人 Aleksandar Vučić 承认在提前举行的议会选举失利，并引述其称最终结果尚未全部公布。报道记录学生运动支持的名单、初步投票情况及庆祝。本期未独立核对正式席位分配和组阁程序，承认失利不等于新政府已完成全部法律程序。",
+      "relevance": "政治变化需区分选票、席位、组阁和实际政策，情绪表达不替代制度节点。",
+      "action": "跟踪正式结果、席位与组阁公告，保留各方声明的归属。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo",
+          "label": "BBC · 塞尔维亚议会选举",
+          "excerpt": "\"We still do not have final results... it is clear that we have lost these elections,\" the right-wing populist leader said as he conceded late on Sunday.",
+          "checked_at": "2026-10-26T10:24:55.149494+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "e089fdbd15c7a8668f41",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-26T01:00:58+00:00",
+      "score": 86,
+      "headline": "澳大利亚养老评估算法受监察调查批评",
+      "short_headline": "澳大利亚养老评估算法受监察调查批评",
+      "short_summary": "Guardian 引述调查批评透明度和人工纠错路径，建议修改制度；不等于法律已改或系统已停用。",
+      "summary": "Guardian Australia 引述联邦监察专员调查，称养老护理评估算法缺乏透明解释和有效人工纠错，评估人员难以更改不合适的资助建议。报道提出修改法律等建议，并引用一百零四页报告。本期未读取完整报告或最新政府回应，保持媒体报道标记，不推断法律已经改变。",
+      "relevance": "公共服务自动决策应核对解释、申诉、人工复核及责任机制。",
+      "action": "核对监察报告与正式回应，区分建议、承诺和实施；具体护理资格应走当地正式评估及申诉渠道。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/australia-news/2026/oct/26/damning-investigation-labor-algorithm-tool-aged-care-assessment",
+          "label": "The Guardian · 养老算法调查",
+          "excerpt": "An algorithm used by the federal government to assess the level of care older Australians are entitled to is unreasonable, unfair and lacks human oversight, according to a damning investigation by the commonwealth ombudsman.",
+          "checked_at": "2026-10-26T10:24:56.475061+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "ai-agent-permission-observability-service",
+      "headline": "代理权限服务更新：浏览器会话范围验证",
+      "short_headline": "代理权限服务更新：浏览器会话范围验证",
+      "short_summary": "新指南将标签选择、整个浏览器访问和设备绑定会话差异具体化，可改进代理权限检查样例。",
+      "category": "工作室业务",
+      "score": 81,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "新指南将标签选择、整个浏览器访问和设备绑定会话差异具体化，可改进代理权限检查样例。 当前为待验证研究，没有已确认采购或收益。",
+      "audience": "已有 AI 自动化或软件测试经验的独立开发者和小团队。",
+      "first_step": "只用测试账户及公开页，记录授权前后可见标签、撤销及退出行为，制作一页范围清单，再访谈潜在使用者。",
+      "risks": "厂商比较有利益关联且未逐项复测；不得导出真实会话凭据，技术检查不是安全认证或已确认订单。",
+      "time_window": "未来一周先做公开资料与小样本验证，没有官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://browser-use.com/posts/coding-agent-logged-in-chrome",
+          "label": "Browser Use · 浏览器接入比较",
+          "excerpt": "Any MCP client: Playwright MCP in extension mode gives the agent tabs you pick. Chrome DevTools MCP in auto-connect mode or our Browser Harness give it your whole running Chrome.",
+          "checked_at": "2026-10-26T10:24:45.884249+08:00"
+        }
+      ],
+      "update_reason": "十月十二日机会来自行业治理主张；本次新增十月二十五日厂商指南，研究步骤具体化为标签授权范围、会话复用和撤销测试，没有包装为全新客户需求。"
+    },
+    {
+      "opportunity_id": "bounded-parser-proof-assessment",
+      "headline": "解析器测试与形式化证明范围审查",
+      "short_headline": "解析器测试与形式化证明范围审查",
+      "short_summary": "研究把部分模糊测试入口转为有前提的证明，可研究如何列出测试、规格与未覆盖假设。",
+      "category": "AI 编程",
+      "score": 81,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "研究把部分模糊测试入口转为有前提的证明，可研究如何列出测试、规格与未覆盖假设。 当前为待验证研究，没有已确认采购或收益。",
+      "audience": "已有 AI 自动化或软件测试经验的独立开发者和小团队。",
+      "first_step": "选公开授权的小型解析器与现有测试，整理输入上限、平台、内存及异常属性，先做规格清单，不运行未知代码。",
+      "risks": "证明成本与工具链复杂，作者实验不保证复现；特定属性不等于整体安全，商业许可需另核。",
+      "time_window": "未来一周先做公开资料与小样本验证，没有官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/research/formal-verification",
+          "label": "Anthropic · 形式化验证研究",
+          "excerpt": "But LLMs are making it far easier. Frontier models can now produce correctness proofs for real-world software fully autonomously. To demonstrate this, we asked Claude to prove useful security properties across 123 open-source libraries, including showing that some of their executable artifacts can never crash under certain conditions. Specifically, Claude proved that these programs will always exit normally without triggering memory-safety errors or failing assertions, for every input less than 64 MB and every modeled Linux operating system (OS) response and memory layout, under certain assumptions (namely that the program runs as a single-threaded static binary with a fixed memory budget on a RISC-V1 CPU using Linux OS). This is still far away from fixing all possible bugs, but it does get us much closer than before and provides a roadmap toward that end.",
+          "checked_at": "2026-10-26T10:24:47.560753+08:00"
+        }
+      ]
+    }
+  ]
+}
