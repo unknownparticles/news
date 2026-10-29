@@ -1,0 +1,364 @@
+{
+  "id": "2026-10-29",
+  "kind": "daily",
+  "title": "2026-10-29 · 新模型、开发交付与央行决定",
+  "period": {
+    "start": "2026-10-29",
+    "end": "2026-10-29"
+  },
+  "generated_at": "2026-10-29T08:44:35+08:00",
+  "collection_window": {
+    "start": "2026-10-28T08:27:53.596802+08:00",
+    "end": "2026-10-29T08:34:26.754418+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证机会，其中语音工作流复用编号并说明实质更新；GitHub 官方日榜前十附四段研究分析。配置来源本次均成功返回，RSS 候选采集至北京时间 08:34 后读取原文。官方发布、作者实验和媒体转述分开标记，英国预算各措施合并为一个事件。竞赛新增 Qoder 高校创造力大赛，明确限在校大学生且须学生认证，记录为资格受限，不加入个人社会人士推荐；现有四项推荐中两项为长期练习。讯飞、百度和金蝶本次未取得完整规则，继续保留旧核验日期。",
+  "source_failures": [],
+  "items": [
+    {
+      "event_id": "3e32bae570ff21ee59e5",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-28T17:00:58+00:00",
+      "score": 90,
+      "headline": "Gemini 4 Carbon 宣布分批开放，先面向部分防御团队",
+      "short_headline": "Gemini 4 Carbon 宣布分批开放，先面向部分防御团队",
+      "short_summary": "DeepMind 介绍长任务与安全能力，访问先向部分网络防御者和可信伙伴开放；公告不等于已向全部开发者上线。",
+      "summary": "Google DeepMind 宣布 Gemini 4 Carbon，介绍长时工程任务和安全能力，并表示先向部分网络防御者开放，通过 Fairwind 逐步扩展可信伙伴，随后再进入广泛产品入口。公告中的基准、内部多日运行及安全改进是发布方报告，本期未独立复测；不把宣布或标价写成所有用户已能使用。",
+      "relevance": "长时代理可用性要同时评估模型能力、实际访问、工具权限和失败恢复，排行榜不能替代业务验收。",
+      "action": "先核对正式访问范围与适用条款，用公开虚构任务设计完成率、审查和恢复检查；不为试用扩大生产权限。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+          "label": "Google DeepMind · Carbon 公告",
+          "excerpt": "We're taking a deliberate approach to rollout and are actively engaged in the U.S. government’s voluntary process for pre-release model testing. Starting this week, we will make Carbon available to a subset of cyber defenders and will gradually phase access to additional trusted partners through our Fairwind Program. We’re continuing to gather feedback and iterate on guardrails before making Carbon available to developers, businesses, and consumers via our product surfaces as soon as possible.",
+          "checked_at": "2026-10-29T08:35:22.399471+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "ec733f799e1aaee3d1ac",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-28T14:58:17+00:00",
+      "score": 88,
+      "headline": "Nemotron 3.5 Transcribe 合并提示转写与说话人任务",
+      "short_headline": "Nemotron 3.5 Transcribe 合并提示转写与说话人任务",
+      "short_summary": "NVIDIA 介绍可提示的多语言语音模型与数据流程；四十种转写、三十一种翻译和十三种说话人支持不能混用。",
+      "summary": "NVIDIA 介绍 Nemotron 3.5 Transcribe 与 Granary v2，称同一检查点覆盖转写、说话人、翻译和音频问答，支持语言随任务不同；公告列四十种转写、三十一种英译互转及十三种说话人任务，最长录音与人数也有上限。量化版本文中仍为即将提供，RTX、DGX 或 Jetson 的部署路线不能推定 M1 支持。本期未实测，基准优势是机构自述。",
+      "relevance": "把语音输出按格式和任务适配可能减少后处理，但必须按语言、说话人边界及实际硬件验证。",
+      "action": "核对模型卡任务语言矩阵、许可与推荐后端，用公开授权录音比较术语、分段、说话人、内存和延迟，不把提示中词语当作音频事实。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+          "label": "NVIDIA · 提示转写与 Granary v2",
+          "excerpt": "NVIDIA Nemotron 3.5 Transcribe is an open-weight, promptable model that turns recorded speech into useful text, now available on Hugging Face and ModelScope. It brings transcription, speaker attribution (diarization), translation, and audio question answering into one checkpoint: it transcribes 40 languages, translates 31 of them to or from English, and attributes speakers in 13. It handles recordings up to an hour long and labels up to eight speakers. Developers can guide output with natural language, choose where their audio is processed, and adapt recognition to domain vocabulary and accents.",
+          "checked_at": "2026-10-29T08:35:22.976553+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "59f92a9af33d7787220c",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-28T16:09:28+00:00",
+      "score": 87,
+      "headline": "GitHub Universe 推进代理应用、项目和自动化工作流",
+      "short_headline": "GitHub Universe 推进代理应用、项目和自动化工作流",
+      "short_summary": "GitHub 公告介绍 Copilot app、Fusion 与跨仓库项目；各功能访问和计费条件需分别核对，演示不等于交付收益。",
+      "summary": "GitHub Universe 公告介绍 Copilot app、按任务选择执行模型的 Fusion、跨仓库项目及会话连续性，并说明自动化可按事件或时间触发、提出改进供审核。企业访问与 AI credits 计费等按具体计划和销售入口区分。本期核实公告所述方向，未逐项测试产品、基准与可用账户条件，不推定所有计划均已支持或一定降低成本。",
+      "relevance": "代理开发工具正在把任务组织、审查与多仓库执行连接，实际收益应计入审核和权限维护成本。",
+      "action": "先核对所在计划的功能状态和费用，在虚构工单中定义交付与审查条件，比较任务完成与返工，不自动授权新仓库。",
+      "sources": [
+        {
+          "url": "https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack",
+          "label": "GitHub · Universe 产品公告",
+          "excerpt": "The GitHub Copilot app is designed from the ground up for agentic software delivery. It connects your agents and tools across projects, so you can direct the work without making every handoff. And it’s for more than producing code: you can write specs, present design discussions, or analyze telemetry in one agent-first surface.",
+          "checked_at": "2026-10-29T08:35:24.059369+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "a0c3e1be77e8b5a27f79",
+      "category": "金融市场",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-28T18:00:00+00:00",
+      "score": 89,
+      "headline": "美联储维持联邦基金目标区间百分之三点七五至四",
+      "short_headline": "美联储维持联邦基金目标区间百分之三点七五至四",
+      "short_summary": "FOMC 官方声明以十比二通过维持区间，两名反对者倾向加息；声明未承诺下一次利率路径。",
+      "summary": "美联储十月二十八日声明维持联邦基金利率目标区间 3.75%—4%，并继续维持充足准备金政策。声明称通胀仍高、经济活动强劲，行动以十比二通过，Cook 和 Hammack 倾向上调二十五个基点。这是本次目标区间决定，不是所有贷款利率同步不变，也不构成对下一次会议的承诺。",
+      "relevance": "融资和资产定价研究应区分政策目标区间、实际市场利率与机构报价，少数票并不预定未来行动。",
+      "action": "对照官方声明、实施说明和后续数据，为预算保留多种利率情景，不由单次声明推导确定回报。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+          "label": "美联储 · FOMC 正式声明",
+          "excerpt": "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+          "checked_at": "2026-10-29T08:35:24.316623+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "4a65a6bbfb2a309968f1",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-28T18:45:09+00:00",
+      "score": 85,
+      "headline": "英国预算宣布能源支持与银行税调整，生效时间不同",
+      "short_headline": "英国预算宣布能源支持与银行税调整，生效时间不同",
+      "short_summary": "BBC 汇总一百英镑能源支持、银行税及其他措施；预算已宣布与款项到账、具体税法生效仍有区别。",
+      "summary": "BBC 报道英国预算宣布面向部分家庭的一次性一百英镑能源支持、银行利润附加税上调及商业税费等安排；部分措施从次年开始，地区执行不同。它们是同一预算事件的合并报道，本期未逐条核对税法与实施文件，不把预算宣布当作全部措施已执行，也不由摘要确认具体家庭资格。",
+      "relevance": "企业与家庭预算需要分别记录适用地区、收入或物业条件、执行年度和资金到账，标题金额不能替代资格核对。",
+      "action": "跟踪财政部及主管部门正式实施说明，逐项记生效日期和申请方式，不提前保证可领款或采用未生效费率。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cqpvgxz3y49go",
+          "label": "BBC · 英国预算综述",
+          "excerpt": "Millions of households will get £100 to help with soaring energy bills to be paid for by a tax on bank profits, John Healey has announced in his first Budget.",
+          "checked_at": "2026-10-29T08:35:24.950472+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "5c4fb9e0ca760dd3ae50",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-28T22:44:58+00:00",
+      "score": 84,
+      "headline": "微软季度营收九百二十三亿美元，Azure 据报增长",
+      "short_headline": "微软季度营收九百二十三亿美元，Azure 据报增长",
+      "short_summary": "Guardian 报道利润与云增长超预期，并提到向部分员工提供自愿离职方案；可选择人数不等于实际离职数。",
+      "summary": "Guardian 报道微软季度营收 923 亿美元、利润超过 366 亿美元及 Azure 增长 48%，引用公司文件和分析师预期。报道同时提到约六万员工收到自愿离职方案，不能把收到方案人数当作已裁减或已接受人数。本期未独立核对全部监管附注，云收入与 AI 单项收入也不能直接等同。",
+      "relevance": "评估企业 AI 投入需分别看经营收入、资本开支、现金流及人力调整实际执行，增长不自动保证估值回报。",
+      "action": "对照正式财报与现金流、业务口径及后续披露，不用收入标题推算 AI 单项盈利或实际裁员。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/technology/2026/oct/28/microsoft-earnings",
+          "label": "The Guardian · 微软季度财报",
+          "excerpt": "The technology giant recorded $92.3bn in total revenue and more than $36.6bn in profit, the company said in a securities filing Wednesday. Analysts had expected around $90.6bn in revenue and $35.1bn in profit, according to FactSet.",
+          "checked_at": "2026-10-29T08:35:25.398519+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "49c28743b6578f5f9bb3",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-28T14:16:24+00:00",
+      "score": 82,
+      "headline": "埃及编辑获释与媒体关闭命令并存，案件仍有后续",
+      "short_headline": "埃及编辑获释与媒体关闭命令并存，案件仍有后续",
+      "short_summary": "Guardian 报道 Mada Masr 支付罚款后编辑获释，并引述法院关闭网站命令；获释不等于全部诉讼结束。",
+      "summary": "Guardian 报道埃及 Mada Masr 总编 Lina Attalah 短暂被拘后获释，媒体方称已支付罚款，法院同时下令关闭网站。报道记录律师对旧判决、上诉和十一月听证安排的说明。本期未取得判决全文或网站实际执行状态，行政许可、刑事程序与新闻自由组织意见分别归属，不能把释放写成全部法律责任撤销。",
+      "relevance": "追踪媒体监管事件需区分拘押、释放、罚款、许可与上诉，单一标题不能代表最终结果。",
+      "action": "核对正式裁判、律师公开说明与后续听证，保留各方来源和程序节点。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/28/egypt-lina-attalah-mada-masr-press-freedom-clampdown",
+          "label": "The Guardian · 埃及媒体案件",
+          "excerpt": "Attalah’s defence team had appealed that sentence, and a new court hearing was scheduled for 11 November, Azhari added.",
+          "checked_at": "2026-10-29T08:35:25.835111+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "49ff0fa053451c8bc8ba",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-28T21:27:33+00:00",
+      "score": 81,
+      "headline": "欧加峰会公报草案措辞收窄，非新增成员资格",
+      "short_headline": "欧加峰会公报草案措辞收窄，非新增成员资格",
+      "short_summary": "Guardian 报道“联系成员”讨论改为更紧密联系，内容仍为公报草案；不意味着加拿大已加入欧盟或获正式地位。",
+      "summary": "Guardian 报道欧加峰会前联合声明草案由讨论 associate membership 改为界定更紧密联系、但不涉及正式成员资格的措辞，并记录成员国法律及政治疑虑。本期依据媒体取得的草案，未直接核对最终公报或欧盟条约程序；提议、草案与已生效地位是不同层级。",
+      "relevance": "跨境合作预期可能影响政策研究，但称谓尚无明确法律含义时不能推导市场准入或居留权改变。",
+      "action": "等待最终公报和正式法律依据，对照实际合作事项，不由草案推断个人或企业取得新权利。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/28/european-union-canada",
+          "label": "The Guardian · 欧加公报草案",
+          "excerpt": "A draft of a joint statement to be issued after the end of the summit, which runs Thursday and Friday, showed a watered-down version offering “an ever closer association of Canada to the EU, short of full membership itself”.",
+          "checked_at": "2026-10-29T08:35:26.314571+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "dcf344de086bdca3e438",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-28T16:56:10+00:00",
+      "score": 80,
+      "headline": "律师称伊朗导演 Panahi 获新判决，具体指控待明",
+      "short_headline": "律师称伊朗导演 Panahi 获新判决，具体指控待明",
+      "short_summary": "Guardian 转述缺席判刑和资产处置，报道同时称本人未被拘押；判决、指控与执行状态不能混为一谈。",
+      "summary": "Guardian 引述律师等来源，称伊朗法院对导演 Jafar Panahi 缺席判处五年一个月监禁并作资产及出行等处置。报道明确最新指控仍不清楚，并引述友人称其当时尚未被拘押。本期未取得判决原文，判决报道不等于已经服刑，对法律是否被违反的评价保留受访者归属。",
+      "relevance": "司法信息不完整时需要突出未知事实与执行状态，不能补写未公布指控或终局结论。",
+      "action": "跟踪律师公开文件与后续程序，分别记录通知、上诉及执行信息，不传播未经核实的案情。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/film/2026/oct/28/iran-film-maker-jafar-panahi-new-prison-sentence-assets-seized",
+          "label": "The Guardian · 伊朗导演案件",
+          "excerpt": "The charges against Panahi remain unclear. He returned to Iran in March from an overseas trip to promote It Was Just an Accident, despite having been sentenced in absentia last year to a year in prison ‌for “propaganda activities against the system”.",
+          "checked_at": "2026-10-29T08:35:26.697831+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "local-speech-workflow-benchmark",
+      "headline": "语音工作流更新：提示约束、术语与说话人验收",
+      "short_headline": "语音工作流更新：提示约束、术语与说话人验收",
+      "short_summary": "Nemotron 3.5 Transcribe 新增可提示多任务和 Granary 适配资料，可把已有本地语音研究细化到术语、格式与说话人检查。",
+      "category": "移动开发",
+      "score": 81,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Nemotron 3.5 Transcribe 新增可提示多任务和 Granary 适配资料，可把已有本地语音研究细化到术语、格式与说话人检查。 属于待验证工程方向，没有订单或收益保证。",
+      "audience": "具有语音应用或代理工程经验的独立开发者与小团队。",
+      "first_step": "选择公开授权、非敏感的多说话人短录音，核对任务语言矩阵，再比较无提示与术语提示的误字、幻觉、说话人和运行成本。",
+      "risks": "不同任务语言支持不一致，量化仍待提供；不推定 M1 支持，不使用真实客户录音，模型、数据和依赖许可需分开核对。",
+      "time_window": "未来一周先做资料与小样本验证，没有官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+          "label": "NVIDIA · 提示转写与 Granary v2",
+          "excerpt": "NVIDIA Nemotron 3.5 Transcribe is an open-weight, promptable model that turns recorded speech into useful text, now available on Hugging Face and ModelScope. It brings transcription, speaker attribution (diarization), translation, and audio question answering into one checkpoint: it transcribes 40 languages, translates 31 of them to or from English, and attributes speakers in 13. It handles recordings up to an hour long and labels up to eight speakers. Developers can guide output with natural language, choose where their audio is processed, and adapt recognition to domain vocabulary and accents.",
+          "checked_at": "2026-10-29T08:35:22.976553+08:00"
+        }
+      ],
+      "update_reason": "十月二十二日语音机会侧重 IBM 模型兼容性；本次新增 NVIDIA 可提示多任务、任务语言矩阵与 Granary 适配资料，将验收细化为术语约束、格式及说话人一致性，复用原编号而非重复包装。"
+    },
+    {
+      "opportunity_id": "agent-delivery-handoff-contract",
+      "headline": "跨工具代理任务交接与交付验收样例",
+      "short_headline": "跨工具代理任务交接与交付验收样例",
+      "short_summary": "GitHub 新公告把项目、会话接续与自动化连接，可研究任务从规格到审查的交接是否保留可验证状态。",
+      "category": "AI 编程",
+      "score": 81,
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "signal": "GitHub 新公告把项目、会话接续与自动化连接，可研究任务从规格到审查的交接是否保留可验证状态。 属于待验证工程方向，没有订单或收益保证。",
+      "audience": "具有语音应用或代理工程经验的独立开发者与小团队。",
+      "first_step": "用一个虚构小工单列规格、分支、测试结果和审查状态，纸面模拟工具或设备切换时哪些信息必须保存，再衡量返工。",
+      "risks": "公告和演示不保证当前账户可用或降低成本；计划、模型执行、权限与云端资料范围仍需核对，未验证客户付费意愿。",
+      "time_window": "未来一周先做资料与小样本验证，没有官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack",
+          "label": "GitHub · Universe 产品公告",
+          "excerpt": "The GitHub Copilot app is designed from the ground up for agentic software delivery. It connects your agents and tools across projects, so you can direct the work without making every handoff. And it’s for more than producing code: you can write specs, present design discussions, or analyze telemetry in one agent-first surface.",
+          "checked_at": "2026-10-29T08:35:24.059369+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-10-29T08:34:27+08:00",
+    "coverage_note": "当日直接读取 GitHub 官方全语言日榜，按原页面顺序取前十，逐条查看公开仓库与文档；未安装或运行候选代码。Star 为页面展示值，后续可能变化；上榜不是新发布、性能、学术质量、许可或商业需求证明。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "JetBrains/thinkrail",
+        "url": "https://github.com/JetBrains/thinkrail",
+        "summary": "围绕 pi 编码代理的 IDE，以独立 Git 工作区、项目规格和可复用技能组织开发；当前与未来扩展能力需分开。",
+        "direction": "代理 IDE 与项目知识",
+        "stars_today": 1068,
+        "total_stars": 5031
+      },
+      {
+        "rank": 2,
+        "repository": "elayadesign/ai-design-skills",
+        "url": "https://github.com/elayadesign/ai-design-skills",
+        "summary": "面向 AI 编码工具的设计技能合集，按任务组织 Markdown 规则和可调整的视觉约束，属于工作指引。",
+        "direction": "设计技能合集",
+        "stars_today": 2139,
+        "total_stars": 11107
+      },
+      {
+        "rank": 3,
+        "repository": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "summary": "由可组合技能构成的软件开发方法，串联需求、设计、计划、测试和审查；本期未安装或执行。",
+        "direction": "代理开发方法与验收",
+        "stars_today": 1095,
+        "total_stars": 307434
+      },
+      {
+        "rank": 4,
+        "repository": "HKUDS/DeepTutor",
+        "url": "https://github.com/HKUDS/DeepTutor",
+        "summary": "整合资料检索、辅导、测验和掌握练习的学习工作区；可见功能不等于已验证教学效果。",
+        "direction": "学习工具与引用检索",
+        "stars_today": 2371,
+        "total_stars": 47960
+      },
+      {
+        "rank": 5,
+        "repository": "macro-inc/macro",
+        "url": "https://github.com/macro-inc/macro",
+        "summary": "统一团队工作区，将邮件、聊天、文档、任务、代理和 CRM 关联为共享上下文；部署及权限条件需另核。",
+        "direction": "团队知识与 CRM 工作区",
+        "stars_today": 117,
+        "total_stars": 5414
+      },
+      {
+        "rank": 6,
+        "repository": "Nutlope/hallmark",
+        "url": "https://github.com/Nutlope/hallmark",
+        "summary": "以主题材料、真实内容和浏览器检查指导网页设计的 skill，区分可用性底线及设计偏好。",
+        "direction": "界面设计与可用性",
+        "stars_today": 2110,
+        "total_stars": 40697
+      },
+      {
+        "rank": 7,
+        "repository": "pbakaus/impeccable",
+        "url": "https://github.com/pbakaus/impeccable",
+        "summary": "面向编码代理的设计指导和审查工具，提供视觉调整词汇及检测规则；效果依具体产品与人工审阅。",
+        "direction": "设计审查与规则检测",
+        "stars_today": 1472,
+        "total_stars": 92637
+      },
+      {
+        "rank": 8,
+        "repository": "makecindy/cindy",
+        "url": "https://github.com/makecindy/cindy",
+        "summary": "整合不同代理框架和模型的客户端，支持跨设备继续任务；远程访问、模型共享和服务数据流需各自确认。",
+        "direction": "跨端代理客户端",
+        "stars_today": 728,
+        "total_stars": 8094
+      },
+      {
+        "rank": 9,
+        "repository": "nightly-labs/openbot",
+        "url": "https://github.com/nightly-labs/openbot",
+        "summary": "为常驻代理提供工作区、队列与协作的本地桌面预览，文档注明当前执行权限很宽，本文未运行。",
+        "direction": "常驻代理队列与权限",
+        "stars_today": 1054,
+        "total_stars": 3245
+      },
+      {
+        "rank": 10,
+        "repository": "togg53192-cmd/jailbreaks",
+        "url": "https://github.com/togg53192-cmd/jailbreaks",
+        "summary": "提示词及安全限制绕过尝试的资料合集，内容不是可靠性证明；仅作为输入边界研究线索，未执行或传播具体绕过方法。",
+        "direction": "提示输入边界与安全评估资料",
+        "stars_today": 1477,
+        "total_stars": 7094
+      }
+    ],
+    "analysis": [
+      "代理工程环境仍受关注：JetBrains/thinkrail、obra/superpowers、makecindy/cindy 与 nightly-labs/openbot 分别覆盖 IDE、方法、客户端或常驻队列，不能把它们视为同一类能力或据排名证明工作效率。学习步骤：用虚构工单对照规格、工作区、任务队列与交接记录；openbot 文档的宽权限只作说明，本文未调整本机权限。",
+      "设计指引与检测工具并存：elayadesign/ai-design-skills、Nutlope/hallmark 和 pbakaus/impeccable 将设计经验整理为合集、流程或审查规则。上榜只反映关注，不能保证页面质量。验证步骤：对同一公开示例检查手机布局、键盘焦点、真实交互及事实来源，区分确定性问题和审美偏好，先读文档再决定是否使用。",
+      "团队上下文与学习上下文是两种应用：macro-inc/macro 连接邮件、文档、任务与 CRM，HKUDS/DeepTutor 连接学习资料、引用与练习。两者都值得研究信息关联，但团队记忆和学习记录具有不同授权与保存要求。学习步骤：用虚构联系人或公开短文画出数据流，检查引用来源、访问边界和撤销路径，不接入真实邮箱或客户资料。",
+      "资料合集不等同安全评测：togg53192-cmd/jailbreaks 以提示绕过资料进入榜单，内容热度不能证明当前模型会复现、方法合规或防御有效。学习步骤：仅列出输入与可信指令的边界，使用自编无害示例检查引用文本是否会被误当命令，记录可复现结果；不执行仓库提示、不使用实际绕过载荷。"
+    ]
+  }
+}
