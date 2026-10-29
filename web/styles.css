@@ -259,7 +259,7 @@ blockquote { border-left: 3px solid var(--line); padding-left: 16px; margin: 12p
   .brand { font-size: 18px; }
   .brand small { font-size: 8px; }
   .brand-mark { width: 32px; height: 32px; }
-  .site-header nav { justify-content: space-between; font-size: 13px; gap: 4px; }
+  .site-header nav { justify-content: space-between; flex-wrap: wrap; font-size: 13px; gap: 4px; }
   .site-header nav > a, .nav-archive summary { padding: 8px 10px; }
   .brief-intro { gap: 20px; }
   .brief-intro h1 { font-size: 29px; }

@@ -40,7 +40,7 @@ def brief(value, length=65):
 
 
 def frame(title, body, prefix="", reports=None):
-    nav = f'<a href="{prefix}index.html#latest-news">新闻速览</a><a href="{prefix}index.html#opportunities">机会观察</a><a href="{prefix}archive/competitions.html">AI 竞赛</a><details class="nav-archive"><summary>历史报告</summary><div>' + ''.join(f'<a href="{prefix}archive/{kind}.html">{label}归档</a>' for kind, label in KINDS.items()) + '</div></details>'
+    nav = f'<a href="{prefix}index.html#latest-news">新闻速览</a><a href="{prefix}index.html#github-trending">开源热榜</a><a href="{prefix}index.html#opportunities">机会观察</a><a href="{prefix}archive/competitions.html">AI 竞赛</a><details class="nav-archive"><summary>历史报告</summary><div>' + ''.join(f'<a href="{prefix}archive/{kind}.html">{label}归档</a>' for kind, label in KINDS.items()) + '</div></details>'
     return f'''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="科技前沿、金融市场、政治政策与近期机会，每条内容保留原文、证据、影响和行动建议。">
@@ -218,7 +218,8 @@ def build(output=ROOT / "docs", report_root=ROOT / "reports", competition_catalo
     date_title = edition_date.strftime('%m 月 %d 日') if edition_date else '准备中'
     weekday = '星期' + '一二三四五六日'[edition_date.weekday()] if edition_date else ''
     updated = time_label(latest_daily['generated_at']) if latest_daily else '等待首期日报'
-    edition = f'''<section class="brief-intro"><div><span class="eyebrow">DAILY INTELLIGENCE / 每日简报</span><h1>每天，读懂重要变化<span>。</span></h1><p>从科技、金融与政策，到值得验证的下一步。</p><div class="edition-stats"><a href="#latest-news"><b>{len(latest_daily['items']) if latest_daily else 0}</b> 条新闻 ↓</a><a href="#opportunities"><b>{len(latest_daily.get('opportunities', [])) if latest_daily else 0}</b> 个机会 ↓</a><a href="#competitions"><b>{len(eligible)}</b> 项个人线上竞赛 ↓</a></div></div>
+    trending_stat = f'<a href="#github-trending"><b>{len(latest_daily["github_trending"]["items"])}</b> 个热榜项目 ↓</a>' if latest_daily and latest_daily.get("github_trending") else ""
+    edition = f'''<section class="brief-intro"><div><span class="eyebrow">DAILY INTELLIGENCE / 每日简报</span><h1>每天，读懂重要变化<span>。</span></h1><p>从科技、金融与政策，到值得验证的下一步。</p><div class="edition-stats"><a href="#latest-news"><b>{len(latest_daily['items']) if latest_daily else 0}</b> 条新闻 ↓</a>{trending_stat}<a href="#opportunities"><b>{len(latest_daily.get('opportunities', [])) if latest_daily else 0}</b> 个机会 ↓</a><a href="#competitions"><b>{len(eligible)}</b> 项个人线上竞赛 ↓</a></div></div>
 <div class="edition-date"><span>{edition_date.year if edition_date else 'DAILY'} / 本期日报</span><strong>{date_title}</strong><small>{weekday} · 北京时间</small><a href="{report_url(latest_daily) if latest_daily else '#archive'}">阅读完整日报 <span aria-hidden="true">↗</span></a></div></section>'''
     opportunity_cards = ''.join(opportunity_card(o, latest_daily) for o in latest_daily.get('opportunities', [])) if latest_daily else ''
     news_filters = '<button class="filter active" data-domain-filter="all" aria-pressed="true">全部领域</button>' + ''.join(f'<button class="filter" data-domain-filter="{domain}" aria-pressed="false">{label}</button>' for domain, label in NEWS_DOMAINS.items())
