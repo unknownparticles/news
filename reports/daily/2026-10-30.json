@@ -1,0 +1,367 @@
+{
+  "id": "2026-10-30",
+  "kind": "daily",
+  "title": "2026-10-30 · 模块化模型、专业编辑与平台交易",
+  "period": {
+    "start": "2026-10-30",
+    "end": "2026-10-30"
+  },
+  "generated_at": "2026-10-30T08:37:50+08:00",
+  "collection_window": {
+    "start": "2026-10-29T08:34:26.754418+08:00",
+    "end": "2026-10-30T08:34:09.916555+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证工程方向；GitHub 官方日榜前十附五段研究分析。配置来源本次均成功返回，RSS 候选采集至北京时间 08:34 后继续读取原文。Wiz 候选地址返回 404，未收录。机构实验、监管建议、交易计划、审批决定和司法调查分别标记，市值变化不等于现金损失。竞赛未发现新增合格项目，现有四项推荐中两项长期练习；智析云荐资格及正式提交通道仍待确认，其他平台未读规则继续保留旧核验日期。",
+  "source_failures": [
+    "Wiz 代理攻击指纹候选原文返回 404，未收录。"
+  ],
+  "items": [
+    {
+      "event_id": "e508e29ae812fe586e8d",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-29T13:37:07+00:00",
+      "score": 87,
+      "headline": "Granite Switch 补丁更新适配器，基础模型保留",
+      "short_headline": "Granite Switch 补丁更新适配器，基础模型保留",
+      "short_summary": "IBM 介绍语音与决策适配器更新，称兼容前版且无需重算基础模型；开发者 SDK 仍是后续计划。",
+      "summary": "IBM 介绍 Granite Switch 4.1.1 补丁版，更新十种语言的语音转写模型和决策适配器，称保持 4.1 兼容，并未重新计算基础模型。面向第三方开发适配器的 SDK 与教程仍为后续计划，不能写成已普遍提供。本期未部署或复测兼容性、延迟和性能，软件式更新是机构主张，仍应做完整回归。",
+      "relevance": "模块化更新可能减少重复训练，但适配器组合、输出格式与业务依赖仍可能影响上线风险。",
+      "action": "从模型卡核对版本、任务、许可和依赖，用公开或虚构样例对比更新前后的输出与失败情况，再判断是否值得迁移。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+          "label": "IBM Granite · Switch 补丁公告",
+          "excerpt": "Granite Switch 4.1.1 is a patch release. The version number means what it means in software: fully backwards compatible with 4.1, no migration, incremental improvements under the hood.",
+          "checked_at": "2026-10-30T08:34:53.480875+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "0976bee42f1f9886bf58",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-29T21:00:00+00:00",
+      "score": 86,
+      "headline": "Figma 介绍专用画布编辑模型的训练与验收",
+      "short_headline": "Figma 介绍专用画布编辑模型的训练与验收",
+      "short_summary": "作者把原生设计结构、合成编辑任务和视觉审查结合；模型内测表现不等于任意设计需求都能一次完成。",
+      "summary": "Figma 介绍面向其原生设计格式的模型训练，早期通过合成编辑请求及成功示例进行监督微调，并使用确定性结构校验、视觉模型和专家设计师评估。文章还讨论强化学习及多种基础模型。内部实验属于厂商自述，结构有效、符合组件要求、视觉好看和满足用户请求应分开衡量，本期未独立复现。",
+      "relevance": "专业编辑任务可能需要领域结构与细粒度验收，而不只是通用提示或更大的模型。",
+      "action": "用公开虚构设计样例列出结构、组件、对齐、对比度和需求满足检查，人工比较修改前后；不向外部服务上传私人设计文件。",
+      "sources": [
+        {
+          "url": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
+          "label": "Figma · 专用编辑模型研究",
+          "excerpt": "We evaluate those dimensions separately. We combine checks on the design’s structure with visual judges, then use expert designers to calibrate and review the results. That helps us understand where a model succeeds and what it still needs to learn.",
+          "checked_at": "2026-10-30T08:34:54.328067+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "05ea37f01881a7e8b500",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-29T09:31:44+00:00",
+      "score": 82,
+      "headline": "Ofcom 提议多种年龄核验方式，仍待批准与实施",
+      "short_headline": "Ofcom 提议多种年龄核验方式，仍待批准与实施",
+      "short_summary": "BBC 报道证件、银行信息、面部年龄估计及数字身份等建议；提出方法不等于全部平台已部署，也不是准确率保证。",
+      "summary": "BBC 报道 Ofcom 为英国社交媒体年龄限制提出核验建议，包括证件与现场照片比对、银行记录、面部年龄估计和数字身份等。文章说明方案需政府批准，平台还需自行实现，十六和十七岁群体核验存在现实困难。本期未直接读取监管原文件或核验各技术准确率，不将媒体报道作为已生效的统一技术标准。",
+      "relevance": "年龄核验涉及误拒、隐私、可用证件和申诉，不应只按一种方法或宣传准确率选型。",
+      "action": "先核对最终监管要求与数据最小化条款，用虚构测试记录比较误判、替代渠道和申诉路径，不收集真实未成年人或人脸资料。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6ly3027820lo",
+          "label": "BBC · 年龄核验建议",
+          "excerpt": "To address that challenge, Ofcom has - in addition to traditional forms of ID - recommended four methods that it says would be \"highly effective\" at gauging people's ages:",
+          "checked_at": "2026-10-30T08:34:57.230532+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "f14704fe6ef602fdc0ed",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-29T22:17:52+00:00",
+      "score": 85,
+      "headline": "Alphabet 市值据报单日减少逾五千亿美元",
+      "short_headline": "Alphabet 市值据报单日减少逾五千亿美元",
+      "short_summary": "BBC 报道搜索广告、AI 投入与现金流担忧；市值减少不同于公司现金亏损，也不证明单一原因。",
+      "summary": "BBC 报道 Alphabet 周四市值由约 3.97 万亿美元降至 3.46 万亿美元，并讨论季度营收增长、利润回落、负自由现金流与 AI 搜索广告变现担忧。市场价值变化与经营现金流是不同指标，价格反应的归因仍是报道和受访者分析。本期未独立核对全部财报与行情，不用单日波动推导长期收益。",
+      "relevance": "观察 AI 投资要把收入、资本开支、广告业务、现金流与估值分开，增长数字不自动代表现金盈利。",
+      "action": "对照正式财报、现金流及收盘时间口径，记录实际支出与业务贡献，不据单篇市场报道做买卖判断。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cm9qzdqpxy48o",
+          "label": "BBC · Alphabet 财报后市场反应",
+          "excerpt": "By the end of Thursday, the company's total stock market value had fallen to $3.46 trillion from $3.97 trillion the day before.",
+          "checked_at": "2026-10-30T08:34:55.216374+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "f243388ea4b407f32234",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-29T15:05:15+00:00",
+      "score": 83,
+      "headline": "DoorDash 宣布拟以一百七十亿美元收购 Instacart",
+      "short_headline": "DoorDash 宣布拟以一百七十亿美元收购 Instacart",
+      "short_summary": "BBC 报道交易计划及配送业务协同，完成日期仍待后续程序；协议金额和平台覆盖目标不等于已经实现。",
+      "summary": "BBC 报道 DoorDash 拟以约一百七十亿美元收购 Instacart，公司称可扩展零售和杂货配送选择。报道列交易价值、现金比例及预计完成窗口，这些属于计划和双方表述，并非已经交割、批准或已实现成本节省。本期未核对完整合并协议和监管文件，不把预期协同当作确定利润。",
+      "relevance": "配送业务整合需要分别看商户覆盖、替代商品处理、履约成本和监管进展，宣布规模不等于用户价值已兑现。",
+      "action": "跟踪交易正式文件、审批与完成条件，比较公开服务指标与费用，不由收购标题保证竞争或投资结果。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cm79pjg2l57yo",
+          "label": "BBC · 配送平台收购计划",
+          "excerpt": "DoorDash said the deal, expected to be final in about a year, will expand options for customers and let more sellers use the companies' services.",
+          "checked_at": "2026-10-30T08:34:55.408802+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "41690a4ebc45cddae668",
+      "category": "金融市场",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-29T20:30:00+00:00",
+      "score": 80,
+      "headline": "美联储批准丰业银行相关银行控股公司申请",
+      "short_headline": "美联储批准丰业银行相关银行控股公司申请",
+      "short_summary": "官方公告批准通过收购 Maple Financial 间接收购 MapleMark Bank；监管批准不同于已完成全部交割。",
+      "summary": "美联储公告批准加拿大 The Bank of Nova Scotia 通过收购美国 Maple Financial Holdings，间接收购 MapleMark Bank 并成为银行控股公司的申请。该公告确认的是监管决定，不足以单独证明交易已交割或所有其他条件已满足，也不是对投资回报或客户产品的推荐。本期未逐项复核完整批准令附件。",
+      "relevance": "银行跨境扩张要区分申请、监管批准、交割与整合，批准事件本身不等于业务收益已经产生。",
+      "action": "阅读官方批准令和后续交易方披露，分别记录附带条件与实际完成时间，不从短公告推导服务或价格变化。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261029a.htm",
+          "label": "美联储 · 丰业银行申请批准",
+          "excerpt": "The Federal Reserve Board on Thursday announced its approval of the application by The Bank of Nova Scotia, of Toronto, Canada, to become a bank holding company by acquiring Maple Financial Holdings, Inc., of Dallas, Texas, and thereby indirectly acquiring MapleMark Bank, of Tulsa, Oklahoma.",
+          "checked_at": "2026-10-30T08:34:55.628093+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "b924cd2a5bafb62bfb3c",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-29T11:25:16+00:00",
+      "score": 82,
+      "headline": "美国对卢旺达国防部制裁，相关指控遭否认",
+      "short_headline": "美国对卢旺达国防部制裁，相关指控遭否认",
+      "short_summary": "BBC 报道美方以涉嫌支持 M23 为由制裁；行政措施、冲突指控和各方回应应分开呈现，不等同刑事定罪。",
+      "summary": "BBC 报道美国对卢旺达国防部实施制裁，美方称其支持刚果民主共和国东部 M23。报道同时记录卢旺达否认及对既有和平承诺履行的争议。这里确认媒体报道中的制裁与各方说法，本期未直接核对美国财政部附件和完整证据，行政制裁不等于法院已作刑事定罪，也不证明冲突已结束。",
+      "relevance": "跨境尽调应核对正式列名、主体和适用范围，不能仅依新闻中的机构称呼判断具体交易。",
+      "action": "查正式制裁名单、法律依据和后续公开回应，区分指控、行政决定与司法结论。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cm87zw51qw0jo",
+          "label": "BBC · 卢旺达制裁报道",
+          "excerpt": "The United States has imposed sanctions on Rwanda's defence ministry over its alleged support for the M23 rebel group in eastern Democratic Republic of Congo, increasing pressure on Kigali to withdraw its troops and halt support for the rebels.",
+          "checked_at": "2026-10-30T08:34:56.253351+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "54d4e28735862a03af1e",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-29T14:51:45+00:00",
+      "score": 84,
+      "headline": "芬兰警方调查 Google 数据中心场地清林程序",
+      "short_headline": "芬兰警方调查 Google 数据中心场地清林程序",
+      "short_summary": "Guardian 报道涉嫌环境评估程序问题，Google 代表致歉并解释当时理解；刑事调查不是定罪或永久取消项目。",
+      "summary": "Guardian 报道芬兰警方就 Google 子公司数据中心场地清林、排水及环境影响评估程序启动刑事调查，并记述此前暂停准备工作的要求和公司回应。报道讨论约三百三十公顷场地，但本期未直接核对警方、许可机关和公司完整文件。涉嫌违法、调查、停工和最终裁判需分开，不把调查写成已定罪或所有项目被取消。",
+      "relevance": "算力项目交付取决于土地、环境许可和建设程序，气候或能源优势不能替代合规审批。",
+      "action": "继续核对警方及许可机构正式公告、评估状态与项目节点，融资或容量研究中保留延期不确定性。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/29/finland-criminal-investigation-google-clearing-forest-datacentre",
+          "label": "The Guardian · 芬兰数据中心调查",
+          "excerpt": "Finnish ⁠police have launched a criminal investigation into possible breaches ⁠of the country’s environmental ⁠laws ​at the site of a planned Google datacentre in rural northern Finland.",
+          "checked_at": "2026-10-30T08:34:57.043241+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "90d3326b6e442304b8d6",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-29T18:14:21+00:00",
+      "score": 81,
+      "headline": "香港住宅火灾报告公布后官员致歉，问责仍待后续",
+      "short_headline": "香港住宅火灾报告公布后官员致歉，问责仍待后续",
+      "short_summary": "Guardian 报道李家超就过往火灾相关政府不足致歉，并转述调查与刑事程序；报告责任判断不同于法院终局结论。",
+      "summary": "Guardian 报道香港政府在有关去年住宅火灾的报告公布时致歉，报告讨论承建方、监管与消防等问题，并列举拘捕、起诉及官员辞职情况。本期未直接取得报告全文及案件文件，行政责任、调查判断、被起诉和被法院定罪应分别记录；火灾发生于此前，今日收录的是报告和问责进展。",
+      "relevance": "重大事故报道需区分技术原因、监管程序、行政责任与刑事裁判，避免把进展当作全部问题已解决。",
+      "action": "核对正式报告、整改清单和后续司法程序，将可核验的执行节点与各方评价分开。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/29/hong-kong-john-lee-apologises-wang-fuk-court-fire-killed-168-people",
+          "label": "The Guardian · 火灾报告及问责",
+          "excerpt": "The chief executive, John Lee, and seven other officials bowed in apology at the release of a report that pointed to “decades of failure” by government bodies.",
+          "checked_at": "2026-10-30T08:35:37.423048+08:00"
+        }
+      ],
+      "context_note": "原文为十月二十九日发布的报告与问责进展，火灾发生于此前；没有将历史事故表述为本期新发生。"
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "adapter-update-regression-review",
+      "headline": "模型适配器补丁的组合回归检查",
+      "short_headline": "模型适配器补丁的组合回归检查",
+      "short_summary": "Granite Switch 的软件式补丁路线提供模块化更新案例，可研究把适配器组合、输出格式与回滚条件显式记录。",
+      "category": "模型与基础设施",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Granite Switch 的软件式补丁路线提供模块化更新案例，可研究把适配器组合、输出格式与回滚条件显式记录。 这是待验证研究方向，尚无付费或收益证据。",
+      "audience": "有推理部署或设计工具开发经验的独立开发者和小团队。",
+      "first_step": "用公开或合成输入建立固定验收集，列基础模型和适配器版本，对照更新前后输出、延迟及失败率，先做纸面回滚清单。",
+      "risks": "机构兼容性主张不替代实际回归；SDK 尚在计划中，第三方支持、算力和许可未完整核对，不承诺降本或客户订单。",
+      "time_window": "未来一周先做文档和小样本验收，无官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ibm-granite/granite-switch-4-1-1",
+          "label": "IBM Granite · Switch 补丁公告",
+          "excerpt": "Granite Switch 4.1.1 is a patch release. The version number means what it means in software: fully backwards compatible with 4.1, no migration, incremental improvements under the hood.",
+          "checked_at": "2026-10-30T08:34:53.480875+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "structured-design-edit-acceptance",
+      "headline": "设计编辑的结构与视觉双重验收",
+      "short_headline": "设计编辑的结构与视觉双重验收",
+      "short_summary": "Figma 报告将原生结构校验、视觉评判和专家标准分开，可研究为小型设计修改建立可解释验收表。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Figma 报告将原生结构校验、视觉评判和专家标准分开，可研究为小型设计修改建立可解释验收表。 这是待验证研究方向，尚无付费或收益证据。",
+      "audience": "有推理部署或设计工具开发经验的独立开发者和小团队。",
+      "first_step": "选一份公开或虚构组件稿，定义组件使用、结构、对齐、对比和请求满足五类检查，对照人工审阅与模型判断的分歧。",
+      "risks": "主观风格与结构正确不同，内部训练效果不能保证复现；客户设计、字体素材和数据授权需另核，不提供效果认证。",
+      "time_window": "未来一周先做文档和小样本验收，无官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
+          "label": "Figma · 专用编辑模型研究",
+          "excerpt": "We evaluate those dimensions separately. We combine checks on the design’s structure with visual judges, then use expert designers to calibrate and review the results. That helps us understand where a model succeeds and what it still needs to learn.",
+          "checked_at": "2026-10-30T08:34:54.328067+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-10-30T08:34:10+08:00",
+    "coverage_note": "运行当日直接读取官方全语言日榜，保持页面顺序前十并逐条核对公开仓库和文档。Star 为当次页面展示值，可能继续变化；上榜不代表新发布、学术质量、性能、商业许可或有效性，候选项目未安装或运行。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "HKUDS/DeepTutor",
+        "url": "https://github.com/HKUDS/DeepTutor",
+        "summary": "整合资料检索、辅导、解题、测验与练习的学习工作区；引用可靠性、教学效果和账号资源边界须分别核验。",
+        "direction": "学习助手与引用检索",
+        "stars_today": 1930,
+        "total_stars": 50029
+      },
+      {
+        "rank": 2,
+        "repository": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "summary": "用可组合技能组织需求、设计、实施计划、测试和审查的软件开发方法，属于代理工作流程而非独立模型。",
+        "direction": "开发方法与交付验收",
+        "stars_today": 1034,
+        "total_stars": 308537
+      },
+      {
+        "rank": 3,
+        "repository": "pbakaus/impeccable",
+        "url": "https://github.com/pbakaus/impeccable",
+        "summary": "为编码代理提供设计调整词汇、审查和检测规则，帮助表达产品设计意图；示例不保证任意项目质量。",
+        "direction": "界面设计与质量审查",
+        "stars_today": 2870,
+        "total_stars": 95301
+      },
+      {
+        "rank": 4,
+        "repository": "JetBrains/thinkrail",
+        "url": "https://github.com/JetBrains/thinkrail",
+        "summary": "围绕 pi 编码代理的 IDE，以 Git 工作区、项目规格和技能保留上下文，区分当前能力与后续扩展计划。",
+        "direction": "代理 IDE 与项目知识",
+        "stars_today": 1117,
+        "total_stars": 5998
+      },
+      {
+        "rank": 5,
+        "repository": "milind-soni/OpenMausBot",
+        "url": "https://github.com/milind-soni/OpenMausBot",
+        "summary": "独立开源代理客户端，将多个本地代理作为联系人，结合各自计算环境和连接应用；不隶属于名称中涉及的模型厂商。",
+        "direction": "代理客户端与执行环境",
+        "stars_today": 1199,
+        "total_stars": 7468
+      },
+      {
+        "rank": 6,
+        "repository": "nightly-labs/openbot",
+        "url": "https://github.com/nightly-labs/openbot",
+        "summary": "本地常驻代理工作区，提供队列、文件协作与浏览器入口；文档注明当前默认执行权限宽，本期未运行。",
+        "direction": "常驻代理与权限边界",
+        "stars_today": 709,
+        "total_stars": 3871
+      },
+      {
+        "rank": 7,
+        "repository": "elayadesign/ai-design-skills",
+        "url": "https://github.com/elayadesign/ai-design-skills",
+        "summary": "面向 AI 编码工具的 Markdown 设计技能合集，按场景整理可调整视觉规则；未安装或执行第三方技能。",
+        "direction": "设计技能与规则表达",
+        "stars_today": 1187,
+        "total_stars": 12140
+      },
+      {
+        "rank": 8,
+        "repository": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "summary": "捕获工具观察、生成摘要并在后续会话检索上下文的记忆工具；本地与托管观察器、保存和付费条件需分开核对。",
+        "direction": "跨会话记忆与数据边界",
+        "stars_today": 336,
+        "total_stars": 104783
+      },
+      {
+        "rank": 9,
+        "repository": "CopilotKit/OpenBot",
+        "url": "https://github.com/CopilotKit/OpenBot",
+        "summary": "以 AG-UI 连接不同代理的 AI 同事应用模板，每个代理可有浏览器、文件和授权工具；是早期自建模板而非已运营托管产品。",
+        "direction": "代理应用模板与动作审计",
+        "stars_today": 247,
+        "total_stars": 8140
+      },
+      {
+        "rank": 10,
+        "repository": "togg53192-cmd/jailbreaks",
+        "url": "https://github.com/togg53192-cmd/jailbreaks",
+        "summary": "提示词及安全限制绕过尝试的资料合集，仅作为输入边界研究线索；热度不证明有效性，不执行或传播具体绕过载荷。",
+        "direction": "提示输入边界资料",
+        "stars_today": 1594,
+        "total_stars": 9016
+      }
+    ],
+    "analysis": [
+      "学习与记忆工具关注不同的上下文：HKUDS/DeepTutor 面向资料、引用和练习，thedotmack/claude-mem 面向会话观察及摘要检索。两者同榜不证明学习效果或记忆正确率。验证步骤：用公开短文和虚构任务记录检查引用、遗漏、过时记忆、保存与删除，先区分本地和托管路径，不接入私人资料。",
+      "开发方法和 IDE 应按交付而非运行时长评估：obra/superpowers、JetBrains/thinkrail 分别组织方法与工作区。学习步骤：对虚构小改动列需求、规格、测试、提交和回滚证据，比较维护流程所花时间与返工情况；文档中的自主执行示例不是质量保证。",
+      "同名代理产品用途与权限不同：milind-soni/OpenMausBot、nightly-labs/openbot 和 CopilotKit/OpenBot 分别是独立客户端、常驻工作区及 AG-UI 自建模板，不应混作同一项目。验证步骤：按文档画出本地进程、虚拟或远程计算环境、浏览器和动作记录边界，再用虚构案例核对撤销与故障恢复。本文未运行工具或据其宽权限默认值修改本机。",
+      "设计指导需要可核验的任务条件：pbakaus/impeccable 与 elayadesign/ai-design-skills 提供审查词汇或规则合集，排名与 Star 不证明视觉品质。学习步骤：用同一公开页面需求比较布局、焦点、对比度、组件和真实交互的覆盖，将确定性缺陷与审美取舍分开，先读资料而非直接安装。",
+      "togg53192-cmd/jailbreaks 属于提示资料合集，不能与经过控制实验的安全研究或模型基准等同。关注信号只能说明此类输入受到讨论。学习步骤：用自编无害文本检查引用资料是否被错误当作操作指令，记录预期边界与实际结果；不执行仓库载荷、不进行真实绕过测试。"
+    ]
+  }
+}
