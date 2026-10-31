@@ -1,0 +1,367 @@
+{
+  "id": "2026-10-31",
+  "kind": "daily",
+  "title": "2026-10-31 · 交互案例、更新窗口与平台风险",
+  "period": {
+    "start": "2026-10-31",
+    "end": "2026-10-31"
+  },
+  "generated_at": "2026-10-31T08:37:06+08:00",
+  "collection_window": {
+    "start": "2026-10-30T08:34:09.916555+08:00",
+    "end": "2026-10-31T08:32:37.319903+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证方向；GitHub 官方日榜前十附五段分析。配置来源本次均成功返回，RSS 候选采集至北京时间 08:32 后继续核验原文；OpenAI 训练偏好候选页返回 403，未当作原文已核实收录。厂商安全汇总、控制实验、媒体转述分别标记。欧加合作从草案到峰会宣布有实质进展，复用原事件编号。竞赛未发现新增合格项目，现有四项推荐含两项长期练习；余震赛列表虽显示十月三十一日结束，但正式首轮报名早已截止，不重新开放推荐。其他平台规则局限保留。",
+  "source_failures": [
+    "OpenAI 训练偏好候选原文返回 403，未收录，未用 RSS 摘要替代原文核验。"
+  ],
+  "items": [
+    {
+      "event_id": "037154e824aaff256e14",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-30T17:57:24+00:00",
+      "score": 81,
+      "headline": "NVIDIA 案例串联语音、角色对话与口型动画",
+      "short_headline": "NVIDIA 案例串联语音、角色对话与口型动画",
+      "short_summary": "作者展示万圣节互动投影，将转写、角色模型、语音和动画组合；单工作站演示不等于普通笔记本可直接复现。",
+      "summary": "NVIDIA 博客作者介绍 MonsterHouse 互动投影案例，以语音识别、角色语言模型、语音合成及 Audio2Face-3D 串联现场对话与口型动画，并结合 Unreal Engine。案例使用配备两张 NVIDIA Blackwell 显卡的工作站，不能把单工作站误读成低配设备或 M1 已可运行；体验、算力需求和稳定性未由本期独立实测。",
+      "relevance": "交互角色应用需要同时验收识别、对话、声音、动画和环境响应，单模型表现不能代表全流程效果。",
+      "action": "先用公开授权或合成音频画出输入到动画的流程和时间预算，核对模型、角色素材与声音授权，再研究是否值得小样本测试。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/nvidia/nemotron-halloween",
+          "label": "NVIDIA · MonsterHouse 交互案例",
+          "excerpt": "TL;DR: MonsterHouse is an interactive projection I created for Halloween. He listens to trick-or-treaters, answers in the voice of a grumpy old pirate ship and softens when visitors remember their manners. He is built on the NVIDIA Nemotron Voice Agent with NVIDIA Nemotron ASR, Nemotron 3.5 Bolt E4B 4GB, Magpie TTS Zeroshot and Audio2Face-3D, and he runs on a single workstation.",
+          "checked_at": "2026-10-31T08:33:37.280043+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "8e6d8828488a3929ec34",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-30T22:51:44+00:00",
+      "score": 85,
+      "headline": "Wiz 汇总 AI 开发平台安全事件，关联仍待调查",
+      "short_headline": "Wiz 汇总 AI 开发平台安全事件，关联仍待调查",
+      "short_summary": "Wiz 称至少九个平台披露事件，多数仍在分析；不能据此断言同一漏洞、同一攻击者或所有用户均已受影响。",
+      "summary": "Wiz 汇总十月多家 AI 开发平台公开披露的安全事件，称至少九家受到不同事件影响，并讨论凭据、依赖和模型访问滥用等风险。文章明确多数事件仍在分析、详细技术资料有限，部分影响仅来自社交媒体个案。本期未逐项复核所有平台公告，不把厂商汇总当作统一攻击链或归因已获证实。",
+      "relevance": "模型应用的安全边界涉及凭据、构建系统和第三方依赖，平台受影响也不能直接推出每个用户已泄密。",
+      "action": "对照各自使用平台的正式事件公告与时间范围，整理授权和密钥范围清单；实际处理依官方通知，不执行来源中的命令或接入未知服务。",
+      "sources": [
+        {
+          "url": "https://www.wiz.io/blog/black-october-for-ai-developer-platforms",
+          "label": "Wiz · 平台事件汇总",
+          "excerpt": "Currently, most of these security incidents are still being analyzed, and detailed technical information is not available. Zeabur has shared a full write-up, and the company will be shutting down due to this incident. Railway has released a preliminary report and timeline.",
+          "checked_at": "2026-10-31T08:33:37.773298+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "168a3a5c5955496be877",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-30T12:07:16+00:00",
+      "score": 86,
+      "headline": "Epoch 研究关注安全修复公开到实际更新的时间差",
+      "short_headline": "Epoch 研究关注安全修复公开到实际更新的时间差",
+      "short_summary": "作者在控制实验中报告浏览器补丁窗口风险，并称已向维护者披露相关问题；研究结果不等于现实普遍失陷。",
+      "summary": "Epoch AI 报告在控制实验中，模型利用安全修复已公开但尚未送达用户的补丁窗口完成浏览器攻击测试，并称已向 Mozilla 披露相关问题。文章区分研究环境的前期总投入与单次运行费用，也说明另一浏览器未成功不证明其绝对安全。本期未复现、未运行攻击代码，不把实验成功率或成本直接推广到真实攻击和所有浏览器。",
+      "relevance": "防御评估除了找到漏洞，还需记录修复何时公开、正式版本何时可得和用户何时完成更新。",
+      "action": "核对维护者安全公告与正式更新渠道，为自有软件建立公开修复到可用版本的时间台账，不复现攻击、不扫描第三方系统。",
+      "sources": [
+        {
+          "url": "https://epochai.substack.com/p/glm-patch-gap-exploit-firefox",
+          "label": "Epoch AI · 补丁窗口研究",
+          "excerpt": "The window between a fix being published and reaching users is called the patch gap, and it’s a known weakness in software release practices. It matters more as AI models get better at hacking. Projects like Anthropic’s Glasswing and OpenAI’s Daybreak give defenders early access to frontier AI models to identify and patch vulnerabilities, but published fixes can also indicate flaws for attackers to target before the fix rolls out. In the past, exploiting patch-gap vulnerabilities required significant time and expertise, or special access to frontier models with advanced cyber capabilities, so few attackers could take advantage of this gap.",
+          "checked_at": "2026-10-31T08:34:39.442297+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "c2b0ab28af6912b421b8",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-30T21:13:14+00:00",
+      "score": 85,
+      "headline": "Binance 据报追索被盗资产，冻结与追回仍需区分",
+      "short_headline": "Binance 据报追索被盗资产，冻结与追回仍需区分",
+      "short_summary": "BBC 引述 Binance 称部分资产已被冻结或保障，分析公司提出攻击归因；声明不等于资金已全部返还或根因已确定。",
+      "summary": "BBC 报道 Binance 称约六十三亿美元资产被访问，约三十亿美元已冻结或保障，并记录公司对初步入侵判断的后续修订。报道中的朝鲜关联来自分析机构，调查和资产追索仍在进行。本期未独立核查链上资金、平台公告和完整证据，冻结、公司补足承诺、实际追回与客户到账不是同一状态。",
+      "relevance": "重大平台安全事件需要分别记录调查、服务状态、冻结和赔付，不能据单篇报道保证资产安全或交易机会。",
+      "action": "以官方公告和可信独立进展核对服务范围及时间；不向所谓追回服务提供密钥、助记词或资金，不把归因猜测当作定论。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
+          "label": "BBC · 平台资产追索报道",
+          "excerpt": "Binance, the world's largest cryptocurrency exchange, says it has frozen around half of the funds stolen in a \"complex\" hack, after $6.3bn (£4.7bn) was accessed in what is believed to be a record heist.",
+          "checked_at": "2026-10-31T08:33:38.020697+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "689ef199f3cbe6e23310",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-30T16:04:55+00:00",
+      "score": 80,
+      "headline": "Yorkshire Water 首席执行官将离任，环境表现受审视",
+      "short_headline": "Yorkshire Water 首席执行官将离任，环境表现受审视",
+      "short_summary": "BBC 报道公司获最低环境等级后宣布换帅，交接定于次年一月；人员变动不等于服务和污染问题已经改善。",
+      "summary": "BBC 报道 Yorkshire Water 首席执行官 Nicola Shaw 宣布将于一月一日离任，由 Nicola Medalova 接任，此前环境署给予公司最低的一星等级。报道引用公司、监管历史和污染事件数据。本期未直接复核完整评级原表和全部薪酬文件，时间相邻不单独证明换帅的全部原因，交接计划也不等于整改已完成。",
+      "relevance": "公共事业经营应同时追踪管理、监管评级、实际服务和治理，职位变化不能替代结果指标。",
+      "action": "核对公司正式任命及环境署报告，持续比较污染与服务指标，不以单次人事消息判断企业价值。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/ckzd623pldqgo",
+          "label": "BBC · 水务公司管理变动",
+          "excerpt": "Yorkshire Water's chief executive has announced she is to step down, just 24 hours after the company was given the lowest possible environmental rating by the Environment Agency.",
+          "checked_at": "2026-10-31T08:33:38.266864+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "1f4188dc23ae5a5c9251",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-30T16:49:00+00:00",
+      "score": 83,
+      "headline": "BP 据报季度调整利润达八十四点六亿美元",
+      "short_headline": "BP 据报季度调整利润达八十四点六亿美元",
+      "short_summary": "Guardian 报道炼油利润率推动特定利润口径增长，并记录批评；该口径不等于全部会计净利润或现金流。",
+      "summary": "Guardian 报道 BP 截至九月季度 underlying replacement cost profit 达约八十四点六亿美元，对比上年同期约二十二亿美元，并引用公司对炼油利润率的说明及环保组织批评。这是特定调整利润口径，本期未直接核对完整财报和现金流；商品价格与利润变化不保证后续季度持续或股东实际回报。",
+      "relevance": "能源企业分析要分开看利润口径、价格、业务结构、投资和现金流，舆论评价与财务事实也应分别归属。",
+      "action": "对照公司原始财报、调整项目及炼油指标，记录统计区间与来源，再评估多种成本和价格情景。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/business/2026/oct/30/bp-profits-jump-as-middle-east-conflict-drives-up-oil-refining-margins",
+          "label": "The Guardian · BP 财报报道",
+          "excerpt": "The energy company hailed a “banner quarter” on Friday, with its underlying ​replacement ⁠cost profit – a key measure of its income – almost quadrupling in the three months to the end of September, from $2.2bn in the same period ​a year ​ago. The jump meant BP’s quarterly profits hit their highest level since the $8.9bn recorded in 2008.",
+          "checked_at": "2026-10-31T08:33:38.686744+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "c4be8a86a27201ba5cdd",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-30T22:20:52+00:00",
+      "score": 82,
+      "headline": "美国批准对乌导弹销售计划，交付日程仍未明确",
+      "short_headline": "美国批准对乌导弹销售计划，交付日程仍未明确",
+      "short_summary": "BBC 报道五百枚 Patriot 销售获批并说明资金来源；批准、采购和到货是不同阶段，不等于已交付。",
+      "summary": "BBC 报道美国批准向乌克兰销售五百枚 Patriot 导弹的计划，约二十一亿美元，引用国务院对欧洲和加拿大等资金安排的说明。文章明确生产和交付时程仍不清楚，不能将批准写成已经到货，也不据此保证战场或停火结果。本期未独立核对完整官方销售通知与合同。",
+      "relevance": "军援新闻需区分政治批准、资金、合同与实际交付，公布数量不代表立即可用。",
+      "action": "继续核对正式通知、资金安排与公开交付进展，只记录可核实程序节点，不推演作战使用。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo",
+          "label": "BBC · 对乌销售批准",
+          "excerpt": "The US has approved the sale of 500 Patriot missiles to Ukraine, a critically-needed munition for defence against escalating Russian aerial attacks, after Kyiv said deliveries had been delayed in recent months.",
+          "checked_at": "2026-10-31T08:33:38.947898+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "49ff0fa053451c8bc8ba",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-30T19:42:15+00:00",
+      "score": 84,
+      "headline": "欧加宣布新合作框架，成员资格与后续承诺分开看",
+      "short_headline": "欧加宣布新合作框架，成员资格与后续承诺分开看",
+      "short_summary": "Guardian 报道蒙特利尔峰会宣布 Alliance for the Future，并涉及超算合作；不等于加拿大已成为欧盟成员。",
+      "summary": "Guardian 报道欧加领导人在蒙特利尔峰会宣布 Alliance for the Future，讨论市场、科研及安全合作，并称有加拿大参与欧洲超算网络等安排。相比此前公报草案讨论，这是峰会宣布阶段的新进展，但倡议名称、签署文件、实际接入条件与未来市场整合仍需分别核对。本期未独立取得全部最终文件，不把合作框架写成加拿大加入欧盟。",
+      "relevance": "跨境科研和产业合作可出现新接口，但个人、企业或科研机构的实际访问须看正式实施规则。",
+      "action": "对照最终峰会文件与后续超算参与条件，区分已宣布安排、未来讨论和具体申请渠道，不推定已取得新权利。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/30/canada-european-union-alliance",
+          "label": "The Guardian · 欧加峰会合作",
+          "excerpt": "Brussels and Ottawa also announced an agreement on Friday that would bringing Canada into Europe’s supercomputing network, giving Canadian access to European machines to train AI models.",
+          "checked_at": "2026-10-31T08:33:39.369422+08:00"
+        }
+      ],
+      "update_reason": "十月二十九日日报仅报道峰会前公报草案措辞；本次新增峰会宣布 Alliance for the Future 及超算合作等安排，区分宣布与实际执行，复用原事件编号。"
+    },
+    {
+      "event_id": "6faa1355c3981bf5587d",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-30T14:00:18+00:00",
+      "score": 81,
+      "headline": "澳大利亚 AI 版权改革讨论出现宪法与补偿争议",
+      "short_headline": "澳大利亚 AI 版权改革讨论出现宪法与补偿争议",
+      "short_summary": "Guardian 引述专家称风险取决于法案如何起草，并指出尚无公开立法方案；这不是法院裁定或已生效新例外。",
+      "summary": "Guardian 报道澳大利亚 AI 与版权改革讨论，反对党、行业和专家关注训练材料使用、财产权及补偿问题。文中专家明确风险取决于具体立法文本，尚无公开方案可供最终判断。本期未核对所有提案和法律原文，不把受访者担忧写成法院已裁定违宪、政府已允许自由抓取或权利人已确定获赔。",
+      "relevance": "训练数据研究应分别核对现行授权、未来提议及最终法律，政策游说不能直接改变材料使用权限。",
+      "action": "跟踪正式咨询与法案文本，实际使用内容时依据有效许可和适用法律确认，不根据报道推定新的抓取权。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/law/2026/oct/31/experts-warn-ai-copyright-changes-could-breach-australian-constitution-and-spark-huge-compensation-rights-case",
+          "label": "The Guardian · AI 版权改革讨论",
+          "excerpt": "Anne Twomey, professor emerita of law at the University of Sydney, said the issue was exceedingly complex and noted no legislative proposal had been aired. She said numerous cases had come before the high court relating to copyright and acquisition of property, including about video games, cigarette plain packaging and cassette tapes, with varying outcomes.",
+          "checked_at": "2026-10-31T08:33:40.240597+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "patch-release-timeline-audit",
+      "headline": "安全修复从公开到送达的时间台账",
+      "short_headline": "安全修复从公开到送达的时间台账",
+      "short_summary": "Epoch 的受控研究提示修复公开和最终版本更新存在时间差，可研究为自有组件建立可追溯的更新状态记录。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Epoch 的受控研究提示修复公开和最终版本更新存在时间差，可研究为自有组件建立可追溯的更新状态记录。 当前是待验证工具方向，没有订单或收益证据。",
+      "audience": "维护自有软件或移动项目的独立开发者及小团队。",
+      "first_step": "选三个公开组件，仅阅读维护者安全公告与正式 Release，记录修复公开、版本可用和自有测试环境验证时间，核对通知是否准确。",
+      "risks": "作者实验不等于真实攻击普遍发生；不运行漏洞代码、不扫描外部系统，日期和分支可能不同，不能用台账代替全部安全审查。",
+      "time_window": "未来一周先做公开资料和小样本核对，没有官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://epochai.substack.com/p/glm-patch-gap-exploit-firefox",
+          "label": "Epoch AI · 补丁窗口研究",
+          "excerpt": "The window between a fix being published and reaching users is called the patch gap, and it’s a known weakness in software release practices. It matters more as AI models get better at hacking. Projects like Anthropic’s Glasswing and OpenAI’s Daybreak give defenders early access to frontier AI models to identify and patch vulnerabilities, but published fixes can also indicate flaws for attackers to target before the fix rolls out. In the past, exploiting patch-gap vulnerabilities required significant time and expertise, or special access to frontier models with advanced cyber capabilities, so few attackers could take advantage of this gap.",
+          "checked_at": "2026-10-31T08:34:39.442297+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "expo-eas-upgrade-acceptance",
+      "headline": "Expo 移动升级规则与验收清单研究",
+      "short_headline": "Expo 移动升级规则与验收清单研究",
+      "short_summary": "本期日榜 expo/skills 提供官方场景指引，可研究将升级、构建与部署约束整理为可复核的移动工程检查表。",
+      "category": "移动开发",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "本期日榜 expo/skills 提供官方场景指引，可研究将升级、构建与部署约束整理为可复核的移动工程检查表。 当前是待验证工具方向，没有订单或收益证据。",
+      "audience": "维护自有软件或移动项目的独立开发者及小团队。",
+      "first_step": "先读 Expo、React Native 和 EAS 对应版本文档，用虚构小项目列出平台、依赖、构建和回归条件，检查是否减少遗漏；不直接部署。",
+      "risks": "技能不是独立模型或兼容保证；Expo 与 Flutter 并非同一技术栈，服务费用、平台签名、依赖许可和实际设备表现仍需核对。",
+      "time_window": "未来一周先做公开资料和小样本核对，没有官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://github.com/expo/skills",
+          "label": "Expo · 官方技能仓库文档",
+          "excerpt": "Official AI agent skills from the Expo team for building, deploying, upgrading, and debugging Expo apps.",
+          "checked_at": "2026-10-31T08:33:16.987421+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-10-31T08:32:36+08:00",
+    "coverage_note": "运行当日直接读取官方全语言日榜，保持页面顺序前十并逐条核对公开仓库与文档。Star 为当次页面值，可能继续变化；关注度不代表新发布、学术质量、性能、商业许可、预测有效性或已验证需求，未安装运行候选项目。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "summary": "记录工具观察、生成摘要并在后续会话检索的记忆工具；本地与托管观察器、数据保存及计费条件需分别核对。",
+        "direction": "跨会话记忆与来源追溯",
+        "stars_today": 1140,
+        "total_stars": 106234
+      },
+      {
+        "rank": 2,
+        "repository": "milind-soni/OpenMausBot",
+        "url": "https://github.com/milind-soni/OpenMausBot",
+        "summary": "独立开源代理客户端，把本地代理组织为联系人并提供各自计算环境和应用连接；实际权限与服务条件按文档核对。",
+        "direction": "代理客户端与计算环境",
+        "stars_today": 895,
+        "total_stars": 8635
+      },
+      {
+        "rank": 3,
+        "repository": "pbakaus/impeccable",
+        "url": "https://github.com/pbakaus/impeccable",
+        "summary": "编码代理的设计词汇、审查与检测工具，支持表达视觉意图和检查常见问题；不保证任意页面的设计质量。",
+        "direction": "设计审查与可用性",
+        "stars_today": 2300,
+        "total_stars": 97048
+      },
+      {
+        "rank": 4,
+        "repository": "CopilotKit/OpenBot",
+        "url": "https://github.com/CopilotKit/OpenBot",
+        "summary": "通过 AG-UI 接入不同代理的自建应用模板，为代理组织浏览器、文件和授权工具；属早期模板，不是已运营的托管产品。",
+        "direction": "代理应用模板与动作记录",
+        "stars_today": 706,
+        "total_stars": 8782
+      },
+      {
+        "rank": 5,
+        "repository": "Renhuai123/ziwei-doushu",
+        "url": "https://github.com/Renhuai123/ziwei-doushu",
+        "summary": "传统术数文化主题的排盘代码、古籍资料和解读数据项目，可研究历法转换与数据版本；不视为具有科学预测效力，代码与引文许可需分开。",
+        "direction": "文化资料、历法与数据工程",
+        "stars_today": 1126,
+        "total_stars": 11197
+      },
+      {
+        "rank": 6,
+        "repository": "expo/skills",
+        "url": "https://github.com/expo/skills",
+        "summary": "Expo 团队提供的移动项目场景技能合集，覆盖构建、部署、升级与排错，官方文档和 CLI 仍是约束依据。",
+        "direction": "移动工程指引与升级检查",
+        "stars_today": 38,
+        "total_stars": 3893
+      },
+      {
+        "rank": 7,
+        "repository": "macro-inc/macro",
+        "url": "https://github.com/macro-inc/macro",
+        "summary": "连接邮件、聊天、文档、任务、代理与 CRM 的团队工作区，以关联上下文和共享记忆组织信息；实际数据权限需单独评估。",
+        "direction": "团队上下文与 CRM",
+        "stars_today": 57,
+        "total_stars": 5872
+      },
+      {
+        "rank": 8,
+        "repository": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "summary": "个人工程实践整理成的小型可组合技能，按任务适配需求、计划和审查，不是已经验证的通用效率结论。",
+        "direction": "工程技能与流程适配",
+        "stars_today": 876,
+        "total_stars": 307476
+      },
+      {
+        "rank": 9,
+        "repository": "pingdotgg/t3code",
+        "url": "https://github.com/pingdotgg/t3code",
+        "summary": "本机编码代理的控制界面，提供移动、网页和桌面入口，依赖已配置的代理与身份；远程入口需核对权限边界。",
+        "direction": "跨端编码代理控制",
+        "stars_today": 930,
+        "total_stars": 32731
+      },
+      {
+        "rank": 10,
+        "repository": "HKUDS/DeepTutor",
+        "url": "https://github.com/HKUDS/DeepTutor",
+        "summary": "整合检索、学习辅导、解题、测验与掌握练习的工作区；功能清单不等于已验证学习成效。",
+        "direction": "学习助手与证据检索",
+        "stars_today": 2282,
+        "total_stars": 51767
+      }
+    ],
+    "analysis": [
+      "记忆与团队信息关联需要来源和撤销边界：thedotmack/claude-mem 侧重会话观察摘要，macro-inc/macro 侧重邮件、文档、任务与 CRM。关注度不能证明记忆正确或权限天然隔离。验证步骤：用虚构资料检查一条结论能否追溯原文、删除后是否仍被引用，分别画出本地和托管数据流，不连接真实邮箱。",
+      "代理控制工具应区分产品形态：milind-soni/OpenMausBot、CopilotKit/OpenBot 和 pingdotgg/t3code 分别是独立客户端、自建模板及控制界面，不能因名字相似或同时上榜就互相替代。学习步骤：按文档列本地进程、远程计算环境、浏览器与动作记录，用虚构任务检查停止、接管和失败恢复，不开放新远程权限。",
+      "移动与工程技能关注可组合规则：expo/skills、mattpocock/skills 和 pbakaus/impeccable 分别提供平台指引、工程实践和设计词汇。它们不是性能模型。验证步骤：对一个虚构移动页面逐项列出平台版本、依赖、构建、交互和视觉验收，核查规则是否冲突或过时，再决定是否采用，本文未安装这些技能。",
+      "学习助手的验收应回到证据和错误解释：HKUDS/DeepTutor 将资料、辅导与练习整合，但 Star 不能说明教学结果。学习步骤：选择公开授权短文，人工检查引用、测验答案和错误解释，记录来源缺失及不确定回答，避免把工具输出替代正式学习评估。",
+      "Renhuai123/ziwei-doushu 属传统文化主题的软件与资料项目，与科学预测模型应区别看待。可研究信号在于历法、时区处理、数据版本和代码与引文分别授权。学习步骤：只用虚构日期核对公开历法转换边界、版本一致性及许可清单，不输入真实出生资料，不将解读用于健康、投资或其他重要决策。"
+    ]
+  }
+}
