@@ -1,0 +1,1303 @@
+{
+  "id": "2026-10",
+  "kind": "monthly",
+  "title": "2026-10 · 月报",
+  "period": {
+    "start": "2026-10-01",
+    "end": "2026-10-31"
+  },
+  "generated_at": "2026-11-02T08:34:45.496973+08:00",
+  "coverage": {
+    "expected_days": 31,
+    "available_days": 13,
+    "missing_dates": [
+      "2026-10-01",
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04",
+      "2026-10-05",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-10-09",
+      "2026-10-10",
+      "2026-10-11",
+      "2026-10-14",
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19",
+      "2026-10-25"
+    ]
+  },
+  "summary": "本期已有 13 天日报，去重后收录 117 个新闻事件，展示前 45 条，并整理 26 个机会，最多展示十个。内容来自已保存日报；已截止的机会标明关闭，缺失日期不补造新闻。",
+  "items": [
+    {
+      "event_id": "2ee55c894d54d6ef378c",
+      "headline": "EmbeddingGemma 2：7.4 亿参数，把文本、图像、音视频放进同一检索空间",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-06T19:57:04+00:00",
+      "context_note": "近七日前沿回看：官网日期为 10 月 6 日，对应北京时间 10 月 7 日，非今日发布。",
+      "score": 94,
+      "summary": "DeepMind 官方发布 EmbeddingGemma 2，基于 Gemma 4，支持代码、图像、视频、音频与文本的统一嵌入，参数量为 7.4 亿，公告声明采用 Apache 2.0 许可。端侧检索与离线 RAG 是其目标用途；实际效果和设备开销仍需自行测试。",
+      "relevance": "多模态素材库、代码检索和本地知识助手可以共用检索模型，值得评估能否减少外部 API 调用与多模型维护成本。",
+      "action": "先用非敏感的文本、图片和短音频构建小型检索样本，比较召回质量、延迟、内存与现有方案，再决定是否接入。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+          "label": "Google DeepMind · 官方公告",
+          "excerpt": "Today, we’re launching EmbeddingGemma 2, expanding beyond text to unify code, images, video, and audio in a shared embedding space.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ],
+      "short_headline": "EmbeddingGemma 2：端侧检索走向多模态",
+      "short_summary": "7.4 亿参数统一处理文本、代码与音视频检索，值得评估离线知识库和素材搜索。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "event_id": "7bed39b4c5111057bc1f",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-12T17:36:18+00:00",
+      "score": 92,
+      "headline": "AWS 研究 priming：复用 Transformer 权重探索混合状态空间架构",
+      "short_headline": "AWS priming：复用权重探索更高效架构",
+      "summary": "Amazon Science 发布 AWS 团队研究，提出 priming 方法，复用预训练 Transformer 权重构建混合状态空间模型。作者报告其测试中的改造预训练成本下降逾 99%，并发布 8B/32B 模型、训练代码、内核及 vLLM 插件。速度、精度和成本均是特定实验口径，本期未独立复现，不能推断所有现有模型都能获得相同改善。",
+      "short_summary": "研究尝试用已有权重降低混合架构探索成本，公开模型与代码；具体收益仍需复现。",
+      "relevance": "长上下文推理的内存与成本可能有新的优化路径，适合自托管推理或模型研究团队作为技术候选。",
+      "action": "先读论文、模型卡和硬件要求，在固定上下文长度与任务集上比较吞吐、显存和质量；核对代码与权重许可证后再考虑部署。",
+      "sources": [
+        {
+          "url": "https://www.amazon.science/blog/can-we-change-an-ai-models-architecture-without-retraining-it-from-scratch",
+          "label": "Amazon Science · AWS 研究发布",
+          "excerpt": "To foster further research on hybrid architectures, we have released a zoo of primed hybrid models at the eight-billion-parameter and 32-billion-parameter scales for long-context reasoning and instruction following, together with training code, optimized kernels, and a vLLM-serving plugin under the Apache 2.0 License.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "91597643c193a9c7e9c9",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-12T17:43:59+00:00",
+      "score": 91,
+      "headline": "GitHub 发布 Copilot 项目上下文指南：分别使用仓库指令、Skills、Agents 与 MCP",
+      "short_headline": "GitHub：让编码助手读懂项目约定",
+      "summary": "GitHub 官方新教程说明如何通过 .github/copilot-instructions.md 写入项目通用约定，通过 .github/skills 封装重复流程、.github/agents 定义专门角色，并用 MCP 连接外部工具。它是配置与使用指南，不代表这些功能均在本日首次推出；也没有证明配置后一定提高成功率。",
+      "short_summary": "官方教程拆分项目约定、重复流程、专门角色和外部工具，便于团队减少重复提示与交接。",
+      "relevance": "多仓库开发团队可以把测试入口、命名规则和交付要求写成可维护的项目资料，降低新成员与编码助手的上下文缺失。",
+      "action": "选一个测试项目先补充仓库指令与一个质量检查流程，再对照没有这些资料时的任务结果；外部工具只配置必要权限。",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase",
+          "label": "GitHub Blog · 官方使用指南",
+          "excerpt": "Repository custom instructions give Copilot that baseline context. Add a .github/copilot-instructions.md file to define guidance that applies across the repository, such as your preferred architecture, naming conventions, or expectations for testing and validation.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "5c52b7d34becd1ccf770",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-19T00:00:00+00:00",
+      "score": 90,
+      "headline": "TorchNeuron 进入公测，Trainium 接入原生 PyTorch 工作流",
+      "short_headline": "TorchNeuron 进入公测，Trainium 接入原生 PyTorch 工作流",
+      "summary": "Hugging Face 公告称 TorchNeuron 从 10 月 20 日进入 public beta，作为 PyTorch 插件，将 Trainium 暴露为原生设备，支持 eager mode、torch.compile 与原生分布式接口。文中建议 Neuron 用户直接使用 Transformers 等库，但也列出静态形状和异步权重加载等限制；本次未实际安装或测试。",
+      "short_summary": "公告称十月二十日起提供公测，支持 eager、torch.compile 与原生分布式接口，实际迁移仍需评估。",
+      "relevance": "已有 AWS 训练需求的团队可研究减少专用模型分支与迁移维护成本；普通本地开发者不应由此推断云资源免费或成本必然更低。",
+      "action": "先核对适用实例、版本和价格，用固定任务小规模比较吞吐、质量、启动开销与账单，再考虑迁移。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/hf-torchneuron",
+          "label": "Hugging Face · TorchNeuron 公告",
+          "excerpt": "Starting Oct. 20, 2026, TorchNeuron will be available as a public beta. Researchers and developers will be able to install it with pip install torch-neuronx.",
+          "checked_at": "2026-10-20T10:01:30+08:00"
+        }
+      ],
+      "context_note": "跨日补采：原文发布于 10 月 19 日 08:00 北京时间，非今日发布。",
+      "daily_report": "2026-10-20"
+    },
+    {
+      "event_id": "ef73bf2ace8ac6719291",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-20T16:09:19+00:00",
+      "score": 90,
+      "headline": "FairStress：评估模型受到劝说后是否仍一致遵循证据",
+      "short_headline": "FairStress：评估模型受到劝说后是否仍一致遵循证据",
+      "short_summary": "Ai2 新基准不只比较最终选择，还测试模型在不同身份设定下对相同劝说的反应。",
+      "summary": "Ai2 团队介绍 FairStress，覆盖三百个两候选决策情境及二十九个领域，并扩展身份呈现和对抗前缀，用于检验决策稳定性。团队强调采用的是特定的对称公平定义，不涵盖所有公平观；研究结果不能作为真实个人录取、借贷或医疗选择依据。",
+      "relevance": "只看一次输出相同可能忽略提示变化后的不一致；评测产品需要明确公平定义、场景与覆盖局限。",
+      "action": "用合成案例复核模型稳定性，将评测与实际个人决策分离；查清数据许可和计算预算后再做模型比较。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/fairstress",
+          "label": "Ai2 · 研究发布",
+          "excerpt": "FairStress contains 300 realistic two-candidate decision scenarios across 29 domains including hiring, healthcare, lending, education, housing, and criminal justice. For example, one scenario asks a model to choose between two candidates for a mechanical engineering job, while another asks which of two patients should receive the last unit of a scarce medication.",
+          "checked_at": "2026-10-21T16:06:32+08:00"
+        }
+      ],
+      "daily_report": "2026-10-21"
+    },
+    {
+      "event_id": "51888f116f5b083740bc",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-22T22:24:34+00:00",
+      "score": 90,
+      "headline": "ThinkingBox 用数据库终态检查训练代理",
+      "short_headline": "ThinkingBox 用数据库终态检查训练代理",
+      "short_summary": "微软作者把数据库真实变化转为训练奖励，并报告特定模型提升；文字声称完成不等于业务状态正确。",
+      "summary": "微软作者发布 ThinkingBox-Training，将执行后的数据库状态与预期结果比较，并把可执行检查用作代理后训练奖励。文章报告 Qwen3.8-27B 经五十步 GRPO 后，在其评测配置中的平均成功率从 51.70% 升至 60.78%；训练任务与基准任务分开。结果属于作者实验，不能推广为任意代理在生产流程中的成功率。",
+      "relevance": "有副作用的代理需要核对真实数据变化；对话看似合理、工具调用成功与业务完成是不同指标。",
+      "action": "在可重置的合成订单数据库中定义预期终态，记录漏改、多改与回滚，再考虑训练；不连接真实客户系统。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/microsoft/thinkingbox-training",
+          "label": "Microsoft · ThinkingBox 训练研究",
+          "excerpt": "We built ThinkingBox to evaluate an agent's work by comparing the final database state with the expected outcome. We then used the same kind of executable signal as a reward on training tasks outside ThinkingBox-Bench. For Qwen3.8-27B, average success rose from 51.70% to 60.78%, while tasks completed correctly on all twenty attempts rose from 38 to 107 with 50 GRPO steps.",
+          "checked_at": "2026-10-23T14:28:17+08:00"
+        }
+      ],
+      "daily_report": "2026-10-23"
+    },
+    {
+      "event_id": "a39c44d95d805fec22ec",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-23T16:00:00+00:00",
+      "score": 90,
+      "headline": "Kimi K3.1 Pro 上线，完整权重仍待十一月发布",
+      "short_headline": "Kimi K3.1 Pro 上线，完整权重仍待十一月发布",
+      "short_summary": "官方称新模型支持百万上下文，现已提供产品与 API 入口；完整权重计划十一月四日前发布，尚非已经开放。",
+      "summary": "月之暗面介绍 Kimi K3.1 Pro 与 Highspeed 版本，称支持一百万 token 上下文，已通过 Kimi 产品和 API 提供访问。官网明确完整模型权重将在十一月四日前发布，不能把公告中的 open-weight 定位写成今日已经可以下载完整权重。编程、三维与金融研究表现及速度提升来自机构自述，本期没有独立复测或核实全部计费条款。",
+      "relevance": "评估长上下文任务多了一个服务候选，当前 API 可用性、后续权重及许可是不同问题。",
+      "action": "先用公开样例评估长文任务、延迟、失败率和成本；等待权重与正式许可发布后再判断本地部署及商业使用。",
+      "sources": [
+        {
+          "url": "https://www.kimi.com/blog/kimi-k3-1-pro",
+          "label": "Kimi · 模型发布",
+          "excerpt": "Kimi K3.1 Pro and Kimi K3.1 Pro Highspeed are available today on Kimi.com, Kimi Work, Kimi Code, and the Kimi API. The full model weights will be released by Nov 4.",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ],
+      "daily_report": "2026-10-24"
+    },
+    {
+      "event_id": "e960e8891f7d7ad86d1b",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-27T16:13:00+00:00",
+      "score": 90,
+      "headline": "Genie 4 发布研究预览，增加原生声音与实时交互",
+      "short_headline": "Genie 4 发布研究预览，增加原生声音与实时交互",
+      "short_summary": "DeepMind 宣布多模态世界模型，先向受信测试者研究预览；不等于所有开发者已能调用或获得机器人训练效果。",
+      "summary": "Google DeepMind 宣布 Genie 4，称可生成实时交互场景、原生环境声音及对话，并结合 Gemini 能力维持场景连续性。公告确认已向受信测试者推出研究预览，消费者和开发者访问仍按后续分批开放安排；演示不证明任意长时物理一致性、普遍可用 API 或已验证的机器人迁移效果。本期未实际运行。",
+      "relevance": "世界模拟可成为交互体验和训练环境的研究候选，实际价值取决于控制稳定、评测与访问条件。",
+      "action": "先核对开放范围与官方限制，列出遮挡、长时一致性和控制延迟等测试任务，不把候补名单视作已获访问。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation",
+          "label": "Google DeepMind · Genie 4 公告",
+          "excerpt": "We have started rolling Genie 4 out as a research preview for trusted testers — gathering feedback before we release it to consumers and developers, starting with Google AI Ultra subscribers in Project Genie and early access partners of the Gemini API and Google AI Studio. Join the waitlist for Genie 4 in Project Genie here.",
+          "checked_at": "2026-10-28T08:28:29.317688+08:00"
+        }
+      ],
+      "daily_report": "2026-10-28"
+    },
+    {
+      "event_id": "3e32bae570ff21ee59e5",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-28T17:00:58+00:00",
+      "score": 90,
+      "headline": "Gemini 4 Carbon 宣布分批开放，先面向部分防御团队",
+      "short_headline": "Gemini 4 Carbon 宣布分批开放，先面向部分防御团队",
+      "short_summary": "DeepMind 介绍长任务与安全能力，访问先向部分网络防御者和可信伙伴开放；公告不等于已向全部开发者上线。",
+      "summary": "Google DeepMind 宣布 Gemini 4 Carbon，介绍长时工程任务和安全能力，并表示先向部分网络防御者开放，通过 Fairwind 逐步扩展可信伙伴，随后再进入广泛产品入口。公告中的基准、内部多日运行及安全改进是发布方报告，本期未独立复测；不把宣布或标价写成所有用户已能使用。",
+      "relevance": "长时代理可用性要同时评估模型能力、实际访问、工具权限和失败恢复，排行榜不能替代业务验收。",
+      "action": "先核对正式访问范围与适用条款，用公开虚构任务设计完成率、审查和恢复检查；不为试用扩大生产权限。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model",
+          "label": "Google DeepMind · Carbon 公告",
+          "excerpt": "We're taking a deliberate approach to rollout and are actively engaged in the U.S. government’s voluntary process for pre-release model testing. Starting this week, we will make Carbon available to a subset of cyber defenders and will gradually phase access to additional trusted partners through our Fairwind Program. We’re continuing to gather feedback and iterate on guardrails before making Carbon available to developers, businesses, and consumers via our product surfaces as soon as possible.",
+          "checked_at": "2026-10-29T08:35:22.399471+08:00"
+        }
+      ],
+      "daily_report": "2026-10-29"
+    },
+    {
+      "event_id": "62d26b448adb5f8d0855",
+      "headline": "科技治理：微软总裁呼吁 AI 安全规则、事件通报与独立评估",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-11T23:07:35+00:00",
+      "score": 89,
+      "summary": "微软总裁 Brad Smith 在 BBC 访谈中主张为 AI 建立安全规则，讨论失控事件通报、独立评估和紧急停止机制。这是行业人士的监管主张，报道本身不能证明某项新法律已经生效。",
+      "relevance": "对准备部署能够写文件、执行命令或调用外部系统的 AI 团队，权限边界、可停止性和审计记录已经是实际产品设计问题。",
+      "action": "梳理现有 AI 自动化的权限、日志和停用入口，在测试环境验证错误操作如何中止与回溯；法律义务以正式法规为准。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6rmy7zmvx3lo",
+          "label": "BBC · 微软总裁访谈",
+          "excerpt": "Brad Smith said there needed to be global safety rules in place, including a legal obligation to tell a \"victim\" if their system is breached by a rogue AI agent as well as deciding when outside evaluators should sign off on an AI product before it is released.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ],
+      "short_headline": "微软总裁呼吁建立 AI 安全规则",
+      "short_summary": "访谈提出事件通报、独立评估和紧急停止机制；这是监管主张，尚非新法律。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "event_id": "1be45fb0ef68a5f78aff",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-19T18:47:22+00:00",
+      "score": 89,
+      "headline": "Copilot 会话可接续到 VS Code，保留对话与工作区",
+      "short_headline": "Copilot 会话可接续到 VS Code，保留对话与工作区",
+      "summary": "GitHub 新教程说明如何把 Copilot app 会话接续到 VS Code，保留任务对话、代码变更及关联 worktree。它是使用流程说明，不表示相关能力均在当天首次推出，也不证明交接后变更一定正确。",
+      "short_summary": "官方教程说明会话接续方式，便于从代理任务转入编辑器审阅、调试和测试。",
+      "relevance": "编码助手生成结果仍需要人工审查与项目测试，保持同一会话和隔离工作区可能减少重复交代上下文。",
+      "action": "在测试仓库核对当前安装版本的入口，检查接续后的分支与差异，再运行项目验证；不要把接续视为自动批准。",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code",
+          "label": "GitHub Blog · 官方使用指南",
+          "excerpt": "VS Code opens the project using the worktree associated with the session. It also displays the existing session in the Copilot sidebar.",
+          "checked_at": "2026-10-20T10:01:30+08:00"
+        }
+      ],
+      "daily_report": "2026-10-20"
+    },
+    {
+      "event_id": "536f23cd94f139849c62",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-20T15:19:48+00:00",
+      "score": 89,
+      "headline": "IBM ALTK-Evolve：从客服任务轨迹提炼可复用准则",
+      "short_headline": "IBM ALTK-Evolve：从客服任务轨迹提炼可复用准则",
+      "short_summary": "研究在固定模型和评测框架上加入学习准则，提高多次尝试的一致成功率；生产效果仍待验证。",
+      "summary": "IBM Research 文章介绍从训练任务的成功和失败轨迹提炼行为准则，再用于独立测试集。作者报告在特定 τ²-bench 设置下，零售与航空任务的 Pass^4 均提高十个百分点；该指标要求四次尝试全部成功，不等同平均准确率，也不是生产客服的保证。文章说明没有更新模型权重。",
+      "relevance": "可在升级模型以外评估流程知识的价值，但需要防止训练与测试泄漏，以及旧规则持续误导。",
+      "action": "先用合成客服记录划分训练、验证和测试，比较有无准则时的成功率、成本与错误动作，涉及退款等动作保留审核。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+          "label": "IBM Research · 客服代理研究",
+          "excerpt": "We extract guidelines from the agent's trajectories on τ²-bench train tasks using gpt-4.1, the same model that powers the agent, then apply them unchanged on the held-out test set.",
+          "checked_at": "2026-10-21T16:06:32+08:00"
+        }
+      ],
+      "daily_report": "2026-10-21"
+    },
+    {
+      "event_id": "94a5f6526eada9bc0f52",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-21T18:26:30+00:00",
+      "score": 89,
+      "headline": "Kumo Relational：直接在关系数据上做少样本预测",
+      "short_headline": "Kumo Relational：直接在关系数据上做少样本预测",
+      "short_summary": "NVIDIA 介绍预训练关系模型，按表、外键与时间构造上下文；无需每任务训练不代表模型从未训练。",
+      "summary": "NVIDIA 的机构文章介绍 Kumo Relational，在关系表及其关联上根据历史上下文预测需求、流失等结果。作者称无需每个任务单独训练或手工压平关系，并报告特定关系数据基准表现。模型本身已经预训练，算力、上下文构造、适用许可和实际数据效果仍须核对，不能将基准优势外推到全部企业数据库。",
+      "relevance": "可研究减少特定业务预测中的特征工程，但部署价值依赖数据结构、时间切分和真实基线。",
+      "action": "先用合成订单或公开数据验证时间泄漏、上下文开销和简单基线；不直接连接含客户私人信息的生产数据库。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/nvidia/kumo-relational",
+          "label": "NVIDIA · 关系模型发布",
+          "excerpt": "Kumo Relational is a Relational Foundation Model that operates directly on the database, respecting its tables, foreign keys, and timestamps. It is pre-trained once on synthetic relational data that reflects real-world datasets and adapts to each new task through in-context learning, reading up to 10,000 context examples at inference time. Each example pairs a local subgraph around an entity at a point in time with its ground-truth target (e.g., \"this user churned\" or \"this item sold 142 units\").",
+          "checked_at": "2026-10-22T17:50:49+08:00"
+        }
+      ],
+      "daily_report": "2026-10-22"
+    },
+    {
+      "event_id": "f6a301346a05e615cdbc",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-22T00:00:00+00:00",
+      "score": 89,
+      "headline": "Anthropic 展示受明确假设约束的汇编级形式化证明",
+      "short_headline": "Anthropic 展示受明确假设约束的汇编级形式化证明",
+      "short_summary": "研究覆盖一百二十三个库的部分入口，但限定输入、架构与执行条件，不能推成所有代码已无漏洞。",
+      "summary": "Anthropic 与 Theorem 介绍利用 Claude 为一百二十三个开源库、二百三十九个入口生成形式化证明的研究，针对小于 64 MB 的输入，在指定 RISC-V 与 Linux 模型、单线程静态二进制及固定内存等假设下证明特定属性。文章公开部分证明，结果属于作者报告；不证明全部平台、业务语义、依赖链或任意输入安全。",
+      "relevance": "测试覆盖与证明范围不同，安全价值需要展示规格、前提及未覆盖部分。",
+      "action": "先读公开证明及语义假设，为小型解析器整理入口与规格，不运行未知仓库，不将研究数字当作生产安全认证。",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/research/formal-verification",
+          "label": "Anthropic · 形式化验证研究",
+          "excerpt": "But LLMs are making it far easier. Frontier models can now produce correctness proofs for real-world software fully autonomously. To demonstrate this, we asked Claude to prove useful security properties across 123 open-source libraries, including showing that some of their executable artifacts can never crash under certain conditions. Specifically, Claude proved that these programs will always exit normally without triggering memory-safety errors or failing assertions, for every input less than 64 MB and every modeled Linux operating system (OS) response and memory layout, under certain assumptions (namely that the program runs as a single-threaded static binary with a fixed memory budget on a RISC-V1 CPU using Linux OS). This is still far away from fixing all possible bugs, but it does get us much closer than before and provides a roadmap toward that end.",
+          "checked_at": "2026-10-26T10:24:47.560753+08:00"
+        }
+      ],
+      "context_note": "近期官方研究背景：原文元数据为十月二十二日，早于本期连续采集窗口。科技新发布较少，补充近七日重要研究，未改写为今日突破。",
+      "daily_report": "2026-10-26"
+    },
+    {
+      "event_id": "3e66020cfa4cc99c53db",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-26T16:33:24+00:00",
+      "score": 89,
+      "headline": "Epoch 用真实工作验收标准评估模型",
+      "short_headline": "Epoch 用真实工作验收标准评估模型",
+      "short_summary": "作者称领先模型平均满足约百分之六十五的评分条目；这不是百分之六十五的岗位已可自动化。",
+      "summary": "Epoch AI 介绍由内部常见工作组成的 Automation Reports，包括研究规划、图形设计和数据任务，以其员工工作标准评估 AI。作者报告领先模型平均满足约百分之六十五的评分条目，并明确不等于完成百分之六十五的自动化进程或节省同等工时；不少输出仍需人审和修改。本期未独立复现实验。",
+      "relevance": "选型要测可验收的交付和返工成本，通用榜单分数不能替代具体流程验证。",
+      "action": "用公开或虚构任务列出逐项验收标准，记录一次通过率、返工时间和失败原因，再判断哪些步骤值得辅助。",
+      "sources": [
+        {
+          "url": "https://epochai.substack.com/p/can-ai-automate-epoch",
+          "label": "Epoch AI · 工作任务评估",
+          "excerpt": "The leaders, Claude Fable 5.1 and GPT-6 Astra, scored 65% on average. That means their output met 65% of the rubric items that human employees would be evaluated on — a score of 100% would mean that it’s fine to automate the task.",
+          "checked_at": "2026-10-27T08:32:59.860650+08:00"
+        }
+      ],
+      "daily_report": "2026-10-27"
+    },
+    {
+      "event_id": "3ba7cc5caa42771618ed",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-19T06:08:02+00:00",
+      "score": 89,
+      "headline": "中国三季度增长回升，高技术出口与内需呈现分化",
+      "short_headline": "中国三季度增长回升，高技术出口与内需呈现分化",
+      "summary": "BBC 援引中国统计数据称第三季度经济增长 4.5%，较前一季度回升，并将高技术出口列为支撑因素。报道同时指出房地产投资和内需压力。本期未独立重算统计序列，不能把部分高技术行业增长直接外推为所有 AI 业务都会盈利。",
+      "short_summary": "BBC 援引数据称三季度增长百分之四点五，出口提供支撑，房地产和消费压力仍在。",
+      "relevance": "产业需求存在分化，面向出口制造、企业服务和消费者的产品需要分别验证预算与实际订单。",
+      "action": "对照统计局原表和行业数据，向目标客户核对采购计划，以具体需求评估产品方向。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cm5yn098xz8lo",
+          "label": "BBC · 中国经济报道",
+          "excerpt": "The world's second largest economy grew by 4.5% in the third quarter, up from the previous period but below the 5% expansion recorded from January to March, according to official Chinese data.",
+          "checked_at": "2026-10-20T10:01:30+08:00"
+        }
+      ],
+      "daily_report": "2026-10-20"
+    },
+    {
+      "event_id": "a0c3e1be77e8b5a27f79",
+      "category": "金融市场",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-28T18:00:00+00:00",
+      "score": 89,
+      "headline": "美联储维持联邦基金目标区间百分之三点七五至四",
+      "short_headline": "美联储维持联邦基金目标区间百分之三点七五至四",
+      "short_summary": "FOMC 官方声明以十比二通过维持区间，两名反对者倾向加息；声明未承诺下一次利率路径。",
+      "summary": "美联储十月二十八日声明维持联邦基金利率目标区间 3.75%—4%，并继续维持充足准备金政策。声明称通胀仍高、经济活动强劲，行动以十比二通过，Cook 和 Hammack 倾向上调二十五个基点。这是本次目标区间决定，不是所有贷款利率同步不变，也不构成对下一次会议的承诺。",
+      "relevance": "融资和资产定价研究应区分政策目标区间、实际市场利率与机构报价，少数票并不预定未来行动。",
+      "action": "对照官方声明、实施说明和后续数据，为预算保留多种利率情景，不由单次声明推导确定回报。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+          "label": "美联储 · FOMC 正式声明",
+          "excerpt": "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+          "checked_at": "2026-10-29T08:35:24.316623+08:00"
+        }
+      ],
+      "daily_report": "2026-10-29"
+    },
+    {
+      "event_id": "a5835755238efc4584cb",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-21T10:16:17+00:00",
+      "score": 87,
+      "headline": "英国通胀与借款走高，预算面临价格与财政双重压力",
+      "short_headline": "英国通胀与借款走高，预算面临价格与财政双重压力",
+      "short_summary": "BBC 称九月通胀升至百分之三点五、政府借款近二百五十亿英镑；预算措施尚待公布。",
+      "summary": "BBC 报道英国九月通胀由八月的 3.1% 升至 3.5%，政府当月借款接近 250 亿英镑，引用官方统计和燃油价格变化。它们是不同统计口径，不能直接相加或推断某项税收措施必然实施。本期未独立重算原始数据，未来预算仍需正式文件确认。",
+      "relevance": "企业成本、消费者购买力和财政选择可能同时承压，需要按实际行业预算衡量影响。",
+      "action": "核对统计原表、燃油与合同报价，对预算情景分别估算，不把媒体分析当作税率决定。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6gel2xv4493o",
+          "label": "BBC · 英国通胀与借款报道",
+          "excerpt": "The pace of UK price rises accelerated to 3.5% in the year to September, pushed up by sharp increases in petrol and diesel prices.",
+          "checked_at": "2026-10-22T17:50:49+08:00"
+        }
+      ],
+      "daily_report": "2026-10-22"
+    },
+    {
+      "event_id": "aeb3cea908f77d270c68",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-22T21:50:13+00:00",
+      "score": 86,
+      "headline": "AI 相关股票拖累指数，非科技股表现分化",
+      "short_headline": "AI 相关股票拖累指数，非科技股表现分化",
+      "short_summary": "报道列标普跌百分之一点二、纳指跌百分之二点六，但多数美股上涨；指数下跌不代表所有行业同步转弱。",
+      "summary": "Guardian 报道十月二十二日标普五百下跌 1.2%、纳斯达克综合指数下跌 2.6%，道指小幅上涨，多数美国股票实际上收涨。文章把 AI 公司融资、数据中心与芯片成本及估值担忧列为市场背景。对下跌原因的归因是报道分析，并非已经证明的单一因果；它与原油价格报道对应不同资产和市场指标。",
+      "relevance": "评估 AI 产业景气需要分开看资本成本、公司经营、估值与指数权重，不能只看科技指数涨跌。",
+      "action": "核对交易日收盘数据与公司披露，建立经营指标和资本开支的公开跟踪表，不把短期波动视为收益保证。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/business/2026/oct/22/stock-markets-drop-ai-oil",
+          "label": "The Guardian · 股市收盘",
+          "excerpt": "The S&P 500 fell 1.2% for its worst day since July, while the Nasdaq composite tumbled 2.6%. The weakness for tech stocks was so overwhelming that it masked strength for the rest of the US market, in which the majority of stocks actually rose. The Dow Jones Industrial Average added 11 points, or less than 0.1%.",
+          "checked_at": "2026-10-23T14:28:17+08:00"
+        }
+      ],
+      "daily_report": "2026-10-23"
+    },
+    {
+      "event_id": "6e021d913e165294aecd",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-23T22:54:57+00:00",
+      "score": 86,
+      "headline": "美国拟调整部分加拿大商品关税，十月三十日起执行",
+      "short_headline": "美国拟调整部分加拿大商品关税，十月三十日起执行",
+      "short_summary": "BBC 称部分机械、纸品等获减免，同时另一些品类新增关税；这不是全面取消对加拿大的征税。",
+      "summary": "BBC 引述白宫称，十月三十日起将放宽胶合板、部分纸品、某些机械与制冷设备等加拿大商品关税，同时对地毯等其他品类新增征税。报道也记录双方谈判与美国中期选举背景；政治动机分析与正式适用品类应分开判断。本期未直接核对完整税则附件，不能把局部豁免写成全面贸易协议。",
+      "relevance": "跨境采购应按税号、原产地和生效时间核算，笼统的降税标题不足以证明具体订单成本会降低。",
+      "action": "查阅正式税则和海关执行文件，对照具体产品与入境日期，再更新报价及合同情景。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c60qk573yzz8o",
+          "label": "BBC · 加拿大商品关税",
+          "excerpt": "Starting on 30 October, tariffs will be eased on products including \"plywood sheets, some paper products, certain machinery and refrigeration equipment,\" the White House said on Friday.",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ],
+      "daily_report": "2026-10-24"
+    },
+    {
+      "event_id": "512576157a5827fd9d98",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-26T19:57:23+00:00",
+      "score": 86,
+      "headline": "Anthropic 上市文件披露财务与治理，估值仍属预期",
+      "short_headline": "Anthropic 上市文件披露财务与治理，估值仍属预期",
+      "short_summary": "BBC 解读上市准备文件，报道收入、亏损与控制结构；申请文件不等于已经上市，亏损也不等同现金流出。",
+      "summary": "BBC 解读 Anthropic 为美国上市准备的三百三十五页文件，报道上半年收入约一百六十二亿美元、净亏损约八百零七亿美元，并讨论投资相关会计费用、基础设施需求和控制结构。媒体所述估值是预期，不能写成已确定发行价格；本期未直接核对全部申报原表，净亏损不等同经营现金消耗。",
+      "relevance": "AI 企业融资判断需分开看收入、会计损益、现金流、算力承诺与股东控制，上市热度不能保证回报。",
+      "action": "先对照正式监管申报和附注梳理会计项目与现金流，再追踪审核及定价进展，不依据媒体数字直接投资。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cwn8d7g29vd9o",
+          "label": "BBC · 上市文件解读",
+          "excerpt": "The 335-page document included fresh details of how the Claude chatbot owner makes money, what it spends that money on and who it is controlled by.",
+          "checked_at": "2026-10-27T08:36:37.362421+08:00"
+        }
+      ],
+      "daily_report": "2026-10-27"
+    },
+    {
+      "event_id": "39c52a362a40b39216f6",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-22T14:28:59+00:00",
+      "score": 85,
+      "headline": "巴克莱计划削减约五千岗位，称并非全部由 AI 引起",
+      "short_headline": "巴克莱计划削减约五千岗位，称并非全部由 AI 引起",
+      "short_summary": "BBC 称已有一千岗位关闭、年内再减四千；银行将其归于现代化计划，不能把全部裁员计为 AI 替代。",
+      "summary": "BBC 报道巴克莱称将削减约五千岗位，其中一千已经关闭，另四千预计年底前完成，约占全球员工的百分之五。报道聚焦英国零售银行及部分在印度的后台业务，也明确并非所有裁减都由 AI 导致。这里是媒体引述公司的计划和工会意见，本期未取得全部执行与人事数据。",
+      "relevance": "评估金融业自动化时，应同时追踪投入、实际流程变化、服务质量和人员安排，不能只用裁员数衡量技术效果。",
+      "action": "对照银行正式财报与后续披露，分清计划和已完成部分，研究自动化时先量化具体任务成本。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cm4g1p347qgxo",
+          "label": "BBC · 巴克莱岗位调整",
+          "excerpt": "The banking group said 1,000 posts had already been closed and it expects a further reduction of 4,000 to be complete by the end of this year, amounting to around 5% of its global workforce.",
+          "checked_at": "2026-10-23T14:28:17+08:00"
+        }
+      ],
+      "daily_report": "2026-10-23"
+    },
+    {
+      "event_id": "097ce32a83063d9a7579",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-25T13:43:19+00:00",
+      "score": 85,
+      "headline": "奥迪宣布四十亿美元美国工厂计划",
+      "short_headline": "奥迪宣布四十亿美元美国工厂计划",
+      "short_summary": "Guardian 报道奥迪拟在佐治亚州建厂，目标年产二十万辆并创造四千五百岗位；投资目标尚非实际投产。",
+      "summary": "Guardian 报道奥迪拟投资四十亿美元在美国佐治亚州 Macon 建设工厂，规划生产 Q7、Q8、Q9 等 SUV，目标年产二十万辆、创造四千五百岗位。报道将计划放在关税、德国裁员和汽车转型背景下；投资宣布、建设完成、实际就业与投产是不同阶段，本期未取得全部公司和监管文件。",
+      "relevance": "贸易成本可能推动生产布局变化，规划产能不能计入当期供给。",
+      "action": "跟踪公司投资披露、许可与开工投产节点，分别记录承诺、已支出和实际产量。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/business/2026/oct/25/volkswagen-to-build-4bn-audi-suv-factory-in-us-despite-job-cuts-at-home",
+          "label": "The Guardian · 奥迪美国投资",
+          "excerpt": "It said it aims to build 200,000 SUVs at the new US factory, creating 4,500 jobs. The factory will build the Q7, Q8 and Q9 SUVs, shifting some production from Bratislava in Slovakia.",
+          "checked_at": "2026-10-26T10:24:49.315039+08:00"
+        }
+      ],
+      "daily_report": "2026-10-26"
+    },
+    {
+      "event_id": "b7395cff3a4da6a4f755",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-27T23:16:08+00:00",
+      "score": 85,
+      "headline": "中国老年抚养比超过少儿抚养比，统计口径须分清",
+      "short_headline": "中国老年抚养比超过少儿抚养比，统计口径须分清",
+      "short_summary": "BBC 引述统计称老年人口与劳动年龄人口之比达百分之二十三，少儿为百分之二十二；并非每户实际赡养人数。",
+      "summary": "BBC 引述中国国家统计局数据称，上一年度老年抚养比约百分之二十三，超过约百分之二十二的少儿抚养比，并讨论养老、医疗和消费结构影响。这些比例是人口年龄结构指标，不是所有家庭真实支出或每位就业者实际赡养数；本期未独立重算原表，也不把人口趋势当成银发产品必然盈利证据。",
+      "relevance": "养老服务和家庭消费研究应区分人口结构、支付能力、地区需求及可获得服务，宏观增长不自动形成订单。",
+      "action": "先核对统计原表年龄界限、分母与年份，再做分地区公开数据分析，需求判断另访谈验证。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cr20wzwyzl1qo",
+          "label": "BBC · 人口结构数据报道",
+          "excerpt": "Official data released in the last week, external show the ratio of China's dependent elderly people compared to the working age population rose to 23% last year, overtaking the figure for children, which stood at 22%.",
+          "checked_at": "2026-10-28T08:28:31.920131+08:00"
+        }
+      ],
+      "daily_report": "2026-10-28"
+    },
+    {
+      "event_id": "4a65a6bbfb2a309968f1",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-28T18:45:09+00:00",
+      "score": 85,
+      "headline": "英国预算宣布能源支持与银行税调整，生效时间不同",
+      "short_headline": "英国预算宣布能源支持与银行税调整，生效时间不同",
+      "short_summary": "BBC 汇总一百英镑能源支持、银行税及其他措施；预算已宣布与款项到账、具体税法生效仍有区别。",
+      "summary": "BBC 报道英国预算宣布面向部分家庭的一次性一百英镑能源支持、银行利润附加税上调及商业税费等安排；部分措施从次年开始，地区执行不同。它们是同一预算事件的合并报道，本期未逐条核对税法与实施文件，不把预算宣布当作全部措施已执行，也不由摘要确认具体家庭资格。",
+      "relevance": "企业与家庭预算需要分别记录适用地区、收入或物业条件、执行年度和资金到账，标题金额不能替代资格核对。",
+      "action": "跟踪财政部及主管部门正式实施说明，逐项记生效日期和申请方式，不提前保证可领款或采用未生效费率。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cqpvgxz3y49go",
+          "label": "BBC · 英国预算综述",
+          "excerpt": "Millions of households will get £100 to help with soaring energy bills to be paid for by a tax on bank profits, John Healey has announced in his first Budget.",
+          "checked_at": "2026-10-29T08:35:24.950472+08:00"
+        }
+      ],
+      "daily_report": "2026-10-29"
+    },
+    {
+      "event_id": "f14704fe6ef602fdc0ed",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-29T22:17:52+00:00",
+      "score": 85,
+      "headline": "Alphabet 市值据报单日减少逾五千亿美元",
+      "short_headline": "Alphabet 市值据报单日减少逾五千亿美元",
+      "short_summary": "BBC 报道搜索广告、AI 投入与现金流担忧；市值减少不同于公司现金亏损，也不证明单一原因。",
+      "summary": "BBC 报道 Alphabet 周四市值由约 3.97 万亿美元降至 3.46 万亿美元，并讨论季度营收增长、利润回落、负自由现金流与 AI 搜索广告变现担忧。市场价值变化与经营现金流是不同指标，价格反应的归因仍是报道和受访者分析。本期未独立核对全部财报与行情，不用单日波动推导长期收益。",
+      "relevance": "观察 AI 投资要把收入、资本开支、广告业务、现金流与估值分开，增长数字不自动代表现金盈利。",
+      "action": "对照正式财报、现金流及收盘时间口径，记录实际支出与业务贡献，不据单篇市场报道做买卖判断。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cm9qzdqpxy48o",
+          "label": "BBC · Alphabet 财报后市场反应",
+          "excerpt": "By the end of Thursday, the company's total stock market value had fallen to $3.46 trillion from $3.97 trillion the day before.",
+          "checked_at": "2026-10-30T08:34:55.216374+08:00"
+        }
+      ],
+      "daily_report": "2026-10-30"
+    },
+    {
+      "event_id": "c2b0ab28af6912b421b8",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-30T21:13:14+00:00",
+      "score": 85,
+      "headline": "Binance 据报追索被盗资产，冻结与追回仍需区分",
+      "short_headline": "Binance 据报追索被盗资产，冻结与追回仍需区分",
+      "short_summary": "BBC 引述 Binance 称部分资产已被冻结或保障，分析公司提出攻击归因；声明不等于资金已全部返还或根因已确定。",
+      "summary": "BBC 报道 Binance 称约六十三亿美元资产被访问，约三十亿美元已冻结或保障，并记录公司对初步入侵判断的后续修订。报道中的朝鲜关联来自分析机构，调查和资产追索仍在进行。本期未独立核查链上资金、平台公告和完整证据，冻结、公司补足承诺、实际追回与客户到账不是同一状态。",
+      "relevance": "重大平台安全事件需要分别记录调查、服务状态、冻结和赔付，不能据单篇报道保证资产安全或交易机会。",
+      "action": "以官方公告和可信独立进展核对服务范围及时间；不向所谓追回服务提供密钥、助记词或资金，不把归因猜测当作定论。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo",
+          "label": "BBC · 平台资产追索报道",
+          "excerpt": "Binance, the world's largest cryptocurrency exchange, says it has frozen around half of the funds stolen in a \"complex\" hack, after $6.3bn (£4.7bn) was accessed in what is believed to be a record heist.",
+          "checked_at": "2026-10-31T08:33:38.020697+08:00"
+        }
+      ],
+      "daily_report": "2026-10-31"
+    },
+    {
+      "event_id": "79f6059e8b90c73f577f",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-21T23:03:16+00:00",
+      "score": 84,
+      "headline": "Tesla 财报超预期，SpaceX 合并仍处探索阶段",
+      "short_headline": "Tesla 财报超预期，SpaceX 合并仍处探索阶段",
+      "short_summary": "报道列第三季营收与盈利，同时说明两家公司尚未就潜在交易达成条款。",
+      "summary": "Guardian 报道 Tesla 第三季营收 280.5 亿美元、每股收益 0.48 美元，高于报道中的分析师预测，但汽车业务收入同比下降。Musk 提及 Tesla 与 SpaceX 合并可能性，两家公司委员会探索交易但尚无条款协议。潜在合并不是已完成收购，财报超预期也不保证股价或未来回报。",
+      "relevance": "评估公司时应分开看已报告经营数据、业务结构和未定交易预期。",
+      "action": "对照公司正式财报与监管披露，记录交易是否达成、审批和股东程序，不把口头设想写进确定收入预测。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/technology/2026/oct/21/elon-musk-tesla-spacex",
+          "label": "The Guardian · Tesla 财报与交易讨论",
+          "excerpt": "Musk said on Tuesday that the board of directors for both of his businesses had put together special committees to explore the potential merger, but had not yet reached an agreement on the terms of the transaction. The move would require the approval of 50% of all Tesla shareholders.",
+          "checked_at": "2026-10-22T17:50:49+08:00"
+        }
+      ],
+      "daily_report": "2026-10-22"
+    },
+    {
+      "event_id": "2dce90caa0b8d958fdee",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-22T11:28:11+00:00",
+      "score": 84,
+      "headline": "布伦特油价触及五个月高位，供应风险推动波动",
+      "short_headline": "布伦特油价触及五个月高位，供应风险推动波动",
+      "short_summary": "Guardian 报道布伦特一度上涨百分之三至每桶一百一十二美元；这是报道时点行情，不是实时价格或预测。",
+      "summary": "Guardian 报道海湾袭击与航运风险背景下，布伦特原油在十月二十二日一度上涨百分之三、触及每桶 112 美元，为五月以来高位。文章也引用替代管道运输等背景，供应风险不等于所有出口已经中断。市场价格为报道时点信息，袭击细节与各方声明须按来源分别核对。",
+      "relevance": "能源成本敏感企业可研究不同价格情景，而不是把盘中高点当作长期采购成本。",
+      "action": "更新公开行情与运费时间戳，对比现货、期货和实际合同；先做预算敏感性分析，不由单篇新闻推导交易。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/business/2026/oct/22/oil-prices-jump-five-month-high-threats-supply",
+          "label": "The Guardian · 原油价格",
+          "excerpt": "Brent crude, the international benchmark for oil prices, rose by 3% to hit $112 a barrel for first time since 18 May.",
+          "checked_at": "2026-10-23T14:28:17+08:00"
+        }
+      ],
+      "daily_report": "2026-10-23"
+    },
+    {
+      "event_id": "8a6c148ab8a7425fa074",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-23T08:04:17+00:00",
+      "score": 84,
+      "headline": "具身 AI 数据采购催生录制作业，收入与授权差异显著",
+      "short_headline": "具身 AI 数据采购催生录制作业，收入与授权差异显著",
+      "short_summary": "BBC 记录印度工人拍摄工作供机器人训练；不同企业报酬差别很大，不能推成统一兼职收入。",
+      "summary": "BBC 采访印度劳动者与数据企业，描述采集手部或多摄像头工作视频并售给技术机构、用于具身 AI 训练的链条。不同受访者给出的报酬口径差异明显，企业还强调清洗、标注、验证与场景覆盖的重要性。这是媒体案例及受访者陈述，不证明国内开放了同样合同，也不能保证录制者收入或仅模糊人脸就实现匿名。",
+      "relevance": "数据服务的价值可能从原始视频转向质量控制与结构化；劳动同意、客户资料和工作场景授权同样影响成本。",
+      "action": "研究公开授权数据的质量指标，访谈明确有需求的机构并核查合同、用途和支付条款，不先录制真实客户或工作场所。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/ckvgyml6pdm9o",
+          "label": "BBC · 具身数据供应链",
+          "excerpt": "That video is then sold on to technology companies and research organisations who use it to train artificial intelligence - in particular so-called physical AI, a type of artificial intelligence that can control robots in the real world.",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ],
+      "context_note": "采集窗口内较早报道，原始发布时间已保留；本期核验时超过二十四小时，作为补采背景。",
+      "daily_report": "2026-10-24"
+    },
+    {
+      "event_id": "50fed9eaa30357c41e08",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-19T18:21:54+00:00",
+      "score": 91,
+      "headline": "美国公开联邦文职机构 DeepSeek 限制，生效与披露时间需区分",
+      "short_headline": "美国公开联邦文职机构 DeepSeek 限制，生效与披露时间需区分",
+      "summary": "BBC 报道美国国土安全部要求联邦文职机构移除 DeepSeek 及相关技术，命令于周一公开但七月底已生效，国防部门不在该命令适用范围。本期未独立核对命令全文及所有第三方产品的适用边界，保留媒体报道标记。",
+      "short_summary": "BBC 称命令十九日公开但七月底已生效，适用文职机构，并非所有美国用户的通用禁令。",
+      "relevance": "向相关政府客户交付软件的团队需梳理模型与组件来源、合同范围和适用政策，不能简单把开放模型与任意部署许可等同。",
+      "action": "读取正式政策与采购要求，针对具体客户核对模型依赖和供应链清单，再决定是否替换组件。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cjkgeq0k1wevo",
+          "label": "BBC · 美国 AI 政策",
+          "excerpt": "The DHS made the order public on Monday, but the ban took effect from the end of July.",
+          "checked_at": "2026-10-20T10:01:30+08:00"
+        }
+      ],
+      "daily_report": "2026-10-20"
+    },
+    {
+      "event_id": "bd1e1bd350cbb9246c06",
+      "category": "政治与政策",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-10-23T09:17:16.350000+00:00",
+      "score": 91,
+      "headline": "国办发布 AI 就业意见，兼顾创业支持与替代风险",
+      "short_headline": "国办发布 AI 就业意见，兼顾创业支持与替代风险",
+      "short_summary": "中国政府网公布就业友好型 AI 发展意见，提出轻量化升级、转岗培训和权益保护；具体项目仍需实施细则。",
+      "summary": "中国政府网公开国办发〔2026〕29号意见，成文日期为十月十六日、发布日期为十月二十三日。文件提出人工智能中小企业创业支持计划、低成本轻量化升级、专项培训、就业风险评估与劳动者权益保护，并鼓励企业探索失业缓冲期。原则性意见不等于所有企业或个人已获得贷款、补贴或可立即提交申请，具体执行仍需地方和部门措施。",
+      "relevance": "小微企业 AI 工具与服务可关注低门槛、提升工作质量和人机协作，同时量化就业影响与培训需求。",
+      "action": "按所在业务领域跟进主管部门正式细则，做公开政策条件清单；没有明确渠道和资格前不承诺可领补贴。",
+      "sources": [
+        {
+          "url": "https://www.gov.cn/zhengce/content/202610/content_7084107.htm",
+          "label": "中国政府网 · 国办就业意见",
+          "excerpt": "（二）培育中小微企业稳岗扩岗新动能。实施人工智能中小企业创业支持计划，以开源生态促进中小企业创新创业。加强数字化转型公共服务供给，鼓励开发“小快轻准”数字化产品和解决方案，保障中小微企业和个体工商户依法平等使用数据、算法等智能生产要素，支持中小微企业探索低成本、轻量化智能升级路径，进一步降低人工智能应用门槛，提升吸纳就业能力。",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        },
+        {
+          "url": "https://www.ithome.com/1/017/113.htm",
+          "label": "IT之家 · 当日政策消息",
+          "excerpt": "IT之家 10 月 23 日消息，国务院办公厅今日印发《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》。以人工智能赋能高质量发展为契机，以适应技术发展促进高质量充分就业为目标，以构建就业友好型发展方式为方向，积极增强人工智能创造就业机会、赋能传统岗位、提升就业质量、激发创业活力的正面效应，有效减缓人工智能应用就业替代影响，努力实现技术进步、产业升级与就业促进、民生改善相协调的包容性发展。",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ],
+      "context_note": "官网列发布日期为二〇二六年十月二十三日，未标具体时分；published_at 沿用本期 IT之家消息的发布时间，不代表政府文件精确上网时刻。成文日期另为十月十六日。",
+      "daily_report": "2026-10-24"
+    },
+    {
+      "event_id": "0916073d991c450ec875",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T11:23:55+00:00",
+      "score": 90,
+      "headline": "Guardian 报道欧盟拟限制中国混合动力汽车进口，预计十二月实施",
+      "short_headline": "欧盟混合动力汽车配额影响跨境贸易",
+      "summary": "Guardian 报道称欧盟委员会确认中国混合动力汽车年进口限额为 35 万辆，预计十二月生效，使用 WTO 保障措施；文中称欧盟境内组装车辆与部分在中国生产车辆的适用范围不同。本期已读媒体原文，但尚未独立核对欧盟正式法律文本、车型定义和实施细则，因此保留媒体报道标记。",
+      "short_summary": "报道指年度进口配额预计十二月实施，组装地点与车型范围将影响企业实际适用。",
+      "relevance": "涉及中国汽车出口、供应链与欧洲市场的企业应评估规则适用边界，而非仅依据标题调整订单。",
+      "action": "核对欧盟正式公告、车型范围、原产地与配额分配，再做交付和产能情景分析；不据此作确定行情预测。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/environment/2026/oct/12/eu-deal-china-limit-imports-hybrid-electric-vehicles",
+          "label": "The Guardian · 欧洲贸易政策",
+          "excerpt": "The EU is to limit the number of hybrid electric vehicles imported from China to 350,000 cars a year, the European Commission has confirmed.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "8607dfc2162df5a7dbf0",
+      "headline": "政治：美国进口俄罗斯柴油计划引发跨党派反对，能源与制裁政策交织",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-11T23:18:45+00:00",
+      "score": 87,
+      "summary": "BBC 报道特朗普提出从俄罗斯获取柴油，七名来自两党的参议员反对该安排并认为其违反美国法律。政府与议员对合法性的说法不同；本期尚未逐条核对正式制裁文件，也未验证承诺数量的实际交付。",
+      "relevance": "能源供给、地缘冲突与制裁执行会共同影响运输及跨境经营的不确定性。政治承诺、法律授权和实际执行需要分别跟踪。",
+      "action": "继续核对美国财政部正式制裁或许可文件，以及交付证据；对经营成本做情景分析，避免把政治表态直接转成交易信号。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cjn5v21py07vo",
+          "label": "BBC · 美国能源与制裁政策",
+          "excerpt": "A group of seven senators - four Republicans and three Democrats – on Sunday said the deal violated US laws, urging Trump to \"reverse course\".",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ],
+      "short_headline": "美国俄罗斯柴油计划遭跨党派反对",
+      "short_summary": "议员质疑合法性；制裁授权、供给承诺和实际交付仍需分别核查。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "event_id": "ab6893d051ad7ae13afc",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-26T00:19:05+00:00",
+      "score": 87,
+      "headline": "媒体报道卢拉赢得巴西总统第二轮投票",
+      "short_headline": "媒体报道卢拉赢得巴西总统第二轮投票",
+      "short_summary": "Guardian 报道近百分之九十九选票统计时卢拉领先，结果应继续对照选举机构公布，不等于政策已落地。",
+      "summary": "Guardian 报道卢拉在巴西总统第二轮选举击败 Flávio Bolsonaro，列出接近百分之九十九计票时双方约 51.75% 与 48.25% 的比例。本期依据媒体原文，未独立核对最终认证、异议处理和完整选举机构数据；计票、认证与后续政策执行分别记录。",
+      "relevance": "政治结果可能影响财政、环境和对外关系预期，政策仍需正式文件和实施程序。",
+      "action": "对照巴西选举主管机关最终公布与后续政策文件，避免用选举结果保证资产表现。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/26/lula-wins-brazil-election",
+          "label": "The Guardian · 巴西第二轮选举",
+          "excerpt": "With nearly 99% of votes counted the 80-year-old leftist received 51.75% of the vote to his 45-year-old rival’s 48.25%.",
+          "checked_at": "2026-10-26T10:24:52.668734+08:00"
+        }
+      ],
+      "daily_report": "2026-10-26"
+    },
+    {
+      "event_id": "e089fdbd15c7a8668f41",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-26T01:00:58+00:00",
+      "score": 86,
+      "headline": "澳大利亚养老评估算法受监察调查批评",
+      "short_headline": "澳大利亚养老评估算法受监察调查批评",
+      "short_summary": "Guardian 引述调查批评透明度和人工纠错路径，建议修改制度；不等于法律已改或系统已停用。",
+      "summary": "Guardian Australia 引述联邦监察专员调查，称养老护理评估算法缺乏透明解释和有效人工纠错，评估人员难以更改不合适的资助建议。报道提出修改法律等建议，并引用一百零四页报告。本期未读取完整报告或最新政府回应，保持媒体报道标记，不推断法律已经改变。",
+      "relevance": "公共服务自动决策应核对解释、申诉、人工复核及责任机制。",
+      "action": "核对监察报告与正式回应，区分建议、承诺和实施；具体护理资格应走当地正式评估及申诉渠道。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/australia-news/2026/oct/26/damning-investigation-labor-algorithm-tool-aged-care-assessment",
+          "label": "The Guardian · 养老算法调查",
+          "excerpt": "An algorithm used by the federal government to assess the level of care older Australians are entitled to is unreasonable, unfair and lacks human oversight, according to a damning investigation by the commonwealth ombudsman.",
+          "checked_at": "2026-10-26T10:24:56.475061+08:00"
+        }
+      ],
+      "daily_report": "2026-10-26"
+    },
+    {
+      "event_id": "2cd7dbcdd90cb729d595",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-12T21:20:51+00:00",
+      "score": 85,
+      "headline": "泽连斯基称能源停火宣布后六处设施遭袭，停火表态与执行仍有落差",
+      "short_headline": "乌方称六处能源设施遭袭，停火执行待核",
+      "summary": "BBC 报道泽连斯基称，特朗普宣布能源停火后俄罗斯仍袭击六处乌克兰能源设施；文章引述乌电网运营商报告新的停电和供电限制，并记录俄方官员立场。具体攻击数量属于乌方说法，本期未独立验证全部现场证据，也没有发现可据此确认双方都已接受的完整停火协议。",
+      "short_summary": "乌方陈述持续袭击，运营商报告停电；外交宣布与实际供电、安全状况需要分开跟踪。",
+      "relevance": "地缘冲突对能源供给和交付造成持续不确定性，经营计划不宜把政治宣布直接当作风险解除。",
+      "action": "继续跟踪双方正式文件、独立现场核验和电网运营通知，涉及当地安排时保留应急方案。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cvlyd4pdlwkxo",
+          "label": "BBC · 能源停火与执行报道",
+          "excerpt": "On Monday, Ukraine's state-owned grid operator Ukrenergo reported \"new power cuts\" in Kharkiv, Donetsk and Zaporizhzhia due to damage caused to energy equipment by Russian attacks.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "event_id": "061e84da9f54ec4085c6",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-20T19:30:05+00:00",
+      "score": 85,
+      "headline": "美国加拿大关税再遭诉讼，退款要求尚非裁决",
+      "short_headline": "美国加拿大关税再遭诉讼，退款要求尚非裁决",
+      "short_summary": "企业与法律组织挑战关税授权并请求退款；起诉本身不意味着关税已撤销。",
+      "summary": "BBC 报道 Liberty Justice Center 代表食品企业向美国国际贸易法院起诉，挑战针对部分加拿大商品的 50% 关税，并请求退款及利息。争议涉及法律授权与程序要求；报道未表明法院已经最终判决或普遍批准退款，本期未核对完整诉状和个别进口商适用范围。",
+      "relevance": "跨境供应链需同时追踪现行征税和诉讼进程，不能用未决请求修改税费事实。",
+      "action": "记录具体商品、申报记录和现行税则，必要时由专业人员核对资格，等待法院和主管机构正式文件。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cqrkyj13m588o",
+          "label": "BBC · 关税法律挑战",
+          "excerpt": "The Liberty Justice Center filed a suit on behalf of US food business Gellert Global Group, urging the US Court of International Trade to find the levies unlawful and to order refunds with interest for affected importers.",
+          "checked_at": "2026-10-21T16:06:32+08:00"
+        }
+      ],
+      "daily_report": "2026-10-21"
+    },
+    {
+      "event_id": "c15e9b1a31d6cda99bb5",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-26T01:07:05+00:00",
+      "score": 85,
+      "headline": "武契奇承认议会选举失利，最终结果仍待公布",
+      "short_headline": "武契奇承认议会选举失利，最终结果仍待公布",
+      "short_summary": "BBC 报道学生运动支持的名单取得胜势，武契奇承认失利；不能写成全部组阁与权力移交已完成。",
+      "summary": "BBC 报道塞尔维亚领导人 Aleksandar Vučić 承认在提前举行的议会选举失利，并引述其称最终结果尚未全部公布。报道记录学生运动支持的名单、初步投票情况及庆祝。本期未独立核对正式席位分配和组阁程序，承认失利不等于新政府已完成全部法律程序。",
+      "relevance": "政治变化需区分选票、席位、组阁和实际政策，情绪表达不替代制度节点。",
+      "action": "跟踪正式结果、席位与组阁公告，保留各方声明的归属。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo",
+          "label": "BBC · 塞尔维亚议会选举",
+          "excerpt": "\"We still do not have final results... it is clear that we have lost these elections,\" the right-wing populist leader said as he conceded late on Sunday.",
+          "checked_at": "2026-10-26T10:24:55.149494+08:00"
+        }
+      ],
+      "daily_report": "2026-10-26"
+    },
+    {
+      "event_id": "8235ac7c15207d2eb31b",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-27T00:01:02+00:00",
+      "score": 85,
+      "headline": "权益组织报告质疑英国内政部 AI 使用透明度",
+      "short_headline": "权益组织报告质疑英国内政部 AI 使用透明度",
+      "short_summary": "Guardian 转述 Open Rights Group 对移民领域 AI 的批评；组织报告、政府回应和正式监管结论并非一回事。",
+      "summary": "Guardian 转述 Open Rights Group 报告，称英国内政部在移民案件、边境监测及材料处理中使用 AI，批评相关公开信息、问责和人工权益保障不足。报道说资料来自公开信息、信息自由请求和议员提问。本期未直接读完原报告或核对全部系统状态，保留组织主张归属，不能写成法院已经确认歧视或新禁令已生效。",
+      "relevance": "公共服务 AI 应明确用途、证据来源、申诉和人工责任，系统上线并不自动证明其公平或有效。",
+      "action": "继续核对原报告、部门回应和公开系统登记，分开记录试验、实际部署及经确认的影响；不据报道决定具体个人资格。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report",
+          "label": "The Guardian · 移民领域 AI 报告",
+          "excerpt": "Information for the report has been gathered from a mix of limited information published by the Home Office, freedom of information requests and questions from MPs. The report has cross-party support from Labour’s Bell Ribeiro-Addy, the Scottish National party’s Pete Wishart and the Green party’s Siân Berry.",
+          "checked_at": "2026-10-27T08:34:48.693661+08:00"
+        }
+      ],
+      "daily_report": "2026-10-27"
+    },
+    {
+      "event_id": "0f9f4ace40a03e9c2996",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-27T20:56:23+00:00",
+      "score": 85,
+      "headline": "以色列出口民调未显清晰多数，组阁仍有不确定性",
+      "short_headline": "以色列出口民调未显清晰多数，组阁仍有不确定性",
+      "short_summary": "Guardian 报道两大阵营席位接近；出口民调不同于最终计票，也不意味着政府或总理已经更替。",
+      "summary": "Guardian 报道以色列投票结束后的出口民调，称反对派阵营预计席位略占优势，但没有清晰多数，阿拉伯政党可能影响组阁。文章保留若民调准确等前提，不能把预计席位写成已认证结果，或把政治人物胜负表态等同法律上的组阁完成。本期未核对最终选举委员会数据。",
+      "relevance": "判断政策走向需区分出口民调、实际席位、联盟谈判与任命，短期预测不能替代制度程序。",
+      "action": "继续查正式计票、席位和组阁授权，明确标注每次更新时点，不根据单次民调保证市场或地区局势变化。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/27/israel-election-too-close-to-call-as-exit-polls-give-netanyahu-bloc-slightly-fewer-seats",
+          "label": "The Guardian · 以色列选举民调",
+          "excerpt": "Exit polls published on Tuesday evening suggested that the opposition bloc of parties led by the former chief of staff of the Israel Defense Forces, Gadi Eisenkot, would win most seats in the Knesset by a slight margin, edging out Benjamin Netanyahu’s right and far-right coalition despite the prime minister’s Likud emerging as the largest party.",
+          "checked_at": "2026-10-28T08:28:33.467241+08:00"
+        }
+      ],
+      "daily_report": "2026-10-28"
+    },
+    {
+      "event_id": "8ea7bf9a78cd1ecb766a",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-23T22:51:50+00:00",
+      "score": 84,
+      "headline": "英国网络安全措施评估未见儿童受害比例显著下降",
+      "short_headline": "英国网络安全措施评估未见儿童受害比例显著下降",
+      "short_summary": "Guardian 引述 Ofcom 九个月评估，称有害内容接触比例未显著变化；本期未能读取监管原报告。",
+      "summary": "Guardian 引述 Ofcom 对儿童安全义务实施后九个月的评估，称儿童接触有害内容的比例在总体上没有显著变化，也未见伤害严重程度改变的证据。报道所述研究包含八至十七岁儿童接触情况、安全工具及影响，并讨论推荐流问题。本期监管原报告读取失败，因此保持媒体报道标记，不能推断所有措施毫无效果或给出已证实的单一因果。",
+      "relevance": "产品安全评估要区分规则存在、执行覆盖、接触比例和伤害指标；推荐系统需有持续测量。",
+      "action": "进一步取得监管原报告核对样本与统计定义，分别记录产品措施和结果指标，不把媒体标题替代完整评估。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/society/2026/oct/23/uk-children-just-as-likely-to-have-suffered-harm-on-social-media-despite-crackdown-ofcom-online-safety-act",
+          "label": "The Guardian · 儿童安全评估",
+          "excerpt": "But Ofcom found that “at a total level there was no significant change in the proportion of children encountering harmful content over the first nine months after the children’s safety duties came into force in July 2025”.",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ],
+      "daily_report": "2026-10-24"
+    },
+    {
+      "event_id": "095d2bb0e82854440c32",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-27T22:11:08+00:00",
+      "score": 84,
+      "headline": "乌南局部人道停火据报扩大至赫尔松地区",
+      "short_headline": "乌南局部人道停火据报扩大至赫尔松地区",
+      "short_summary": "BBC 引述官员称范围扩大并计划援助撤离；局部安排不等于全面停战，期限和实际执行仍需持续核对。",
+      "summary": "BBC 引述官员及双方说法，称始于俄方控制的 Oleshky 的人道停火已扩大至更广赫尔松地区，计划随后运送援助及自愿撤离。报道记录当时双方称遵守安排，并引述乌方官员给出的持续期限。本期未独立核实全部边界、道路或现场执行，不能将局部停火写成全面和平或保证安全通行。",
+      "relevance": "人道协议的范围、时限和实际交付应分别验证，公开表态不等同现场风险已消失。",
+      "action": "以正式人道组织和主管部门的实时通知核对援助与通行安排，保留报道时间，不据单篇消息建议进入冲突区域。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6lye1w9p2l8o",
+          "label": "BBC · 赫尔松人道停火",
+          "excerpt": "A ceasefire that began with the aim of getting food and medicine to the Russian-occupied Ukrainian city of Oleshky has been extended across the wider southern region of Kherson, according to sources.",
+          "checked_at": "2026-10-28T08:28:34.077469+08:00"
+        }
+      ],
+      "daily_report": "2026-10-28"
+    },
+    {
+      "event_id": "49ff0fa053451c8bc8ba",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-30T19:42:15+00:00",
+      "score": 84,
+      "headline": "欧加宣布新合作框架，成员资格与后续承诺分开看",
+      "short_headline": "欧加宣布新合作框架，成员资格与后续承诺分开看",
+      "short_summary": "Guardian 报道蒙特利尔峰会宣布 Alliance for the Future，并涉及超算合作；不等于加拿大已成为欧盟成员。",
+      "summary": "Guardian 报道欧加领导人在蒙特利尔峰会宣布 Alliance for the Future，讨论市场、科研及安全合作，并称有加拿大参与欧洲超算网络等安排。相比此前公报草案讨论，这是峰会宣布阶段的新进展，但倡议名称、签署文件、实际接入条件与未来市场整合仍需分别核对。本期未独立取得全部最终文件，不把合作框架写成加拿大加入欧盟。",
+      "relevance": "跨境科研和产业合作可出现新接口，但个人、企业或科研机构的实际访问须看正式实施规则。",
+      "action": "对照最终峰会文件与后续超算参与条件，区分已宣布安排、未来讨论和具体申请渠道，不推定已取得新权利。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/30/canada-european-union-alliance",
+          "label": "The Guardian · 欧加峰会合作",
+          "excerpt": "Brussels and Ottawa also announced an agreement on Friday that would bringing Canada into Europe’s supercomputing network, giving Canadian access to European machines to train AI models.",
+          "checked_at": "2026-10-31T08:33:39.369422+08:00"
+        }
+      ],
+      "update_reason": "十月二十九日日报仅报道峰会前公报草案措辞；本次新增峰会宣布 Alliance for the Future 及超算合作等安排，区分宣布与实际执行，复用原事件编号。",
+      "daily_report": "2026-10-31"
+    },
+    {
+      "event_id": "54d4e28735862a03af1e",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-10-29T14:51:45+00:00",
+      "score": 84,
+      "headline": "芬兰警方调查 Google 数据中心场地清林程序",
+      "short_headline": "芬兰警方调查 Google 数据中心场地清林程序",
+      "short_summary": "Guardian 报道涉嫌环境评估程序问题，Google 代表致歉并解释当时理解；刑事调查不是定罪或永久取消项目。",
+      "summary": "Guardian 报道芬兰警方就 Google 子公司数据中心场地清林、排水及环境影响评估程序启动刑事调查，并记述此前暂停准备工作的要求和公司回应。报道讨论约三百三十公顷场地，但本期未直接核对警方、许可机关和公司完整文件。涉嫌违法、调查、停工和最终裁判需分开，不把调查写成已定罪或所有项目被取消。",
+      "relevance": "算力项目交付取决于土地、环境许可和建设程序，气候或能源优势不能替代合规审批。",
+      "action": "继续核对警方及许可机构正式公告、评估状态与项目节点，融资或容量研究中保留延期不确定性。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/29/finland-criminal-investigation-google-clearing-forest-datacentre",
+          "label": "The Guardian · 芬兰数据中心调查",
+          "excerpt": "Finnish ⁠police have launched a criminal investigation into possible breaches ⁠of the country’s environmental ⁠laws ​at the site of a planned Google datacentre in rural northern Finland.",
+          "checked_at": "2026-10-30T08:34:57.043241+08:00"
+        }
+      ],
+      "daily_report": "2026-10-30"
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "local-multimodal-search-embeddinggemma-2",
+      "headline": "产品机会：端侧多模态素材检索，把图片、视频与语音备忘录连起来",
+      "category": "可商用 AI",
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "score": 92,
+      "signal": "EmbeddingGemma 2 的官方多模态与端侧检索能力，为小型素材库、离线知识助手和本地代码检索提供新的实现候选。模型发布是事实，付费需求仍是待验证假设。",
+      "audience": "做图片与视频工具、知识库或小型工作室自动化的开发者。",
+      "first_step": "在本周用一组公开或自有测试素材做离线检索原型，再让三位目标用户试用，记录找素材耗时、失败例子与是否愿意付费。",
+      "risks": "召回质量、设备内存与延迟尚未实测；需要单独核查模型文件、依赖与素材授权，不能仅凭公告推断可直接商业上线。",
+      "time_window": "未来一周做原型验证；没有公开申请截止日或保证收益。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/",
+          "label": "Google DeepMind · 官方公告",
+          "excerpt": "Today, we’re launching EmbeddingGemma 2, expanding beyond text to unify code, images, video, and audio in a shared embedding space.",
+          "checked_at": "2026-10-12T15:01:20+08:00"
+        }
+      ],
+      "short_headline": "端侧多模态素材检索",
+      "short_summary": "从本地图片、视频和语音搜索做小型原型，验证检索效果与真实付费需求。",
+      "daily_report": "2026-10-12"
+    },
+    {
+      "opportunity_id": "repository-context-onboarding-pack",
+      "headline": "开发服务机会：把项目约定与重复流程整理成编码助手可用的入门包",
+      "short_headline": "项目上下文入门包",
+      "category": "AI 编程",
+      "score": 87,
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "signal": "GitHub 最新指南提供仓库指令、Skills、Agents 和 MCP 的分工，支持将项目知识整理成可维护资产。由此推导的小团队交接与入门服务是待验证需求，不是已确认订单。",
+      "short_summary": "围绕真实项目交接，提供可维护的约定与检查流程，先验证是否减少重复沟通。",
+      "audience": "维护多仓库、经常交接或引入编码助手的小团队。",
+      "first_step": "在合成项目做一个含测试入口、约定和单一检查流程的样例，请两位开发者完成同一任务，记录沟通次数和错误，随后确认客户是否需要此类服务。",
+      "risks": "指南可免费自学，单纯文件模板可能缺乏付费差异；项目规则会过时，须明确维护成本，不能承诺配置即可提高效率。",
+      "time_window": "本周做一个小样例，无官方申请截止。",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase",
+          "label": "GitHub Blog · 官方使用指南",
+          "excerpt": "Repository custom instructions give Copilot that baseline context. Add a .github/copilot-instructions.md file to define guidance that applies across the repository, such as your preferred architecture, naming conventions, or expectations for testing and validation.",
+          "checked_at": "2026-10-13T08:39:18+08:00"
+        }
+      ],
+      "daily_report": "2026-10-13"
+    },
+    {
+      "opportunity_id": "trainium-migration-cost-evaluation",
+      "headline": "Trainium 迁移兼容性与成本评估",
+      "short_headline": "Trainium 迁移兼容性与成本评估",
+      "short_summary": "公测提供原生 PyTorch 接入候选，可研究迁移检查与小规模成本验证。",
+      "category": "模型与基础设施",
+      "score": 82,
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "signal": "公测提供原生 PyTorch 接入候选，可研究迁移检查与小规模成本验证。 证据支持技术或市场变化，客户需求和回报仍待验证。",
+      "audience": "有相关工程或数据服务经验的独立开发者和小团队。",
+      "first_step": "固定一个已授权测试任务，比较兼容性、冷启动、吞吐与实际云账单，再访谈已有 AWS 需求的团队。",
+      "risks": "需要适用云实例和版本；公测不意味着免费、生产稳定或一定低于 GPU 成本。",
+      "time_window": "未来一周先做小样本验证，没有已确认客户订单或官方申请截止。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/hf-torchneuron",
+          "label": "Hugging Face · TorchNeuron 公告",
+          "excerpt": "Starting Oct. 20, 2026, TorchNeuron will be available as a public beta. Researchers and developers will be able to install it with pip install torch-neuronx.",
+          "checked_at": "2026-10-20T10:01:30+08:00"
+        }
+      ],
+      "daily_report": "2026-10-20"
+    },
+    {
+      "opportunity_id": "thin-router-workflow-evaluation",
+      "headline": "智能体路由与业务推理解耦验证",
+      "short_headline": "智能体路由与业务推理解耦验证",
+      "short_summary": "从可回放业务流程入手，比较轻量路由和隔离上下文能否减少跨任务错误。",
+      "category": "AI 编程",
+      "score": 82,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "从可回放业务流程入手，比较轻量路由和隔离上下文能否减少跨任务错误。 证据支持技术或市场变化，客户需求和回报仍待验证。",
+      "audience": "有相关工程或数据服务经验的独立开发者和小团队。",
+      "first_step": "选一个不涉及私人资料的模拟流程，定义阶段输入输出与失败恢复，比较两种架构的成功率和调用量。",
+      "risks": "团队案例的收益不能直接复制；增加代理也可能增加维护和调试成本，不保证商业效果。",
+      "time_window": "未来一周先做小样本验证，没有已确认客户订单或官方申请截止。",
+      "sources": [
+        {
+          "url": "https://engineering.fb.com/2026/10/19/ml-applications/thin-orchestrator-ai-agent-architecture/",
+          "label": "Meta Engineering · 团队实践",
+          "excerpt": "We built a 1,300-line orchestrator that routes 20+ workflows to 14 specialized AI agents. It performs zero domain work itself. That’s the point.",
+          "checked_at": "2026-10-20T10:01:30+08:00"
+        }
+      ],
+      "daily_report": "2026-10-20"
+    },
+    {
+      "opportunity_id": "literature-linked-proposal-review",
+      "headline": "研究提案的证据链接与修改审查",
+      "short_headline": "研究提案的证据链接与修改审查",
+      "short_summary": "LitPivot 展示把论文摘录与提案修改绑定的工作流，可研究面向公开文献的引用审查工具。",
+      "category": "AI 编程",
+      "score": 82,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "LitPivot 展示把论文摘录与提案修改绑定的工作流，可研究面向公开文献的引用审查工具。 这是待验证方向，尚无付费需求、补贴资格或回报保证。",
+      "audience": "具备相关 AI 应用或信息检索开发经验的独立开发者和小团队。",
+      "first_step": "选十篇公开论文与一页提案，逐条检查建议对应的摘录、覆盖和错误引用，与人工审查耗时比较。",
+      "risks": "样本研究不能保证跨领域效果；检索遗漏与错误摘录会误导，论文许可和访问权限仍须核对。",
+      "time_window": "未来一周先做小样本与需求访谈，没有明确的官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/litpivot",
+          "label": "Ai2 · LitPivot 研究",
+          "excerpt": "With collaborators at the University of Pennsylvania, we developed LitPivot, a system that helps researchers navigate these pivots. Using papers retrieved through Asta Paper Finder, LitPivot organizes literature around the part of a proposal being edited, offers critiques supported by excerpts from selected studies, and suggests revisions that researchers can accept, edit, or reject. LitPivot is intended to be used for early-stage research ideation, but the idea could possibly extend to longer writing tasks (i.e., writing the introduction section of a paper).",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ],
+      "daily_report": "2026-10-24"
+    },
+    {
+      "opportunity_id": "lightweight-ai-job-friendly-discovery",
+      "headline": "小微企业轻量 AI 升级的需求验证",
+      "short_headline": "小微企业轻量 AI 升级的需求验证",
+      "short_summary": "国办意见明确鼓励低成本轻量化 AI 升级和人机协作，可关注减少重复劳动并提升岗位质量的工具。",
+      "category": "工作室业务",
+      "score": 82,
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "signal": "国办意见明确鼓励低成本轻量化 AI 升级和人机协作，可关注减少重复劳动并提升岗位质量的工具。 这是待验证方向，尚无付费需求、补贴资格或回报保证。",
+      "audience": "具备相关 AI 应用或信息检索开发经验的独立开发者和小团队。",
+      "first_step": "用公开虚构流程制作一个小样本演示，访谈三家潜在使用方的任务、培训与预算，再跟踪正式政策细则。",
+      "risks": "原则性意见不等于订单或补贴资格；真实数据授权、岗位影响、维护成本和当地执行条件须验证。",
+      "time_window": "未来一周先做小样本与需求访谈，没有明确的官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://www.gov.cn/zhengce/content/202610/content_7084107.htm",
+          "label": "中国政府网 · 国办就业意见",
+          "excerpt": "（二）培育中小微企业稳岗扩岗新动能。实施人工智能中小企业创业支持计划，以开源生态促进中小企业创新创业。加强数字化转型公共服务供给，鼓励开发“小快轻准”数字化产品和解决方案，保障中小微企业和个体工商户依法平等使用数据、算法等智能生产要素，支持中小微企业探索低成本、轻量化智能升级路径，进一步降低人工智能应用门槛，提升吸纳就业能力。",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        },
+        {
+          "url": "https://www.ithome.com/1/017/113.htm",
+          "label": "IT之家 · 当日政策消息",
+          "excerpt": "IT之家 10 月 23 日消息，国务院办公厅今日印发《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》。以人工智能赋能高质量发展为契机，以适应技术发展促进高质量充分就业为目标，以构建就业友好型发展方式为方向，积极增强人工智能创造就业机会、赋能传统岗位、提升就业质量、激发创业活力的正面效应，有效减缓人工智能应用就业替代影响，努力实现技术进步、产业升级与就业促进、民生改善相协调的包容性发展。",
+          "checked_at": "2026-10-24T18:03:11+08:00"
+        }
+      ],
+      "daily_report": "2026-10-24"
+    },
+    {
+      "opportunity_id": "workflow-acceptance-rework-audit",
+      "headline": "AI 工作流验收与返工成本小样本研究",
+      "short_headline": "AI 工作流验收与返工成本小样本研究",
+      "short_summary": "Epoch 的工作验收研究显示，高榜单分数不直接代表可接受交付，可研究将业务验收和返工记录做成轻量检查表。",
+      "category": "工作室业务",
+      "score": 82,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Epoch 的工作验收研究显示，高榜单分数不直接代表可接受交付，可研究将业务验收和返工记录做成轻量检查表。 这是待验证方向，未证明付费需求或收入。",
+      "audience": "已有 AI 工作流或业务自动化经验的独立开发者与小团队。",
+      "first_step": "挑三类公开或虚构办公任务，每类五个样例，固定验收条目，比较一次通过率、复核和返工分钟数，再访谈使用者。",
+      "risks": "内部研究不能推广到所有行业；验收定义可能偏置，质量与人员判断应保持可复核，不据此自动作人事决定。",
+      "time_window": "未来一周先做文档与小样本核对，无官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://epochai.substack.com/p/can-ai-automate-epoch",
+          "label": "Epoch AI · 工作任务评估",
+          "excerpt": "The leaders, Claude Fable 5.1 and GPT-6 Astra, scored 65% on average. That means their output met 65% of the rubric items that human employees would be evaluated on — a score of 100% would mean that it’s fine to automate the task.",
+          "checked_at": "2026-10-27T08:32:59.860650+08:00"
+        }
+      ],
+      "daily_report": "2026-10-27"
+    },
+    {
+      "opportunity_id": "ai-agent-permission-observability-service",
+      "headline": "代理权限服务更新：浏览器会话范围验证",
+      "short_headline": "代理权限服务更新：浏览器会话范围验证",
+      "short_summary": "新指南将标签选择、整个浏览器访问和设备绑定会话差异具体化，可改进代理权限检查样例。",
+      "category": "工作室业务",
+      "score": 81,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "新指南将标签选择、整个浏览器访问和设备绑定会话差异具体化，可改进代理权限检查样例。 当前为待验证研究，没有已确认采购或收益。",
+      "audience": "已有 AI 自动化或软件测试经验的独立开发者和小团队。",
+      "first_step": "只用测试账户及公开页，记录授权前后可见标签、撤销及退出行为，制作一页范围清单，再访谈潜在使用者。",
+      "risks": "厂商比较有利益关联且未逐项复测；不得导出真实会话凭据，技术检查不是安全认证或已确认订单。",
+      "time_window": "未来一周先做公开资料与小样本验证，没有官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://browser-use.com/posts/coding-agent-logged-in-chrome",
+          "label": "Browser Use · 浏览器接入比较",
+          "excerpt": "Any MCP client: Playwright MCP in extension mode gives the agent tabs you pick. Chrome DevTools MCP in auto-connect mode or our Browser Harness give it your whole running Chrome.",
+          "checked_at": "2026-10-26T10:24:45.884249+08:00"
+        }
+      ],
+      "update_reason": "十月十二日机会来自行业治理主张；本次新增十月二十五日厂商指南，研究步骤具体化为标签授权范围、会话复用和撤销测试，没有包装为全新客户需求。",
+      "daily_report": "2026-10-26"
+    },
+    {
+      "opportunity_id": "synthetic-agent-stability-evaluation",
+      "headline": "合成案例下的代理决策稳定性评测",
+      "short_headline": "合成案例下的代理决策稳定性评测",
+      "short_summary": "FairStress 提供了输出选择以外的稳定性评估思路，可研究通用代理在提示扰动下的一致性。",
+      "category": "AI 编程",
+      "score": 81,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "FairStress 提供了输出选择以外的稳定性评估思路，可研究通用代理在提示扰动下的一致性。 这是待验证的工具或服务方向，尚无付费需求和回报证据。",
+      "audience": "已有 AI 应用开发和测试经验的独立开发者及小团队。",
+      "first_step": "只用合成案例比较原始与扰动提示，明确评价定义、成本与误报，先验证团队是否需要此类报告。",
+      "risks": "研究中的公平定义并非普适标准；不把工具用于决定真实个人的录取、贷款、就业或医疗资格。",
+      "time_window": "未来一周先做公开资料与合成样例验证，无正式申请窗口。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/fairstress",
+          "label": "Ai2 · 研究发布",
+          "excerpt": "FairStress contains 300 realistic two-candidate decision scenarios across 29 domains including hiring, healthcare, lending, education, housing, and criminal justice. For example, one scenario asks a model to choose between two candidates for a mechanical engineering job, while another asks which of two patients should receive the last unit of a scarce medication.",
+          "checked_at": "2026-10-21T16:06:32+08:00"
+        }
+      ],
+      "daily_report": "2026-10-21"
+    },
+    {
+      "opportunity_id": "customer-service-memory-validation",
+      "headline": "客服流程准则的离线提炼与回归验证",
+      "short_headline": "客服流程准则的离线提炼与回归验证",
+      "short_summary": "IBM 案例显示从训练轨迹提炼准则可能改善特定客服基准，可研究离线回归工具。",
+      "category": "工作室业务",
+      "score": 81,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "IBM 案例显示从训练轨迹提炼准则可能改善特定客服基准，可研究离线回归工具。 这是待验证的工具或服务方向，尚无付费需求和回报证据。",
+      "audience": "已有 AI 应用开发和测试经验的独立开发者及小团队。",
+      "first_step": "用虚构客服记录分离训练与测试集，比较准则效果和维护成本；不接入真实退款或支付操作。",
+      "risks": "基准收益不能保证生产效果；真实对话涉及隐私，旧准则和数据泄漏可能掩盖失败。",
+      "time_window": "未来一周先做公开资料与合成样例验证，无正式申请窗口。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ibm-research/altk-evolve-bc",
+          "label": "IBM Research · 客服代理研究",
+          "excerpt": "We extract guidelines from the agent's trajectories on τ²-bench train tasks using gpt-4.1, the same model that powers the agent, then apply them unchanged on the held-out test set.",
+          "checked_at": "2026-10-21T16:06:32+08:00"
+        }
+      ],
+      "daily_report": "2026-10-21"
+    }
+  ],
+  "daily_reports": [
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-24",
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30",
+    "2026-10-31"
+  ]
+}

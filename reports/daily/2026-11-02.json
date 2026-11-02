@@ -1,0 +1,369 @@
+{
+  "id": "2026-11-02",
+  "kind": "daily",
+  "title": "2026-11-02 · 创作原型、团队交付与规则变化",
+  "period": {
+    "start": "2026-11-02",
+    "end": "2026-11-02"
+  },
+  "generated_at": "2026-11-02T08:34:14+08:00",
+  "collection_window": {
+    "start": "2026-10-31T08:32:37.319903+08:00",
+    "end": "2026-11-02T08:31:07.957320+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证方向，其中设计验收机会复用编号并说明新增证据；GitHub 官方日榜十项附五段分析。本次从十月三十一日截止连续补采至十一月二日 08:31，十一月一日日报未发布，不补造。科技源新增较少，补充两篇十月二十七日官方产品资料回看；AIHOT 周榜仍为十月二十五日，不当作本周来源。BNPL 现行规则解读、移民改革预告与诉讼程序分别标记。竞赛仍有四项推荐，含两项长期练习，未发现新增合格项目；其他平台未能重读的规则保留旧核验时间。发布时补齐上周及十月周期回顾，缺失日期明确列出。",
+  "source_failures": [],
+  "items": [
+    {
+      "event_id": "3e4cd1e3871dc6c4ca35",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-11-01T21:36:00+00:00",
+      "score": 82,
+      "headline": "Game Off 公布 SHIFT 主题，提供月度游戏原型练习入口",
+      "short_headline": "Game Off 公布 SHIFT 主题，提供月度游戏原型练习入口",
+      "short_summary": "GitHub 公告本届主题与提交时限；这是游戏创作活动，不是保证现金奖励或只面向 AI 的竞赛。",
+      "summary": "GitHub 公布 Game Off 2026 主题 SHIFT，邀请围绕主题在一个月内制作游戏，公告列提交截止为十二月一日 13:37 PST。主题允许多种解释，文章展示创意示例并非完整参赛合同。本期未报名或提交，也未据公告确认所有资格、奖项和作品许可，不能包装成确定收入或全国 AI 奖金赛。",
+      "relevance": "独立开发者可用明确主题限制原型范围，把完成度、玩法与可访问性作为学习验收。",
+      "action": "先阅读正式活动规则与素材授权，设计一局可完成的虚构小游戏规格；确认时区和提交流程后再决定参与。",
+      "sources": [
+        {
+          "url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift",
+          "label": "GitHub · Game Off 主题公告",
+          "excerpt": "You have until December 1, 2026, at 13:37 PST to build and submit a game inspired by SHIFT. Strong or loose inspirations apply!",
+          "checked_at": "2026-11-02T08:31:52.869424+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "f663f4e835cc42cbfad4",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-27T16:45:00+00:00",
+      "score": 84,
+      "headline": "LangChain 回看设计代理：背景、环境和反馈需要一起设计",
+      "short_headline": "LangChain 回看设计代理：背景、环境和反馈需要一起设计",
+      "short_summary": "Content Studio 案例强调设计原则、可持久工作区与发布审批；内部案例不等于新模型或通用设计质量证明。",
+      "summary": "LangChain 介绍内部 Content Studio 设计代理，将设计原则与反馈写入技能，为每个 Slack 线程提供工作环境，组合图像、视频和画布工具并检查渲染。文章讨论规则随模型变化而淘汰及团队控制长任务的界面。本期作为近七日厂商资料回看，未独立复现内部效果，不把案例写成所有任务可自动交付。",
+      "relevance": "设计代理的质量依赖任务背景、工具环境、可见进度和反馈治理，单个模型并不足以定义完整流程。",
+      "action": "用公开虚构设计需求梳理原则、检查项和发布审批，人工记录哪些反馈应长期保留、哪些只是模型临时补丁。",
+      "sources": [
+        {
+          "url": "https://www.langchain.com/blog/design-agent",
+          "label": "LangChain · Content Studio 设计案例",
+          "excerpt": "Give the agent a designer’s computer. Every Slack thread gets its own sandbox where the agent keeps the project between turns, works across a video engine, image tools, and a shared canvas, and inspects its own renders.",
+          "checked_at": "2026-11-02T08:31:53.871658+08:00"
+        }
+      ],
+      "context_note": "科技订阅本次新增较少，补充近七日十月二十七日的官方产品资料回看；早于本次增量窗口，不称为今日发布。"
+    },
+    {
+      "event_id": "48433c5c180169c62a74",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-10-27T15:30:00+00:00",
+      "score": 83,
+      "headline": "Replit 回看云代理贡献流程，工程审查仍是交付关口",
+      "short_headline": "Replit 回看云代理贡献流程，工程审查仍是交付关口",
+      "short_summary": "厂商称可把自然语言请求变成带测试和演示的 PR，并让工程师批准；宣称可用不等于所有仓库都兼容。",
+      "summary": "Replit 十月二十七日介绍 Cloud Agents 团队代码贡献流程，称可在隔离环境测试修改、附截图或视频并向 GitHub 或 GitLab 提交审查请求。文章说相关功能面向 Pro 与 Enterprise，审查反馈形成技能更新也需工程师批准。本期是厂商资料回看，未测试账户权限、费用、代码兼容或真实缺陷率，不能推定非工程人员无需工程审查即可发布。",
+      "relevance": "团队代理工具需要把可运行证据和审查权限分开，自动生成 PR 不等于允许自动合并。",
+      "action": "用虚构小工单列环境、测试证据、审查和回滚要求，核对正式产品条件；不接入真实代码或授权新仓库。",
+      "sources": [
+        {
+          "url": "https://replit.com/blog/anyone-can-bring-ideas-to-company-codebase",
+          "label": "Replit · 团队代码贡献公告",
+          "excerpt": "When it looks right, the agent opens a pull request (PR) in GitHub or a merge request (MR) in GitLab that follows your team’s skills and contribution guidelines. If a review, human or agent, asks for changes, the agent makes them and updates the request. Non-technical experts no longer have to turn review comments into code themselves.",
+          "checked_at": "2026-11-02T08:31:54.945382+08:00"
+        }
+      ],
+      "context_note": "科技订阅本次新增较少，补充近七日十月二十七日的官方产品资料回看；早于本次增量窗口，不称为今日发布。"
+    },
+    {
+      "event_id": "d32406ed6212bca7fd9a",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-01T23:34:49+00:00",
+      "score": 81,
+      "headline": "英国先买后付解释性报道提醒交易级负担检查",
+      "short_headline": "英国先买后付解释性报道提醒交易级负担检查",
+      "short_summary": "BBC 回顾七月以来的 BNPL 监管与检查；这是现行规则解读，不是今日新生效，也不保证个人获贷。",
+      "summary": "BBC 解释英国 BNPL 属分期贷款，并回顾自七月纳入监管后，贷款方批准、消费者投诉和交易负担检查等变化。报道中借款限额和购物被拒不构成对具体个人的资格判断；本期未直接核对全部 FCA 规则，不把解释性报道改写为今天新法规生效。",
+      "relevance": "支付产品研究应区分贷款成本、负担检查、退款和投诉渠道，免息宣传不能替代借款义务。",
+      "action": "查 FCA 和实际贷款合同的适用条款，遇真实债务困难应找当地合格支持渠道，不据文章绕过检查或新增借贷。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/crpdgp4y017go",
+          "label": "BBC · BNPL 规则解释",
+          "excerpt": "BNPL has always been a type of loan, usually paid back in instalments, but it's only been officially regulated since July.",
+          "checked_at": "2026-11-02T08:31:55.704285+08:00"
+        }
+      ],
+      "context_note": "十一月一日解释性报道回顾七月以来的 BNPL 规则，并非今日新生效。"
+    },
+    {
+      "event_id": "fac43bdfc6e2e1754d04",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-01T16:57:14+00:00",
+      "score": 82,
+      "headline": "Virgin Media O2 据报拟裁减岗位，人数尚未敲定",
+      "short_headline": "Virgin Media O2 据报拟裁减岗位，人数尚未敲定",
+      "short_summary": "BBC 记录债务与竞争压力下的裁员风险；预计涉及数千人不等于已完成裁员，公司本次未评论。",
+      "summary": "BBC 报道 Virgin Media O2 考虑裁减岗位和评估供应商，以应对债务及竞争，称具体人数尚未确定，公司拒绝评论，工会表达担忧。报道列部分非客户岗位和高层调整背景。本期未取得完整重组公告，不把风险人数当成已离职人数，不将采访归因视为所有原因已证实。",
+      "relevance": "电信经营分析要把债务、服务竞争、岗位计划与实际执行分开，裁员数量不能直接说明服务改善。",
+      "action": "对照公司正式财报、重组和工会后续通知，记录计划与已完成事项，不由新闻估算个人就业结果。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6rry8x9d9qko",
+          "label": "BBC · 电信岗位调整报道",
+          "excerpt": "The broadband provider has not finalised the number of roles to be cut but it is likely be a sizeable chunk of its 16,000 workforce, the BBC understands.",
+          "checked_at": "2026-11-02T08:31:56.488062+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "a91226f569877020c2bc",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-01T14:00:18+00:00",
+      "score": 83,
+      "headline": "澳洲住宅价值指数继续回落，城市和区间须区分",
+      "short_headline": "澳洲住宅价值指数继续回落，城市和区间须区分",
+      "short_summary": "Guardian 引述 Cotality 月度指标，称首府城市合计下降；指数、中位数和具体住房成交并不等价。",
+      "summary": "Guardian 引述 Cotality 称澳大利亚住宅价值连续七个月下降，首府城市合计月降 1.4%，跌势向部分中型城市扩展。报道中的利率影响和未来跌幅是机构解释或预测，不是确定事实；本期未独立重算原始指数，也不把全国或合计变化等同某套房产价格。",
+      "relevance": "住宅研究应核对指数方法、城市、房型和交易量，宏观平均不能替代个体资产估价。",
+      "action": "读取机构原表与统计说明，分城市和月份比较并记录利率情景，不据单篇报道保证买入或出售结果。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/australia-news/2026/nov/02/home-values-fall-for-seventh-month-interest-rates-dent-property-demand",
+          "label": "The Guardian · 澳洲住宅指数",
+          "excerpt": "Combined values across the state and territory capital cities fell 1.4% over the month.",
+          "checked_at": "2026-11-02T08:31:57.483943+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "b1c71babba26d813b5dc",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-01T19:47:35+00:00",
+      "score": 82,
+      "headline": "英国定居等待年限改革预告仍待正式文本",
+      "short_headline": "英国定居等待年限改革预告仍待正式文本",
+      "short_summary": "Guardian 报道政府拟公布咨询回应，部分豁免与积分规则未定；预告不能直接替代现行移民资格。",
+      "summary": "Guardian 报道英国内政大臣拟在周一公布合法移民定居规则改革，讨论基准等待期、部分职业更长等待及可能豁免或缩短条件。文中多处为预期和咨询方案，具体细节仍待正式回应及规则。本期未取得最终文本，不把预告写成所有申请已适用的新法，也不判断具体人的定居资格。",
+      "relevance": "移民政策信息需要分开记录提案、咨询、公布、生效和过渡条款，最长年限不能直接套用个人。",
+      "action": "以政府最终规则及过渡条款为准，对具体情况向合格专业人士确认，不按媒体预告提交或放弃申请。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/politics/2026/nov/01/home-secretary-shabana-mahmood-immigration-leave-to-remain-windrush",
+          "label": "The Guardian · 定居改革预告",
+          "excerpt": "The government’s response to the consultation on the reforms, which will be put before MPs on Monday, is expected give some exemption to care workers already in the UK, though most other professions will face the lengthy waits for settlement.",
+          "checked_at": "2026-11-02T08:31:58.440705+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "a148f1e82896a9d50811",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-01T20:10:27+00:00",
+      "score": 81,
+      "headline": "阿拉斯加参院选举认证诉讼被驳回，司法部拟上诉",
+      "short_headline": "阿拉斯加参院选举认证诉讼被驳回，司法部拟上诉",
+      "short_summary": "Guardian 报道法院驳回条件阻止认证的诉求；判决、上诉和选举结果是不同程序，不预判胜负或刑事责任。",
+      "summary": "Guardian 报道法官驳回一项寻求在共和党候选人败选时阻止阿拉斯加参院选举认证的诉讼，并记录司法部计划上诉。同名候选人是否有意混淆及各方知情程度仍是争议，本期未读取完整案卷，不把指控当作定罪，也不把该裁定视为选举结果已经确定。",
+      "relevance": "选举司法报道应把诉求、裁定、上诉、实际投票和认证分开，政治人物说法需要明确归属。",
+      "action": "跟踪正式法院记录和选举机构通知，保留更新时间，不从诉讼结果推导候选人必然胜败。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/us-news/2026/nov/01/alaska-senate-race-republican-dan-sullivan",
+          "label": "The Guardian · 选举认证诉讼",
+          "excerpt": "The justice department said it planned to appeal Sunday’s ruling: “Alaskan voters deserve a fair election, not to be misled in an attempt to rig outcomes,” a department spokesperson said in a statement.",
+          "checked_at": "2026-11-02T08:31:59.342703+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "9196d3f52904b910cc1d",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-01T15:44:28+00:00",
+      "score": 80,
+      "headline": "波兰宪法法院改革争议持续，政府与反对派说法不同",
+      "short_headline": "波兰宪法法院改革争议持续，政府与反对派说法不同",
+      "short_summary": "Guardian 报道 Tusk 为改革辩护及法院程序冲突；政治表态不等于争议已有终局法律裁定。",
+      "summary": "Guardian 报道波兰总理 Tusk 为宪法法院改革辩护，并记录法官任命、程序控制、抗议与总统介入的争议。报道包含多方对法治和权限的指控，本期未独立核对全部裁判及宪法程序，政府立场和反对派评价均不能直接作为终局法律结论。",
+      "relevance": "制度争议应分开看任命、程序措施、法院裁判和政治论述，单次发言不代表制度已经稳定。",
+      "action": "核对正式法案、任命及司法记录，记录各方主张与已发生程序节点，不补写未经核实的合法性结论。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/oct/31/donald-tusk-defends-overhaul-poland-constitutional-court-despite-protests",
+          "label": "The Guardian · 波兰法院改革争议",
+          "excerpt": "Poland’s prime minister, Donald Tusk, has vowed to see through a contested overhaul of the country’s constitutional court, declaring that “in certain matters, there can be no compromise”.",
+          "checked_at": "2026-11-02T08:32:00.333957+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "game-jam-small-prototype-scope",
+      "headline": "以 Game Off 主题约束小型游戏原型",
+      "short_headline": "以 Game Off 主题约束小型游戏原型",
+      "short_summary": "SHIFT 主题提供小范围创作练习的公开入口，可研究如何以一局玩法和完成标准控制原型范围。",
+      "category": "工作室业务",
+      "score": 79,
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "signal": "Game Off 公布主题和活动时间，可作为学习与展示原型的候选，不证明奖金、客户需求或收入。",
+      "audience": "希望练习游戏原型、交互设计或公开作品整理的独立开发者。",
+      "first_step": "先读完整活动规则与素材许可，用一页规格说明核心玩法、一次成功路径与失败条件，确认自己有时间后再决定参加。",
+      "risks": "本期未确认所有资格、奖励和提交许可；活动不是现金承诺，模型、素材及工具费用自行核对，不代报名或提交。",
+      "time_window": "公告提交截止为十二月一日 13:37 PST；实际规则和时区仍须本人核对。",
+      "deadline": "2026-12-01T13:37:00-08:00",
+      "sources": [
+        {
+          "url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift",
+          "label": "GitHub · Game Off 主题公告",
+          "excerpt": "You have until December 1, 2026, at 13:37 PST to build and submit a game inspired by SHIFT. Strong or loose inspirations apply!",
+          "checked_at": "2026-11-02T08:31:52.869424+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "structured-design-edit-acceptance",
+      "headline": "设计验收更新：把团队反馈分成原则与临时规则",
+      "short_headline": "设计验收更新：原则与临时规则",
+      "short_summary": "LangChain 案例把持久设计原则、工具环境和可淘汰规则分开，可补充已有设计编辑验收研究。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "新增 Content Studio 案例将设计背景、渲染检查和团队反馈连接，可研究规则何时应保留或删除；尚无付费需求证据。",
+      "audience": "维护设计工具或内容生成流程的独立开发者和小团队。",
+      "first_step": "用虚构设计需求记录五次反馈，区分产品事实、审美原则和临时模型补丁，对照渲染和人工验收后再决定哪些写入长期规则。",
+      "risks": "内部案例无法保证泛化，规则可能互相冲突或过期；私人品牌资料、素材和连接服务权限需另核，不能保证效果。",
+      "time_window": "未来一周先做公开资料与小样本检查，无官方申请截止日。",
+      "update_reason": "十月三十日机会关注 Figma 原生结构与视觉双重验收；本次新增十月二十七日 LangChain 官方案例，细化为持久设计原则、工具环境和可淘汰临时规则的反馈治理，复用原编号。",
+      "sources": [
+        {
+          "url": "https://www.langchain.com/blog/design-agent",
+          "label": "LangChain · Content Studio 设计案例",
+          "excerpt": "Give the agent a designer’s computer. Every Slack thread gets its own sandbox where the agent keeps the project between turns, works across a video engine, image tools, and a shared canvas, and inspects its own renders.",
+          "checked_at": "2026-11-02T08:31:53.871658+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-11-02T08:31:07+08:00",
+    "coverage_note": "当日直接读取 GitHub 官方全语言日榜并保持前十顺序，逐条核对仓库首页和文档。public-apis 首页未显示完整 README，改读同仓库 raw README。Star 为页面当次值，后续可能变化；关注度不代表新发布、性能、收益、商业许可或学术质量，未安装运行项目。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "summary": "捕获工具观察、生成摘要并跨会话检索的记忆工具；本地与托管路径、保存和计费条件需分别核对。",
+        "direction": "跨会话记忆与来源",
+        "stars_today": 1526,
+        "total_stars": 109250
+      },
+      {
+        "rank": 2,
+        "repository": "lightpanda-io/browser",
+        "url": "https://github.com/lightpanda-io/browser",
+        "summary": "用 Zig 实现的无头浏览器，面向自动化与代理，文档列平台和兼容限制；速度内存数字属于特定作者基准。",
+        "direction": "无头浏览器与兼容性",
+        "stars_today": 825,
+        "total_stars": 40109
+      },
+      {
+        "rank": 3,
+        "repository": "shiyu-coder/Kronos",
+        "url": "https://github.com/shiyu-coder/Kronos",
+        "summary": "针对金融 K 线序列的模型与研究工具，使用离散化和自回归建模；预测示例不证明可交易收益或未来准确率。",
+        "direction": "金融时序研究与数据边界",
+        "stars_today": 630,
+        "total_stars": 45372
+      },
+      {
+        "rank": 4,
+        "repository": "pingdotgg/t3code",
+        "url": "https://github.com/pingdotgg/t3code",
+        "summary": "本机编码代理控制界面，提供移动、网页与桌面入口，依赖已配置的代理及身份；远程权限仍须评估。",
+        "direction": "跨端代理控制",
+        "stars_today": 3094,
+        "total_stars": 37970
+      },
+      {
+        "rank": 5,
+        "repository": "milind-soni/OpenMausBot",
+        "url": "https://github.com/milind-soni/OpenMausBot",
+        "summary": "独立开源代理客户端，组织本地代理、各自计算环境和应用连接；不隶属所借鉴产品的厂商。",
+        "direction": "代理客户端与执行环境",
+        "stars_today": 922,
+        "total_stars": 10510
+      },
+      {
+        "rank": 6,
+        "repository": "public-apis/public-apis",
+        "url": "https://github.com/public-apis/public-apis",
+        "summary": "公共 API 资源目录，含分类链接、认证和服务信息；目录中的免费字样不等于每项无配额、无需授权或持续可用。",
+        "direction": "API 资源检索与条款核对",
+        "stars_today": 324,
+        "total_stars": 494591
+      },
+      {
+        "rank": 7,
+        "repository": "cjpais/Handy",
+        "url": "https://github.com/cjpais/Handy",
+        "summary": "桌面语音转文字应用，通过快捷键录音并插入文本，文档强调本地转写；具体模型下载、后端和权限仍需核对。",
+        "direction": "离线语音输入与设备适配",
+        "stars_today": 339,
+        "total_stars": 36537
+      },
+      {
+        "rank": 8,
+        "repository": "Donchitos/Claude-Code-Game-Studios",
+        "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+        "summary": "游戏开发代理角色与工作流程模板，按设计、工程和质量门槛组织任务；人数和技能数不代表实际工作室产能。",
+        "direction": "游戏工程流程与验收",
+        "stars_today": 967,
+        "total_stars": 32260
+      },
+      {
+        "rank": 9,
+        "repository": "kornia/kornia",
+        "url": "https://github.com/kornia/kornia",
+        "summary": "基于 PyTorch 的可微图像处理和几何视觉库，提供批量变换与自动微分；算子、后端和数值约定按版本核对。",
+        "direction": "几何视觉与批量图像处理",
+        "stars_today": 101,
+        "total_stars": 11782
+      },
+      {
+        "rank": 10,
+        "repository": "beenuar/AiSOC",
+        "url": "https://github.com/beenuar/AiSOC",
+        "summary": "自托管安全运营研究工具，组织告警关联、代理调查和可回放记录，并设计人工批准响应；规则总数不等于可执行检测覆盖。",
+        "direction": "告警分析与可回放决策",
+        "stars_today": 446,
+        "total_stars": 6213
+      }
+    ],
+    "analysis": [
+      "运行环境、记忆与控制界面各有边界：thedotmack/claude-mem、lightpanda-io/browser、pingdotgg/t3code 和 milind-soni/OpenMausBot 分别处理记忆、浏览器或代理入口，不能将它们的热度相加推定性能。学习步骤：用公开页面与虚构任务列数据流、兼容条件、撤销和失败恢复；不导入真实会话或开放远程访问。",
+      "金融模型应先验证时间边界：shiyu-coder/Kronos 针对 K 线序列建模，不是收益保证。关注信号在于专用表示与预测研究。验证步骤：仅用授权历史数据设计按时间分割的纸面评测，检查泄漏、复权、成本和简单基线，不接入真实交易账户。",
+      "移动输入与视觉库可按设备实测：cjpais/Handy 面向本地语音输入，kornia/kornia 面向可微几何与批量图像处理。它们不是同一类模型。学习步骤：先阅读模型和算子版本，用公开音频或自制几何图样定义延迟、误差、内存及数值一致性；未在本机安装测试，不推定 M1 支持全部后端。",
+      "目录与流程模板提供入口而非完成保证：public-apis/public-apis 是服务资源目录，Donchitos/Claude-Code-Game-Studios 是游戏工程角色与流程模板。学习步骤：分别核对一个 API 的认证配额与条款、一个虚构游戏原型的职责与验收，避免把服务免费或角色数量当作成本和交付证明；本文未注册、安装或运行。",
+      "告警工具需要可重放证据：beenuar/AiSOC 文档将规则、代理调查、台账和人工响应分开，值得研究每步能否解释和复核。学习步骤：用自编无害告警样例纸面追踪输入、关联、建议和审批，区分规则库总数、实际执行数及误报；不接入真实遥测或执行响应。"
+    ]
+  }
+}
