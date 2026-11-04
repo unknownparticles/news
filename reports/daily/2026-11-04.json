@@ -1,0 +1,367 @@
+{
+  "id": "2026-11-04",
+  "kind": "daily",
+  "title": "2026-11-04 · 状态追踪、结构化设计与制度进展",
+  "period": {
+    "start": "2026-11-04",
+    "end": "2026-11-04"
+  },
+  "generated_at": "2026-11-04T08:33:22+08:00",
+  "collection_window": {
+    "start": "2026-11-03T08:31:49.338614+08:00",
+    "end": "2026-11-04T08:29:18.480453+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证工程方向；GitHub 官方日榜前十附五段分析。RSS 候选采集至北京时间 08:29 后继续读取原文，配置新闻源均成功返回。研究与作者自述保持区别，草案、拟议补偿、职位变动与非约束路线图不写成全部实施。选举实时页面未用未确认结果凑数。设计验收机会复用编号并说明实质更新。竞赛仍有四项推荐，其中两项长期练习，未发现新增合格赛题；DataFountain 查询超时及其他动态平台规则覆盖限制保留。",
+  "source_failures": [
+    "DataFountain 竞赛来源本次超时，未将该平台赛题视为重新核验。"
+  ],
+  "items": [
+    {
+      "event_id": "8d86676710497099b109",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-03T17:15:21+00:00",
+      "score": 88,
+      "headline": "StateBench 区分长文状态追踪与最后一次信息检索",
+      "short_headline": "StateBench 区分长文状态追踪与最后一次信息检索",
+      "short_summary": "Ai2 用不同复杂度更新任务评测状态追踪，作者称长依赖仍有困难；结果不能泛化成所有模型在所有长文任务都失效。",
+      "summary": "Ai2 介绍 StateBench，区分不可变赋值、按值更新、自引用更新和跨变量依赖等状态追踪任务，对比不同架构与模型。作者报告某些递归或混合模型在任务训练后有更远泛化，而前沿模型也会在更难长输入上失效。本期未复现实验，专门任务的训练与真实业务检索不同，不能用一个分数保证长对话状态正确。",
+      "relevance": "长上下文容量、找到最近记录和准确累计状态是不同能力，代理记忆需要专门验收。",
+      "action": "用自编无害状态更新序列固定真值，分类型检查最终值、依赖链和长度变化，不把能装入长文当作推理正确证明。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/statebench",
+          "label": "Ai2 · StateBench 研究",
+          "excerpt": "We’re introducing StateBench, a benchmark for long-context state tracking—how well language models keep track of information about entities in long documents as they evolve.",
+          "checked_at": "2026-11-04T08:30:19.272722+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "4d3938441f216409a8f1",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-03T16:35:36+00:00",
+      "score": 86,
+      "headline": "Palette 将幻灯片规划与绘制拆成可编辑中间规格",
+      "short_headline": "Palette 将幻灯片规划与绘制拆成可编辑中间规格",
+      "short_summary": "IBM 研究以专用数据和检查流程适配小模型，作者报告特定基准表现；演示不能保证任意模板或保密场景可直接上线。",
+      "summary": "IBM Research 介绍 Palette，对约二百亿参数模型作适配，让设计角色先给出结构化幻灯片说明，再由代码角色逐页绘制，并用合成数据、渲染和检查流程训练。文章报告特定 PresentBench 领域表现。结果是作者实验，规划、几何布局、内容准确和风格一致需分开验收；本期未安装、训练或复现，许可与部署条件须另核。",
+      "relevance": "结构化中间规格可帮助人工局部修改并追踪质量，但并行绘制和模型缩小不自动保证完整成本下降。",
+      "action": "用虚构内容写一页 JSON 式规格，人工核对文本、层级、图表与边界，再比较整体生成和逐页检查的错误类型。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ibm-research/palette-deck-building",
+          "label": "IBM Research · Palette 研究",
+          "excerpt": "Palette tests one bet: that a small open-weight model, trained on synthetic data in your design language and checked by a harness, can compete with frontier systems while you keep ownership of the result. We fine-tuned a 20B model to build decks the way people do: a designer plans the deck and a coder draws each slide. Its training data follows the IBM Design Language, and on PresentBench it ranks first on two of the three domains we measured. This post covers how we synthesized the data, trained the model and built a harness around it.",
+          "checked_at": "2026-11-04T08:30:19.824934+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "23c4f130369cb97228de",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-03T15:00:00+00:00",
+      "score": 85,
+      "headline": "DeepMind 案例把代理调度与确定性化学计算分工",
+      "short_headline": "DeepMind 案例把代理调度与确定性化学计算分工",
+      "short_summary": "官方展示文献、数据整理和工具协作；计算案例不是新药有效性、临床安全或可直接实验的证明。",
+      "summary": "Google DeepMind 展示 Antigravity 化学信息工作流，强调模型负责调度、检索和推理，确定性工具执行分子计算，并连接公开化学资源。文章是技术案例，不是已验证治疗或临床结论，本期不复现分子设计或合成、不提供实验步骤，性能与耗时仍属发布方报告。",
+      "relevance": "专业科学代理需把来源、数据表示与工具结果分开校验，单个结构或单位错误可能改变含义。",
+      "action": "仅研究公开数据的来源链、格式转换与计算校验分工，采用无害通用数据记录样例，不将模型输出用于用药或化学实验。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity",
+          "label": "Google DeepMind · 化学信息工作流",
+          "excerpt": "The skills also create a division of labour where the underlying language model handles workflow orchestration, database navigation and scientific reasoning, while deterministic chemistry tools execute molecular calculations. Grounded in RDKit, the foundational open source cheminformatics toolkit developed over two decades by a global community of contributors, alongside connectors to curated resources from ChEMBL and PubChem, the skills encode domain best practices directly into the agent’s workflow.",
+          "checked_at": "2026-11-04T08:30:18.774689+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "5bb6ba782f19325a5cd0",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-03T20:53:03+00:00",
+      "score": 83,
+      "headline": "英欧食品与农产品协议达草案阶段，仍待后续程序",
+      "short_headline": "英欧食品与农产品协议达草案阶段，仍待后续程序",
+      "short_summary": "BBC 报道拟减少出口检查和证书负担，并涉及标准动态对齐；草案不是所有企业现在已可免除检查。",
+      "summary": "BBC 报道英欧就食品及农业出口检查形成约二百页 SPS 草案，拟减少证书和部分费用，文本将交成员国讨论，并涉及英国对相关欧盟标准动态对齐。经济收益数字为政府估计，本期未取得完整草案或生效文件，不能写成现行海关程序已立即取消。",
+      "relevance": "贸易成本分析应区分草案、批准、实施和商品适用范围，未来节省不等于当前订单已免手续。",
+      "action": "查最终协议与海关实施通知，按商品、原产地、日期和证书要求核对，不提前承诺未生效的便利。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cmp3grwre9xdo",
+          "label": "BBC · 英欧 SPS 草案",
+          "excerpt": "The UK and EU have agreed a draft deal on removing post-Brexit checks from food and agriculture exports, ahead of the UK-EU summit later this month.",
+          "checked_at": "2026-11-04T08:30:20.409874+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "674036464ba455a99719",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-04T00:09:35+00:00",
+      "score": 82,
+      "headline": "Canva 重组涉及一千二百余岗位，裁减与搬迁需分清",
+      "short_headline": "Canva 重组涉及一千二百余岗位，裁减与搬迁需分清",
+      "short_summary": "BBC 引述公司称部分员工将离职、迁移或转岗；受影响人数不能全部计为裁员，也不能单独归因 AI。",
+      "summary": "BBC 报道 Canva 宣布调整约 1271 人的岗位安排，包括离职、搬迁及角色变化，并记录公司对增速、产品和组织集中的说明。报道的估值变化和 AI 成本讨论来自媒体与公司表述，本期未核对全部人事及财务文件，不把全部受影响岗位当作实际裁员或由 AI 替代。",
+      "relevance": "研究设计软件经营要分开看收入增长、模型成本、组织变化和真实用户需求，单个人事数字不能说明产品价值。",
+      "action": "对照公司正式说明及后续披露，记录裁减、迁移、转岗的实际范围，不据报道推断具体员工结果。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cw77pg7neydmo",
+          "label": "BBC · Canva 组织调整",
+          "excerpt": "In what was \"without doubt the hardest moment in our thirteen-year history\" co-founder and CEO Melanie Perkins said 1,271 people would either lose their jobs, be asked to relocate or change roles.",
+          "checked_at": "2026-11-04T08:30:20.961261+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "df0a549dcdc3c3904669",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-03T11:56:31+00:00",
+      "score": 81,
+      "headline": "英国汽车金融部分提前和解可先提出，中央方案仍涉诉",
+      "short_headline": "英国汽车金融部分提前和解可先提出，中央方案仍涉诉",
+      "short_summary": "BBC 报道监管方欢迎公平提前报价但多数人仍需等待；预期平均赔偿不等于每个人已获确定金额。",
+      "summary": "BBC 报道 FCA 对贷款方提前提出汽车金融赔偿和解表示欢迎，前提是消费者不比拟议中央方案更差，并称多数申请仍需等后续法律挑战。接受报价、法律权利和个体损害程度不同，本期未直接核对完整监管声明或合同，媒体平均数字不能直接作为个人应得款项。",
+      "relevance": "金融补偿报道要明确方案状态、报价条件、接受后果与申诉路径，预计行业成本不是可立即领取的统一金额。",
+      "action": "查 FCA 正式规则和贷款方书面条件，实际接受或拒绝前核对权益及专业意见，不代提交或接受协议。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cqrky5nxxn4po",
+          "label": "BBC · 汽车金融赔偿进展",
+          "excerpt": "Regulator the Financial Conduct Authority (FCA) said it would welcome lenders making settlement offers as long as customers were not given a worse deal than under its proposed central scheme.",
+          "checked_at": "2026-11-04T08:30:21.609237+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "74ecce8615d5a0c32a99",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-03T13:00:07+00:00",
+      "score": 82,
+      "headline": "巴西公布化石能源转型路线图，未设强制期限",
+      "short_headline": "巴西公布化石能源转型路线图，未设强制期限",
+      "short_summary": "Guardian 报道 COP30 后续实施资料，原文明确非约束、无期限与里程碑；不能写成全球已同意统一退出时间表。",
+      "summary": "Guardian 报道巴西公布化石能源转型等路线图，意在推动既有目标实施，同时记录专家对缺少时间和基准的批评。文章明确这些路线图非约束、不设期限或行动里程碑，由各国诊断情况并选措施。本期未直接核对全部文件，不将倡议写成国际法律义务或各国已实施的统一政策。",
+      "relevance": "转型政策比较需要区分愿景、约束、预算和执行时间，没有期限的路线图不能直接驱动确定交付预测。",
+      "action": "阅读正式路线图与各国实施计划，对比责任主体、资金和里程碑，不用全球倡议代替当地现行规定。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/environment/2026/nov/03/brazil-first-global-roadmap-phasing-out-fossil-fuels",
+          "label": "The Guardian · 巴西路线图",
+          "excerpt": "The Brazilian roadmaps only set out steps that are possible. They are not binding, they contain no deadlines or milestones for actions, and they leave it to countries themselves to “diagnose” their degree of dependence on fossil fuels and select steps to reduce it.",
+          "checked_at": "2026-11-04T08:30:22.430535+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "d1191b4a85a1195d7b8e",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-03T21:09:39+00:00",
+      "score": 80,
+      "headline": "Dapo Akande 据报当选国际法院法官",
+      "short_headline": "Dapo Akande 据报当选国际法院法官",
+      "short_summary": "Guardian 报道人选与任期，国际法院处理国家间争端；当选不等于对任何待审案件已有裁判。",
+      "summary": "Guardian 报道 Dapo Akande 当选联合国国际法院法官，并介绍其法律背景和法院职能。本期未直接核对全部联大、安理会投票和任职文件，保留媒体报道标记，不把个人国籍、外交评价或选举结果推导为未来案件立场。",
+      "relevance": "国际机构报道应区分人事选举、法院权限与具体裁判，不以外交胜负叙事替代法律内容。",
+      "action": "对照联合国正式选举与任期公告，案件信息以公开裁判及程序文件为准，不预测个人投票。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/law/2026/nov/03/british-lawyer-dapo-akande-elected-to-un-international-court-of-justice-diplomatic-win",
+          "label": "The Guardian · 国际法院选举",
+          "excerpt": "Dapo Akande will now serve as one of the ICJ’s 15 judges for a minimum nine-year term.",
+          "checked_at": "2026-11-04T08:30:22.872199+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "968580948772fb681129",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-03T22:45:59+00:00",
+      "score": 81,
+      "headline": "西班牙交通大臣宣布辞职，事故调查责任仍待查明",
+      "short_headline": "西班牙交通大臣宣布辞职，事故调查责任仍待查明",
+      "short_summary": "BBC 报道在列车事故后国会听证中辞职并退出候选名单；政治责任不等于已由法院认定事故原因或刑责。",
+      "summary": "BBC 报道西班牙交通大臣 Óscar Puente 在严重铁路事故后的国会会议中宣布辞职，并退出后续选举名单。文章回顾先前争议与新安全措施，事故技术原因和个人法律责任仍需调查。本期未取得完整听证或调查报告，不将辞职当作承认具体刑责或整改已完成。",
+      "relevance": "重大事故需把政治问责、技术调查、司法程序和实际安全措施分开，人员更换不是风险已消失的证据。",
+      "action": "继续核对正式辞职、事故调查和整改执行，保留时点，不传播未经核实的原因归责。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6wydqd4yxdyo",
+          "label": "BBC · 西班牙交通大臣辞职",
+          "excerpt": "Spain's Transport Minister Óscar Puente has resigned - six days after the high-speed train collision in which at least 69 people were killed and dozens injured.",
+          "checked_at": "2026-11-04T08:30:24.049517+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "long-context-state-ledger-test",
+      "headline": "长上下文状态台账的可验证样例",
+      "short_headline": "长上下文状态台账的可验证样例",
+      "short_summary": "StateBench 将状态更新按依赖复杂度区分，可研究业务助手何时需要外部台账而非只靠聊天记忆。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "StateBench 将状态更新按依赖复杂度区分，可研究业务助手何时需要外部台账而非只靠聊天记忆。 当前为待验证工程方向，没有已确认收入或订单。",
+      "audience": "维护长文助手、文档工具或内容流程的独立开发者和小团队。",
+      "first_step": "自编十条虚构订单或任务状态更新，用确定性程序保存真值，对照最近值检索、累计与跨对象引用错误，再测长度变化。",
+      "risks": "合成任务不等于生产效果；外部台账也可能过期或越权，不输入真实客户资料，不用测试替代完整审计。",
+      "time_window": "未来一周先做公开资料与无害小样本检查，没有官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/statebench",
+          "label": "Ai2 · StateBench 研究",
+          "excerpt": "We’re introducing StateBench, a benchmark for long-context state tracking—how well language models keep track of information about entities in long documents as they evolve.",
+          "checked_at": "2026-11-04T08:30:19.272722+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "structured-design-edit-acceptance",
+      "headline": "设计验收更新：逐页可编辑规格与渲染检查",
+      "short_headline": "设计验收更新：逐页可编辑规格与渲染检查",
+      "short_summary": "Palette 提供规划与绘制之间的结构化规格，可把既有设计验收研究细化到逐页修改和可追踪检查。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Palette 提供规划与绘制之间的结构化规格，可把既有设计验收研究细化到逐页修改和可追踪检查。 当前为待验证工程方向，没有已确认收入或订单。",
+      "audience": "维护长文助手、文档工具或内容流程的独立开发者和小团队。",
+      "first_step": "用虚构三页简报写每页内容与布局规格，分别检查事实、溢出、组件和视觉层级，记录局部修改是否影响其他页。",
+      "risks": "作者小模型基准不保证任意品牌或模板表现；代码、权重、字体和素材许可需分开核对，未验证客户采购需求。",
+      "time_window": "未来一周先做公开资料与无害小样本检查，没有官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ibm-research/palette-deck-building",
+          "label": "IBM Research · Palette 研究",
+          "excerpt": "Palette tests one bet: that a small open-weight model, trained on synthetic data in your design language and checked by a harness, can compete with frontier systems while you keep ownership of the result. We fine-tuned a 20B model to build decks the way people do: a designer plans the deck and a coder draws each slide. Its training data follows the IBM Design Language, and on PresentBench it ranks first on two of the three domains we measured. This post covers how we synthesized the data, trained the model and built a harness around it.",
+          "checked_at": "2026-11-04T08:30:19.824934+08:00"
+        }
+      ],
+      "update_reason": "十一月二日更新侧重 LangChain 团队反馈的持久原则与临时规则；本次新增 IBM Palette 研究，把验收具体到规划与绘制之间的逐页结构化规格和局部渲染回归，复用原编号。"
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-11-04T08:29:17+08:00",
+    "coverage_note": "当日直接读取官方全语言日榜并保持原顺序前十，逐条核对仓库与文档。Star 为当次展示值，后续可能变化；关注度不代表新发布、学术质量、模型安全、性能、商业许可或采购需求，未安装运行项目。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "thedotmack/claude-mem",
+        "url": "https://github.com/thedotmack/claude-mem",
+        "summary": "跨会话记录观察、压缩摘要并检索上下文的记忆工具，本地和托管数据流、保存和删除条件需分别核对。",
+        "direction": "代理记忆与来源",
+        "stars_today": 1139,
+        "total_stars": 111881
+      },
+      {
+        "rank": 2,
+        "repository": "vercel-labs/agent-desktop",
+        "url": "https://github.com/vercel-labs/agent-desktop",
+        "summary": "通过系统无障碍树读取与操作桌面应用的 CLI 和 C 库，使用元素引用及再次观察核验；未在本机运行。",
+        "direction": "桌面动作与证据",
+        "stars_today": 3791,
+        "total_stars": 12710
+      },
+      {
+        "rank": 3,
+        "repository": "max-sixty/worktrunk",
+        "url": "https://github.com/max-sixty/worktrunk",
+        "summary": "管理 Git worktree 的命令行工具，为并行改动提供工作目录、选择与流程钩子；隔离目录不等于自动解决合并或资源冲突。",
+        "direction": "工作区管理与并行改动",
+        "stars_today": 438,
+        "total_stars": 10476
+      },
+      {
+        "rank": 4,
+        "repository": "JustVugg/colibri",
+        "url": "https://github.com/JustVugg/colibri",
+        "summary": "用 C 实现模型推理，按需将 MoE 专家分层放在 GPU、内存或磁盘，支持范围与速度应按模型及设备核对。",
+        "direction": "MoE 分层推理与资源成本",
+        "stars_today": 802,
+        "total_stars": 47240
+      },
+      {
+        "rank": 5,
+        "repository": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "summary": "由个人工程实践整理的小型可组合技能，面向需求、计划与检查等任务；不是通用效率保证。",
+        "direction": "工程规则与流程适配",
+        "stars_today": 1164,
+        "total_stars": 311442
+      },
+      {
+        "rank": 6,
+        "repository": "p-e-w/heretic",
+        "url": "https://github.com/p-e-w/heretic",
+        "summary": "无训练模型行为修改研究工具，涉及拒答、文本风格和迎合行为的调整；作者主张不证明安全或质量，本期未修改模型。",
+        "direction": "模型行为研究与评估边界",
+        "stars_today": 701,
+        "total_stars": 38781
+      },
+      {
+        "rank": 7,
+        "repository": "spotify/portal-ai-plugins",
+        "url": "https://github.com/spotify/portal-ai-plugins",
+        "summary": "Spotify Portal CLI 插件工作流，查询软件目录、生成服务简报和诊断，动作路径含预演及确认机制。",
+        "direction": "开发者目录与服务诊断",
+        "stars_today": 91,
+        "total_stars": 3034
+      },
+      {
+        "rank": 8,
+        "repository": "floci-io/floci",
+        "url": "https://github.com/floci-io/floci",
+        "summary": "供开发、测试与 CI 使用的本地 AWS 服务模拟器，可按兼容接口连接工具；模拟语义不保证与真实云全部相同。",
+        "direction": "本地云服务模拟与契约测试",
+        "stars_today": 482,
+        "total_stars": 28762
+      },
+      {
+        "rank": 9,
+        "repository": "Usagi-org/ai-goofish-monitor",
+        "url": "https://github.com/Usagi-org/ai-goofish-monitor",
+        "summary": "结合 Playwright 与 AI 的闲鱼商品监控分析系统，包含任务、定时及后台界面；使用需遵守平台条款、账号和请求边界。",
+        "direction": "商品信息监控与任务队列",
+        "stars_today": 228,
+        "total_stars": 16352
+      },
+      {
+        "rank": 10,
+        "repository": "anomalyco/hex",
+        "url": "https://github.com/anomalyco/hex",
+        "summary": "Mac、Windows、Linux 的本地语音听写工具，按键录音并粘贴文字，稳定版和开发通道需区分。",
+        "direction": "本地语音输入与权限",
+        "stars_today": 410,
+        "total_stars": 4576
+      }
+    ],
+    "analysis": [
+      "记忆、动作和工作区需要分层验证：thedotmack/claude-mem、vercel-labs/agent-desktop、max-sixty/worktrunk 分别处理上下文、桌面操作和 Git 目录。学习步骤：用虚构任务画出记忆来源、动作核验及分支提交，检查删除、撤销和合并边界，不以目录隔离推断权限或运行资源完全隔离。",
+      "本地推理、行为修改与输入工具不是同类能力：JustVugg/colibri、p-e-w/heretic、anomalyco/hex 各面向推理资源、模型行为或语音听写。验证步骤：先核对硬件、模型格式及数据路径，用自编无害输出标准比较延迟、正确性和拒答边界；本期未执行模型修改、移除限制或安装工具，Star 不证明安全或性能。",
+      "工程技能与服务目录可帮助结构化流程：mattpocock/skills 和 spotify/portal-ai-plugins 组织开发规则、服务简报和诊断。学习步骤：选择虚构服务，写所有者、健康信息来源与允许动作清单，区分只读查询、预演和实际执行；不接入真实内部目录或凭据。",
+      "本地云模拟适合先做契约对照：floci-io/floci 提供 AWS 形状的本地服务，免费和兼容声明不等于完整云安全语义。学习步骤：用虚构资源列一项接口的请求、错误和授权预期，比较模拟与官方规范差异，不使用真实云密钥或部署资源。",
+      "商品监控需尊重平台和通知边界：Usagi-org/ai-goofish-monitor 的任务队列与 AI 分析可作系统设计研究，不能由上榜推定套利机会或平台许可。学习步骤：仅用自建商品样例检查去重、变化识别与失败暂停，逐项核对平台条款、账号授权和通知目的，不登录、爬取或发送外部消息。"
+    ]
+  }
+}
