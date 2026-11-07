@@ -1,0 +1,367 @@
+{
+  "id": "2026-11-07",
+  "kind": "daily",
+  "title": "2026-11-07 · 受控评测、代理工程与基础工具",
+  "period": {
+    "start": "2026-11-07",
+    "end": "2026-11-07"
+  },
+  "generated_at": "2026-11-07T08:36:15+08:00",
+  "collection_window": {
+    "start": "2026-11-06T08:33:12.273148+08:00",
+    "end": "2026-11-07T08:32:30.418311+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证方向；GitHub 官方全语言日榜前十附四段分析。RSS 候选采集至北京时间 08:32 后读取原文，配置来源均成功返回。Meta 专用模型资料采用官网时间元数据并明确近期背景；作者评测、产品指南、初步监管意见与司法程序分别标记。科技股反弹和英欧产品适用争议复用原事件编号并说明实质更新，状态台账机会亦复用编号。竞赛仍有四项推荐，含两项长期练习；未发现新增合格赛题，DataFountain 只读到列表，其他动态平台未核对细则保留旧日期。",
+  "source_failures": [],
+  "items": [
+    {
+      "event_id": "5a90caffb2c87d2e6e8e",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-06T14:00:48+00:00",
+      "score": 86,
+      "headline": "ToyBlocks 以受控桌面环境研究机器人学习与失败",
+      "short_headline": "ToyBlocks 以受控桌面环境研究机器人学习与失败",
+      "short_summary": "Ai2 将任务、演示与评测整合在模拟世界，研究训练覆盖和泛化；受控环境效果不等于实体机器人安全已验证。",
+      "summary": "Ai2 介绍 FoundationWorlds 与首个 ToyBlocks 框架，在机械臂和桌面积木的受控模拟环境中自动生成任务及演示，比较训练数据、模型设计和行为指标。作者强调简单范围有助于复现实验及追查失败，模拟还可能使用实体传感器无法直接获得的信息。本期未部署或复测，不将模拟表现推成真实机器人可安全泛化。",
+      "relevance": "机器人评估需要区分任务覆盖、训练样本、隐藏真值与实际观测，演示完成不能说明模型掌握所有物理场景。",
+      "action": "先阅读任务和数据划分，用无害虚构状态定义训练与保留测试的覆盖表，不连接实体机器人或执行动作策略。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/toyblocks",
+          "label": "Ai2 · ToyBlocks 发布",
+          "excerpt": "Our first foundation world is ToyBlocks: an open simulation framework built around a robot arm and blocks on a tabletop. The setting is deliberately simple, but the robot must still reason about how the blocks interact and how to arrange them while pushing, flipping, and stacking.",
+          "checked_at": "2026-11-07T08:33:32.054906+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "92b8001eea640de46464",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-06T22:15:59+00:00",
+      "score": 83,
+      "headline": "GitHub 指南把代理工程拆为计划、实现、验证与观察",
+      "short_headline": "GitHub 指南把代理工程拆为计划、实现、验证与观察",
+      "short_summary": "官方实践文章强调验收和审查，所引外部调查不等于通用效率结论；产品能力需按账户和状态核对。",
+      "summary": "GitHub 发布代理工程实践指南，将软件工作划分为 Plan、Build、Verify、Observe，讨论明确需求、验收标准、项目上下文、审查及生产反馈。它是厂商工作流建议，所引调查和产品示例未由本期独立复核，不把自动起草代码或 PR 视为完成质量与收益证明。各计划的功能和费用仍需分别确认。",
+      "relevance": "代码生成加速可能把压力转移到审查和验收，实际完成工作需看缺陷、返工和运行证据。",
+      "action": "用虚构小工单定义输入、测试、审查与观察指标，比较完成率与总耗时，不新授权仓库或自动合并。",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering",
+          "label": "GitHub · 代理工程指南",
+          "excerpt": "As a software developer, you gather requirements and steer implementation, review changes and evaluate test results, then investigate what happens in production. Agents can help you work more efficiently across all of these stages: Plan, Build, Verify, and Observe. We’ll walk through what an effective agentic engineering workflow looks like on GitHub.",
+          "checked_at": "2026-11-07T08:33:33.026284+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "4eedf8a76087bd541824",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-06T00:00:00+00:00",
+      "score": 84,
+      "headline": "Meta 更新专用模型，强调跨时记忆与持续任务",
+      "short_headline": "Meta 更新专用模型，强调跨时记忆与持续任务",
+      "short_summary": "Meta 称将 Muse Wonder 能力用于产品专用模型，加入 Active Memory 与 Focus；作者评估数字不等于所有真实任务效果。",
+      "summary": "Meta 介绍为 Muse 和 Meta AI 推出的专用模型，称借助 Muse Wonder 改善记忆与持续完成目标能力，包括区分临时、持久或过时信息和处理中途澄清。文中改进比例来自内部评估，本期未独立实测、核对全部账户开放或资料保留条件，不能用产品自述保证代理不会忘记或误用旧信息。",
+      "relevance": "跨会话记忆还要管理时效、来源与用户更正，持续工作不等于无需人工反馈。",
+      "action": "用自编虚构事件检查记忆何时失效、能否按新指令更新和删除，先核对服务数据条款，不输入私人历史。",
+      "sources": [
+        {
+          "url": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai",
+          "label": "Meta Research · 专用模型公告",
+          "excerpt": "Active Memory enables Muse and Meta AI to remember what matters and recognize when earlier information becomes relevant, making it easier to build off your past conversations. We’ve trained our models to recognize what type of information is temporary versus permanent, to reason across time, and to distinguish between what is still relevant and what has become stale. For example, our improved models in Muse show a 2.4x reduction in forgetting critical information necessary for helping you achieve your goals.",
+          "checked_at": "2026-11-07T08:33:34.003467+08:00"
+        }
+      ],
+      "context_note": "近期官方资料补充回看：官网元数据为十一月六日零时 UTC，AIHOT 记录为当日七时 UTC；本期采用官网元数据，早于增量窗口且核验时超过二十四小时，不称今日新发布。"
+    },
+    {
+      "event_id": "aeb3cea908f77d270c68",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-06T21:06:25+00:00",
+      "score": 83,
+      "headline": "科技股据报小幅反弹，尚未抵消前日跌幅",
+      "short_headline": "科技股据报小幅反弹，尚未抵消前日跌幅",
+      "short_summary": "BBC 报道纳指周五上涨百分之一点一，其他市场表现分化；上涨不说明风险解除，市场叙事也不构成单一因果。",
+      "summary": "BBC 报道纳斯达克综合指数周五收涨 1.1%，部分收复此前 5.5% 的跌幅，同时记录亚洲和欧洲部分市场仍跌及就业数据等背景。市场价格、指数市值和企业经营现金流不同，选举与 AI 投入的解释也并非已证实唯一原因。本期未独立核对全部行情序列，不据反弹推断未来方向。",
+      "relevance": "判断产业趋势应分开看经营数据、估值和政策实施，单日回升不能替代长期现金与需求验证。",
+      "action": "对照同一交易日和指数口径核对收盘，比较财报与资本开支，不据新闻反弹进行确定收益判断。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c35ynnpzdq51o",
+          "label": "BBC · 科技股回升报道",
+          "excerpt": "But the Nasdaq Composite bounced back slightly on Friday, ending the day up 1.1%, partly reversing some of its 5.5% fall.",
+          "checked_at": "2026-11-07T08:33:34.793248+08:00"
+        }
+      ],
+      "update_reason": "昨日记录十一月五日纳指大幅下跌；本次新增十一月六日收涨百分之一点一及地区分化，仍未抵消此前跌幅，复用原市场事件编号。"
+    },
+    {
+      "event_id": "ca5a231c35bd07c9bd37",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-06T15:25:43+00:00",
+      "score": 81,
+      "headline": "英国政府促企业提前公开招聘薪酬，立法仍待推进",
+      "short_headline": "英国政府促企业提前公开招聘薪酬，立法仍待推进",
+      "short_summary": "BBC 报道首相呼吁自愿先行，未来拟强制披露；呼吁、咨询支持率与已经生效的法律应区分。",
+      "summary": "BBC 报道英国政府计划要求招聘广告列薪酬，并呼吁企业在新法前自愿公开，称立法将尽快推进。文章也记录行业对适用性的不同意见及咨询结果。咨询回应比例不等于全社会代表性调查，本期未取得最终法案和生效条款，不把计划写成现行统一义务或已解决薪酬歧视。",
+      "relevance": "招聘产品和企业流程可研究信息透明度，但具体法定范围、薪酬口径和例外要等正式文本。",
+      "action": "跟进法案和主管部门说明，用虚构岗位检查薪酬区间与条件是否清楚，不收集员工私人薪酬或判断个人就业资格。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cmd9343z3zw2o",
+          "label": "BBC · 招聘薪酬计划",
+          "excerpt": "The government is planning to make pay details compulsory in adverts, with legislation on the issue being brought forward \"as soon as possible\".",
+          "checked_at": "2026-11-07T08:33:35.712256+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "5bb6ba782f19325a5cd0",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-06T17:19:38+00:00",
+      "score": 80,
+      "headline": "英欧食品标准谈判引发零食命名适用争议",
+      "short_headline": "英欧食品标准谈判引发零食命名适用争议",
+      "short_summary": "BBC 报道烟熏味零食与肉类名称可能受规则影响，行业寻求澄清；不能据讨论断言英国已禁售相关产品。",
+      "summary": "BBC 以烟熏培根味零食为例讨论英国拟与欧盟食品标准对齐，区分此前烟熏香料调整和另行涉及肉类名称的规则。文章说行业仍寻求具体适用解释，英方预期纳入拟议协议。本期未核对全部规则原文和最终协议，不将潜在影响写成现已禁售、必须改配方或确定成本。",
+      "relevance": "贸易便利与产品标签、配方等合规成本可能同时变化，整体收益估计不能代替具体商品适用判断。",
+      "action": "等待最终协议及官方适用解释，按虚构产品列成分、名称、市场与过渡期，不因媒体案例调整真实合规结论。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cm1dwwqrr1kvo",
+          "label": "BBC · 食品标准适用讨论",
+          "excerpt": "The European snack industry is seeking clarity on how the rules, which will also cover terms such as pork, chicken and beef, would apply to meat-flavoured crisps, including those flavoured without the use of any meat extracts.",
+          "checked_at": "2026-11-07T08:33:36.610338+08:00"
+        }
+      ],
+      "update_reason": "昨日更新为学费承诺影响英欧协议落实；本次新增食品标准对齐对香料和肉类名称的不同适用争议，行业仍求澄清，复用同一谈判事件编号。"
+    },
+    {
+      "event_id": "d114c54c9d0131ef5e5c",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-06T15:17:08+00:00",
+      "score": 82,
+      "headline": "欧盟对 TikTok 提出初步监管意见，公司表示反对",
+      "short_headline": "欧盟对 TikTok 提出初步监管意见，公司表示反对",
+      "short_summary": "Guardian 报道推荐系统对重复内容风险的初步判断；监管程序尚非终局判决，也不等于已证明每名用户受到医学伤害。",
+      "summary": "Guardian 报道欧盟委员会初步认为 TikTok 未充分减轻推荐内容反复集中对年轻及脆弱用户的风险，并记录公司称相关说法不准确及其保护措施回应。本期未直接读取完整监管文件，保持媒体报道和初步程序属性，不把指控写成最终罚款、刑事定罪或对具体用户的临床诊断。",
+      "relevance": "平台治理应区分单条内容与累积推荐效果，投诉、干预、解释及真正降低风险需要各自证据。",
+      "action": "跟进委员会正式文件和平台回应，用无害自建推荐样例定义重复暴露与退出控制，不采集未成年人的敏感资料。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/technology/2026/nov/06/eu-charges-tiktok-failure-to-protect-users-mental-health",
+          "label": "The Guardian · TikTok 初步监管意见",
+          "excerpt": "Issuing a preliminary ruling on Friday, the EU regulator said TikTok’s algorithm “can be harmful” and was leading young and vulnerable users “down rabbit holes they cannot easily escape from”.",
+          "checked_at": "2026-11-07T08:33:37.354420+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "fdf49967a23921afa463",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-06T08:18:10+00:00",
+      "score": 81,
+      "headline": "索马里最高法院据报否定总统任期延长适用",
+      "short_headline": "索马里最高法院据报否定总统任期延长适用",
+      "short_summary": "BBC 报道法院要求制定选举计划，政府为改革辩护；法院命令、政治协商与实际选举仍需分别跟踪。",
+      "summary": "BBC 报道索马里最高法院认为有关修法不能追溯延长总统现任任期，并就首席大法官解职与选举时间作出决定，政府坚持改革必要性。这里是媒体转述的司法与政治争议，本期未取得完整裁决、后续执行或新选举安排，不将命令视为已完成权力交接或投票。",
+      "relevance": "宪政争议要区分修法、任期适用、司法权限与实际执行，各方政治主张不能代替程序事实。",
+      "action": "继续核对法院和选务正式文件，记录判决、回应及执行时点，不推定未来政治结果。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c977ppnezep6o",
+          "label": "BBC · 索马里任期争议",
+          "excerpt": "On Thursday, the Supreme Court ruled that the constitutional changes could not be applied retrospectively to the president's current term.",
+          "checked_at": "2026-11-07T08:33:37.908590+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "9a970121eb62e81559b8",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-06T14:57:08+00:00",
+      "score": 80,
+      "headline": "坦桑尼亚反对派领袖被判煽动罪，叛国指控未成立",
+      "short_headline": "坦桑尼亚反对派领袖被判煽动罪，叛国指控未成立",
+      "short_summary": "BBC 报道四年判刑及叛国罪无罪，Lissu 否认指控；不同罪名、上诉和实际羁押条件不可合并判断。",
+      "summary": "BBC 报道坦桑尼亚高院判 Tundu Lissu 煽动罪成立并处四年监禁，同时以未证明关键要素为由宣告叛国指控不成立。报道保留本人和人权组织对案件的异议，本期未直接读取判决全文或后续保释上诉，不将单项无罪写成全部获释，也不把判刑推成未来选举资格的确定结论。",
+      "relevance": "司法报道应逐罪名和程序呈现结果，政治动机指控与法院认定分别归属。",
+      "action": "核对正式判决、保释和上诉进展，不据新闻替具体个人作法律决定。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/ckp8g4pm0y4lo",
+          "label": "BBC · 坦桑尼亚判决",
+          "excerpt": "A panel of three judges at the High Court in Dar es Salaam acquitted him of the more serious offence of treason, saying prosecutors had failed to prove a key element of that charge.",
+          "checked_at": "2026-11-07T08:33:38.755961+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "controlled-simulation-coverage",
+      "headline": "受控模拟数据的训练与保留测试覆盖表",
+      "short_headline": "受控模拟数据的训练与保留测试覆盖表",
+      "short_summary": "ToyBlocks 提供刻意收窄范围的可复现环境，可研究如何把演示生成、任务覆盖与失败归因分开。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "ToyBlocks 提供刻意收窄范围的可复现环境，可研究如何把演示生成、任务覆盖与失败归因分开。 属于待验证研究方向，没有已确认采购或收益。",
+      "audience": "维护代理记忆、评测或模拟工具的独立开发者和小团队。",
+      "first_step": "仅用虚构积木状态或公开任务说明列训练、保留测试和随机条件，检查哪些变量模型能观察、哪些是模拟特权信息。",
+      "risks": "受控模拟不代表实体安全；任务分布、物理误差、许可和计算开销需要核对，不操作机器人或生成危险动作。",
+      "time_window": "未来一周先做公开资料与无害小样本核对，无官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/toyblocks",
+          "label": "Ai2 · ToyBlocks 发布",
+          "excerpt": "Our first foundation world is ToyBlocks: an open simulation framework built around a robot arm and blocks on a tabletop. The setting is deliberately simple, but the robot must still reason about how the blocks interact and how to arrange them while pushing, flipping, and stacking.",
+          "checked_at": "2026-11-07T08:33:32.054906+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "long-context-state-ledger-test",
+      "headline": "状态台账研究更新：临时记忆与过时信息检查",
+      "short_headline": "状态台账研究更新：临时记忆与过时信息检查",
+      "short_summary": "Meta 专用模型资料把临时、持久及过时信息区分，可补充既有状态追踪研究的时效和更正验收。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Meta 专用模型资料把临时、持久及过时信息区分，可补充既有状态追踪研究的时效和更正验收。 属于待验证研究方向，没有已确认采购或收益。",
+      "audience": "维护代理记忆、评测或模拟工具的独立开发者和小团队。",
+      "first_step": "自编无害跨日任务，加入到期、撤回和更正记录，对照确定性台账检查代理是否使用最新有效信息，再记录删除和回溯行为。",
+      "risks": "厂商记忆改善比例不保证具体工作流正确；服务保存和训练条款需核对，不输入私人历史，不将测试作为安全认证。",
+      "time_window": "未来一周先做公开资料与无害小样本核对，无官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai",
+          "label": "Meta Research · 专用模型公告",
+          "excerpt": "Active Memory enables Muse and Meta AI to remember what matters and recognize when earlier information becomes relevant, making it easier to build off your past conversations. We’ve trained our models to recognize what type of information is temporary versus permanent, to reason across time, and to distinguish between what is still relevant and what has become stale. For example, our improved models in Muse show a 2.4x reduction in forgetting critical information necessary for helping you achieve your goals.",
+          "checked_at": "2026-11-07T08:33:34.003467+08:00"
+        }
+      ],
+      "update_reason": "十一月四日状态台账机会依据 StateBench 的更新依赖复杂度；本次新增 Meta 记忆时效与中途更正的产品评估材料，把验收扩展到到期、撤回和过时信息，不把厂商数字当作已复测结果。"
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-11-07T08:32:29+08:00",
+    "coverage_note": "当日直接读取 GitHub 官方全语言日榜，保持页面前十原始顺序并逐条核对仓库文档。榜单含成熟基础工具；Star 为当次页面值，未按总 Star 或新增量重排。关注度不是新发布、学术质量、性能、许可或需求证明，候选项目未安装运行。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "zed-industries/zed",
+        "url": "https://github.com/zed-industries/zed",
+        "summary": "以 Rust 构建、支持协作的代码编辑器，文档提供平台安装与开发资料；编辑体验和资源表现需按环境核对。",
+        "direction": "协作编辑与开发工具",
+        "stars_today": 306,
+        "total_stars": 93619
+      },
+      {
+        "rank": 2,
+        "repository": "NVIDIA/auto-ontology",
+        "url": "https://github.com/NVIDIA/auto-ontology",
+        "summary": "围绕指标、实体关系和来源构建语义图层，面向代理提供查询上下文与接口；可解释性和正确率仍需实测。",
+        "direction": "数据语义与来源链",
+        "stars_today": 2015,
+        "total_stars": 9014
+      },
+      {
+        "rank": 3,
+        "repository": "rails/rails",
+        "url": "https://github.com/rails/rails",
+        "summary": "Ruby 数据库驱动 Web 应用框架，采用 MVC 和 Active Record 等组件；属于成熟应用基础设施，不是今日新模型。",
+        "direction": "Web 框架与领域建模",
+        "stars_today": 142,
+        "total_stars": 59024
+      },
+      {
+        "rank": 4,
+        "repository": "mpv-player/mpv",
+        "url": "https://github.com/mpv-player/mpv",
+        "summary": "命令行媒体播放器，支持多种格式、编解码和字幕；硬件解码与资源条件按平台核对。",
+        "direction": "媒体播放与设备适配",
+        "stars_today": 37,
+        "total_stars": 37873
+      },
+      {
+        "rank": 5,
+        "repository": "rust-lang/rust",
+        "url": "https://github.com/rust-lang/rust",
+        "summary": "Rust 编译器、标准库和文档的主源码仓库，类型与所有权帮助减少部分错误，但不保证应用无逻辑或运行风险。",
+        "direction": "系统语言与可靠性",
+        "stars_today": 192,
+        "total_stars": 121442
+      },
+      {
+        "rank": 6,
+        "repository": "react/react",
+        "url": "https://github.com/react/react",
+        "summary": "用于 Web 和原生界面的组件化 UI 库，以声明式状态组织视图；应用架构与构建工具须另行选择。",
+        "direction": "界面组件与状态",
+        "stars_today": 248,
+        "total_stars": 252252
+      },
+      {
+        "rank": 7,
+        "repository": "angular/angular",
+        "url": "https://github.com/angular/angular",
+        "summary": "构建 Web 应用的 TypeScript/JavaScript 开发平台，提供框架和配套工具，版本及升级约束需核对。",
+        "direction": "Web 平台与工程约束",
+        "stars_today": 135,
+        "total_stars": 101357
+      },
+      {
+        "rank": 8,
+        "repository": "symfony/symfony",
+        "url": "https://github.com/symfony/symfony",
+        "summary": "PHP Web 与控制台框架及可复用组件，提供可预测版本与长期支持路线；实际支持按版本确认。",
+        "direction": "后端组件与版本治理",
+        "stars_today": 128,
+        "total_stars": 31427
+      },
+      {
+        "rank": 9,
+        "repository": "prometheus/prometheus",
+        "url": "https://github.com/prometheus/prometheus",
+        "summary": "采集指标、查询时间序列和评估规则的监控系统，可在条件满足时触发告警；指标不等同完整日志或所有故障证据。",
+        "direction": "可观测性与指标",
+        "stars_today": 148,
+        "total_stars": 67179
+      },
+      {
+        "rank": 10,
+        "repository": "google/skills",
+        "url": "https://github.com/google/skills",
+        "summary": "面向 Google 产品和技术的代理技能合集，包含产品诊断和实践；真实服务权限与费用仍由相应产品决定。",
+        "direction": "产品技能与诊断流程",
+        "stars_today": 534,
+        "total_stars": 22831
+      }
+    ],
+    "analysis": [
+      "应用基础框架集中上榜不等于新发布：rails/rails、react/react、angular/angular、symfony/symfony 分别覆盖后端或界面技术栈，不能据一次排名判断哪种更适合业务。学习步骤：用虚构 CRUD 页面列数据模型、状态、测试和升级约束，比较已有团队技能与维护成本，先读版本文档，不重写现有项目。",
+      "开发环境与系统语言有不同验收：zed-industries/zed 关注编辑协作，rust-lang/rust 提供编译器和标准库。作者性能和安全表述不是应用无错误保证。学习步骤：只阅读平台需求，用公开小示例规划编辑延迟、错误提示及测试覆盖，区分编译期检查和业务正确性，不安装切换当前编辑器。",
+      "语义与监控都要能追溯来源：NVIDIA/auto-ontology 定义数据意义，prometheus/prometheus 记录指标和规则。两者不是同一种数据库或证据。验证步骤：用虚构订单指标标明币种、时间与来源，再写一个无害阈值告警预期，检查错误定义或缺失采样会如何影响结论，不接入生产遥测。",
+      "媒体与产品技能是具体工程入口：mpv-player/mpv 涉及解码、字幕与硬件路径，google/skills 是产品知识与工作流指引。学习步骤：分别以自制测试音视频和虚构服务检查版本、许可、平台限制与只读诊断条件；不把上榜视为模型性能或商业授权，不调用真实云服务。"
+    ]
+  }
+}
