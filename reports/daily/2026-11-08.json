@@ -1,0 +1,368 @@
+{
+  "id": "2026-11-08",
+  "kind": "daily",
+  "title": "2026-11-08 · 技术背景回看、消费变化与组阁进展",
+  "period": {
+    "start": "2026-11-08",
+    "end": "2026-11-08"
+  },
+  "generated_at": "2026-11-08T08:31:38+08:00",
+  "collection_window": {
+    "start": "2026-11-07T08:32:30.418311+08:00",
+    "end": "2026-11-08T08:27:48.404546+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证工程方向；GitHub 官方日榜前十附四段分析。RSS 采集至北京时间 08:27，配置来源均成功返回，科技订阅零新增，三条技术内容为近七日未收录的官方背景回看，日期已明确。金融区分销量、成员投票与未获官方确认的 IPO 转述；政治区分初步席位、裁判及组阁意向。IPO 与以色列组阁复用既有编号并说明实质更新。竞赛维持四项推荐，含两项长期练习，无新增合格赛题；讯飞列表十一月十日期限不覆盖正文早已过去的必交材料要求，仍待确认，不催促新报名。动态平台规则覆盖局限保留。",
+  "source_failures": [],
+  "items": [
+    {
+      "event_id": "c65c7708e93995ca4541",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "score": 83,
+      "headline": "Phonon 回看：端侧语音模型的语言与许可分开核对",
+      "short_headline": "Phonon 回看：端侧语音模型的语言与许可分开核对",
+      "short_summary": "作者介绍设备端 TTS，英语小模型与多语言版本许可不同；模型大小和演示不代表所有设备或中文场景已验证。",
+      "summary": "Phonon 团队十一月五日文章回顾端侧语音模型，称可离线运行，列英语 31m 与多语言 40m 等版本。文中说明前者采用 Apache 2.0，其他部分模型为非商业许可，支持语言也不同。本期未实际运行或逐项审阅全部权重、依赖和声音素材许可，不因开放权重或体积小就推荐商用，也不推定中文支持。",
+      "relevance": "离线语音产品需要同时验证设备资源、语言、数字读法与完整授权，文本本地处理不自动证明整个应用不外联。",
+      "action": "先查具体模型卡和声音授权，以自编非敏感英语数字、日期和代码样例设计读音验收，未确认支持前不安装或连接真实文本。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/phonon-tts",
+          "label": "Phonon 团队 · 端侧语音资料",
+          "excerpt": "It runs on phones, laptops, single-board computers and in a browser tab, so you can hear it right now. Phonon 31m speaks English and is Apache 2.0, so you can build on it freely, including for commercial products. Phonon 40m covers all five languages under a non-commercial license.",
+          "checked_at": "2026-11-08T08:28:57.952629+08:00"
+        }
+      ],
+      "context_note": "科技订阅本次零新增，补充近七日未收录的官方技术资料，早于增量窗口，明确作为背景回看，不是今日新发布。"
+    },
+    {
+      "event_id": "32d4e91d243ef07f0795",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-04T17:50:10+00:00",
+      "score": 84,
+      "headline": "Dharma 回看：字段抽取以 schema 和缺失值约束输出",
+      "short_headline": "Dharma 回看：字段抽取以 schema 和缺失值约束输出",
+      "short_summary": "作者介绍约二十亿参数文档模型，按请求返回类型化 JSON；宣称输出 null 不等于已证明所有文档都不会幻觉。",
+      "summary": "Dharma-AI 介绍文档图像字段抽取模型，可开放提取或按指定 schema 返回类型化 JSON，并声称缺失字段输出 null。文章将字段映射与完整 OCR 区分，性能和成本优势来自作者测试。本期未独立复现，不能把任意文档、严格字段名或缺失处理宣传当作已验证保证；私密证件和医疗资料不用于本次测试。",
+      "relevance": "结构化输出要同时看字段含义、类型、来源位置和缺失值，JSON 合法不等于内容正确。",
+      "action": "用自制虚构发票检查已知值、缺失项、列表顺序和金额单位，对照人工真值及原文位置，再核对许可和实际硬件。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+          "label": "Dharma-AI · 字段抽取介绍",
+          "excerpt": "Schema-directed: you specify the exact shape wanted, field by field, with a type for each one (string, number, or boolean), under the key names your system already uses. Ask for \"service_provider\" and \"client_company\", and those are the exact keys that come back. Ask for a table and it fills it row by row, column by column, matching each cell to the key it belongs under. Ask for a field that isn't on the document, and it returns null instead of inventing a value.",
+          "checked_at": "2026-11-08T08:28:58.532691+08:00"
+        }
+      ],
+      "context_note": "科技订阅本次零新增，补充近七日未收录的官方技术资料，早于增量窗口，明确作为背景回看，不是今日新发布。"
+    },
+    {
+      "event_id": "c30b322513faf4e64f8b",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "score": 82,
+      "headline": "Cursor 回看：应用构建发布加入数据库与检查流程",
+      "short_headline": "Cursor 回看：应用构建发布加入数据库与检查流程",
+      "short_summary": "官方更新介绍云代理构建和链接分享，发布前需检查及显式发布；安全检查不等于应用已满足全部安全要求。",
+      "summary": "Cursor 更新介绍通过云代理构建在线应用、按需配置数据库与认证，并在发布前做确定性及代理安全检查。官方说明检查通过后仍需用户显式发布，团队管理员可管理应用和相关规则。本文是近期资料回看，未测试账号条件、费用、全部检查覆盖或实际部署，不在本次连接服务、授予新权限或发布应用。",
+      "relevance": "从本地原型到公开应用还涉及数据、认证、托管、费用和发布责任，自动生成不替代安全与产品验收。",
+      "action": "先读正式产品条件，以虚构应用列数据流、权限、验收和停用要求，不填写真实密钥或客户数据。",
+      "sources": [
+        {
+          "url": "https://cursor.com/changelog/build-live-apps",
+          "label": "Cursor · 在线应用更新",
+          "excerpt": "When you publish an app, Cursor will run deterministic and agentic security checks to catch common issues, like secrets written in app files or exposed credentials. If a check fails, the agent tells you what it needs to fix. Nothing goes live until the checks pass and you explicitly publish the app.",
+          "checked_at": "2026-11-08T08:28:58.776655+08:00"
+        }
+      ],
+      "context_note": "科技订阅本次零新增，补充近七日未收录的官方技术资料，早于增量窗口，明确作为背景回看，不是今日新发布。 published_at 沿用此前 AIHOT 发现项的十一月五日零时字段；本期更新页未提供可核实的精确发布时分，不将零时视为精确上网时间。"
+    },
+    {
+      "event_id": "d224113f959928f0d508",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-07T23:02:35+00:00",
+      "score": 80,
+      "headline": "Labubu 热度与销售据报回落，社媒案例不等于全市场",
+      "short_headline": "Labubu 热度与销售据报回落，社媒案例不等于全市场",
+      "short_summary": "BBC 讨论 Pop Mart 销售与收藏者经历；单一产品、地区收入、内容播放量和长期品牌价值不能混为一谈。",
+      "summary": "BBC 报道 Labubu 热度变化，引用 Pop Mart 对第三季度全球销售及美国收入下降的披露，并采访收藏者和分析师。个别视频播放、收藏者支出与公司整体经营口径不同，本期未独立核对完整原始披露，不将热度下降推成所有产品无需求或未来价格必跌。",
+      "relevance": "消费品牌评估需区分产品周期、地区、渠道和复购，病毒传播不等于可持续现金流。",
+      "action": "查正式经营更新与相同统计区间，对比库存、销量及区域结构，不据收藏者故事或转售报价做收益判断。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cmvg652l927lo",
+          "label": "BBC · Labubu 消费市场报道",
+          "excerpt": "Pop Mart recently reported that global sales in the three months to the end of September had fallen by as much as 50% on the previous year.",
+          "checked_at": "2026-11-08T08:28:59.009277+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "8b62aafdbd54da123e43",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-07T15:06:59+00:00",
+      "score": 80,
+      "headline": "National Trust 成员支持重审银行伙伴，尚非已完成更换",
+      "short_headline": "National Trust 成员支持重审银行伙伴，尚非已完成更换",
+      "short_summary": "Guardian 报道 AGM 表决希望环境标准进入招标，受托人称结果为意见指示；投票和实际终止银行关系不同。",
+      "summary": "Guardian 报道 National Trust 成员大会支持寻求更符合环境政策的银行伙伴，拟考虑竞争性招标。文章同时引述受托人称投票不是对其有约束力的命令，具体招标时间也未定。本期未直接读取完整决议或采购文件，不能写成已解除 Barclays 关系或已选定新银行。",
+      "relevance": "机构银行采购可能同时看服务、费用及环境政策，成员投票不等于合同已经变更或资金已经转移。",
+      "action": "对照机构正式决议、受托人决定和采购公告，分别记录意见、程序与完成状态，不从表态推断银行财务结果。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/uk-news/2026/nov/07/national-trust-agm-barclays-environment-policies",
+          "label": "The Guardian · 慈善机构银行关系",
+          "excerpt": "Despite supporting the vote the National Trust sounded a qualifying note, with Sandy Nairne, deputy chair of the board of trustees, warning: “The outcome of the ballot provides the board with an important indication of members’ views, but it is not binding on the trustees.",
+          "checked_at": "2026-11-08T08:28:59.324674+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "512576157a5827fd9d98",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-07T17:37:25+00:00",
+      "score": 79,
+      "headline": "媒体转述 Anthropic 上市计划与估值预期调整",
+      "short_headline": "媒体转述 Anthropic 上市计划与估值预期调整",
+      "short_summary": "The Decoder 转述 FT 引述投资者的信息，称仍推进上市；目标融资、估值与时间表均未由本期取得官方确认。",
+      "summary": "The Decoder 转述 Financial Times 引述投资者称 Anthropic 希望在感恩节前推进 IPO，并讨论低于此前乐观预期的估值及融资目标。本期只核对该篇转述，未直接取得 FT 完整原文、最终发行文件或官方定价，因此保持媒体报道属性；不是已上市、已完成募资或已确定时间表。",
+      "relevance": "上市预期需要与监管申报、现金、算力承诺及最终发行条件分开，媒体目标不能作为投资价值保证。",
+      "action": "以公司及监管正式文件追踪审批、定价和交割，不据未确认估值交易，不将年化口径当作已实现全年收入。",
+      "sources": [
+        {
+          "url": "https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/",
+          "label": "The Decoder · 上市计划转述",
+          "excerpt": "Anthropic is pressing ahead with its IPO despite the tech selloff, accepting a lower valuation. The Claude developer wants to go public before Thanksgiving and raise $80–100 billion at a $1.25–1.75 trillion valuation, according to investors cited by the Financial Times. That tops the current $965 billion but falls short of the $2 trillion the most optimistic investors had hoped for. Annualized reported revenue now sits at about $81 billion, up from roughly $65 billion at the end of July.",
+          "checked_at": "2026-11-08T08:29:05.175003+08:00"
+        }
+      ],
+      "update_reason": "十月二十七日日报仅解读上市准备文件；本次新增媒体转述的推进时间及估值预期调整，尚无最终发行官方确认，复用同一 IPO 事件编号。"
+    },
+    {
+      "event_id": "85ece2f5694e6af6c458",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-07T15:56:28+00:00",
+      "score": 82,
+      "headline": "新西兰初步选举结果未见清晰赢家，组阁待谈判",
+      "short_headline": "新西兰初步选举结果未见清晰赢家，组阁待谈判",
+      "short_summary": "BBC 报道 National 与 Labour 席位及伙伴组合，官方结果尚待公布；初步最大党不等于已经取得执政多数。",
+      "summary": "BBC 报道新西兰大选初步结果下两大党都未直接取得多数，需要联合谈判，选举委员会正式结果预定稍后公布。文中席位为初步结果或预测，本期未独立核对最新计票，不能把潜在伙伴合计、看守政府与正式新政府混同，也不预测最终胜者。",
+      "relevance": "选举新闻要区分计票、正式席位、联盟协议和任命，政策判断不能跳过组阁。",
+      "action": "继续核对选举机构及正式联盟公告，保留结果更新时间，不由初步席位保证政策或市场变化。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c3ewev11g1e0o",
+          "label": "BBC · 新西兰选举初步结果",
+          "excerpt": "There was no clear winner following New Zealand's election on Saturday, as the leaders of its two major parties preparing for negotiations to form a coalition government.",
+          "checked_at": "2026-11-08T08:29:05.395461+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "9f4c8241a45c83108ed4",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-07T13:00:11+00:00",
+      "score": 81,
+      "headline": "英上诉法院要求考虑绑架勒索是否构成剥削",
+      "short_headline": "英上诉法院要求考虑绑架勒索是否构成剥削",
+      "short_summary": "Guardian 报道人口贩运认定案，不等于所有类似申请已获身份或补助；每案仍需事实审查。",
+      "summary": "Guardian 报道英国上诉法院否定内政部未考虑绑架勒索是否构成剥削的处理，称相关申请可能需要重新评估。报道强调每案要按自身事实判断，本期未直接读取完整判决和执行指引，不能把该结果写成所有庇护或人口贩运申请已自动成功，也不据报道判断具体人资格。",
+      "relevance": "法律解释变化与个案最终认定不同，支持、身份与救济程序各需正式条件。",
+      "action": "查完整裁判和主管部门指引，具体情况向合格法律人员确认，不代申请或根据报道提供保证。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/law/2026/nov/07/court-of-appeal-rules-kidnap-for-ransom-libya-exploitation-trafficking-victims-asylum-seeker-home-office",
+          "label": "The Guardian · 人口贩运认定裁判",
+          "excerpt": "While each trafficking claim must be considered on the facts of the individual case, the judgment found: “The secretary of state erred in not considering the question of whether kidnapping amounted to exploitation.”",
+          "checked_at": "2026-11-08T08:29:05.806732+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "0f9f4ace40a03e9c2996",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-07T19:49:39+00:00",
+      "score": 82,
+      "headline": "以总统宣布拟交 Eisenkot 组阁，正式仪式与联盟仍待完成",
+      "short_headline": "以总统宣布拟交 Eisenkot 组阁，正式仪式与联盟仍待完成",
+      "short_summary": "Guardian 引述总统办公室拟任命消息；受邀尝试组阁不等于已经成为总理，议会多数和联盟协议仍有不确定性。",
+      "summary": "Guardian 报道以色列总统办公室称将交由 Gadi Eisenkot 尝试组阁，正式任命仪式预定周日举行，并回顾双方均无清晰多数及伙伴支持问题。本期未独立核对仪式和最终联盟，不将任命意向、正式组阁授权、政府成立和总理就任当作同一步骤。",
+      "relevance": "政治进展需按制度节点跟踪，获得组阁任务不保证能形成多数或改变具体政策。",
+      "action": "对照总统和议会正式公告，记录任命、期限及联盟协议进度，不根据一条声明预测最终政府。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/nov/07/israel-president-gadi-eisenkot-form-government",
+          "label": "The Guardian · 组阁任务进展",
+          "excerpt": "It added that the formal appointment would take place in an official ceremony on Sunday at the president’s residence in Jerusalem.",
+          "checked_at": "2026-11-08T08:29:06.031837+08:00"
+        }
+      ],
+      "update_reason": "十月二十八日日报为出口民调及组阁不确定性；本次新增总统拟交 Eisenkot 组阁、正式仪式预定周日的程序进展，未将其视为政府已成立，复用原选举事件编号。"
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "offline-tts-number-reading",
+      "headline": "离线 TTS 的数字读法与数据流核对",
+      "short_headline": "离线 TTS 的数字读法与数据流核对",
+      "short_summary": "Phonon 端侧资料提供离线语音候选，可研究小模型对日期、号码和代码读法的完整体验。",
+      "category": "移动开发",
+      "score": 79,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Phonon 端侧资料提供离线语音候选，可研究小模型对日期、号码和代码读法的完整体验。 属待验证工程方向，没有已确认订单或回报。",
+      "audience": "开发语音或文档工具的独立开发者与小团队。",
+      "first_step": "先选明确支持的英语模型，以自编无敏感数字和短句列正确读法，对照语言、声音许可、离线数据路径和设备需求，再决定是否测试。",
+      "risks": "英语与多语言模型许可不同，不推定中文或所有设备支持；声音及依赖授权需核对，离线宣称不保证整个应用不外联。",
+      "time_window": "未来一周先做文档和无害样例验收，无官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/phonon-tts",
+          "label": "Phonon 团队 · 端侧语音资料",
+          "excerpt": "It runs on phones, laptops, single-board computers and in a browser tab, so you can hear it right now. Phonon 31m speaks English and is Apache 2.0, so you can build on it freely, including for commercial products. Phonon 40m covers all five languages under a non-commercial license.",
+          "checked_at": "2026-11-08T08:28:57.952629+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "schema-null-field-consistency",
+      "headline": "文档字段的缺失值与来源一致性检查",
+      "short_headline": "文档字段的缺失值与来源一致性检查",
+      "short_summary": "Dharma 介绍按 schema 抽取及缺失字段 null，可研究结构合法之外的证据和缺失处理验收。",
+      "category": "AI 编程",
+      "score": 79,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Dharma 介绍按 schema 抽取及缺失字段 null，可研究结构合法之外的证据和缺失处理验收。 属待验证工程方向，没有已确认订单或回报。",
+      "audience": "开发语音或文档工具的独立开发者与小团队。",
+      "first_step": "用自制虚构发票指定字段类型和真值，分别加入缺失、模糊和多行情况，人工比对原文位置、列表顺序与单位。",
+      "risks": "作者宣称不等于所有文档无幻觉；不使用真实证件或健康资料，部署、权重许可和误读成本需另核，没有采购需求保证。",
+      "time_window": "未来一周先做文档和无害样例验收，无官方申请截止日。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/Dharma-AI/dharma-field-extractor",
+          "label": "Dharma-AI · 字段抽取介绍",
+          "excerpt": "Schema-directed: you specify the exact shape wanted, field by field, with a type for each one (string, number, or boolean), under the key names your system already uses. Ask for \"service_provider\" and \"client_company\", and those are the exact keys that come back. Ask for a table and it fills it row by row, column by column, matching each cell to the key it belongs under. Ask for a field that isn't on the document, and it returns null instead of inventing a value.",
+          "checked_at": "2026-11-08T08:28:58.532691+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-11-08T08:27:47+08:00",
+    "coverage_note": "当日直接读取官方全语言日榜，保留原页面前十顺序，逐条核对公开仓库与文档。Star 为当次页面展示值，后续可能变化；关注度不是新发布、性能、学术质量、安全、商业许可或身份真实性证明，候选项目未安装运行。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "vercel-labs/agent-browser",
+        "url": "https://github.com/vercel-labs/agent-browser",
+        "summary": "面向代理的浏览器自动化 CLI，以页面快照、元素引用和再次观察核验操作；页面变化后需重新确认引用。",
+        "direction": "浏览器自动化与动作证据",
+        "stars_today": 190,
+        "total_stars": 46820
+      },
+      {
+        "rank": 2,
+        "repository": "cloudflare/security-audit-skill",
+        "url": "https://github.com/cloudflare/security-audit-skill",
+        "summary": "组织多阶段代码安全审查与独立记录验证的技能工作流，输出结构化发现；作者所称验证不等于保证零漏报。",
+        "direction": "代码审查与证据台账",
+        "stars_today": 2085,
+        "total_stars": 65706
+      },
+      {
+        "rank": 3,
+        "repository": "google/skills",
+        "url": "https://github.com/google/skills",
+        "summary": "Google 产品与技术的代理技能合集，涵盖诊断和实践指引；真实服务权限、可用性与费用仍按产品核对。",
+        "direction": "产品技能与诊断规则",
+        "stars_today": 443,
+        "total_stars": 23393
+      },
+      {
+        "rank": 4,
+        "repository": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "summary": "个人工程实践整理为小型可组合技能，可按需求、计划和检查适配任务；不是通用效率保证。",
+        "direction": "工程技能与验收",
+        "stars_today": 1100,
+        "total_stars": 317697
+      },
+      {
+        "rank": 5,
+        "repository": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills",
+        "summary": "Anthropic 的任务技能示例仓库，以指令、脚本和资源说明重复工作模式；示例与线上实际行为可能不同。",
+        "direction": "任务技能与参考实现",
+        "stars_today": 390,
+        "total_stars": 188781
+      },
+      {
+        "rank": 6,
+        "repository": "meta/astryx",
+        "url": "https://github.com/meta/astryx",
+        "summary": "提供 React 组件、主题和工具的设计系统，面向人工与代理协作，宣称可访问组件仍需在实际产品中检查。",
+        "direction": "设计系统与组件约束",
+        "stars_today": 96,
+        "total_stars": 14508
+      },
+      {
+        "rank": 7,
+        "repository": "prometheus/prometheus",
+        "url": "https://github.com/prometheus/prometheus",
+        "summary": "系统指标采集、时间序列查询与规则告警工具；指标覆盖、采样和告警定义需另行设计。",
+        "direction": "可观测性与时序指标",
+        "stars_today": 322,
+        "total_stars": 67444
+      },
+      {
+        "rank": 8,
+        "repository": "sherlock-project/sherlock",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "summary": "按用户名查询公开社交站点账号线索的工具，结果不证明同一人身份；本期未对任何真实人物搜索。",
+        "direction": "公开账号线索与误判边界",
+        "stars_today": 1766,
+        "total_stars": 100439
+      },
+      {
+        "rank": 9,
+        "repository": "milind-soni/OpenMausBot",
+        "url": "https://github.com/milind-soni/OpenMausBot",
+        "summary": "独立代理客户端，组织本地代理与各自计算环境、应用连接；数据和远程权限需按配置核对。",
+        "direction": "代理客户端与执行环境",
+        "stars_today": 1955,
+        "total_stars": 16967
+      },
+      {
+        "rank": 10,
+        "repository": "astral-sh/ruff",
+        "url": "https://github.com/astral-sh/ruff",
+        "summary": "Rust 编写的 Python 静态检查与格式化工具，提供规则及部分自动修复；静态检查不等于功能和安全全部正确。",
+        "direction": "Python 代码质量与格式",
+        "stars_today": 350,
+        "total_stars": 50974
+      }
+    ],
+    "analysis": [
+      "技能合集和安全审查需分别看证据：cloudflare/security-audit-skill、google/skills、mattpocock/skills 与 anthropics/skills 涉及安全流程、产品知识或任务参考。上榜和作者验证说法不等于正确性。学习步骤：对自编无害任务画出输入、权限、验收及结构化结果，阅读每个子目录规则与许可，不把仓库文字作为本机操作指令，不安装运行技能。",
+      "自动化与设计系统应有可复核状态：vercel-labs/agent-browser、meta/astryx 与 milind-soni/OpenMausBot 分别提供浏览器动作、组件和代理入口。验证步骤：用虚构页面列快照引用、键盘焦点、可见状态和撤销要求，核查组件默认值是否满足实际场景；不连接真实账号或放宽系统权限。",
+      "代码与运行检查相互补充：astral-sh/ruff 可静态检查和格式化，prometheus/prometheus 观察运行指标，两者不能替代业务测试。学习步骤：用无害示例定义一项静态规则、一项行为测试和一项时序指标，记录它们各自能发现和不能证明什么，不接入生产遥测或自动修复现有项目。",
+      "公开账号查询不等同身份核实：sherlock-project/sherlock 提供跨站用户名线索，重名、误报和网站变更都可能影响结果。学习步骤：只阅读公开方法和误判边界，以自建虚构数据集说明同名不是同一人，不对真实人物运行搜索，不拼接或公开个人资料。"
+    ]
+  }
+}
