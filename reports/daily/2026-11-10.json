@@ -1,0 +1,376 @@
+{
+  "id": "2026-11-10",
+  "kind": "daily",
+  "title": "2026-11-10 · 模型访问、压缩研究与政策进展",
+  "period": {
+    "start": "2026-11-10",
+    "end": "2026-11-10"
+  },
+  "generated_at": "2026-11-10T08:40:46+08:00",
+  "collection_window": {
+    "start": "2026-11-09T08:30:34.712118+08:00",
+    "end": "2026-11-10T08:32:01.260487+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证研究方向与官方 GitHub 日榜前十。原文区分厂商自述、监管确认和媒体报道；Anthropic 公告仅明确发布日，精度限制单列。Seedream 原文未成功读取，未采用聚合摘要。竞赛仍四项推荐，其中两项为长期练习；Qoder 初筛总数更正为四十二队但仍限学生，跨本体报名日期冲突保留，百度视频看点赛确认已结束。讯飞今日列表截止仍与十月必交材料冲突，金蝶仍在复赛窗口，均不作首次报名推荐。",
+  "source_failures": [
+    "字节 Seed 的 Seedream 原文读取未成功；未采用未核实聚合摘要。"
+  ],
+  "items": [
+    {
+      "event_id": "a989f1582084d0cf153c",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-09T00:00:00+00:00",
+      "score": 86,
+      "headline": "Anthropic 发布 Fable 与 Mythos 5.2，访问条件有别",
+      "short_headline": "Anthropic 发布 Fable 与 Mythos 5.2，访问条件有别",
+      "short_summary": "厂商称两者使用相同底层模型，Fable 面向一般访问，Mythos 需核验计划；内部演示和基准不能等同独立复现。",
+      "summary": "Anthropic 公告升级 Claude Fable 5.2 与 Mythos 5.2，称两者为相同底层模型，但 Fable 配有网络安全与生物领域防滥用限制，Mythos 通过相关核验计划提供。文档列编码、推理、视觉与工程演示及每百万输入八美元、输出四十美元的标准价格。本文记录厂商自述，未独立复现全部基准、硬件或科研结果，也不把展示等同通用可靠性、无限制访问或无需人工审核。",
+      "relevance": "模型能力、允许任务、数据保留和账户资格分别影响能否实际使用；单个基准与 token 单价不能替代完整任务成本。",
+      "action": "先读系统卡和当前访问条款，用自编无害任务列成功率、人工复核和完整费用；不申请受限访问或启动付费任务。",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "label": "Anthropic · 模型发布公告",
+          "excerpt": "Claude Fable and Claude Mythos are the same underlying model.",
+          "checked_at": "2026-11-10T08:33:07.179068+08:00"
+        }
+      ],
+      "context_note": "官网明确发布日为十一月九日，但本次正文未给精确时刻；零时仅编码日期，作为近七日发布资料收录，非今日零时新发布。",
+      "published_at_precision": "date"
+    },
+    {
+      "event_id": "55d059b88c6c576a2f3d",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-09T12:34:29+00:00",
+      "score": 84,
+      "headline": "HOPE 研究把专家间协作纳入 MoE 剪枝",
+      "short_headline": "HOPE 研究把专家间协作纳入 MoE 剪枝",
+      "short_summary": "Amazon 作者在 Hugging Face 介绍成对专家交互剪枝，报告高剪枝率下的基准收益；跨层交互和真实部署收益仍有边界。",
+      "summary": "Amazon 作者介绍 HOPE，以二阶成对交互统计选择保留的 MoE 专家，而非只逐个排名。文章报告三个模型、两套校准数据、多个剪枝率及编码基准的实验，称优势在四成至五成剪枝时更明显。作者也说明按层独立处理、未覆盖跨层及更高阶交互；本期未复现实验，剪去一半专家不等于整机费用或延迟必然减半。",
+      "relevance": "模型稀疏激活并不等于所有权重无需常驻；压缩方案需同时评价内存、校准分布及任务质量。",
+      "action": "先读论文的误差定义与限制，用四个虚构专家的共现表手算独立排序和成对保留差异，不下载大权重或租用算力。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+          "label": "Hugging Face · Amazon 研究自述",
+          "excerpt": "accounts for pairwise expert interactions.",
+          "checked_at": "2026-11-10T08:33:09.526325+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次官方来源 RSS 字段；原文正文已直接核对，不以聚合摘要代替。"
+    },
+    {
+      "event_id": "ac8f18750241a65f1eaf",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-09T15:05:57+00:00",
+      "score": 82,
+      "headline": "NVIDIA 与 Elith 发布日本金融合成人物数据",
+      "short_headline": "NVIDIA 与 Elith 发布日本金融合成人物数据",
+      "short_summary": "文档称一百万条记录各含九类人物描述，覆盖五十字段；合成分布可作评测输入，不能替代真实消费者调查或合规认定。",
+      "summary": "NVIDIA 与 Elith 介绍 Nemotron-Personas-Finance-Japan：一百万条记录、每条九类人物描述，共九百万 persona，含五十个字段，依据日本官方统计与公开调查生成。作者称不对应真实个人，数据采用 CC BY 4.0。本文未独立核验分布、隐私与公平性，不把合成人物当作九百万真实客户，也不把发布者的许可说明扩展为所有模型、依赖和下游用途均已获准。",
+      "relevance": "合成数据可帮助设计客服和评测，但文化、统计覆盖、生成偏差与真实使用效果仍需分别检查。",
+      "action": "先读数据卡与生成流程，用自编虚构记录检查字段含义、时间和类别覆盖，保留来源与许可要求；不用于个人授信、保险或投资决策。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+          "label": "Hugging Face · NVIDIA 与 Elith 数据说明",
+          "excerpt": "Every persona is fully synthetic.",
+          "checked_at": "2026-11-10T08:34:09.253873+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次官方来源 RSS 字段；原文正文已直接核对，不以聚合摘要代替。"
+    },
+    {
+      "event_id": "2bae0dc9f043ef959612",
+      "category": "金融市场",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-11-09T21:00:00+00:00",
+      "score": 80,
+      "headline": "美联储批准 Mutual Federal 相关控股结构申请",
+      "short_headline": "美联储批准 Mutual Federal 相关控股结构申请",
+      "short_summary": "公告批准两项申请，允许设立新的顶层储贷控股公司；这是个案组织结构审批，不是降息或全行业监管变化。",
+      "summary": "美联储十一月九日宣布批准 Mutual Federal Bancorp, MHC 与 MFB Bancorp, Inc. 的两项申请。公告称这将允许 MFB Bancorp, Inc. 通过收购芝加哥 Mutual Federal Bank 成为新的顶层储贷控股公司。本条仅确认公告所述批准，不将其写成交易交割已经完成、政策利率变化或所有并购的一般放宽，未额外解读未读的批准令附件。",
+      "relevance": "监管审批与法律实体结构可以作为公开金融事件记录；获批、完成交割与后续经营结果不同。",
+      "action": "按正式公告及后续披露核对法律实体、交易条件和完成状态，勿据个案推断货币政策。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
+          "label": "美联储 · 申请审批公告",
+          "excerpt": "These approvals allow the banking organization to have a new top-tier holding company, MFB Bancorp, Inc.,",
+          "checked_at": "2026-11-10T08:34:09.736742+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "1c98d0cc4ef056474096",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-09T16:46:40+00:00",
+      "score": 82,
+      "headline": "Poundland 据报购货现金受限，救助仍待落实",
+      "short_headline": "Poundland 据报购货现金受限，救助仍待落实",
+      "short_summary": "BBC 报道约五千万英镑资金被冻结、门店补货受阻；融资限制、收购意向和进入管理程序是不同状态。",
+      "summary": "BBC 报道 Poundland 因持有人限制银行账户现金使用而难以购买新库存，称约五千万英镑受限，救助期限至周四且可能延长。报道同时记录管理层销售改善说法与持有人对脆弱性的评价，年度账目仍未审计。本期未取得全部融资文件或约束性报价，不把补货困难写成已经全面停业，也不把潜在买方进展当作交易完成。",
+      "relevance": "零售现金可用性可能与利润、销售和账面余额不同；研究重组应区分经营、融资约束及法律保护。",
+      "action": "跟踪企业和法院正式披露，分别记录可用现金、存货供应和救助完成条件，不根据传闻保证岗位或供应商回款。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cw1l3lmem165o",
+          "label": "BBC · 零售融资进展",
+          "excerpt": "Poundland is unable to buy new stock to fill its shelves after being blocked by its owners from accessing cash in its bank accounts.",
+          "checked_at": "2026-11-10T08:33:11.019230+08:00"
+        }
+      ],
+      "update_reason": "十一月三日仅记录创始人投资意愿及寻找买方；本次新增账户资金受限、补货困难、救助期限及听证安排，属于实质经营与融资进展。",
+      "context_note": "发布时间采用本次官方来源 RSS 字段；原文正文已直接核对，不以聚合摘要代替。"
+    },
+    {
+      "event_id": "75eee0dcbc87b091d46a",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-09T19:58:01+00:00",
+      "score": 82,
+      "headline": "NVIDIA 调查后股价据报下跌约百分之四",
+      "short_headline": "NVIDIA 调查后股价据报下跌约百分之四",
+      "short_summary": "BBC 记录周一收盘市场反应与后续治理安排，公司仍称未有理由相信机密受损；跌幅不证明调查指控成立。",
+      "summary": "BBC 报道 NVIDIA 在独立调查消息后周一收盘股价下跌约百分之四，并记录国会拟闭门简报等后续。公司仍表示没有理由相信公司机密或国家安全受损；中国方面否认相关指控。本条只记录媒体报道的价格及治理进展，不涉及无关私人细节，调查、指控、价格变化及最终认定分别表述。没有直接核对交易所逐笔数据或全部调查文件。",
+      "relevance": "重大公司事件可影响指数及供应链预期，但单日波动不能证明指控、长期损失或未来价格路径。",
+      "action": "以公司及监管正式披露核对调查结果、权限和治理变化，记录市场数据时点，勿将评论者预测作为确定结果。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6zxjx01vyleo",
+          "label": "BBC · 调查后的市场反应",
+          "excerpt": "The tech firm saw its shares fall by about 4% by close of trade on Monday",
+          "checked_at": "2026-11-10T08:33:12.628437+08:00"
+        }
+      ],
+      "update_reason": "昨日仅报道董事会启动独立调查；本期新增周一收盘价格反应和国会闭门简报安排，复用调查事件编号，不重复计算相关评论及多篇转载。",
+      "context_note": "发布时间采用本次官方来源 RSS 字段；原文正文已直接核对，不以聚合摘要代替。"
+    },
+    {
+      "event_id": "9641a16883f21f0be4dc",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-10T00:09:49+00:00",
+      "score": 83,
+      "headline": "俄乌三方会谈拟重启，安全安排仍存分歧",
+      "short_headline": "俄乌三方会谈拟重启，安全安排仍存分歧",
+      "short_summary": "BBC 引述美方称私下出现一定灵活性，双方公开立场仍相距较远；拟议谈判框架不等于停火或领土协议已成。",
+      "summary": "BBC 报道俄、乌、美高级官员拟在阿布扎比举行三方会谈，美方人士称双方在领土问题上私下显出一定灵活性，但顿涅茨克及战后安全安排仍有明显分歧。欧洲参与多边讨论只是拟议方向。正文描述会前安排，本期未直接核对共同声明，不能从标题“恢复会谈”推断会谈已完成、停火已生效或各方已接受新安全框架。",
+      "relevance": "外交消息需区分会前表态、实际参会、共同文件和执行结果，单方评价不代表全部参与方同意。",
+      "action": "跟踪正式参会名单及共同文件，分别记录提案、共识和生效条件，不把会前预期当作既成事实。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cqpvgvrpjvv8o",
+          "label": "BBC · 三方会谈会前报道",
+          "excerpt": "But Moscow and Kyiv's positions on ending the conflict in the first place remain far apart.",
+          "checked_at": "2026-11-10T08:33:13.282533+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次官方来源 RSS 字段；原文正文已直接核对，不以聚合摘要代替。"
+    },
+    {
+      "event_id": "263217067047ebe9415b",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-09T17:54:40+00:00",
+      "score": 84,
+      "headline": "法国就冷柜攻击公开归因，欧盟制裁仍待程序",
+      "short_headline": "法国就冷柜攻击公开归因，欧盟制裁仍待程序",
+      "short_summary": "Guardian 引述法国外长指向伊朗革命卫队，并报道检方调查；法国归因和制裁表态不等于独立司法认定或欧盟已通过措施。",
+      "summary": "Guardian 报道法国就十月商超冷柜网络攻击公开归因于伊朗革命卫队，并称将推动欧洲范围制裁，检方已展开调查。欧盟方面仍提及下周外长会议讨论及有条件响应。本文记录媒体引述的官方立场，未独立取得完整技术证据或司法裁决；其他欧洲冷柜、血库或银行事件与该攻击的关系不能因同时出现就视为已证实。",
+      "relevance": "同一联网设备事件的技术故障、攻击归因、司法程序与制裁生效是四个不同证据阶段。",
+      "action": "核对主管机构技术公告与正式制裁文件，明确归因主体和证据时点，勿据报道扫描或控制真实联网设备。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/nov/09/france-blames-irans-revolutionary-guards-for-cyber-attacks-on-supermarket-fridges",
+          "label": "The Guardian · 法国归因及外交响应",
+          "excerpt": "The European Commission did not immediately comment on the French foreign minister’s statement.",
+          "checked_at": "2026-11-10T08:33:13.985653+08:00"
+        }
+      ],
+      "update_reason": "十月十三日记录法国冷柜攻击与旧设备风险；本次新增法国外长公开归因、检方调查及拟议欧洲制裁，复用原事件编号。十一月三日欧洲多国事件的关联仍未确认。"
+    },
+    {
+      "event_id": "9f1ce244d56170ead4a5",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-09T23:48:36+00:00",
+      "score": 81,
+      "headline": "美最高法院暂缓下级禁令，Big Bend 工程可继续",
+      "short_headline": "美最高法院暂缓下级禁令，Big Bend 工程可继续",
+      "short_summary": "Guardian 报道最高法院准许紧急请求，暂停阻止施工的下级命令；临时程序结果不等于工程全部合法性争议已有终局结论。",
+      "summary": "Guardian 报道美国最高法院通过未署名裁定，准许政府暂停下级法院此前暂时阻止得州 Big Bend 边境工程的命令。报道涉及国会授权与环境、历史保护争议；本文未直接取得完整裁定及诉讼卷宗，不把紧急程序结果写成所有实体争议已审结，也不将机构的施工目标当作工程已完工。",
+      "relevance": "诉讼中的临时禁令、紧急救济、实体判决和项目执行进度各有范围，政策影响需跟踪后续程序。",
+      "action": "查最高法院及相关法院公开文书，核对命令范围和案件阶段，再比对实际工程与保护要求。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/us-news/2026/nov/09/us-supreme-court-border-wall-texas-big-bend",
+          "label": "The Guardian · 边境工程紧急裁定报道",
+          "excerpt": "In an unsigned, five-page ruling, the nation’s highest court granted the Trump administration’s emergency request to suspend a lower court order",
+          "checked_at": "2026-11-10T08:33:14.645548+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "moe-coactivation-pruning-study",
+      "headline": "MoE 剪枝的成对协作与质量验收研究",
+      "short_headline": "专家剪枝的协作验收表",
+      "short_summary": "HOPE 将成对交互纳入专家选择，可先用虚构小矩阵研究内存与任务质量如何分开评价。",
+      "category": "模型与基础设施",
+      "score": 79,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "新研究把独立专家打分扩展到成对协作，且明确高剪枝率更有优势、跨层结果仍初步；提供压缩验收的具体研究入口，尚不证明确定付费需求。",
+      "audience": "研究稀疏模型压缩和资源预算的开发者、小型研究团队。",
+      "first_step": "用四个虚构专家及共现矩阵手工比较两种保留方案，列内存、校准数据、质量和成本指标；先完成纸面验收表，不租用算力或下载权重。",
+      "risks": "任务分布和剪枝率影响结果，校准也有成本；参数减少不能直接推出时延、整机费用和泛化收益，代码及权重许可需另核。",
+      "time_window": "未来一周先读方法与限制，无官方申请截止。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+          "label": "Amazon · HOPE 方法边界",
+          "excerpt": "HOPE prunes each layer independently and does not account for cross-layer interactions.",
+          "checked_at": "2026-11-10T08:33:09.526325+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "synthetic-persona-evaluation-coverage",
+      "headline": "合成人物客服评测的分布与失效边界",
+      "short_headline": "合成人物评测的覆盖检查",
+      "short_summary": "日本金融合成数据增加家庭金融与素养字段，可研究客服在不同背景下是否遗漏条件，但合成分布不代表真实需求。",
+      "category": "工作室业务",
+      "score": 78,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "NVIDIA 与 Elith 的新数据资料给出人口、家庭及金融素养维度，为无需真实客户资料的客服样例设计提供参照，不证明真实客户满意度、合规或购买意愿。",
+      "audience": "设计多语言客服、FAQ 和代理评测的小团队及开发者。",
+      "first_step": "自编六条无关真实个人的虚构问答，按语言、信息缺失与条件冲突做覆盖表，逐项检查拒绝猜测、来源和转人工条件；不导入客户资料。",
+      "risks": "合成分布可能遗漏少数群体和罕见场景，生成错误会污染评测；日本统计不能外推中国，许可、署名与下游模型仍需另核，不据样例作个人金融决定。",
+      "time_window": "未来一周完成样例和覆盖表，没有官方报名截止。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+          "label": "NVIDIA 与 Elith · 合成数据边界",
+          "excerpt": "No real individuals are represented",
+          "checked_at": "2026-11-10T08:34:09.253873+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-11-10T08:32:35.897232+08:00",
+    "coverage_note": "当日直接读取官方全语言日榜，完整页面有十一项，本期按原顺序保留前十；今日和总 Star 均为页面展示值，逐项核对公开仓库文档。榜单反映关注度，不代表新发布、学术质量、性能、安全或商业许可；本期未安装运行候选代码。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills",
+        "summary": "Anthropic 的任务技能示例仓库，以指令、脚本和资源表达可复用流程；示例与线上服务行为可能不同。",
+        "direction": "任务技能与流程验收",
+        "stars_today": 1038,
+        "total_stars": 190953
+      },
+      {
+        "rank": 2,
+        "repository": "meta/astryx",
+        "url": "https://github.com/meta/astryx",
+        "summary": "React 设计系统，提供组件、主题及工具，当前为 Beta；具体界面仍须做交互与可访问性检查。",
+        "direction": "设计系统与代理协作",
+        "stars_today": 3278,
+        "total_stars": 20018
+      },
+      {
+        "rank": 3,
+        "repository": "sherlock-project/sherlock",
+        "url": "https://github.com/sherlock-project/sherlock",
+        "summary": "按用户名查找公开社交站点账号线索的工具；同名结果不证明身份归属，本期未查询真实人物。",
+        "direction": "公开线索与误报边界",
+        "stars_today": 4267,
+        "total_stars": 107002
+      },
+      {
+        "rank": 4,
+        "repository": "google-deepmind/mujoco",
+        "url": "https://github.com/google-deepmind/mujoco",
+        "summary": "通用物理仿真引擎，支持关节结构接触研究、可视化及多语言接口；模拟不代表实体安全或性能已验证。",
+        "direction": "物理仿真与数值验证",
+        "stars_today": 574,
+        "total_stars": 16903
+      },
+      {
+        "rank": 5,
+        "repository": "anthropics/claude-quickstarts",
+        "url": "https://github.com/anthropics/claude-quickstarts",
+        "summary": "Claude API 应用参考项目合集，含客服、数据分析及浏览器和计算机使用示例；文档明确部分只是参考接口。",
+        "direction": "代理应用样例与工具协议",
+        "stars_today": 551,
+        "total_stars": 20009
+      },
+      {
+        "rank": 6,
+        "repository": "garrytan/gbrain",
+        "url": "https://github.com/garrytan/gbrain",
+        "summary": "可自托管的代理记忆与检索系统，记录事实、来源、更正及撤回；可选外部提供方会影响数据流和费用。",
+        "direction": "记忆来源与共享权限",
+        "stars_today": 216,
+        "total_stars": 32135
+      },
+      {
+        "rank": 7,
+        "repository": "vercel-labs/agent-browser",
+        "url": "https://github.com/vercel-labs/agent-browser",
+        "summary": "面向代理的浏览器自动化 CLI，通过快照与元素引用操作并再次观察；页面变化后引用需更新。",
+        "direction": "浏览器动作与结果核验",
+        "stars_today": 916,
+        "total_stars": 48454
+      },
+      {
+        "rank": 8,
+        "repository": "ruvnet/RuView",
+        "url": "https://github.com/ruvnet/RuView",
+        "summary": "探索 WiFi 信道感知、存在检测与姿态等的研究工程；文档区分模拟、硬件及未验证指标，普通网卡不等同 CSI 传感器。",
+        "direction": "无线感知与证据成熟度",
+        "stars_today": 172,
+        "total_stars": 103436
+      },
+      {
+        "rank": 9,
+        "repository": "ZhuLinsen/daily_stock_analysis",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+        "summary": "聚合多市场行情和新闻，生成模型分析看板及通知的工程；免费数据源稳定性不保证，分析不证明交易收益。",
+        "direction": "市场数据溯源与自动报告",
+        "stars_today": 506,
+        "total_stars": 68831
+      },
+      {
+        "rank": 10,
+        "repository": "homeassistant-ai/ha-mcp",
+        "url": "https://github.com/homeassistant-ai/ha-mcp",
+        "summary": "把 Home Assistant 的配置和自动化接入 MCP 客户端的服务器；部署方式、管理凭据与实体动作权限需分别核对。",
+        "direction": "家居工具接口与动作权限",
+        "stars_today": 31,
+        "total_stars": 5958
+      }
+    ],
+    "analysis": [
+      "技能与设计系统是工程资料：anthropics/skills 提供任务参考，meta/astryx 提供组件与主题。共同关注信号是把可复用知识变为明确接口。学习步骤：用虚构表单需求列输入、输出、焦点与失败验收，再检查参考目录许可；它们不是新模型或自动通过生产审核的证明。",
+      "代理记忆、样例与浏览器控制需连贯核验：garrytan/gbrain、anthropics/claude-quickstarts 和 vercel-labs/agent-browser 分别涉及持久事实、参考应用和页面动作。学习步骤：用虚构任务画出来源、更正、授权、动作及结果记录，确认页面变化会使引用失效；本期未连接真实记忆或执行网页操作。",
+      "物理环境研究要看验证层次：google-deepmind/mujoco 提供仿真引擎，ruvnet/RuView 探索无线感知。学习步骤：分别列模拟假设、真实传感器要求、作者指标与待复现证据，不把无视频宣传或模拟演示当作医疗测量、穿墙能力及普遍精度的认证。",
+      "信息聚合要避免错误归因：sherlock-project/sherlock 的同名线索不代表同一个人，ZhuLinsen/daily_stock_analysis 的行情和模型解释也不是确定收益。学习步骤：只用虚构账号和自编价格记录检查误报、来源时点及缺失处理；不搜真人、不导入持仓或发送自动通知。",
+      "家居自动化需要区分发现与执行：homeassistant-ai/ha-mcp 暴露 Home Assistant 工具，文档涉及多种传输方式及管理凭据。学习步骤：先用虚构设备画出只读查询、动作授权、失败恢复与凭据范围，不连接实际家居；上榜关注度不能证明项目安全、商业许可或真实需求。"
+    ]
+  }
+}
