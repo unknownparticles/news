@@ -1,0 +1,368 @@
+{
+  "id": "2026-11-13",
+  "kind": "daily",
+  "title": "2026-11-13 · 模型执行、服务复盘与治理进展",
+  "period": {
+    "start": "2026-11-13",
+    "end": "2026-11-13"
+  },
+  "generated_at": "2026-11-13T08:31:04+08:00",
+  "collection_window": {
+    "start": "2026-11-12T08:32:20.933464+08:00",
+    "end": "2026-11-13T08:25:38.310626+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证方向和官方 GitHub 日榜前十。Hydrogen、LLMON 与 GitHub 复盘分别保留产品权限、实验边界及历史影响口径；不把复盘用于无证据诊断当前客户端。NVIDIA 人事进展复用调查编号，不复述无关私人细节；规划许可、讨论中的 NDA 保护和会议主办意向均注明尚待条件。竞赛仍四项推荐，其中两项长期练习；天池十一项规则证据重新核对，其他平台本次仅列表或动态外壳覆盖，无新匹配及临近首次报名机会获确认。",
+  "source_failures": [],
+  "items": [
+    {
+      "event_id": "5b69826eead48a963c75",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-12T18:00:50+00:00",
+      "score": 85,
+      "headline": "Gemini 4 Hydrogen 推出，免费入口与订阅权限有别",
+      "short_headline": "Gemini 4 Hydrogen 推出，免费入口与订阅权限有别",
+      "short_summary": "Google 介绍面向日常代理任务的模型与多模型编排；免费用户经自动选择访问，产品推出及基准表现仍需按场景核验。",
+      "summary": "Google 发布 Gemini 4 Hydrogen，定位日常编码与代理执行，称覆盖 API、应用和搜索等入口，并介绍 Antigravity 的动态多模型编排。公告列百万 token 上下文、每百万输入一点五美元及输出七点五美元；免费 Gemini 应用用户由自动模型选择在适合时使用，Antigravity 入口则要求相应付费订阅。本期未独立复测性能、费用或账户可用性，不把平台覆盖与每个用户可手动无限调用混同。",
+      "relevance": "模型单价、推理投入、实际订阅和完整任务重试共同影响开销，多模型编排收益属于具体实验结果。",
+      "action": "先核对当前账户入口与完整计费条款，用虚构任务定义成功、恢复和人工复核指标，再决定是否试验。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+          "label": "Google DeepMind · Hydrogen 公告",
+          "excerpt": "free users will get access to Gemini 4 Hydrogen via auto model selection",
+          "checked_at": "2026-11-13T08:26:21.687106+08:00"
+        }
+      ],
+      "context_note": "官网明确十一月十二日发布，精确时间采用本次 DeepMind RSS；免费用户与付费产品入口按公告脚注区分。"
+    },
+    {
+      "event_id": "84ec87286cb35a64f463",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-12T19:07:35+00:00",
+      "score": 84,
+      "headline": "IBM LLMON 预览用结构标记区分指令与数据",
+      "short_headline": "IBM LLMON 预览用结构标记区分指令与数据",
+      "short_summary": "IBM 介绍三十亿和八十亿参数实验模型，以特殊 token 和绑定关系表达上下文；静态注入评测改善不是强制安全保证。",
+      "summary": "IBM Granite 团队介绍 LLMON，以保留的特殊 token、命名块和执行绑定表达指令、数据及约束，发布 Granite 4.1 3B、8B 实验预览模型及工具。作者报告静态间接提示注入评测改善，也明确这种区分是学得的行为而非强制保证，自适应多轮攻击仍需研究。本期未复现实验，不将格式转换视为普通模型自动获得同等能力；文档将当前预览定位为探索评估，未面向生产。",
+      "relevance": "可信边界需要同时由应用控制、数据绑定与模型行为支持，标签本身不足以替代工具权限和输出检查。",
+      "action": "用自编无害文档画出哪些内容是任务、输入和约束，核对绑定范围与模板；先做纸面检查，不安装预览或接入真实资料。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+          "label": "Hugging Face · IBM Granite LLMON 说明",
+          "excerpt": "This is a learned behavior, not an enforced guarantee.",
+          "checked_at": "2026-11-13T08:26:22.227914+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "eaf76493fdb0b4bfceb5",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-11-13T00:20:16+00:00",
+      "score": 83,
+      "headline": "GitHub 发布十月可用性复盘，扩容与恢复分别检验",
+      "short_headline": "GitHub 发布十月可用性复盘，扩容与恢复分别检验",
+      "short_summary": "官方总结八起服务降级事件，涉及路由、连接重试和依赖；历史原因与已做改进不代表当前所有故障具有同一来源。",
+      "summary": "GitHub 发布十月可用性报告，记录八起事件及影响、处置和改进，涉及数据库路由、迁移负载、模型提供方认证及网络依赖。报告说明部分事件中同步重连放大了负载，随后限制新连接速率并加入随机延迟；容量扩张与跨区恢复仍需单独验证。本文确认官方发布的复盘，不把历史诊断外推到本次自动化或其他客户端的重连原因，也不把所有标题事件时长等同所有用户持续不可用。",
+      "relevance": "故障影响范围、用户症状、关键恢复时间和后台积压清理是不同口径，重试策略会影响恢复是否扩散。",
+      "action": "依据报告将虚构服务的依赖、重试上限、退避和恢复证据写成表，真实排障时核对同一时段日志与状态页。",
+      "sources": [
+        {
+          "url": "https://github.blog/news-insights/company-news/github-availability-report-october-2026",
+          "label": "GitHub Blog · 十月可用性复盘",
+          "excerpt": "availability, then capacity, then features.",
+          "checked_at": "2026-11-13T08:26:22.665655+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "1ee6867cdbb6f3c3818c",
+      "category": "金融市场",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-11-12T18:30:00+00:00",
+      "score": 81,
+      "headline": "美联储公布明年支付服务定价，支票处理有调整",
+      "short_headline": "美联储公布明年支付服务定价，支票处理有调整",
+      "short_summary": "公告自二〇二七年一月一日起调整机构支付服务价格，成熟服务平均涨幅为估计值；不等于消费者支票功能被取消。",
+      "summary": "美联储公布二〇二七年一月一日起对银行和信用合作社提供的支付服务收费，涵盖支票清算、ACH、即时支付和批发结算等，预计成熟服务平均价格上升百分之一点四，并调整低量时段处理窗口等支票运营安排。公告明确变化影响金融机构与储备银行间的处理，不影响消费者和企业开具或接收支票。本期未逐项读取完整费率附件，不把平均估计等同每项服务统一涨价或终端费用必然同幅增加。",
+      "relevance": "基础设施收费、机构转嫁方式和个人账户价格各有条件，生效日期与服务范围必须分别记录。",
+      "action": "需用到相关机构服务时对照正式费率表、处理窗口及自身合同；不据公告推导具体账户将被收取同等费用。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm",
+          "label": "美联储 · 支付服务定价公告",
+          "excerpt": "effective January 1, 2027",
+          "checked_at": "2026-11-13T08:26:23.182724+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "1bd07cdea18c682e5080",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-12T11:20:25+00:00",
+      "score": 81,
+      "headline": "英国第三季度经济据报增长百分之零点七",
+      "short_headline": "英国第三季度经济据报增长百分之零点七",
+      "short_summary": "BBC 引述官方数据称服务业推动季度增长，编程和咨询贡献显著；总体增长不代表各行业或家庭实际收入同步改善。",
+      "summary": "BBC 报道英国七至九月经济较前季增长百分之零点七，服务业、计算机编程和咨询等贡献较大，并记录能源价格与后续增长风险。本期未直接复核完整统计表或季调修订，不把季度增速写成年化或同比，也不由相关行业支出推定 AI 对所有生产率的因果贡献。经济总体扩张与家庭可支配收入及未来增长仍需分别判断。",
+      "relevance": "统计时段和单位决定比较含义，行业贡献、价格变化与家庭感受不能用一个 GDP 数字替代。",
+      "action": "对照统计机构完整发布中的环比、同比、实质值和修订口径，再区分已实现增长与后续预测。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/ck3rgd429zd5o",
+          "label": "BBC · 英国季度经济报道",
+          "excerpt": "Between July and September, the economy expanded by 0.7%",
+          "checked_at": "2026-11-13T08:26:23.421605+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 字段，正文已直接核对；更新与原事件起始时间分开记录。"
+    },
+    {
+      "event_id": "75eee0dcbc87b091d46a",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-12T23:34:05+00:00",
+      "score": 84,
+      "headline": "NVIDIA 据报 CEO 辞任，Colette Kress 临时接任",
+      "short_headline": "NVIDIA 据报 CEO 辞任，Colette Kress 临时接任",
+      "short_summary": "BBC 报道黄仁勋辞去 CEO、财务负责人临时接任；公司调查及外界指控仍未有最终结论，人事结果不等于指控被证实。",
+      "summary": "BBC 报道 NVIDIA 首席执行官黄仁勋辞任，财务负责人 Colette Kress 被任命为临时 CEO，公司寻找永久接任者。报道仍保留公司未有理由相信机密受损的说法，以及有关机构尚未作出部分调查结论的状态。本文仅记录媒体所述治理变化，未直接取得完整董事会及监管文件，不转述无关私人细节，不把辞任、股价变化和未定指控混为证实违法或泄密。",
+      "relevance": "临时接任、独立调查和永久继任安排分别影响治理评估；市场反应不替代最终事实认定。",
+      "action": "跟踪公司及监管正式公告，区分职权生效、调查结论和后续治理方案，不据未核实指控预测价格。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o",
+          "label": "BBC · NVIDIA 人事进展",
+          "excerpt": "Chief Financial Officer Colette Kress was named on Thursday as interim CEO.",
+          "checked_at": "2026-11-13T08:26:23.649161+08:00"
+        }
+      ],
+      "update_reason": "此前记录董事会调查和周一收盘市场反应；本次新增 CEO 辞任、临时接任和永久继任安排，复用原事件编号，调查及指控仍按未定状态处理。",
+      "context_note": "发布时间采用本次 BBC 源 RSS 字段，正文已直接核对；更新与原事件起始时间分开记录。"
+    },
+    {
+      "event_id": "e1dafa6411005a667a2b",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-12T22:00:15+00:00",
+      "score": 80,
+      "headline": "中国据报不承办 COP33，主办国尚未确定",
+      "short_headline": "中国据报不承办 COP33，主办国尚未确定",
+      "short_summary": "Guardian 称中国排除承办二〇二八年气候大会，其他亚洲国家或考虑申办；原因及最终主办决定未独立核实。",
+      "summary": "Guardian 报道据其了解，中国已排除承办二〇二八年 COP33 的可能，并称其他亚洲国家考虑申请。文章明确原因尚不清楚，专家关于美国选举周期等解释属于推测，最终主办安排仍待决定。本文未取得中方或联合国完整正式决定，不将媒体所述主办意向变化等同退出气候合作、改变减排承诺或其他候选国已经获选。",
+      "relevance": "会议承办、外交参与与具体减排和资金义务不同，主办选择不能直接推导政策后果。",
+      "action": "核对中方及联合国气候机制的公开说明，分别记录申办意向、正式遴选和会议目标，不将专家推测写作原因定论。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/environment/2026/nov/12/china-rules-out-hosting-cop33-climate-summit-in-2028",
+          "label": "The Guardian · COP33 主办安排报道",
+          "excerpt": "It is not clear why China has decided against hosting the conference",
+          "checked_at": "2026-11-13T08:26:24.115323+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "19aaa2da4387427fc16a",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-12T22:09:20+00:00",
+      "score": 80,
+      "headline": "英国前军用地庇护安置规划获批，启用仍待决定",
+      "short_headline": "英国前军用地庇护安置规划获批，启用仍待决定",
+      "short_summary": "Guardian 报道 Piddington 附近项目取得规划许可，内政部仍称最终推进未定；规划审批、法律挑战和实际入住不是同一步。",
+      "summary": "Guardian 报道英国相关部门批准 Piddington 附近前国防部场地用于临时分阶段庇护安置的规划，内政部同时表示最终是否推进仍未决定，并存在可提起法律挑战的窗口。本文未直接核对完整规划命令与后续诉讼，不把取得规划许可写成设施已启用、人员已入住或所有法律争议解决，也不将居民象征性投票视为改变法定领土状态。",
+      "relevance": "公共项目规划、业务主管部门最终决策、诉讼和运营分别有条件，单项批准不能代表完整交付。",
+      "action": "核对规划决定书、主管部门后续公告与法律程序，按阶段记录审批、建设和启用证据。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/uk-news/2026/nov/12/angela-rayner-grants-planning-approval-for-asylum-centre-in-piddington-despite-local-opposition",
+          "label": "The Guardian · 安置项目规划许可报道",
+          "excerpt": "a final decision to proceed is yet to be taken.",
+          "checked_at": "2026-11-13T08:26:24.351464+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "c78515f33d1c1780515b",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-12T18:38:13+00:00",
+      "score": 80,
+      "headline": "英国拟扩大保密协议限制，讨论覆盖自由职业者",
+      "short_headline": "英国拟扩大保密协议限制，讨论覆盖自由职业者",
+      "short_summary": "Guardian 报道政府研究将部分反骚扰披露保护扩大到非雇员，并拟举行行业会谈；讨论方向不是已经生效的新法。",
+      "summary": "Guardian 报道英国大臣研究扩大有关保密协议的保护，考虑覆盖自由职业者、志愿者等非雇员，并拟与文化行业讨论。文章引述官员称仍处早期，具体法律或非立法路径及时间未定。本文聚焦政策程序，未直接取得新措施正式文本，不把讨论写成全部 NDA 无效或所有披露均受豁免，也不转述与政策核验无关的私人指控细节。",
+      "relevance": "就业关系与非雇员合作可能适用不同保护；政策建议、征询和正式生效应分开核对。",
+      "action": "跟踪政府正式咨询、立法和生效安排，具体协议由本人结合正式文本及专业意见处理，不依新闻概述决定披露。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/tv-and-radio/2026/nov/12/uk-ministers-look-at-quick-ways-to-limit-ndas-after-walliams-allegations",
+          "label": "The Guardian · NDA 保护讨论",
+          "excerpt": "It is still early",
+          "checked_at": "2026-11-13T08:28:18.838167+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "instruction-data-binding-evaluation",
+      "headline": "结构化上下文中指令与数据绑定的验收研究",
+      "short_headline": "指令与数据绑定的验收表",
+      "short_summary": "IBM LLMON 预览明确绑定指令、数据和约束，且承认学得行为不构成强制保证，可研究静态与多轮场景的差异。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "LLMON 新资料以特殊 token 和绑定关系表达上下文，并说明静态注入实验与多轮适应性攻击边界，提供格式与应用权限如何共同验收的具体入口，不证明已存在付费需求。",
+      "audience": "维护检索、文档摘要和工具代理的开发者与小团队。",
+      "first_step": "用自编无害任务、虚构文档和相互矛盾的无害提示画出指令、数据、约束及引用边界，先人工核对绑定和未绑定块；定义正确输出及拒绝越权条件，不调用真实工具或上传私密资料。",
+      "risks": "训练出的结构理解不是解析器或权限系统的强制隔离，静态测试不能覆盖多轮攻击；预览模型、依赖及许可要另核，不承诺生产安全。",
+      "time_window": "未来一周先完成公开资料与纸面验收，无官方报名截止。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+          "label": "IBM Granite · 预览适用范围",
+          "excerpt": "not for production.",
+          "checked_at": "2026-11-13T08:26:22.227914+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "bounded-retry-recovery-ledger",
+      "headline": "连接重试上限与恢复阶段的证据台账",
+      "short_headline": "重连与恢复的证据台账",
+      "short_summary": "GitHub 新复盘区分连接风暴、区域容量和积压清理，可研究如何用有限重试和分阶段证据避免误判恢复。",
+      "category": "模型与基础设施",
+      "score": 79,
+      "status": "research",
+      "verification_status": "official_confirmed",
+      "signal": "GitHub 十月复盘给出同步重连放大负载及随后限制连接、随机延迟的实例，为小型服务的重试验收提供公开依据；这不诊断任何本地客户端，也不证明特定方案已在所有环境有效。",
+      "audience": "维护 API 客户端、定时任务与队列的小团队及开发者。",
+      "first_step": "用自编状态序列在纸面模拟连接失败、限流和恢复，分别列并发上限、最大重试、退避、任务幂等与积压清空证据，不向真实服务制造故障或负载。",
+      "risks": "退避参数和故障范围依赖系统；连接成功不代表任务完成，切换区域也可能转移过载；样例不能替代生产监测或独立容量验证。",
+      "time_window": "未来一周先做虚构状态回放与维护清单，无申请截止或收益保证。",
+      "sources": [
+        {
+          "url": "https://github.blog/news-insights/company-news/github-availability-report-october-2026",
+          "label": "GitHub · 重连随机延迟改进",
+          "excerpt": "We added randomized delays to reconnects after a failed request",
+          "checked_at": "2026-11-13T08:26:22.665655+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-11-13T08:25:54.270322+08:00",
+    "coverage_note": "当日直接读取官方全语言日榜，页面十三项，按原排名保留前十；逐项阅读公开 README，今日及总 Star 为本次榜单页面值。未沿用旧榜或搜索排序，未安装运行候选。榜单关注度不代表新发布、质量、官方认可、安全或商业许可。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "GoogleChrome/modern-web-guidance-src",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+        "summary": "现代网页平台技能的源仓库，包含指南编写、校准、评测与兼容资料；指南不表示所有浏览器均支持所列新能力。",
+        "direction": "网页平台知识与兼容性",
+        "stars_today": 739,
+        "total_stars": 2898
+      },
+      {
+        "rank": 2,
+        "repository": "openai/codex-security",
+        "url": "https://github.com/openai/codex-security",
+        "summary": "软件漏洞调查、验证及修复的 CLI 和 TypeScript SDK，部分能力有访问资格限制；本期只读文档，未运行扫描。",
+        "direction": "安全调查与修复证据",
+        "stars_today": 643,
+        "total_stars": 12408
+      },
+      {
+        "rank": 3,
+        "repository": "nvm-sh/nvm",
+        "url": "https://github.com/nvm-sh/nvm",
+        "summary": "按用户安装、由各 shell 加载的 Node.js 版本管理脚本，支持兼容的 POSIX shell；与 Node 运行时、原生 Windows 管理器分别判断。",
+        "direction": "运行时版本与环境一致性",
+        "stars_today": 63,
+        "total_stars": 96010
+      },
+      {
+        "rank": 4,
+        "repository": "pookjw/HermesEnabler",
+        "url": "https://github.com/pookjw/HermesEnabler",
+        "summary": "尝试在 Apple Watch 设备启用特定表盘的系统修改项目；README 限定 watchOS 版本并涉及配置备份恢复，本期未安装或改变设备。",
+        "direction": "设备兼容与修改恢复边界",
+        "stars_today": 218,
+        "total_stars": 1533
+      },
+      {
+        "rank": 5,
+        "repository": "we-promise/sure",
+        "url": "https://github.com/we-promise/sure",
+        "summary": "Maybe Finance 的社区延续分支，可自托管财务应用；采用 AGPLv3 并有原项目商标限制，维护与数据接入需单独检查。",
+        "direction": "财务应用与维护连续性",
+        "stars_today": 967,
+        "total_stars": 13901
+      },
+      {
+        "rank": 6,
+        "repository": "QwenLM/qwen-code",
+        "url": "https://github.com/QwenLM/qwen-code",
+        "summary": "多入口、多模型协议的编码代理，含终端、编辑器及实验性守护进程；接入本地或第三方服务时权限和数据流需分别核对。",
+        "direction": "编码代理与会话边界",
+        "stars_today": 151,
+        "total_stars": 29800
+      },
+      {
+        "rank": 7,
+        "repository": "ashhart/TensorFold",
+        "url": "https://github.com/ashhart/TensorFold",
+        "summary": "以 Zig 二进制直接运行 Metal 或 CUDA 的语言模型推理引擎，文档区分实际验证组合与未支持模型；榜单简介提到的后端不等于当前完整支持。",
+        "direction": "本地推理与后端验证范围",
+        "stars_today": 54,
+        "total_stars": 1934
+      },
+      {
+        "rank": 8,
+        "repository": "nodejs/node",
+        "url": "https://github.com/nodejs/node",
+        "summary": "跨平台 JavaScript 运行时，提供版本发布、文档与二进制校验信息；具体支持平台、版本维护期和依赖需分别核对。",
+        "direction": "JavaScript 运行时与发行管理",
+        "stars_today": 62,
+        "total_stars": 123597
+      },
+      {
+        "rank": 9,
+        "repository": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "summary": "编码代理工程流程技能与检查表合集，覆盖规格、测试及发布；流程自述不等于结果已独立验证或可免除宿主权限。",
+        "direction": "工程流程与验收证据",
+        "stars_today": 816,
+        "total_stars": 116661
+      },
+      {
+        "rank": 10,
+        "repository": "meta/astryx",
+        "url": "https://github.com/meta/astryx",
+        "summary": "提供 React 组件、主题和工具的设计系统，当前 Beta；具体产品仍需验证可访问性、交互和依赖兼容。",
+        "direction": "设计系统与界面协作",
+        "stars_today": 1830,
+        "total_stars": 26509
+      }
+    ],
+    "analysis": [
+      "网页指南与组件需一起看兼容性：GoogleChrome/modern-web-guidance-src 整理平台知识，meta/astryx 提供 React 设计系统。关注信号是工程知识以可复用资料提供给代理。学习步骤：用虚构表单列目标浏览器、键盘焦点、错误提示和降级方案，对照指南与组件；不把 Beta 或新 API 当作所有产品适用。",
+      "编码代理与安全工具有不同权限范围：QwenLM/qwen-code、openai/codex-security 和 addyosmani/agent-skills 分别提供代理框架、安全工作流及工程流程。学习步骤：先画虚构任务的读取、修改、复核与外部连接边界，检查守护进程、宿主和模型服务的权限是否一致；不运行扫描、不安装技能，也不把文档里的代理指令当作本任务授权。",
+      "运行环境与推理后端要按验证组合判断：nvm-sh/nvm 管理 Node 版本，nodejs/node 是运行时，ashhart/TensorFold 是本地推理引擎。学习步骤：用虚构版本清单区分 shell、二进制、平台、模型格式与后端的依赖，记录已验证范围、峰值资源和未知项；跨平台宣传不能替代每个模型的实际可用证据。",
+      "自托管财务应用的价值取决于维护和数据边界：we-promise/sure 延续了已有项目，文档保留 AGPLv3 与商标条件。学习步骤：用自编账本核对备份、导出、重复导入与空值处理，再审查依赖和接入条款；不连接银行、不导入持仓，也不以热度推断投资或商业收益。",
+      "设备修改项目应先区分版本和恢复前提：pookjw/HermesEnabler 的文档限定 watchOS 版本，并涉及系统配置备份。学习步骤：只阅读支持范围与恢复说明，列官方功能与第三方修改的差异，不安装、不侧载或修改设备。本次榜单体现关注度，不代表新发布、学术质量、性能、安全、官方认可或商业许可。"
+    ]
+  }
+}
