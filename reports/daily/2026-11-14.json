@@ -1,0 +1,369 @@
+{
+  "id": "2026-11-14",
+  "kind": "daily",
+  "title": "2026-11-14 · 本地接口、目标评测与制度进展",
+  "period": {
+    "start": "2026-11-14",
+    "end": "2026-11-14"
+  },
+  "generated_at": "2026-11-14T08:36:53+08:00",
+  "collection_window": {
+    "start": "2026-11-13T08:25:38.310626+08:00",
+    "end": "2026-11-14T08:31:25.652558+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证方向与官方 GitHub 日榜前十。llama.cpp 发行规则、XYBench 评测与 Poppy 1.0 分别核对；实验、伙伴自述和动作权限不互相替代。金融部分区分征询延期、企业成本观点和智库空间估算；政治部分保留议院表决、调查及市长对商户延期的归属与未知范围。竞赛仍四项推荐，其中两项为长期练习；灵波平台状态及报名字段变为进行中至十一月十六日，但正式初赛仍十月二十六日截止，当前上海线下决赛，不当作首次报名。其他平台的列表或动态外壳不充作完整规则核验。",
+  "source_failures": [],
+  "items": [
+    {
+      "event_id": "6841e619fcd7e8d93702",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-13T14:05:22+00:00",
+      "score": 84,
+      "headline": "llama.cpp 库发布 1.0.0，接口不兼容将升主版本",
+      "short_headline": "llama.cpp 库发布 1.0.0，接口不兼容将升主版本",
+      "short_summary": "ggml-org 宣布库版本与接口兼容边界，后续 API、ABI 不兼容以主版本变化表示；不代表全部模型或硬件组合已完成验证。",
+      "summary": "ggml-org 宣布 llama.cpp 与相关库的 1.0.0 里程碑，表示后续 API 和 ABI 不兼容变化将反映为主版本提升，并介绍分发、持续集成及后端支持工作。本文记录维护者自述的发行与兼容规则，未实际编译、下载模型或逐平台复测；版本稳定承诺不能外推为所有下游应用无须回归、任意模型可运行或本地推理自动满足全部隐私与资源要求。",
+      "relevance": "下游依赖需要区分接口、二进制兼容、模型文件与实际后端，锁定版本和验收比仅跟随最新构建更可追溯。",
+      "action": "先核对正式发行与兼容说明，为虚构集成列 API、ABI、模型格式和回归条件；本期不安装更新或执行候选代码。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+          "label": "Hugging Face · ggml-org 发行说明",
+          "excerpt": "both llama.cpp and ggml will reflect API and ABI incompatibilities with major-version bumps.",
+          "checked_at": "2026-11-14T08:32:08.172963+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次源 RSS 的带时区字段，原文正文已直接核对；不由页面相对时间编造另一精确发布时间。"
+    },
+    {
+      "event_id": "96c7f67bef86f8316048",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-13T17:02:35+00:00",
+      "score": 83,
+      "headline": "XYBench 区分回答表面问题与解决实际目标",
+      "short_headline": "XYBench 区分回答表面问题与解决实际目标",
+      "short_summary": "Ai2 介绍八千余条误解型问题，分别评估解法、重点和误解识别；多数样例经生成构造，当前主要覆盖英文程序性任务。",
+      "summary": "Ai2 与合作者介绍 XYBench，含八千一百一十五条程序设计及日常操作问题，区分用户提出的方法与上下文可推断的目标。数据由公开论坛、人工样例和六千余条依据 WikiHow 生成的问题组成，不能全部称为真实用户提问。作者在单轮实验中报告模型往往提到有效方法却仍聚焦错误路径；本文未复现实验，保留自动评审、英文覆盖及程序性任务的限制，不外推到所有模型或多轮沟通。",
+      "relevance": "评测不仅要看是否提到正确答案，还应看是否识别前提错误、解释并把有效解决步骤放在主要位置。",
+      "action": "用自编无害排错案例分列目标、提出的方法和足够上下文，分别评价解法是否出现、重点及误解解释，避免替用户臆造隐藏意图。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/xybench",
+          "label": "Hugging Face · Ai2 XYBench 研究",
+          "excerpt": "a gap between recognizing useful advice and producing it",
+          "checked_at": "2026-11-14T08:32:08.711293+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次源 RSS 的带时区字段，原文正文已直接核对；不由页面相对时间编造另一精确发布时间。"
+    },
+    {
+      "event_id": "c9279d164297034c09b5",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-13T17:00:00+00:00",
+      "score": 83,
+      "headline": "Poppy 1.0 发布，代理发现能力与交易授权分开",
+      "short_headline": "Poppy 1.0 发布，代理发现能力与交易授权分开",
+      "short_summary": "Sierra 发布 Personal Agent Protocol 1.0，描述发现、认证及行业扩展；厂商合作名单不能证明每家公司每项交易均已开放。",
+      "summary": "Sierra 宣布 Personal Agent Protocol（Poppy）1.0，说明其基于 MCP、OpenAPI、UCP 等现有标准定义个人代理与企业的连接、能力发现及 OAuth 授权，并介绍 Shopify 商务扩展与伙伴采用情况。本文只确认发布方文档所述进展，未逐站验证部署、身份流程或服务条款，不将自动发布能力文件等同所有交易可自动执行；品牌案例中的查询、准备和付款仍有各自审批范围。",
+      "relevance": "发现服务、确认身份、获得动作权限及实际完成交易需要分步证明，协议支持不替代用户授权和机构审批。",
+      "action": "先用虚构店铺画出公开发现、只读能力、账户授权与敏感动作审批的接口图，再核对协议文档；不登录、购买或转账。",
+      "sources": [
+        {
+          "url": "https://sierra.ai/blog/releasing-poppy",
+          "label": "Sierra · Poppy 1.0 公告",
+          "excerpt": "customers control what personal agents can and can’t do",
+          "checked_at": "2026-11-14T08:32:10.001207+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "537d1229e28dcb2912c5",
+      "category": "金融市场",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-11-13T21:15:00+00:00",
+      "score": 81,
+      "headline": "美国监管机构延长第三方风险指引征询至十二月十六日",
+      "short_headline": "美国监管机构延长第三方风险指引征询至十二月十六日",
+      "short_summary": "美联储等四机构公告将原十一月十六日意见期限后移；拟议指引采用原则方式，征询延期不等于最终规则已经生效。",
+      "summary": "美联储、FDIC、NCUA 与 OCC 联合公告，将拟议第三方关系风险管理指引的意见截止从十一月十六日延长至十二月十六日；美联储另就传统社区银行相关指南延长同日征询。公告说明拟议指引采取原则方式且不具有约束性，最终定稿后才计划替代现有相关指导。本期未逐条阅读全部征询附件，不把延期视为正式实施或所有机构已经更换管理要求。",
+      "relevance": "金融机构选择与管理服务商的证据要求可能受最终指引影响，但意见窗口、定稿与实施程序不同。",
+      "action": "先读正式征询文件的适用对象与问题，将现有第三方清单和拟议变化对照；本期只查资料，不代提交意见。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
+          "label": "美联储等机构 · 征询延期公告",
+          "excerpt": "extend, until December 16, the comment period",
+          "checked_at": "2026-11-14T08:32:10.475908+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "3356842ee68f8bb026b4",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-13T06:21:34+00:00",
+      "score": 80,
+      "headline": "英国苹果酒企业谈成本压力，原料选择并未一致改变",
+      "short_headline": "英国苹果酒企业谈成本压力，原料选择并未一致改变",
+      "short_summary": "BBC 采访多家生产商，税费、能源和包装增加压力；企业对本地苹果的选择不同，个别预期不代表全行业已经改用进口原料。",
+      "summary": "BBC 采访英国苹果酒生产商，记录酒精税、能源、包装及用工成本压力，部分企业担心本地苹果依赖下降，另有企业明确坚持当地果园原料或报告业务增长。政府表示扩大部分小生产者减免。本文未直接核算税率或全行业利润，保留预测与采访归属，不把某家企业的税负增幅外推为统一法定税率，也不将潜在改用原料写成全行业既成决定。",
+      "relevance": "税负、规模、产品酒精度和供应链条件各不相同，成本上升与价格转嫁需要企业层面的真实数据。",
+      "action": "核对正式税务及减免条款，使用虚构产品成本表区分税额、能源与包装，再比较不同经营规模；不据采访推断商品收益。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c5zjxjzx2dpwo",
+          "label": "BBC · 苹果酒行业成本报道",
+          "excerpt": "Higher alcohol duty, energy bills and packaging costs are making it harder to stay profitable",
+          "checked_at": "2026-11-14T08:32:10.882739+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次源 RSS 的带时区字段，原文正文已直接核对；不由页面相对时间编造另一精确发布时间。"
+    },
+    {
+      "event_id": "bfd8ecb1b9ecf0252697",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-13T21:34:43+00:00",
+      "score": 80,
+      "headline": "Create Streets 建议小幅街道改造，消费估算待检验",
+      "short_headline": "Create Streets 建议小幅街道改造，消费估算待检验",
+      "short_summary": "Guardian 报道智库建议减少街道杂物、改善步行与路缘空间；报告模型和案例不证明任意商业街改造都能实现同等销售增长。",
+      "summary": "Guardian 介绍 Create Streets 与自行车设施企业共同形成的商业街报告，主张以较小改造改善步行与停留，并对停车、自行车及户外餐饮空间作消费估算。本文未直接读取完整测算模型或独立核查因果效应，明确这些属于报告建议与假设；单地空置率变化不能证明所有改善均由某一改造造成，也不作为安全设施可任意拆除的依据。",
+      "relevance": "商业街活力还受交通需求、无障碍、公共安全和商户组合影响，空间估值与已实现营业收入不同。",
+      "action": "先核对报告方法及当地规划规则，用虚构街段列客流、停留、可达性和维护指标，再设计可比较观察；不擅自改变公共设施。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/society/2026/nov/13/rip-out-clutter-to-retail-revive-high-streets-thinktank",
+          "label": "The Guardian · 商业街报告报道",
+          "excerpt": "a better answer could be smaller changes",
+          "checked_at": "2026-11-14T08:32:11.121836+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "f4aab3e216f34e9232e6",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-13T15:42:52+00:00",
+      "score": 81,
+      "headline": "德国联邦议院据报通过情报法改革，权限范围引争议",
+      "short_headline": "德国联邦议院据报通过情报法改革，权限范围引争议",
+      "short_summary": "BBC 报道扩大情报机构部分行动与数字能力的立法获议院通过；议会表决、具体授权条件与全部条款生效时间需分别核对。",
+      "summary": "BBC 报道德国联邦议院通过情报法律改革，涉及 BND 与 BfV 的部分保护行动、数字分析及监督授权安排，并记录政府支持与反对党批评。本文未直接取得完整立法文本、所有后续程序或生效日期，因此仅确认媒体所述议院表决，不把全部新增权限写成已可无条件使用；具体行动仍受法定限制和审批，不传播行动技术方法。",
+      "relevance": "情报权限的法律范围、监督要求及实际启用需分别评估，政治赞成或反对表述不替代法条。",
+      "action": "核对联邦议院正式文件及公布程序，分列授权对象、法定条件、审查与生效日期，不依新闻概述作个人法律判断。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6jre3z03w4go",
+          "label": "BBC · 德国情报法改革报道",
+          "excerpt": "309 MPs voted in favour of the new law",
+          "checked_at": "2026-11-14T08:32:11.359863+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次源 RSS 的带时区字段，原文正文已直接核对；不由页面相对时间编造另一精确发布时间。"
+    },
+    {
+      "event_id": "e7b299eff0f699e4093d",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-13T22:12:54+00:00",
+      "score": 80,
+      "headline": "匈牙利反腐机构据报扣押现金，案件尚未终审",
+      "short_headline": "匈牙利反腐机构据报扣押现金，案件尚未终审",
+      "short_summary": "Guardian 引述反腐机构称搜查取得约一千九百五十万美元等值现金；扣押、涉案指控与法院最终认定分别记录。",
+      "summary": "Guardian 引述匈牙利反腐机构称，在涉及前部长的调查中搜查森林、建筑等地点并扣押现金，所列多币种金额折合约一千九百五十万美元。本文未独立取得搜查、资产归属或完整司法文书，不将扣押等同贿赂来源已经证实或嫌疑人已获最终定罪；现政府与前政府的政治评价保留为相关方表态。",
+      "relevance": "反腐调查中的发现、保全、起诉和定罪是不同阶段，折算金额亦不代表法院最终追缴额。",
+      "action": "跟踪检方、调查机构及法院正式公开文件，分别记录资产处置和案件阶段，不把指控写成判决结论。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/nov/13/hungary-seizes-195m-in-cash-found-buried-in-forests-amid-graft-inquiry",
+          "label": "The Guardian · 匈牙利反腐调查报道",
+          "excerpt": "its staff deposited the cash into the Hungarian State Treasury’s account.",
+          "checked_at": "2026-11-14T08:32:11.606956+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "783d1d16752af1391c68",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-13T23:53:43+00:00",
+      "score": 80,
+      "headline": "纽约市长称 SNAP 商户规则获九十天适应期",
+      "short_headline": "纽约市长称 SNAP 商户规则获九十天适应期",
+      "short_summary": "Guardian 引述市长称达成延期，便于小店满足食品品类要求；本条未直接核对联邦实施文件，不把延期当作取消规则或改变个人资格。",
+      "summary": "Guardian 报道纽约市长 Mamdani 称与联邦政府达成 SNAP 商户新库存要求延后九十天的安排，使便利店等有更多适应时间。文章将其与个人能否在附近商店使用福利的影响联系。本文未直接核对农业部最终实施文本、精确新截止日及所有商户条件，不自行推算申请日期，也不把商户适应期写成个人福利资格全面扩大或要求永久取消。",
+      "relevance": "零售商参与条件与个人领取资格不同，地方宣布还需核对联邦具体执行及适用范围。",
+      "action": "以农业部正式公告核对商户规则、执行起点及例外，受影响者向正式服务确认；本期不代申请或更改任何资格。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/us-news/2026/nov/13/mamdani-trump-deal-snap-delay",
+          "label": "The Guardian · SNAP 商户规则延期报道",
+          "excerpt": "a 90-day delay on new rules",
+          "checked_at": "2026-11-14T08:32:12.075286+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "misconception-aware-support-evaluation",
+      "headline": "客服与排错回答中误解识别的离线评测",
+      "short_headline": "误解问题与实际目标的验收",
+      "short_summary": "XYBench 分开评价有效解法是否出现、是否成为重点和误解是否解释，可研究客服流程是否只满足错误前提。",
+      "category": "工作室业务",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Ai2 新评测显示选择好答案与主动生成以目标为中心的答案存在差距，为客服与排错回复的离线验收提供指标；英文单轮结果不证明多语言客户效果或付费需求。",
+      "audience": "维护 FAQ、技术支持和代理回复质量的小团队与开发者。",
+      "first_step": "自编六个无害排错案例，分别写明实际目标、用户误解、已知事实与可接受澄清，人工标记解法出现、回答重点和解释；不读取真实客户资料或改变线上回复。",
+      "risks": "从上下文推测目标可能过度，需允许用户坚持自己的目标；评测含大量生成样例且主要英文单轮，自动评审不代表普适真值，不用于敏感个人资格判断。",
+      "time_window": "未来一周先做离线样例与人工验收，无官方申请截止。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/xybench",
+          "label": "Ai2 · XYBench 评测边界",
+          "excerpt": "English-language queries and mainly procedural problems",
+          "checked_at": "2026-11-14T08:32:08.711293+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "ai-agent-permission-observability-service",
+      "headline": "代理权限研究更新：企业发现与动作批准分层",
+      "short_headline": "企业能力发现与动作批准的台账",
+      "short_summary": "Poppy 1.0 新资料区分协议发现、OAuth 范围与企业审批，可给既有代理权限研究增加跨企业接口的检查维度。",
+      "category": "AI 编程",
+      "score": 81,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Sierra 发布 Poppy 1.0 并介绍商务扩展和企业采用，材料明确用户管理 OAuth 访问及特定动作事前批准；可补充权限台账研究，未证明全部部署或需求成熟。",
+      "audience": "开发企业连接器、客服代理及个人助手接口的独立开发者与小团队。",
+      "first_step": "用虚构店铺做纸面能力清单，分别列公开发现、只读查询、账户权限、购买准备、最终动作审批和撤销证据；不连接真实账号，不接受协议、不付款或提交。",
+      "risks": "协议声明不能代替实际权限执行，企业支持范围和版本可能不同；案例与未来计划应分开，数据流、许可及费用须另核，不承诺业务收益。",
+      "time_window": "未来一周先核对规范与虚构接口图，没有官方申请截止。",
+      "update_reason": "此前依据浏览器会话范围及原生无障碍动作研究权限和回读；本次新增 Poppy 1.0 的企业能力发现、OAuth 范围与行业动作批准，将台账扩展到跨企业接口及访问撤销，复用原编号。",
+      "sources": [
+        {
+          "url": "https://sierra.ai/blog/releasing-poppy",
+          "label": "Sierra · Poppy 商务批准要求",
+          "excerpt": "it makes the agent ask the customer before taking certain actions",
+          "checked_at": "2026-11-14T08:32:10.001207+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-11-14T08:31:44.884249+08:00",
+    "coverage_note": "本次直接读取官方全语言日榜，页面十二项，按原顺序保留前十；每项 README 已核对，今日及总 Star 均取本次榜单值。未使用旧榜、周榜或搜索排序，未安装运行候选；关注度不证明新发布、质量、安全、收益或商业许可。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "summary": "将确定性文件筛选、规则和模型代理结合的代码审查 CLI，可读 diff 及关联代码；作者基准取舍与模型数据流需分别核对。",
+        "direction": "混合代码审查与证据定位",
+        "stars_today": 215,
+        "total_stars": 50611
+      },
+      {
+        "rank": 2,
+        "repository": "GoogleChrome/modern-web-guidance-src",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+        "summary": "现代网页平台技能的源仓库，包含指南编写、校准及评测与兼容资料；指南不代表目标浏览器一定支持全部能力。",
+        "direction": "网页工程知识与兼容性",
+        "stars_today": 1925,
+        "total_stars": 4834
+      },
+      {
+        "rank": 3,
+        "repository": "openai/codex-security",
+        "url": "https://github.com/openai/codex-security",
+        "summary": "提供漏洞调查、验证、修复及报告的 CLI 和 TypeScript SDK，部分能力有资格限制；本期仅阅读文档，未运行扫描。",
+        "direction": "安全调查与修复验收",
+        "stars_today": 751,
+        "total_stars": 13124
+      },
+      {
+        "rank": 4,
+        "repository": "ZhuLinsen/daily_stock_analysis",
+        "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+        "summary": "聚合多市场行情、新闻与模型解释的定时分析工程；数据源和模型结论有边界，自动报告不能视为收益保证。",
+        "direction": "市场数据来源与自动报告",
+        "stars_today": 256,
+        "total_stars": 71583
+      },
+      {
+        "rank": 5,
+        "repository": "we-promise/sure",
+        "url": "https://github.com/we-promise/sure",
+        "summary": "Maybe Finance 的社区延续分支，可自托管个人财务应用；AGPLv3、原项目商标条件与维护责任需另核。",
+        "direction": "财务应用与维护连续性",
+        "stars_today": 925,
+        "total_stars": 14734
+      },
+      {
+        "rank": 6,
+        "repository": "backnotprop/plannotator",
+        "url": "https://github.com/backnotprop/plannotator",
+        "summary": "为代理计划、文档、HTML 及代码差异提供本地审阅和注释界面；AI、共享或托管功能各有不同数据传输边界。",
+        "direction": "代理产物审阅与反馈",
+        "stars_today": 108,
+        "total_stars": 10447
+      },
+      {
+        "rank": 7,
+        "repository": "louislam/uptime-kuma",
+        "url": "https://github.com/louislam/uptime-kuma",
+        "summary": "可自托管的可用性监控工具，支持 HTTP、TCP、DNS 等探测与状态页；单个探测成功不等于业务流程全部可用。",
+        "direction": "服务可用性与探测口径",
+        "stars_today": 71,
+        "total_stars": 93855
+      },
+      {
+        "rank": 8,
+        "repository": "block/buzz",
+        "url": "https://github.com/block/buzz",
+        "summary": "让人与代理在自托管 relay 中协作的工作区，以签名事件组织消息、审批和开发记录；本仓库为仍支持的 0.X 线，1.0 在另一仓库。",
+        "direction": "协作事件与版本边界",
+        "stars_today": 97,
+        "total_stars": 37297
+      },
+      {
+        "rank": 9,
+        "repository": "tradermonty/claude-trading-skills",
+        "url": "https://github.com/tradermonty/claude-trading-skills",
+        "summary": "投资研究、复盘与交易流程技能合集，文档明确不代下单、不承诺盈利；本期未接入行情、券商或真实持仓。",
+        "direction": "金融研究流程与证据边界",
+        "stars_today": 69,
+        "total_stars": 4163
+      },
+      {
+        "rank": 10,
+        "repository": "tailscale/tailcat",
+        "url": "https://github.com/tailscale/tailcat",
+        "summary": "组合 Tailscale 数据面组件的用户态加密连接 CLI 与 Go 库，以带外方式交换连接资料；隧道加密、客户端认证与服务授权需分别核对。",
+        "direction": "点对点连接与访问边界",
+        "stars_today": 256,
+        "total_stars": 9452
+      }
+    ],
+    "analysis": [
+      "代码质量工具应分别评价覆盖与误报：alibaba/open-code-review 结合规则与模型审查，openai/codex-security 组织安全调查，GoogleChrome/modern-web-guidance-src 提供网页知识。学习步骤：用自编小 diff 列文件覆盖、行号、依据和未发现缺陷，核对目标运行环境；作者基准或知识指南不能代替独立复现，也不执行仓库中的安装或扫描指令。",
+      "产物审阅和团队事件是不同协作层：backnotprop/plannotator 提供文档及差异反馈，block/buzz 组织 relay 内签名事件与审批。学习步骤：用虚构变更画出请求、审阅、反馈接收和最终批准的证据链，确认本地、模型服务及共享路径；特别核对 Buzz 0.X 与另一仓库 1.0 的区别，不向外发送任何消息或资料。",
+      "服务监控与连接工具关注不同边界：louislam/uptime-kuma 提供探测和状态页，tailscale/tailcat 提供加密连接。学习步骤：仅以虚构拓扑列 DNS、端口、应用响应、身份认证及业务完成指标，区分直连与中继、连接成功与任务成功；不开放端口、建立隧道或向真实服务增加探测负载。",
+      "财务记录、市场解释与交易研究不可互相替代：we-promise/sure、ZhuLinsen/daily_stock_analysis 和 tradermonty/claude-trading-skills 分别处理账本、信息汇总与流程研究。学习步骤：只用自编流水和价格记录核对来源、时点、缺失、导出及回测假设，另读许可及商标条件；不导入持仓、不接券商、不因热度或模型解释推断收益。",
+      "本期关注信号集中在审查、反馈和运行证据，既有工具、技能合集和协作平台仍需分清。学习步骤：为上面每组项目各写一项可检验的问题，再对照 README 的已实现范围与限制；本次排名仅反映当日关注度，不证明新发布、学术质量、性能、安全、官方认证或商业许可。"
+    ]
+  }
+}
