@@ -1,0 +1,378 @@
+{
+  "id": "2026-11-15",
+  "kind": "daily",
+  "title": "2026-11-15 · 恢复证据、仿真验收与消费观察",
+  "period": {
+    "start": "2026-11-15",
+    "end": "2026-11-15"
+  },
+  "generated_at": "2026-11-15T08:36:59+08:00",
+  "collection_window": {
+    "start": "2026-11-14T08:31:25.652558+08:00",
+    "end": "2026-11-15T08:29:45.525497+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证方向和官方 GitHub 日榜前十。微软恢复声明、航空维护初步归因与 SimReady 背景教程分别核对；科技官方订阅零新增，教程保留真实发布时间。消费价值、经营成本与艺术品争议不外推为回报；处罚上诉、选举认证与边境试验生效条件明确。竞赛仍四项推荐（两项长期练习），十一项天池证据重新核对，灵波仍为晋级线下决赛及首轮日期冲突，其他平台覆盖限制保留，未确认新匹配或临近首次报名机会。",
+  "source_failures": [],
+  "items": [
+    {
+      "event_id": "a61501fbc50aff18ab3c",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-14T06:42:27+00:00",
+      "score": 82,
+      "headline": "微软称服务已恢复，完整事故复盘仍待发布",
+      "short_headline": "微软称服务已恢复，完整事故复盘仍待发布",
+      "short_summary": "BBC 引述微软称网络容量升级引入的问题已修复；服务恢复声明不证明所有客户业务和积压均已完成。",
+      "summary": "BBC 引述微软称 Microsoft 365 全球故障已经修复，事故与网络容量升级有关，并非网络攻击或 AI 代理造成。报道回顾逐区恢复，完整事后报告仍待发布。本期未核对所有租户和积压，不将厂商声明视为全部业务已交付，也不据此诊断其他客户端。",
+      "relevance": "连接、应用、积压和业务完成属于不同恢复阶段。",
+      "action": "对照正式事故公告，在自身授权范围核对关键操作与积压；不重复提交有副作用的任务。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o",
+          "label": "BBC · 微软恢复更新",
+          "excerpt": "A full post-incident report will be released",
+          "checked_at": "2026-11-15T08:30:25.498476+08:00"
+        }
+      ],
+      "context_note": "原文仍列十一月十三日发布，本期采用 RSS 十一月十四日更新时刻，内容已变为厂商称全面恢复；事故开始、更新与核验时间分开记录。"
+    },
+    {
+      "event_id": "5bfebd58b9443dcaccf7",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-14T19:12:25+00:00",
+      "score": 82,
+      "headline": "美国交通部长将停飞归因于维护升级，调查仍继续",
+      "short_headline": "美国交通部长将停飞归因于维护升级，调查仍继续",
+      "short_summary": "BBC 报道铜缆转光纤维护问题引发通信异常；官员初步归因与最终责任、航班调度恢复仍不同。",
+      "summary": "BBC 引述交通部长与 FAA 官员称，全国停飞与承包商铜缆转光纤维护中的路由设备问题有关，尚在核查具体原因，未见恶意活动或 AI 相关证据。禁飞解除后仍有取消和延误。本期未取得完整技术复盘，不将初步说明写成最终结论或所有旅客行程已恢复。",
+      "relevance": "基础设施变更可能跨系统扩散，技术恢复与交通积压消化需各自核验。",
+      "action": "跟踪 FAA 及承包商正式说明，只用虚构依赖图研究回退；真实出行以航空公司状态为准。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6wy9lynq4qno",
+          "label": "BBC · 停飞维护归因",
+          "excerpt": "an investigation is still under way",
+          "checked_at": "2026-11-15T08:30:25.735025+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC RSS 更新字段，正文已核对；不由相对时间显示另行推算精确时刻。"
+    },
+    {
+      "event_id": "cdc8eef67bc55a0d0fa5",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-13T18:00:39+00:00",
+      "score": 82,
+      "headline": "SimReady 教程回看：资产校验与完整任务验收分开",
+      "short_headline": "SimReady 教程回看：资产校验与完整任务验收分开",
+      "short_summary": "NVIDIA 示例组合机械臂、夹爪及物体，明确无视觉、固定位置与简化物理；配置通过不证明真机或泛化可靠。",
+      "summary": "NVIDIA 教程介绍 SimReady OpenUSD 资产与 Isaac Sim 抓取任务，区分 profile 属性校验及组装控制测试。示例使用已知位置和固定路线、碰撞检查有限，不建模罐体变形或液体。本期只读教程，未运行软件，不将演示外推到未知位置、不同负载或真实硬件安全。",
+      "relevance": "资产合格、组合正确、任务成功与真机适用是不同证据层次。",
+      "action": "先用虚构资产列关节、接触、初始条件和失败证据；不下载代码、启动远程执行或操作硬件。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+          "label": "Hugging Face · NVIDIA SimReady 教程",
+          "excerpt": "These results apply to this scripted setup.",
+          "checked_at": "2026-11-15T08:30:26.292599+08:00"
+        }
+      ],
+      "context_note": "科技官方订阅本次零新增，补充近七日未收录的十一月十三日官方教程为背景回看；发布时间采用源 RSS，未改成今日发布。"
+    },
+    {
+      "event_id": "d68b444ca72afec9fc64",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-15T00:01:07+00:00",
+      "score": 82,
+      "headline": "美妆日历礼盒的标价与实际使用价值需分开",
+      "short_headline": "美妆日历礼盒的标价与实际使用价值需分开",
+      "short_summary": "BBC 比较组合价、稀缺营销及用不完的小样；标称零售价总和或个人转售经历不证明每位买家都省钱。",
+      "summary": "BBC 采访消费者与研究者，讨论美妆礼盒组合价、开箱营销和不同使用偏好，并回顾个别品牌退款。本期未逐项估价或取得完整市场数据，不把标称零售价总和当作实际节省，亦不由个人转售经历推导普遍回报。",
+      "relevance": "产品容量、原本需求与可用比例共同影响真实价值。",
+      "action": "用虚构礼盒列容量、可比单价与原本需要的内容，再核对退换条件，不据促销估值推导收益。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cqn83l442724o",
+          "label": "BBC · 美妆礼盒观察",
+          "excerpt": "it is more important she actually wants the items inside",
+          "checked_at": "2026-11-15T08:30:26.535192+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC RSS 更新字段，正文已核对；不由相对时间显示另行推算精确时刻。"
+    },
+    {
+      "event_id": "fd8ce9f123e3aa3b999f",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-14T07:11:26+00:00",
+      "score": 82,
+      "headline": "曼彻斯特市集商户谈涨价与利润压力",
+      "short_headline": "曼彻斯特市集商户谈涨价与利润压力",
+      "short_summary": "BBC 采访商户称成本增加，也有摊位降价留客；个案不代表所有市集统一的成本、售价或利润变化。",
+      "summary": "BBC 报道曼彻斯特圣诞市集部分商户提价后仍称利润下降，亦有保持或降低售价者，开销涉及员工、原料、住宿、运输及支付费用。本期未审计账目或建立市场样本，不由终端价格推断利润，也不将个别摊位日成本当作平均经营门槛。",
+      "relevance": "季节性经营受固定成本、营业天数、备货和支付结构共同影响。",
+      "action": "用虚构摊位区分固定、变动及准备撤场成本，比较销量与利润，不据报道直接租位采购。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c95y152k8erpo",
+          "label": "BBC · 市集经营成本",
+          "excerpt": "some saying they were making less money despite charging more.",
+          "checked_at": "2026-11-15T08:30:26.942201+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC RSS 更新字段，正文已核对；不由相对时间显示另行推算精确时刻。"
+    },
+    {
+      "event_id": "2690d08037a4812b4a8e",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-14T18:00:10+00:00",
+      "score": 82,
+      "headline": "梵高拟拍品遭来源争议，估价不等于成交",
+      "short_headline": "梵高拟拍品遭来源争议，估价不等于成交",
+      "short_summary": "BBC 报道继承人代表质疑历史出售是否受胁迫，苏富比称研究未证实并正沟通；争议尚非已有最终裁判。",
+      "summary": "BBC 报道梵高拟拍品约一亿八千万美元估价及来源争议，继承人代表质疑纳粹时期出售是否受胁迫，苏富比表示尚未证实并与家族沟通。本期未审查完整档案或法院文件，不将争议视为已经判定应返还，也不把估价当成成交价或保证价值。",
+      "relevance": "艺术品交易依赖来源、所有权及争议处理，历史研究与司法结论不同。",
+      "action": "查正式目录、后续争议处理与法院公开文件，区分估值、拟拍安排和权属状态，不据新闻作购买决定。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cmwy05gg75lvo",
+          "label": "BBC · 梵高来源争议",
+          "excerpt": "working to resolve a dispute",
+          "checked_at": "2026-11-15T08:30:27.188048+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC RSS 更新字段，正文已核对；不由相对时间显示另行推算精确时刻。"
+    },
+    {
+      "event_id": "a2e4f8948c514022303d",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-14T18:28:06+00:00",
+      "score": 82,
+      "headline": "意大利据报罚 Meta 八亿欧元，公司拟上诉",
+      "short_headline": "意大利据报罚 Meta 八亿欧元，公司拟上诉",
+      "short_summary": "BBC 引述监管方称相册建议功能缺乏具体知情同意；系统权限、特定用途同意及上诉程序需要分别记录。",
+      "summary": "BBC 报道意大利数据保护机构就相册建议功能罚 Meta 八亿零五百万欧元，要求默认关闭并另行征求同意。Meta 不同意事实与法律评估，拟上诉。本期未取得完整决定及上诉文件，不视为终审认定，也不将设备层面授权等同全部数据用途已获同意。",
+      "relevance": "罚款决定、整改和上诉有不同程序；许可范围应说明具体用途。",
+      "action": "核对监管正式决定和公司后续说明，用虚构权限界面区分系统许可与用途告知，不访问真实相册。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cwn83gxemk35o",
+          "label": "BBC · Meta 相册同意处罚",
+          "excerpt": "it planned to appeal.",
+          "checked_at": "2026-11-15T08:30:27.426329+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC RSS 更新字段，正文已核对；不由相对时间显示另行推算精确时刻。"
+    },
+    {
+      "event_id": "898e12ad324137b4c0fa",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-14T16:58:33+00:00",
+      "score": 82,
+      "headline": "阿拉斯加州长选举据报由 Kreiss-Tomkins 胜出",
+      "short_headline": "阿拉斯加州长选举据报由 Kreiss-Tomkins 胜出",
+      "short_summary": "Guardian 引述美联社判定胜选并介绍竞选主张；媒体判定、正式认证、就任及政策生效仍是不同阶段。",
+      "summary": "Guardian 报道美联社判定 Jonathan Kreiss-Tomkins 赢得阿拉斯加州长选举，介绍教育、可负担性和数据中心主张。本期未核对最终州级认证，不把媒体判定写成已就职或竞选提案已生效；州长和同州仍在计票的参院选举分别记录。",
+      "relevance": "行业影响需跟踪正式议程，不能凭竞选口号推定政策已经实施。",
+      "action": "核对州选务正式认证及就任安排，再区分政策提案、通过和执行。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/us-news/2026/nov/14/alaska-governor-democrat-jonathan-kreiss-tomkins-wins",
+          "label": "The Guardian · 阿拉斯加州长选举",
+          "excerpt": "His victory – called by the Associated Press",
+          "checked_at": "2026-11-15T08:30:27.842000+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "7b4d7913fd00b870fd28",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-14T07:00:38+00:00",
+      "score": 82,
+      "headline": "海峡隧道拟试行车内采集，全面启用仍未定",
+      "short_headline": "海峡隧道拟试行车内采集，全面启用仍未定",
+      "short_summary": "Guardian 引述 Getlink 称获准试验摄像监督终端；设备准备、试验许可及法国系统对接不同，不能保证排队减少。",
+      "summary": "Guardian 报道 Getlink 拟在 Folkestone 与 Calais 试行车内护照和生物识别采集，计划两年。公司同时称不知法国系统何时启用，对接仍未工作。本期未核对完整批准文本或现场状态，不将试验安排写成边境手续已全面改变、永久采用或实际效率已经改善。",
+      "relevance": "硬件、许可、跨境对接和旅客实际流程需要分别确认。",
+      "action": "核对正式旅行指引和生效日，不收集个人生物资料，也不把试验写成已可预约服务。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/travel/2026/nov/14/eurotunnel-drive-in-fingerprint-trial-folkestone-calais-border",
+          "label": "The Guardian · 隧道边境试验",
+          "excerpt": "the connection with the French system is still not working.",
+          "checked_at": "2026-11-15T08:30:28.256496+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "simulation-asset-integration-acceptance",
+      "headline": "仿真资产配置与完整任务组合的验收分层",
+      "short_headline": "资产、场景和任务的三层验收",
+      "short_summary": "SimReady 区分资产属性与完整任务测试，可研究如何记录组合条件和失败，避免只看外观正确。",
+      "category": "模型与基础设施",
+      "score": 79,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "NVIDIA 教程明确 profile 校验后仍需验证组装和控制，固定示例不覆盖未知位置与真机，为仿真验收提供具体依据，不证明已有商业需求。",
+      "audience": "学习机器人仿真、资产整理与测试流程的开发者和小团队。",
+      "first_step": "只用虚构机械臂与物体列资产、场景、任务三张检查表，写初始条件、预期接触、成功和失败证据；不安装软件、运行未知代码或操作硬件。",
+      "risks": "固定脚本成功不代表泛化或实体安全，简化动力学影响结论；资源、资产和依赖许可需另核，示例扭矩不是厂商硬件建议。",
+      "time_window": "未来一周先做文档与纸面验收，无官方申请截止。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
+          "label": "NVIDIA · 示例外推边界",
+          "excerpt": "They do not establish robustness to uncertain object positions, different payloads, or real hardware.",
+          "checked_at": "2026-11-15T08:30:26.292599+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "bounded-retry-recovery-ledger",
+      "headline": "恢复台账更新：维护变更、应用恢复与积压分开",
+      "short_headline": "维护变更后的分阶段恢复证据",
+      "short_summary": "微软恢复和航空维护报道增加变更及积压资料，可扩展重试台账，检查声明与业务完成之间的差异。",
+      "category": "模型与基础设施",
+      "score": 79,
+      "status": "research",
+      "verification_status": "media_reported",
+      "signal": "BBC 分别记录微软逐步恢复且完整复盘待发、航空通信维护后仍有调度积压，为既有重连研究增加变更来源、关键操作与业务清理维度，不证明通用故障方案。",
+      "audience": "维护 API 客户端、定时任务和外部依赖的小团队与开发者。",
+      "first_step": "用虚构事件回放连接恢复、关键操作、重复任务核对及积压清空，为每阶段列证据、幂等和最大重试条件；不向真实服务制造负载。",
+      "risks": "初步归因可能修订，厂商声明不证明每个账户恢复；重放动作可能重复，备用服务也可能共享依赖，不据案例诊断本机。",
+      "time_window": "未来一周先做虚构状态回放与维护清单，无报名或收益承诺。",
+      "update_reason": "此前依据 GitHub 复盘研究连接风暴与退避；本次新增微软维护升级后的逐步恢复及 FAA 维护后持续调度积压，把台账扩展到变更记录、恢复声明和业务清理，复用原编号。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o",
+          "label": "BBC · 微软逐步恢复",
+          "excerpt": "Microsoft said it restored services gradually",
+          "checked_at": "2026-11-15T08:30:25.498476+08:00"
+        },
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6wy9lynq4qno",
+          "label": "BBC · 调度后续影响",
+          "excerpt": "the disruption is expected to last for days.",
+          "checked_at": "2026-11-15T08:30:25.735025+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-11-15T08:30:03.611920+08:00",
+    "coverage_note": "直接读取当日官方全语言日榜，页面十五项，保留原始前十；逐项核对 README，今日及总 Star 均为本次榜单值。未以旧榜、周榜或搜索替代，未安装运行候选；关注度不证明新发布、质量、安全、收益或商业许可。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "backnotprop/plannotator",
+        "url": "https://github.com/backnotprop/plannotator",
+        "summary": "为计划、文档、HTML 及代码差异提供本地审阅和注释界面；共享、AI 及托管功能有不同数据传输边界。",
+        "direction": "代理产物审阅与反馈",
+        "stars_today": 408,
+        "total_stars": 11117
+      },
+      {
+        "rank": 2,
+        "repository": "GoogleChrome/modern-web-guidance-src",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+        "summary": "现代网页平台技能的源仓库，提供指南编写、校准、评测与兼容资料；参考知识不能代替目标浏览器实测。",
+        "direction": "网页知识与兼容验证",
+        "stars_today": 1231,
+        "total_stars": 6036
+      },
+      {
+        "rank": 3,
+        "repository": "tradermonty/claude-trading-skills",
+        "url": "https://github.com/tradermonty/claude-trading-skills",
+        "summary": "投资研究、日志及复盘的技能流程合集，明确不代下单或承诺盈利；本期未接入券商和真实持仓。",
+        "direction": "金融研究流程与证据边界",
+        "stars_today": 553,
+        "total_stars": 4805
+      },
+      {
+        "rank": 4,
+        "repository": "ChromeDevTools/chrome-devtools-mcp",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "summary": "供代理控制和检查 Chrome 的 MCP 与 CLI 工具，支持性能、网络和控制台调试；浏览器内容暴露、统计及外部请求需核对。",
+        "direction": "浏览器调试与数据边界",
+        "stars_today": 664,
+        "total_stars": 56297
+      },
+      {
+        "rank": 5,
+        "repository": "alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "summary": "结合文件筛选、规则与模型代理的代码审查 CLI，可读 diff 和关联代码；基准效果与模型输入范围需另核。",
+        "direction": "混合代码审查与定位证据",
+        "stars_today": 893,
+        "total_stars": 51426
+      },
+      {
+        "rank": 6,
+        "repository": "QwenLM/qwen-code",
+        "url": "https://github.com/QwenLM/qwen-code",
+        "summary": "多入口、多模型协议的编码代理，覆盖终端、编辑器及实验能力；工具具备不等于已授权全部本地或第三方动作。",
+        "direction": "编码代理与会话范围",
+        "stars_today": 64,
+        "total_stars": 30334
+      },
+      {
+        "rank": 7,
+        "repository": "dream-num/univer",
+        "url": "https://github.com/dream-num/univer",
+        "summary": "可嵌入产品的 Office SDK，开源基础包含部分 Sheets、Docs 与计算能力；服务端、转换及部分 AI 扩展另行分发许可。",
+        "direction": "办公内容模型与许可范围",
+        "stars_today": 495,
+        "total_stars": 24485
+      },
+      {
+        "rank": 8,
+        "repository": "ag-ui-protocol/ag-ui",
+        "url": "https://github.com/ag-ui-protocol/ag-ui",
+        "summary": "连接代理后端与用户界面的事件协议，组织执行和状态事件；支持协议不证明每个应用的权限或数据一致性。",
+        "direction": "代理界面事件与状态同步",
+        "stars_today": 9,
+        "total_stars": 17360
+      },
+      {
+        "rank": 9,
+        "repository": "ashhart/TensorFold",
+        "url": "https://github.com/ashhart/TensorFold",
+        "summary": "以 Zig 二进制在 Metal 或 CUDA 上提供模型推理的引擎；文档按模型和硬件列验证范围，不能由标题推定全部后端可用。",
+        "direction": "本地推理与适用组合",
+        "stars_today": 37,
+        "total_stars": 2160
+      },
+      {
+        "rank": 10,
+        "repository": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "summary": "包含短输出技能、压缩与路由工具的成本实验工程；节省倍率属作者测试，Auto 和云路由有不同上下文传输范围。",
+        "direction": "上下文成本与信息保留",
+        "stars_today": 227,
+        "total_stars": 120063
+      }
+    ],
+    "analysis": [
+      "界面反馈与状态协议互补：backnotprop/plannotator 处理产物审阅，ag-ui-protocol/ag-ui 连接事件与前端，dream-num/univer 提供办公内容模型。学习步骤：用虚构单元格修改列执行、撤销、界面更新和确认事件，区分临时与持久状态；演示中的商业能力不等于默认开源功能。",
+      "网页参考与实时调试不同：GoogleChrome/modern-web-guidance-src 提供平台知识，ChromeDevTools/chrome-devtools-mcp 检查活跃浏览器。学习步骤：以虚构页面列兼容、键盘与性能条件，再核对内容、统计及外部请求边界；本期未启动调试器或接入真实会话。",
+      "编码与审查要分别验收：QwenLM/qwen-code 执行开发任务，alibaba/open-code-review 结合规则与模型审查。学习步骤：用自编 diff 列范围、位置、依据、遗漏与验证；作者精度和 token 收益不能直接推广到所有代码库，第三方模型输入与权限须另核。",
+      "成本优化需要保留事实：ashhart/TensorFold 涉及本地推理组合，JuliusBrussee/caveman 涉及输出压缩和路由。学习步骤：用自编任务表列内存、完整调用、遗漏、回退和复核成本，核对云路由数据流；不安装工具或修改设置，不以作者倍率保证任意设备与套餐收益。",
+      "研究合集不等于交易系统：tradermonty/claude-trading-skills 明确定位研究与复盘。学习步骤：只用虚构价格检查时点、假设、缺失和回测偏差，不导入持仓或连券商。以上方向为当日关注度推断，不代表新发布、学术质量、性能、安全或商业许可。"
+    ]
+  }
+}
