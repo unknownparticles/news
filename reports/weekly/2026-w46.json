@@ -1,0 +1,1302 @@
+{
+  "id": "2026-w46",
+  "kind": "weekly",
+  "title": "2026-W46 · 周报",
+  "period": {
+    "start": "2026-11-09",
+    "end": "2026-11-15"
+  },
+  "generated_at": "2026-11-16T08:42:59.757274+08:00",
+  "coverage": {
+    "expected_days": 7,
+    "available_days": 7,
+    "missing_dates": []
+  },
+  "summary": "本期已有 7 天日报，去重后收录 57 个新闻事件，展示前 45 条，并整理 13 个机会，最多展示十个。内容来自已保存日报；已截止的机会标明关闭，缺失日期不补造新闻。",
+  "items": [
+    {
+      "event_id": "f0fc30384fec2ecc4dbc",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-11-10T18:00:00+00:00",
+      "score": 87,
+      "headline": "Git 发布六项安全修复，内置副本也需核对",
+      "short_headline": "Git 发布六项安全修复，内置副本也需核对",
+      "short_summary": "GitHub 公告列 Git 2.56.1 及维护分支修复版，涉及克隆、引用、合并和输入处理；不同宿主应用的更新状态需逐项确认。",
+      "summary": "GitHub 官方公告称 Git 发布修复六项安全问题的新版本，包括 Git 2.56.1 及多个维护分支补丁版。文章建议同时更新操作系统分发的 Git 与应用内置副本，并区分 GitHub 云服务已部署修复、企业服务可升级版本和部分应用协调推出中的状态。本文不提供利用方法，也未检查本机版本或自动安装更新；不能从云端已修复推断所有桌面和自动化环境已经完成升级。",
+      "relevance": "同一机器可能运行系统 Git、IDE 内置 Git 和自动化镜像，单个版本号不能覆盖全部执行路径。",
+      "action": "通过各软件官方发行渠道核对实际 Git 路径、修复版本和发布说明；建立清单后按正常维护流程升级，不克隆未知样例验证漏洞。",
+      "sources": [
+        {
+          "url": "https://github.blog/open-source/git/git-security-vulnerabilities-announced-7",
+          "label": "GitHub Blog · Git 安全修复公告",
+          "excerpt": "Git project is releasing new versions to address six security vulnerabilities.",
+          "checked_at": "2026-11-11T08:30:49.182764+08:00"
+        }
+      ],
+      "daily_report": "2026-11-11"
+    },
+    {
+      "event_id": "a989f1582084d0cf153c",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-09T00:00:00+00:00",
+      "score": 86,
+      "headline": "Anthropic 发布 Fable 与 Mythos 5.2，访问条件有别",
+      "short_headline": "Anthropic 发布 Fable 与 Mythos 5.2，访问条件有别",
+      "short_summary": "厂商称两者使用相同底层模型，Fable 面向一般访问，Mythos 需核验计划；内部演示和基准不能等同独立复现。",
+      "summary": "Anthropic 公告升级 Claude Fable 5.2 与 Mythos 5.2，称两者为相同底层模型，但 Fable 配有网络安全与生物领域防滥用限制，Mythos 通过相关核验计划提供。文档列编码、推理、视觉与工程演示及每百万输入八美元、输出四十美元的标准价格。本文记录厂商自述，未独立复现全部基准、硬件或科研结果，也不把展示等同通用可靠性、无限制访问或无需人工审核。",
+      "relevance": "模型能力、允许任务、数据保留和账户资格分别影响能否实际使用；单个基准与 token 单价不能替代完整任务成本。",
+      "action": "先读系统卡和当前访问条款，用自编无害任务列成功率、人工复核和完整费用；不申请受限访问或启动付费任务。",
+      "sources": [
+        {
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "label": "Anthropic · 模型发布公告",
+          "excerpt": "Claude Fable and Claude Mythos are the same underlying model.",
+          "checked_at": "2026-11-10T08:33:07.179068+08:00"
+        }
+      ],
+      "context_note": "官网明确发布日为十一月九日，但本次正文未给精确时刻；零时仅编码日期，作为近七日发布资料收录，非今日零时新发布。",
+      "published_at_precision": "date",
+      "daily_report": "2026-11-10"
+    },
+    {
+      "event_id": "3e32bae570ff21ee59e5",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-10T16:03:47+00:00",
+      "score": 86,
+      "headline": "Gemini 4 Carbon 扩大开放，优惠价格有结束日",
+      "short_headline": "Gemini 4 Carbon 扩大开放，优惠价格有结束日",
+      "short_summary": "Google 公告向付费开发者及部分产品用户开放 Carbon，介绍价至十一月三十日；防御专用访问和研究计划仍有筛选条件。",
+      "summary": "Google 公告扩大 Gemini 4 Carbon 访问，称付费开发者可通过 AI Studio 等入口使用，并向 Ultra 订阅产品推出。公开模型介绍价为每百万输入二美元、输出十美元，优惠期十一月三十日结束后为四美元和二十美元；专门网络防御访问仍通过 Fairwind。本文记录发布者自述，未实际测试账户可用性或独立复测基准，不把产品推出、科研申请和受限防御能力混作无条件开放。",
+      "relevance": "模型进入常规入口是实际变化，但完整任务费用还取决于推理量、工具、重试、套餐及优惠结束时间。",
+      "action": "先核对当前账户、地区与计费文档，用虚构任务列质量、总费用和人工审核指标；不因演示效果直接扩大生产权限。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/gemini-4-carbon-is-now-available",
+          "label": "Google · Carbon 扩大开放公告",
+          "excerpt": "Gemini 4 Carbon is available via the API",
+          "checked_at": "2026-11-11T08:30:46.195279+08:00"
+        }
+      ],
+      "update_reason": "十月二十九日仅确认向部分防御团队及可信伙伴分批开放；本次新公告扩大至付费开发者和产品用户，并明确介绍价结束日，复用原模型事件编号。",
+      "context_note": "官网明确十一月十日发布，精确时间采用本次 DeepMind RSS；本条是扩大访问的实质更新，非首次宣布模型。",
+      "daily_report": "2026-11-11"
+    },
+    {
+      "event_id": "0e9fb0eb84f13acffdc5",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-10T12:00:00+00:00",
+      "score": 85,
+      "headline": "AlphaProof Code 研究验证 Signal 核心代码属性",
+      "short_headline": "AlphaProof Code 研究验证 Signal 核心代码属性",
+      "short_summary": "DeepMind 报告将人工审核的安全目标转为规格，再由代理生成 Lean 证明；证明特定实现属性不等于整个通信系统无漏洞。",
+      "summary": "DeepMind 介绍 AlphaProof Code 形式化验证研究：人类专家审核安全规格，代理为 Signal 核心密码协议实现生成 Lean 证明，并报告以隔离版本重新引入两项已修复缺陷检查系统辨别能力。作者称过程历时四周、生成超过六百万行 Lean，并开放验证产物。本文未复现完整工具链，不将指定属性与假设下的证明外推为客户端、终端环境或整个通信链路绝对安全；该研究项目与同日模型常规开放分别记录。",
+      "relevance": "形式化验证的价值取决于规格、编译与建模范围、可信检查器和人工审查，证明行数不能单独衡量保障水平。",
+      "action": "先读技术论文及公开产物目录，用无害的自编状态机列规格、假设与未覆盖条件；不运行未知代码或对实际通信系统测试。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code",
+          "label": "DeepMind · AlphaProof Code 研究说明",
+          "excerpt": "human experts reviewing every one.",
+          "checked_at": "2026-11-11T08:30:48.018225+08:00"
+        }
+      ],
+      "daily_report": "2026-11-11"
+    },
+    {
+      "event_id": "ba0fcf4e325b4115c73c",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-11T15:00:00+00:00",
+      "score": 85,
+      "headline": "AlphaGenome 2 预测特定细胞中的 DNA 变异影响",
+      "short_headline": "AlphaGenome 2 预测特定细胞中的 DNA 变异影响",
+      "short_summary": "DeepMind 介绍按细胞类型和状态作条件预测，非商业研究可经 API 使用；模型未获临床或诊断验证，不是个体疾病判断。",
+      "summary": "DeepMind 发布 AlphaGenome 2，将 DNA 序列与目标组织、细胞类型或状态共同作为条件，预测基因调控及变异影响。官方报告其训练包含逾一亿单细胞样本，并可结合新单细胞资料作预测；非商业研究经 AlphaGenome API 提供，商业研究处于私有预览。本文未独立复现性能或核实所有配额条款，明确保留官方所述研究用途边界，不把预测或候选变异解释成临床诊断、疾病因果已证实或可直接给出治疗建议。",
+      "relevance": "细胞条件可以改变同一变异的预测解释；数据分布、实验真值和访问许可需与模型能力分别判断。",
+      "action": "先读模型资料及公开技术说明，画出序列、细胞条件、预测读出和实验验证之间的关系；本期不上传个人或未公开基因数据。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease",
+          "label": "Google DeepMind · AlphaGenome 2 公告",
+          "excerpt": "intended for research use only and have not been validated or approved for clinical or diagnostic purposes.",
+          "checked_at": "2026-11-12T08:33:04.292574+08:00"
+        }
+      ],
+      "daily_report": "2026-11-12"
+    },
+    {
+      "event_id": "5b69826eead48a963c75",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-12T18:00:50+00:00",
+      "score": 85,
+      "headline": "Gemini 4 Hydrogen 推出，免费入口与订阅权限有别",
+      "short_headline": "Gemini 4 Hydrogen 推出，免费入口与订阅权限有别",
+      "short_summary": "Google 介绍面向日常代理任务的模型与多模型编排；免费用户经自动选择访问，产品推出及基准表现仍需按场景核验。",
+      "summary": "Google 发布 Gemini 4 Hydrogen，定位日常编码与代理执行，称覆盖 API、应用和搜索等入口，并介绍 Antigravity 的动态多模型编排。公告列百万 token 上下文、每百万输入一点五美元及输出七点五美元；免费 Gemini 应用用户由自动模型选择在适合时使用，Antigravity 入口则要求相应付费订阅。本期未独立复测性能、费用或账户可用性，不把平台覆盖与每个用户可手动无限调用混同。",
+      "relevance": "模型单价、推理投入、实际订阅和完整任务重试共同影响开销，多模型编排收益属于具体实验结果。",
+      "action": "先核对当前账户入口与完整计费条款，用虚构任务定义成功、恢复和人工复核指标，再决定是否试验。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen",
+          "label": "Google DeepMind · Hydrogen 公告",
+          "excerpt": "free users will get access to Gemini 4 Hydrogen via auto model selection",
+          "checked_at": "2026-11-13T08:26:21.687106+08:00"
+        }
+      ],
+      "context_note": "官网明确十一月十二日发布，精确时间采用本次 DeepMind RSS；免费用户与付费产品入口按公告脚注区分。",
+      "daily_report": "2026-11-13"
+    },
+    {
+      "event_id": "187bb7cb1c545322a4d5",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "score": 84,
+      "headline": "Inkling 2 Small 回看：先提供服务，权重释出仍需核实",
+      "short_headline": "Inkling 2 Small 回看：先提供服务，权重释出仍需核实",
+      "short_summary": "厂商介绍多模态 MoE 与 Tinker 访问，文章将完整权重置于后续安全测试后发布；本期未确认实际下载状态。",
+      "summary": "Thinking Machines 介绍 Inkling 2 Small，列总参数 594B、激活 17B，支持图像输入及可调整推理投入。文章说初始经 Tinker 提供服务、权重暂不开放，并计划在外部安全测试后于次周以 Apache 2.0 释出。本文回看该公告，不独立验证基准，也未确认本期实际释出状态，不能把计划当作已可下载或适合普通设备。",
+      "relevance": "模型名称中的 Small 不代表完整权重或部署资源很小；服务、微调检查点、许可证和真实可用性需分开。",
+      "action": "先核对正式模型卡、权重仓库和访问条件，以公开虚构任务设计质量和成本验收，不购买服务或下载权重。",
+      "sources": [
+        {
+          "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+          "label": "Thinking Machines · Inkling 公告",
+          "excerpt": "Inkling 2 Small will initially be available through Tinker, with closed weights, following the approach we outlined in a safe path to open weights. We intend to make the full weights available under an Apache 2.0 license next week after the completion of external safety testing and red-teaming.",
+          "checked_at": "2026-11-09T08:32:12.492468+08:00"
+        }
+      ],
+      "context_note": "科技官方订阅本次零新增，补充近七日尚未收录的十一月五日官方资料，明确为背景回看。 采用官网 datePublished 零时元数据；权重释出的后续实际状态本期未独立确认。",
+      "daily_report": "2026-11-09"
+    },
+    {
+      "event_id": "55d059b88c6c576a2f3d",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-09T12:34:29+00:00",
+      "score": 84,
+      "headline": "HOPE 研究把专家间协作纳入 MoE 剪枝",
+      "short_headline": "HOPE 研究把专家间协作纳入 MoE 剪枝",
+      "short_summary": "Amazon 作者在 Hugging Face 介绍成对专家交互剪枝，报告高剪枝率下的基准收益；跨层交互和真实部署收益仍有边界。",
+      "summary": "Amazon 作者介绍 HOPE，以二阶成对交互统计选择保留的 MoE 专家，而非只逐个排名。文章报告三个模型、两套校准数据、多个剪枝率及编码基准的实验，称优势在四成至五成剪枝时更明显。作者也说明按层独立处理、未覆盖跨层及更高阶交互；本期未复现实验，剪去一半专家不等于整机费用或延迟必然减半。",
+      "relevance": "模型稀疏激活并不等于所有权重无需常驻；压缩方案需同时评价内存、校准分布及任务质量。",
+      "action": "先读论文的误差定义与限制，用四个虚构专家的共现表手算独立排序和成对保留差异，不下载大权重或租用算力。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+          "label": "Hugging Face · Amazon 研究自述",
+          "excerpt": "accounts for pairwise expert interactions.",
+          "checked_at": "2026-11-10T08:33:09.526325+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次官方来源 RSS 字段；原文正文已直接核对，不以聚合摘要代替。",
+      "daily_report": "2026-11-10"
+    },
+    {
+      "event_id": "02bfed5e7aa817ea9dcb",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-11T00:00:00+00:00",
+      "score": 84,
+      "headline": "Gemini Decisions API 以候选概率支持有界选择",
+      "short_headline": "Gemini Decisions API 以候选概率支持有界选择",
+      "short_summary": "Google 介绍一次输入评估多个是非、选择与量规问题，返回概率和置信度；延迟范围、计费与校准结果仍须按任务核验。",
+      "summary": "Google 介绍 Gemini Decisions API 与 Gemini Decision 1，用多模态输入对最多一千个独立问题进行有界选择、是非判断或量规评分，返回候选概率与置信度。公告列每百万输入 token 零点一美元、输出 token 不计费，并对部分输入长度和问题数报告延迟实验。本文未实际调用或复测校准，不能把一百至二百五十毫秒外推到所有二十五万六千 token 输入及一千问题组合，也不把概率高当作事实正确或已获执行授权。",
+      "relevance": "路由、分类与评分可和长文本生成分开，但候选集遗漏、分布变化及回退机制仍决定系统质量和总费用。",
+      "action": "先用虚构请求与固定选项画出低置信度、候选缺失和人工回退流程，逐项核对当前 API 条款与计费范围，不申请密钥或付费调用。",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+          "label": "Google · Gemini Decisions API 公告",
+          "excerpt": "returning probabilities and confidence scores",
+          "checked_at": "2026-11-12T08:33:05.457521+08:00"
+        }
+      ],
+      "context_note": "官网只明确十一月十一日发布；零时仅编码日期，非核实到分钟的发布时刻。本条作为近七日官方发布资料收录。",
+      "published_at_precision": "date",
+      "daily_report": "2026-11-12"
+    },
+    {
+      "event_id": "84ec87286cb35a64f463",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-12T19:07:35+00:00",
+      "score": 84,
+      "headline": "IBM LLMON 预览用结构标记区分指令与数据",
+      "short_headline": "IBM LLMON 预览用结构标记区分指令与数据",
+      "short_summary": "IBM 介绍三十亿和八十亿参数实验模型，以特殊 token 和绑定关系表达上下文；静态注入评测改善不是强制安全保证。",
+      "summary": "IBM Granite 团队介绍 LLMON，以保留的特殊 token、命名块和执行绑定表达指令、数据及约束，发布 Granite 4.1 3B、8B 实验预览模型及工具。作者报告静态间接提示注入评测改善，也明确这种区分是学得的行为而非强制保证，自适应多轮攻击仍需研究。本期未复现实验，不将格式转换视为普通模型自动获得同等能力；文档将当前预览定位为探索评估，未面向生产。",
+      "relevance": "可信边界需要同时由应用控制、数据绑定与模型行为支持，标签本身不足以替代工具权限和输出检查。",
+      "action": "用自编无害文档画出哪些内容是任务、输入和约束，核对绑定范围与模板；先做纸面检查，不安装预览或接入真实资料。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+          "label": "Hugging Face · IBM Granite LLMON 说明",
+          "excerpt": "This is a learned behavior, not an enforced guarantee.",
+          "checked_at": "2026-11-13T08:26:22.227914+08:00"
+        }
+      ],
+      "daily_report": "2026-11-13"
+    },
+    {
+      "event_id": "6841e619fcd7e8d93702",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-13T14:05:22+00:00",
+      "score": 84,
+      "headline": "llama.cpp 库发布 1.0.0，接口不兼容将升主版本",
+      "short_headline": "llama.cpp 库发布 1.0.0，接口不兼容将升主版本",
+      "short_summary": "ggml-org 宣布库版本与接口兼容边界，后续 API、ABI 不兼容以主版本变化表示；不代表全部模型或硬件组合已完成验证。",
+      "summary": "ggml-org 宣布 llama.cpp 与相关库的 1.0.0 里程碑，表示后续 API 和 ABI 不兼容变化将反映为主版本提升，并介绍分发、持续集成及后端支持工作。本文记录维护者自述的发行与兼容规则，未实际编译、下载模型或逐平台复测；版本稳定承诺不能外推为所有下游应用无须回归、任意模型可运行或本地推理自动满足全部隐私与资源要求。",
+      "relevance": "下游依赖需要区分接口、二进制兼容、模型文件与实际后端，锁定版本和验收比仅跟随最新构建更可追溯。",
+      "action": "先核对正式发行与兼容说明，为虚构集成列 API、ABI、模型格式和回归条件；本期不安装更新或执行候选代码。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+          "label": "Hugging Face · ggml-org 发行说明",
+          "excerpt": "both llama.cpp and ggml will reflect API and ABI incompatibilities with major-version bumps.",
+          "checked_at": "2026-11-14T08:32:08.172963+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次源 RSS 的带时区字段，原文正文已直接核对；不由页面相对时间编造另一精确发布时间。",
+      "daily_report": "2026-11-14"
+    },
+    {
+      "event_id": "5bd02a39074589ea287c",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-05T00:00:00+00:00",
+      "score": 83,
+      "headline": "Mistral Studio 回看：代理、工作流和应用分别承接任务",
+      "short_headline": "Mistral Studio 回看：代理、工作流和应用分别承接任务",
+      "short_summary": "官方介绍托管代理、企业上下文与评估，部署范围和权限要分别确认；客户案例不证明通用节省或本地可用。",
+      "summary": "Mistral 介绍 Studio 扩展，组合托管代理、工作流、应用、企业上下文、可观察性和评估能力，称可在云、VPC 或本地等环境部署。文章区分代理行动、工作流协调审批及应用入口。本文回看官方产品资料，未核验全部套餐、客户效果与部署成本，不将开放模型或平台控制宣传视为无需数据和权限治理。",
+      "relevance": "企业代理不只需要模型，还要定义执行状态、审批、连接器与结果追溯；托管不代表所有责任都转移。",
+      "action": "用虚构服务画出只读查询、建议、敏感动作审批和回滚流程，先核对部署及计费条款，不连接实际业务系统。",
+      "sources": [
+        {
+          "url": "https://mistral.ai/news/build-with-studio/",
+          "label": "Mistral · Studio 产品资料",
+          "excerpt": "Agents, workflows and apps serve different parts of a business process. An agent investigates and acts, a workflow coordinates execution and approvals, and an app gives employees a way to use these systems.",
+          "checked_at": "2026-11-09T08:32:12.974615+08:00"
+        }
+      ],
+      "context_note": "科技官方订阅本次零新增，补充近七日尚未收录的十一月五日官方资料，明确为背景回看。 官网仅给发布日，零时用于编码日期，并非核实到分钟的发布时间。 聚合项曾记为十一月四日，本期以官网结构化数据的十一月五日为准。",
+      "published_at_precision": "date",
+      "daily_report": "2026-11-09"
+    },
+    {
+      "event_id": "eaf76493fdb0b4bfceb5",
+      "category": "科技前沿",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-11-13T00:20:16+00:00",
+      "score": 83,
+      "headline": "GitHub 发布十月可用性复盘，扩容与恢复分别检验",
+      "short_headline": "GitHub 发布十月可用性复盘，扩容与恢复分别检验",
+      "short_summary": "官方总结八起服务降级事件，涉及路由、连接重试和依赖；历史原因与已做改进不代表当前所有故障具有同一来源。",
+      "summary": "GitHub 发布十月可用性报告，记录八起事件及影响、处置和改进，涉及数据库路由、迁移负载、模型提供方认证及网络依赖。报告说明部分事件中同步重连放大了负载，随后限制新连接速率并加入随机延迟；容量扩张与跨区恢复仍需单独验证。本文确认官方发布的复盘，不把历史诊断外推到本次自动化或其他客户端的重连原因，也不把所有标题事件时长等同所有用户持续不可用。",
+      "relevance": "故障影响范围、用户症状、关键恢复时间和后台积压清理是不同口径，重试策略会影响恢复是否扩散。",
+      "action": "依据报告将虚构服务的依赖、重试上限、退避和恢复证据写成表，真实排障时核对同一时段日志与状态页。",
+      "sources": [
+        {
+          "url": "https://github.blog/news-insights/company-news/github-availability-report-october-2026",
+          "label": "GitHub Blog · 十月可用性复盘",
+          "excerpt": "availability, then capacity, then features.",
+          "checked_at": "2026-11-13T08:26:22.665655+08:00"
+        }
+      ],
+      "daily_report": "2026-11-13"
+    },
+    {
+      "event_id": "96c7f67bef86f8316048",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-13T17:02:35+00:00",
+      "score": 83,
+      "headline": "XYBench 区分回答表面问题与解决实际目标",
+      "short_headline": "XYBench 区分回答表面问题与解决实际目标",
+      "short_summary": "Ai2 介绍八千余条误解型问题，分别评估解法、重点和误解识别；多数样例经生成构造，当前主要覆盖英文程序性任务。",
+      "summary": "Ai2 与合作者介绍 XYBench，含八千一百一十五条程序设计及日常操作问题，区分用户提出的方法与上下文可推断的目标。数据由公开论坛、人工样例和六千余条依据 WikiHow 生成的问题组成，不能全部称为真实用户提问。作者在单轮实验中报告模型往往提到有效方法却仍聚焦错误路径；本文未复现实验，保留自动评审、英文覆盖及程序性任务的限制，不外推到所有模型或多轮沟通。",
+      "relevance": "评测不仅要看是否提到正确答案，还应看是否识别前提错误、解释并把有效解决步骤放在主要位置。",
+      "action": "用自编无害排错案例分列目标、提出的方法和足够上下文，分别评价解法是否出现、重点及误解解释，避免替用户臆造隐藏意图。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/xybench",
+          "label": "Hugging Face · Ai2 XYBench 研究",
+          "excerpt": "a gap between recognizing useful advice and producing it",
+          "checked_at": "2026-11-14T08:32:08.711293+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次源 RSS 的带时区字段，原文正文已直接核对；不由页面相对时间编造另一精确发布时间。",
+      "daily_report": "2026-11-14"
+    },
+    {
+      "event_id": "c9279d164297034c09b5",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-13T17:00:00+00:00",
+      "score": 83,
+      "headline": "Poppy 1.0 发布，代理发现能力与交易授权分开",
+      "short_headline": "Poppy 1.0 发布，代理发现能力与交易授权分开",
+      "short_summary": "Sierra 发布 Personal Agent Protocol 1.0，描述发现、认证及行业扩展；厂商合作名单不能证明每家公司每项交易均已开放。",
+      "summary": "Sierra 宣布 Personal Agent Protocol（Poppy）1.0，说明其基于 MCP、OpenAPI、UCP 等现有标准定义个人代理与企业的连接、能力发现及 OAuth 授权，并介绍 Shopify 商务扩展与伙伴采用情况。本文只确认发布方文档所述进展，未逐站验证部署、身份流程或服务条款，不将自动发布能力文件等同所有交易可自动执行；品牌案例中的查询、准备和付款仍有各自审批范围。",
+      "relevance": "发现服务、确认身份、获得动作权限及实际完成交易需要分步证明，协议支持不替代用户授权和机构审批。",
+      "action": "先用虚构店铺画出公开发现、只读能力、账户授权与敏感动作审批的接口图，再核对协议文档；不登录、购买或转账。",
+      "sources": [
+        {
+          "url": "https://sierra.ai/blog/releasing-poppy",
+          "label": "Sierra · Poppy 1.0 公告",
+          "excerpt": "customers control what personal agents can and can’t do",
+          "checked_at": "2026-11-14T08:32:10.001207+08:00"
+        }
+      ],
+      "daily_report": "2026-11-14"
+    },
+    {
+      "event_id": "75eee0dcbc87b091d46a",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-12T23:34:05+00:00",
+      "score": 84,
+      "headline": "NVIDIA 据报 CEO 辞任，Colette Kress 临时接任",
+      "short_headline": "NVIDIA 据报 CEO 辞任，Colette Kress 临时接任",
+      "short_summary": "BBC 报道黄仁勋辞去 CEO、财务负责人临时接任；公司调查及外界指控仍未有最终结论，人事结果不等于指控被证实。",
+      "summary": "BBC 报道 NVIDIA 首席执行官黄仁勋辞任，财务负责人 Colette Kress 被任命为临时 CEO，公司寻找永久接任者。报道仍保留公司未有理由相信机密受损的说法，以及有关机构尚未作出部分调查结论的状态。本文仅记录媒体所述治理变化，未直接取得完整董事会及监管文件，不转述无关私人细节，不把辞任、股价变化和未定指控混为证实违法或泄密。",
+      "relevance": "临时接任、独立调查和永久继任安排分别影响治理评估；市场反应不替代最终事实认定。",
+      "action": "跟踪公司及监管正式公告，区分职权生效、调查结论和后续治理方案，不据未核实指控预测价格。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o",
+          "label": "BBC · NVIDIA 人事进展",
+          "excerpt": "Chief Financial Officer Colette Kress was named on Thursday as interim CEO.",
+          "checked_at": "2026-11-13T08:26:23.649161+08:00"
+        }
+      ],
+      "update_reason": "此前记录董事会调查和周一收盘市场反应；本次新增 CEO 辞任、临时接任和永久继任安排，复用原事件编号，调查及指控仍按未定状态处理。",
+      "context_note": "发布时间采用本次 BBC 源 RSS 字段，正文已直接核对；更新与原事件起始时间分开记录。",
+      "daily_report": "2026-11-13"
+    },
+    {
+      "event_id": "1c98d0cc4ef056474096",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-11T22:08:56+00:00",
+      "score": 82,
+      "headline": "Poundland 持有人据报支持延长期限，正式结果待定",
+      "short_headline": "Poundland 持有人据报支持延长期限，正式结果待定",
+      "short_summary": "BBC 报道议员质询已举行、持有人倾向延长救助期限，董事会拟紧急开会；表态与延期生效、交易完成仍有区别。",
+      "summary": "BBC 更新 Poundland 救助进展，称持有人向议员表示支持延长寻找买方的期限，议会委员会已作质询，企业董事会拟举行紧急会议。此前部分资金释放仍只是缓解短期压力，持有人否认蓄意推动拆售的指控。本文未取得正式延期决定或完整收购协议，不将支持延期写成已获法院批准，也不把议员批评当作违法认定或岗位已获保障。",
+      "relevance": "重组进展应以资金、法律保护和约束性报价分别跟踪；听证发生是新事实，但不决定最终存续方案。",
+      "action": "核对法院、企业和委员会正式文件，记录延期是否生效及交易约束条件；不根据表态保证门店、岗位或供应商结果。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c3702jjkez4ko",
+          "label": "BBC · 零售救助听证更新",
+          "excerpt": "Following the private meeting with MPs",
+          "checked_at": "2026-11-12T08:33:06.490325+08:00"
+        }
+      ],
+      "update_reason": "昨日仅记录消息人士所称部分资金释放及延期预期；本次新增持有人向议员表态、质询实际举行及董事会紧急会议安排，复用原编号，延期仍未写作正式生效。",
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，原文正文已直接核对；相对时间显示不额外推算精确发布时刻。",
+      "daily_report": "2026-11-12"
+    },
+    {
+      "event_id": "d68b444ca72afec9fc64",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-15T00:01:07+00:00",
+      "score": 82,
+      "headline": "美妆日历礼盒的标价与实际使用价值需分开",
+      "short_headline": "美妆日历礼盒的标价与实际使用价值需分开",
+      "short_summary": "BBC 比较组合价、稀缺营销及用不完的小样；标称零售价总和或个人转售经历不证明每位买家都省钱。",
+      "summary": "BBC 采访消费者与研究者，讨论美妆礼盒组合价、开箱营销和不同使用偏好，并回顾个别品牌退款。本期未逐项估价或取得完整市场数据，不把标称零售价总和当作实际节省，亦不由个人转售经历推导普遍回报。",
+      "relevance": "产品容量、原本需求与可用比例共同影响真实价值。",
+      "action": "用虚构礼盒列容量、可比单价与原本需要的内容，再核对退换条件，不据促销估值推导收益。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cqn83l442724o",
+          "label": "BBC · 美妆礼盒观察",
+          "excerpt": "it is more important she actually wants the items inside",
+          "checked_at": "2026-11-15T08:30:26.535192+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC RSS 更新字段，正文已核对；不由相对时间显示另行推算精确时刻。",
+      "daily_report": "2026-11-15"
+    },
+    {
+      "event_id": "fd8ce9f123e3aa3b999f",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-14T07:11:26+00:00",
+      "score": 82,
+      "headline": "曼彻斯特市集商户谈涨价与利润压力",
+      "short_headline": "曼彻斯特市集商户谈涨价与利润压力",
+      "short_summary": "BBC 采访商户称成本增加，也有摊位降价留客；个案不代表所有市集统一的成本、售价或利润变化。",
+      "summary": "BBC 报道曼彻斯特圣诞市集部分商户提价后仍称利润下降，亦有保持或降低售价者，开销涉及员工、原料、住宿、运输及支付费用。本期未审计账目或建立市场样本，不由终端价格推断利润，也不将个别摊位日成本当作平均经营门槛。",
+      "relevance": "季节性经营受固定成本、营业天数、备货和支付结构共同影响。",
+      "action": "用虚构摊位区分固定、变动及准备撤场成本，比较销量与利润，不据报道直接租位采购。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c95y152k8erpo",
+          "label": "BBC · 市集经营成本",
+          "excerpt": "some saying they were making less money despite charging more.",
+          "checked_at": "2026-11-15T08:30:26.942201+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC RSS 更新字段，正文已核对；不由相对时间显示另行推算精确时刻。",
+      "daily_report": "2026-11-15"
+    },
+    {
+      "event_id": "2690d08037a4812b4a8e",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-14T18:00:10+00:00",
+      "score": 82,
+      "headline": "梵高拟拍品遭来源争议，估价不等于成交",
+      "short_headline": "梵高拟拍品遭来源争议，估价不等于成交",
+      "short_summary": "BBC 报道继承人代表质疑历史出售是否受胁迫，苏富比称研究未证实并正沟通；争议尚非已有最终裁判。",
+      "summary": "BBC 报道梵高拟拍品约一亿八千万美元估价及来源争议，继承人代表质疑纳粹时期出售是否受胁迫，苏富比表示尚未证实并与家族沟通。本期未审查完整档案或法院文件，不将争议视为已经判定应返还，也不把估价当成成交价或保证价值。",
+      "relevance": "艺术品交易依赖来源、所有权及争议处理，历史研究与司法结论不同。",
+      "action": "查正式目录、后续争议处理与法院公开文件，区分估值、拟拍安排和权属状态，不据新闻作购买决定。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cmwy05gg75lvo",
+          "label": "BBC · 梵高来源争议",
+          "excerpt": "working to resolve a dispute",
+          "checked_at": "2026-11-15T08:30:27.188048+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC RSS 更新字段，正文已核对；不由相对时间显示另行推算精确时刻。",
+      "daily_report": "2026-11-15"
+    },
+    {
+      "event_id": "e234be1478cf3d5ec791",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-08T16:50:58+00:00",
+      "score": 81,
+      "headline": "BYD 荷兰办公室据报曾被取证，JLR 知识产权争议待审",
+      "short_headline": "BYD 荷兰办公室据报曾被取证，JLR 知识产权争议待审",
+      "short_summary": "Guardian 转述八月司法执行人员取证消息；本周诉讼尚非已认定侵权，也不能由车型评论推导法律结论。",
+      "summary": "Guardian 转述 Sunday Times 称，JLR 相关知识产权案件中，法院指派的执行人员八月在 BYD 荷兰办公室取得电子资料，争议涉及 SUV 设计及技术。本期未直接核对取证令、全部诉状或裁判，保留多层报道归属，不把取证或外观评价写成已经判定侵权，也不推定产品已被禁止销售。",
+      "relevance": "知识产权诉讼中的指控、证据保全、实体审理与市场进入分别有条件，价格差和外观近似不能替代法律判断。",
+      "action": "跟踪正式法院与企业披露，区分先前取证及新听审进度，不根据报道作产品合规保证。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/business/2026/nov/08/chinese-carmaker-byd-offices-raided-netherlands-land-rover-copycat-claim",
+          "label": "The Guardian · 汽车知识产权案件",
+          "excerpt": "Bailiffs acting on behalf of JLR reportedly seized digital records from the offices of Chinese carmaker BYD in Schiedam and Hoofddorp in August, according to the Sunday Times.",
+          "checked_at": "2026-11-09T08:32:15.752718+08:00"
+        }
+      ],
+      "context_note": "本文十一月八日的新报道回顾据称发生于八月的证据保全，未将取证日期写成今日。",
+      "daily_report": "2026-11-09"
+    },
+    {
+      "event_id": "e88bd441bce49bebe94d",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-11T00:01:23+00:00",
+      "score": 81,
+      "headline": "Niesr 批评英国加息应对，长期通胀判断属预测",
+      "short_headline": "Niesr 批评英国加息应对，长期通胀判断属预测",
+      "short_summary": "Guardian 引述智库称较缓应对可能令通胀更持久；预测依赖能源价格等假设，不代表英格兰银行已决定后续利率路径。",
+      "summary": "Guardian 报道 Niesr 对英格兰银行应对通胀的批评，称较温和的收紧可能增加长期利率压力，并给出经济增长和通胀情景。文章披露其预测以每桶一百零五美元油价为假设，同时说明市场油价已波动。本文记录智库观点的媒体报道，未独立核验完整预测模型，不把建议、情景预测及央行实际决定合为确定的未来利率。",
+      "relevance": "宏观预测应保留能源假设、预测期和条件变化，单一机构判断不能直接当作融资或资产价格保证。",
+      "action": "对照智库完整报告与央行正式会议记录，分开记录已公布决策、机构建议和预测假设，不据报道作个人投资决定。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/business/2026/nov/11/bank-of-england-inflation-response-risks-higher-interest-rates-for-longer",
+          "label": "The Guardian · Niesr 经济判断报道",
+          "excerpt": "forecasts for growth in the UK and the global economy were based on oil prices at $105 a barrel.",
+          "checked_at": "2026-11-11T08:31:46.885437+08:00"
+        }
+      ],
+      "daily_report": "2026-11-11"
+    },
+    {
+      "event_id": "97f72667296fcfcbe061",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-11T18:51:02+00:00",
+      "score": 81,
+      "headline": "西班牙住房成本引发总罢工，参与规模有不同口径",
+      "short_headline": "西班牙住房成本引发总罢工，参与规模有不同口径",
+      "short_summary": "Guardian 报道租户组织和工会支持的停工与游行；参与人数来自不同主体估计，诉求不等于新的住房政策已获通过。",
+      "summary": "Guardian 报道西班牙因住房成本压力举行二十四小时全国停工及多地示威，交通、教育和若干产业受到影响。文章对参与规模保留组织方、工会和警方不同说法，并说明各地参与不均；租户提出限制投机及加强租赁保护等诉求。本文未独立核验全国人数或全部房价统计，不把罢工、组织者目标或选举预测写成政府已通过新住房措施。",
+      "relevance": "住房压力会影响劳动力、交通和城市商业，但参与估计、租金口径与政策执行需分别核对。",
+      "action": "对照官方交通及公共服务公告、统计口径与正式住房立法，记录诉求、决定和执行的不同阶段，不据单一报道外推资产价格。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/nov/11/spain-general-strike-housing-costs",
+          "label": "The Guardian · 住房成本与劳工行动报道",
+          "excerpt": "participation was uneven across the country.",
+          "checked_at": "2026-11-12T08:33:07.521060+08:00"
+        }
+      ],
+      "daily_report": "2026-11-12"
+    },
+    {
+      "event_id": "1ee6867cdbb6f3c3818c",
+      "category": "金融市场",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-11-12T18:30:00+00:00",
+      "score": 81,
+      "headline": "美联储公布明年支付服务定价，支票处理有调整",
+      "short_headline": "美联储公布明年支付服务定价，支票处理有调整",
+      "short_summary": "公告自二〇二七年一月一日起调整机构支付服务价格，成熟服务平均涨幅为估计值；不等于消费者支票功能被取消。",
+      "summary": "美联储公布二〇二七年一月一日起对银行和信用合作社提供的支付服务收费，涵盖支票清算、ACH、即时支付和批发结算等，预计成熟服务平均价格上升百分之一点四，并调整低量时段处理窗口等支票运营安排。公告明确变化影响金融机构与储备银行间的处理，不影响消费者和企业开具或接收支票。本期未逐项读取完整费率附件，不把平均估计等同每项服务统一涨价或终端费用必然同幅增加。",
+      "relevance": "基础设施收费、机构转嫁方式和个人账户价格各有条件，生效日期与服务范围必须分别记录。",
+      "action": "需用到相关机构服务时对照正式费率表、处理窗口及自身合同；不据公告推导具体账户将被收取同等费用。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm",
+          "label": "美联储 · 支付服务定价公告",
+          "excerpt": "effective January 1, 2027",
+          "checked_at": "2026-11-13T08:26:23.182724+08:00"
+        }
+      ],
+      "daily_report": "2026-11-13"
+    },
+    {
+      "event_id": "1bd07cdea18c682e5080",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-12T11:20:25+00:00",
+      "score": 81,
+      "headline": "英国第三季度经济据报增长百分之零点七",
+      "short_headline": "英国第三季度经济据报增长百分之零点七",
+      "short_summary": "BBC 引述官方数据称服务业推动季度增长，编程和咨询贡献显著；总体增长不代表各行业或家庭实际收入同步改善。",
+      "summary": "BBC 报道英国七至九月经济较前季增长百分之零点七，服务业、计算机编程和咨询等贡献较大，并记录能源价格与后续增长风险。本期未直接复核完整统计表或季调修订，不把季度增速写成年化或同比，也不由相关行业支出推定 AI 对所有生产率的因果贡献。经济总体扩张与家庭可支配收入及未来增长仍需分别判断。",
+      "relevance": "统计时段和单位决定比较含义，行业贡献、价格变化与家庭感受不能用一个 GDP 数字替代。",
+      "action": "对照统计机构完整发布中的环比、同比、实质值和修订口径，再区分已实现增长与后续预测。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/ck3rgd429zd5o",
+          "label": "BBC · 英国季度经济报道",
+          "excerpt": "Between July and September, the economy expanded by 0.7%",
+          "checked_at": "2026-11-13T08:26:23.421605+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 字段，正文已直接核对；更新与原事件起始时间分开记录。",
+      "daily_report": "2026-11-13"
+    },
+    {
+      "event_id": "537d1229e28dcb2912c5",
+      "category": "金融市场",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-11-13T21:15:00+00:00",
+      "score": 81,
+      "headline": "美国监管机构延长第三方风险指引征询至十二月十六日",
+      "short_headline": "美国监管机构延长第三方风险指引征询至十二月十六日",
+      "short_summary": "美联储等四机构公告将原十一月十六日意见期限后移；拟议指引采用原则方式，征询延期不等于最终规则已经生效。",
+      "summary": "美联储、FDIC、NCUA 与 OCC 联合公告，将拟议第三方关系风险管理指引的意见截止从十一月十六日延长至十二月十六日；美联储另就传统社区银行相关指南延长同日征询。公告说明拟议指引采取原则方式且不具有约束性，最终定稿后才计划替代现有相关指导。本期未逐条阅读全部征询附件，不把延期视为正式实施或所有机构已经更换管理要求。",
+      "relevance": "金融机构选择与管理服务商的证据要求可能受最终指引影响，但意见窗口、定稿与实施程序不同。",
+      "action": "先读正式征询文件的适用对象与问题，将现有第三方清单和拟议变化对照；本期只查资料，不代提交意见。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
+          "label": "美联储等机构 · 征询延期公告",
+          "excerpt": "extend, until December 16, the comment period",
+          "checked_at": "2026-11-14T08:32:10.475908+08:00"
+        }
+      ],
+      "daily_report": "2026-11-14"
+    },
+    {
+      "event_id": "987516c0a83f4e363599",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-08T07:00:34+00:00",
+      "score": 80,
+      "headline": "拉美香蕉生产者呼吁提高交易回报，应对气候成本",
+      "short_headline": "拉美香蕉生产者呼吁提高交易回报，应对气候成本",
+      "short_summary": "Guardian 引述行业与公平贸易机构称天气影响产量和成本；历史损失、当期数据及未来预测需分别看。",
+      "summary": "Guardian 报道拉美香蕉生产者因极端天气、生产率及出口压力呼吁更合理的交易条件，引用 Fairtrade、行业组织与工人经历。文章同时包含既往 El Niño 周期统计、当期地区出口和未来天气预期。本期未独立核查全部数据，不把特定地区损失当作全球统一减产，也不推定零售价格或未来回报。",
+      "relevance": "供应链成本包括天气、劳务、合同与汇率，风险如何分担要看实际采购和支付条款。",
+      "action": "对照原始行业数据的地区、年份和统计单位，研究公开合同条件与风险分担，不据单篇报道预测商品价格。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/business/2026/nov/08/banana-producers-in-latin-america-want-better-pay-to-cope-with-effects-of-climate-crisis",
+          "label": "The Guardian · 香蕉供应链报道",
+          "excerpt": "Banana producers in Latin America are calling for better pay to help cope with the impact of the climate crisis, as they face big drops in production resulting from extreme weather during this year’s super El Niño event.",
+          "checked_at": "2026-11-09T08:32:16.008301+08:00"
+        }
+      ],
+      "daily_report": "2026-11-09"
+    },
+    {
+      "event_id": "2bae0dc9f043ef959612",
+      "category": "金融市场",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-11-09T21:00:00+00:00",
+      "score": 80,
+      "headline": "美联储批准 Mutual Federal 相关控股结构申请",
+      "short_headline": "美联储批准 Mutual Federal 相关控股结构申请",
+      "short_summary": "公告批准两项申请，允许设立新的顶层储贷控股公司；这是个案组织结构审批，不是降息或全行业监管变化。",
+      "summary": "美联储十一月九日宣布批准 Mutual Federal Bancorp, MHC 与 MFB Bancorp, Inc. 的两项申请。公告称这将允许 MFB Bancorp, Inc. 通过收购芝加哥 Mutual Federal Bank 成为新的顶层储贷控股公司。本条仅确认公告所述批准，不将其写成交易交割已经完成、政策利率变化或所有并购的一般放宽，未额外解读未读的批准令附件。",
+      "relevance": "监管审批与法律实体结构可以作为公开金融事件记录；获批、完成交割与后续经营结果不同。",
+      "action": "按正式公告及后续披露核对法律实体、交易条件和完成状态，勿据个案推断货币政策。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
+          "label": "美联储 · 申请审批公告",
+          "excerpt": "These approvals allow the banking organization to have a new top-tier holding company, MFB Bancorp, Inc.,",
+          "checked_at": "2026-11-10T08:34:09.736742+08:00"
+        }
+      ],
+      "daily_report": "2026-11-10"
+    },
+    {
+      "event_id": "00e70634b07e0c0f2e0b",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-11T00:16:44+00:00",
+      "score": 80,
+      "headline": "英国玩具销量据报增长，低价传统品类受关注",
+      "short_headline": "英国玩具销量据报增长，低价传统品类受关注",
+      "short_summary": "BBC 引述 Circana 称截至十月销量同比增百分之十七；销量、销售额与成人消费者统计口径不同，不能相互替代。",
+      "summary": "BBC 引述 Circana 研究称英国截至十月玩具销售数量比上年同期增长百分之十七，五至十英镑价位及贴纸、拼搭等传统品类受关注。文章另列上半年十二岁以上消费群销售额增长，统计时段和单位不同。本文未独立取得完整样本或原始数据库，不把销量增幅等同零售收入、利润或全部家庭支出，也不据圣诞前表现保证全年结果。",
+      "relevance": "零售需求分析需拆开件数、单价、年龄定义与季节性，低价段增长不必然代表整体消费能力改善。",
+      "action": "核对统计机构公开口径与覆盖市场，用虚构数据表分别列数量、金额和时间范围，避免用一个百分比推导商业收益。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cx5ynyg6j375o",
+          "label": "BBC · 英国玩具销售报道",
+          "excerpt": "The number of toys sold up to October was 17% higher than the same period last year",
+          "checked_at": "2026-11-11T08:30:49.965357+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 字段，正文已直接核对；相对时间显示不被编造成额外的精确原文时刻。",
+      "daily_report": "2026-11-11"
+    },
+    {
+      "event_id": "8d84b3eecc4c4f53e2ad",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-12T00:05:40+00:00",
+      "score": 80,
+      "headline": "巴黎至华盛顿的办公楼改住宅，计划与交付需区分",
+      "short_headline": "巴黎至华盛顿的办公楼改住宅，计划与交付需区分",
+      "short_summary": "BBC 采访办公改住宅项目，记录空置、采光和税务规划约束；在建管线与人口目标不能视为已交付房源或确定收益。",
+      "summary": "BBC 报道巴黎 La Défense 及美国城市的办公楼转住宅实践，采访开发企业与公共机构，说明远程办公后需求变化及采光、管线、层高、规划和税务等条件。文章中的部分住房数字来自既往管线报告，巴黎项目和新增住户目标亦有未来安排。本文未独立核验所有项目财务与许可，不把改造意向、项目管线和完工交付合并，也不外推到任意城市或建筑的投资回报。",
+      "relevance": "用途改变不仅是装修，建筑条件、消防与无障碍要求、税务和本地住房需求共同决定可行性。",
+      "action": "对照具体城市官方规划与项目许可，用虚构建筑列采光、基础设施、合规和交付阶段，不据单篇案例判断购房或开发收益。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cm89ze7qepvyo",
+          "label": "BBC · 办公改住宅观察",
+          "excerpt": "Other issues include the need for more plumbing, and ceilings that can be too low.",
+          "checked_at": "2026-11-12T08:33:05.944172+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，原文正文已直接核对；相对时间显示不额外推算精确发布时刻。",
+      "daily_report": "2026-11-12"
+    },
+    {
+      "event_id": "263217067047ebe9415b",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-09T17:54:40+00:00",
+      "score": 84,
+      "headline": "法国就冷柜攻击公开归因，欧盟制裁仍待程序",
+      "short_headline": "法国就冷柜攻击公开归因，欧盟制裁仍待程序",
+      "short_summary": "Guardian 引述法国外长指向伊朗革命卫队，并报道检方调查；法国归因和制裁表态不等于独立司法认定或欧盟已通过措施。",
+      "summary": "Guardian 报道法国就十月商超冷柜网络攻击公开归因于伊朗革命卫队，并称将推动欧洲范围制裁，检方已展开调查。欧盟方面仍提及下周外长会议讨论及有条件响应。本文记录媒体引述的官方立场，未独立取得完整技术证据或司法裁决；其他欧洲冷柜、血库或银行事件与该攻击的关系不能因同时出现就视为已证实。",
+      "relevance": "同一联网设备事件的技术故障、攻击归因、司法程序与制裁生效是四个不同证据阶段。",
+      "action": "核对主管机构技术公告与正式制裁文件，明确归因主体和证据时点，勿据报道扫描或控制真实联网设备。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/nov/09/france-blames-irans-revolutionary-guards-for-cyber-attacks-on-supermarket-fridges",
+          "label": "The Guardian · 法国归因及外交响应",
+          "excerpt": "The European Commission did not immediately comment on the French foreign minister’s statement.",
+          "checked_at": "2026-11-10T08:33:13.985653+08:00"
+        }
+      ],
+      "update_reason": "十月十三日记录法国冷柜攻击与旧设备风险；本次新增法国外长公开归因、检方调查及拟议欧洲制裁，复用原事件编号。十一月三日欧洲多国事件的关联仍未确认。",
+      "daily_report": "2026-11-10"
+    },
+    {
+      "event_id": "9641a16883f21f0be4dc",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-11T18:04:58+00:00",
+      "score": 83,
+      "headline": "俄乌三方两日会谈结束，战俘交换仍在筹备",
+      "short_headline": "俄乌三方两日会谈结束，战俘交换仍在筹备",
+      "short_summary": "BBC 报道第二日结束未见和平突破，双方确认筹备较大规模战俘交换；拟议互访和安全框架不等于已经签署或执行协议。",
+      "summary": "BBC 报道乌、俄、美在阿布扎比两日会谈结束，未显示达成结束战争的突破，但俄乌双方确认较大规模战俘交换正在准备。报道另提美方代表拟分别会见两国领导人，安全安排、领土及停火顺序仍有分歧。本文未取得共同签署的和平文件，不将筹备交换写成已经完成，也不将后续会晤计划等同安全保证已生效。",
+      "relevance": "实际完成会谈、共同确认的人道准备、单方评价和未来外交安排具有不同证据强度。",
+      "action": "跟踪双方正式交换与会后通报，分列人数是否确认、行动是否完成、协议是否签署以及后续条件。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/ck792we7zrz4o",
+          "label": "BBC · 三方会谈第二日结果",
+          "excerpt": "a large-scale prisoner of war exchange was in the works",
+          "checked_at": "2026-11-12T08:33:07.811082+08:00"
+        }
+      ],
+      "update_reason": "昨日报道首日完成及积极评价；本期新增两日会谈正式结束、双方确认筹备战俘交换和后续领导人会见计划，复用原会谈编号，未将准备或计划写成已执行。",
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，原文正文已直接核对；相对时间显示不额外推算精确发布时刻。",
+      "daily_report": "2026-11-12"
+    },
+    {
+      "event_id": "afce5ac82540cdfdd3ed",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-11T16:38:07+00:00",
+      "score": 82,
+      "headline": "印尼副总统据报递交辞呈，是否接受尚不明确",
+      "short_headline": "印尼副总统据报递交辞呈，是否接受尚不明确",
+      "short_summary": "BBC 引述助手称 Gibran 已提交辞呈，并报道学历文件司法争议；提交辞呈、获准离任与继任安排不能混为一谈。",
+      "summary": "BBC 引述助手称印度尼西亚副总统 Gibran Rakabuming Raka 已向总统递交辞呈，并报道此前学历证明文件的司法争议与议会动向。原文明言辞呈是否接受尚不清楚。本文未直接取得辞呈、完整判决或正式离任公告，不把媒体所述递交程序写成职位已经空缺，也不将相关政治背景解读为确定的政府或联盟后续结果。",
+      "relevance": "人事报道需要区分消息来源、文件提交、接受程序与正式生效，司法争议还需按具体裁判范围理解。",
+      "action": "以总统府、议会和法院正式公开文件核对辞呈状态、法定程序及是否已有继任决定。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cmvgxgz87qqro",
+          "label": "BBC · 印尼副总统辞呈报道",
+          "excerpt": "It remains unclear if it has been accepted.",
+          "checked_at": "2026-11-12T08:33:08.105901+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，原文正文已直接核对；相对时间显示不额外推算精确发布时刻。",
+      "daily_report": "2026-11-12"
+    },
+    {
+      "event_id": "a2e4f8948c514022303d",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-14T18:28:06+00:00",
+      "score": 82,
+      "headline": "意大利据报罚 Meta 八亿欧元，公司拟上诉",
+      "short_headline": "意大利据报罚 Meta 八亿欧元，公司拟上诉",
+      "short_summary": "BBC 引述监管方称相册建议功能缺乏具体知情同意；系统权限、特定用途同意及上诉程序需要分别记录。",
+      "summary": "BBC 报道意大利数据保护机构就相册建议功能罚 Meta 八亿零五百万欧元，要求默认关闭并另行征求同意。Meta 不同意事实与法律评估，拟上诉。本期未取得完整决定及上诉文件，不视为终审认定，也不将设备层面授权等同全部数据用途已获同意。",
+      "relevance": "罚款决定、整改和上诉有不同程序；许可范围应说明具体用途。",
+      "action": "核对监管正式决定和公司后续说明，用虚构权限界面区分系统许可与用途告知，不访问真实相册。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cwn83gxemk35o",
+          "label": "BBC · Meta 相册同意处罚",
+          "excerpt": "it planned to appeal.",
+          "checked_at": "2026-11-15T08:30:27.426329+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC RSS 更新字段，正文已核对；不由相对时间显示另行推算精确时刻。",
+      "daily_report": "2026-11-15"
+    },
+    {
+      "event_id": "898e12ad324137b4c0fa",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-14T16:58:33+00:00",
+      "score": 82,
+      "headline": "阿拉斯加州长选举据报由 Kreiss-Tomkins 胜出",
+      "short_headline": "阿拉斯加州长选举据报由 Kreiss-Tomkins 胜出",
+      "short_summary": "Guardian 引述美联社判定胜选并介绍竞选主张；媒体判定、正式认证、就任及政策生效仍是不同阶段。",
+      "summary": "Guardian 报道美联社判定 Jonathan Kreiss-Tomkins 赢得阿拉斯加州长选举，介绍教育、可负担性和数据中心主张。本期未核对最终州级认证，不把媒体判定写成已就职或竞选提案已生效；州长和同州仍在计票的参院选举分别记录。",
+      "relevance": "行业影响需跟踪正式议程，不能凭竞选口号推定政策已经实施。",
+      "action": "核对州选务正式认证及就任安排，再区分政策提案、通过和执行。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/us-news/2026/nov/14/alaska-governor-democrat-jonathan-kreiss-tomkins-wins",
+          "label": "The Guardian · 阿拉斯加州长选举",
+          "excerpt": "His victory – called by the Associated Press",
+          "checked_at": "2026-11-15T08:30:27.842000+08:00"
+        }
+      ],
+      "daily_report": "2026-11-15"
+    },
+    {
+      "event_id": "7b4d7913fd00b870fd28",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-14T07:00:38+00:00",
+      "score": 82,
+      "headline": "海峡隧道拟试行车内采集，全面启用仍未定",
+      "short_headline": "海峡隧道拟试行车内采集，全面启用仍未定",
+      "short_summary": "Guardian 引述 Getlink 称获准试验摄像监督终端；设备准备、试验许可及法国系统对接不同，不能保证排队减少。",
+      "summary": "Guardian 报道 Getlink 拟在 Folkestone 与 Calais 试行车内护照和生物识别采集，计划两年。公司同时称不知法国系统何时启用，对接仍未工作。本期未核对完整批准文本或现场状态，不将试验安排写成边境手续已全面改变、永久采用或实际效率已经改善。",
+      "relevance": "硬件、许可、跨境对接和旅客实际流程需要分别确认。",
+      "action": "核对正式旅行指引和生效日，不收集个人生物资料，也不把试验写成已可预约服务。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/travel/2026/nov/14/eurotunnel-drive-in-fingerprint-trial-folkestone-calais-border",
+          "label": "The Guardian · 隧道边境试验",
+          "excerpt": "the connection with the French system is still not working.",
+          "checked_at": "2026-11-15T08:30:28.256496+08:00"
+        }
+      ],
+      "daily_report": "2026-11-15"
+    },
+    {
+      "event_id": "34430db32ce5c9d8cf4d",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-08T11:50:15+00:00",
+      "score": 81,
+      "headline": "波兰检方就克拉科夫枪击启动恐怖主义调查",
+      "short_headline": "波兰检方就克拉科夫枪击启动恐怖主义调查",
+      "short_summary": "Guardian 报道检方调查分类与哀悼安排；动机初步判断和启动调查不能等同法院已认定全部事实。",
+      "summary": "Guardian 报道波兰检方在克拉科夫枪击后按恐怖主义相关犯罪启动调查，引用检方、警方及官员说明。本文聚焦调查与公共处置，本期未直接取得起诉文件或独立核实全部现场资料，官员对动机的初步判断、调查分类与最终定罪须分开，不传播攻击方法或私人受害者资料。",
+      "relevance": "重大事件应根据正式调查阶段和证据更新，初步归因不能代替司法结论或泛化到群体。",
+      "action": "关注检方和地方机构正式公告，保留信息时点，不由不明来源推断动机或后续风险。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/nov/08/krakow-shooting-poland-terrorism-investigation",
+          "label": "The Guardian · 波兰检方调查",
+          "excerpt": "As two days of national mourning began, the national prosecutor’s office said on social media it had launched an investigation into “the killing of six people … using a firearm, and the attempted murder of many others, including police officers, this act constituting a terrorist offence”.",
+          "checked_at": "2026-11-09T08:32:17.239824+08:00"
+        }
+      ],
+      "daily_report": "2026-11-09"
+    },
+    {
+      "event_id": "9f1ce244d56170ead4a5",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-09T23:48:36+00:00",
+      "score": 81,
+      "headline": "美最高法院暂缓下级禁令，Big Bend 工程可继续",
+      "short_headline": "美最高法院暂缓下级禁令，Big Bend 工程可继续",
+      "short_summary": "Guardian 报道最高法院准许紧急请求，暂停阻止施工的下级命令；临时程序结果不等于工程全部合法性争议已有终局结论。",
+      "summary": "Guardian 报道美国最高法院通过未署名裁定，准许政府暂停下级法院此前暂时阻止得州 Big Bend 边境工程的命令。报道涉及国会授权与环境、历史保护争议；本文未直接取得完整裁定及诉讼卷宗，不把紧急程序结果写成所有实体争议已审结，也不将机构的施工目标当作工程已完工。",
+      "relevance": "诉讼中的临时禁令、紧急救济、实体判决和项目执行进度各有范围，政策影响需跟踪后续程序。",
+      "action": "查最高法院及相关法院公开文书，核对命令范围和案件阶段，再比对实际工程与保护要求。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/us-news/2026/nov/09/us-supreme-court-border-wall-texas-big-bend",
+          "label": "The Guardian · 边境工程紧急裁定报道",
+          "excerpt": "In an unsigned, five-page ruling, the nation’s highest court granted the Trump administration’s emergency request to suspend a lower court order",
+          "checked_at": "2026-11-10T08:33:14.645548+08:00"
+        }
+      ],
+      "daily_report": "2026-11-10"
+    },
+    {
+      "event_id": "ea9f422cbfcf434a2249",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-10T18:04:18+00:00",
+      "score": 81,
+      "headline": "枢密院据报推翻特立尼达和多巴哥同性亲密行为刑法",
+      "short_headline": "枢密院据报推翻特立尼达和多巴哥同性亲密行为刑法",
+      "short_summary": "BBC 报道终审机构在相关诉讼中一致支持上诉，理由涉及隐私与家庭生活权；本条未独立核对完整判决及实施范围。",
+      "summary": "BBC 报道英国枢密院司法委员会作为特立尼达和多巴哥终审机构，推翻当地将同性亲密行为入罪的相关法律，判决涉及私人及家庭生活权。报道回顾此前高等法院与上诉程序。本文仅记录该媒体对判决的报道，未直接取得完整判词，不将该裁定外推为所有英联邦地区法律同步变化或全部平等权利议题均已解决。",
+      "relevance": "跨法域判决必须说明法院角色、适用地区与具体争点，新闻标题不能替代完整法律文本。",
+      "action": "从法院正式公开判决核对命令、适用范围和后续程序，避免把媒体概述当作个人法律意见。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cm0e0evlpp87o",
+          "label": "BBC · 特立尼达和多巴哥判决报道",
+          "excerpt": "The judicial committee unanimously found in favour of Jones.",
+          "checked_at": "2026-11-11T08:30:50.483241+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 字段，正文已直接核对；相对时间显示不被编造成额外的精确原文时刻。",
+      "daily_report": "2026-11-11"
+    },
+    {
+      "event_id": "518877a6ec48aa433e1f",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-10T22:42:43+00:00",
+      "score": 81,
+      "headline": "共和党据报选出 Jordan 领导下届众院党团",
+      "short_headline": "共和党据报选出 Jordan 领导下届众院党团",
+      "short_summary": "Guardian 报道共和党选出 Jim Jordan，并说明其将在明年新国会担任少数党领袖；党内选举不等于当前议长职务已交接。",
+      "summary": "Guardian 报道美国众议院共和党在闭门党团选举中选出 Jim Jordan，拟在明年新国会担任少数党领袖，参议院共和党领袖 John Thune 亦获续任。本文未直接核对完整党团公告或表决票数，分别记录党内选举、下一届职务与当前国会安排，不把党团领袖选举等同议长选举或已经通过新的立法政策。",
+      "relevance": "立法机构的党团领导、院内法定职务和实际多数席位不同，职务生效时间影响后续议程判断。",
+      "action": "核对党团正式公告和国会新会期安排，分别记录人事选择、就任时间与待表决议程。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/us-news/2026/nov/10/jim-jordan-house-republican-leader",
+          "label": "The Guardian · 美国共和党党团人事",
+          "excerpt": "Jordan will serve as minority leader under the new Congress that begins next year",
+          "checked_at": "2026-11-11T08:30:50.740052+08:00"
+        }
+      ],
+      "daily_report": "2026-11-11"
+    },
+    {
+      "event_id": "f4aab3e216f34e9232e6",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-13T15:42:52+00:00",
+      "score": 81,
+      "headline": "德国联邦议院据报通过情报法改革，权限范围引争议",
+      "short_headline": "德国联邦议院据报通过情报法改革，权限范围引争议",
+      "short_summary": "BBC 报道扩大情报机构部分行动与数字能力的立法获议院通过；议会表决、具体授权条件与全部条款生效时间需分别核对。",
+      "summary": "BBC 报道德国联邦议院通过情报法律改革，涉及 BND 与 BfV 的部分保护行动、数字分析及监督授权安排，并记录政府支持与反对党批评。本文未直接取得完整立法文本、所有后续程序或生效日期，因此仅确认媒体所述议院表决，不把全部新增权限写成已可无条件使用；具体行动仍受法定限制和审批，不传播行动技术方法。",
+      "relevance": "情报权限的法律范围、监督要求及实际启用需分别评估，政治赞成或反对表述不替代法条。",
+      "action": "核对联邦议院正式文件及公布程序，分列授权对象、法定条件、审查与生效日期，不依新闻概述作个人法律判断。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6jre3z03w4go",
+          "label": "BBC · 德国情报法改革报道",
+          "excerpt": "309 MPs voted in favour of the new law",
+          "checked_at": "2026-11-14T08:32:11.359863+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次源 RSS 的带时区字段，原文正文已直接核对；不由页面相对时间编造另一精确发布时间。",
+      "daily_report": "2026-11-14"
+    },
+    {
+      "event_id": "525f23dd6ea5d6ab1c54",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-08T22:30:51+00:00",
+      "score": 80,
+      "headline": "英格兰拟加强冬季基层照护，目标人数不同于已交付",
+      "short_headline": "英格兰拟加强冬季基层照护，目标人数不同于已交付",
+      "short_summary": "Guardian 报道四千万英镑计划拟支持三十万人，资金由既有预算调整；目标、临床资格与实际效果仍需正式评估。",
+      "summary": "Guardian 报道英格兰计划从 2026—27 年既有 GP 预算重新分配约四千万英镑，支持基层服务为部分脆弱患者提供额外照护，目标约三十万人。本文记录政策和资源安排，不提供个人医疗建议，本期未直接核对完整实施指引，也不把预算目标当作已覆盖人数或证明一定减少入院。",
+      "relevance": "公共服务方案需区分新增总投入、预算内调整、目标覆盖和实际结果，人数目标不足以衡量交付质量。",
+      "action": "核对正式预算、实施时限与覆盖统计，分别记录投入、服务能力和效果；个人情况由当地正式服务确认。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/society/2026/nov/08/gps-extra-checks-winter-nhs-hospitals-england",
+          "label": "The Guardian · 冬季基层照护计划",
+          "excerpt": "Funded by cash reallocated from existing GP budgets for 2026-27, the scheme will allow surgeries to identify and provide extra care to the patients they believe are most at risk of becoming seriously unwell in the winter. Groups of GP practices can use £126 for every eligible patient supported.",
+          "checked_at": "2026-11-09T08:32:17.660271+08:00"
+        }
+      ],
+      "daily_report": "2026-11-09"
+    },
+    {
+      "event_id": "9add0c107628fa5e0377",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-08T13:24:00+00:00",
+      "score": 80,
+      "headline": "COP31 会前呼吁重落实，仍不是已达成新协议",
+      "short_headline": "COP31 会前呼吁重落实，仍不是已达成新协议",
+      "short_summary": "Guardian 采访会议主持方，强调减排、资金与可见进展；会前诉求不等于各国已同意目标或资金到账。",
+      "summary": "Guardian 在 COP31 开会前采访澳大利亚谈判主持方，报道其希望形成可见的减排与资金落实进展，并讨论小岛国家适应资金等诉求。报道中的愿望、预期分歧和批评不是峰会最终决定。本期未取得完整会议文件，不将发言写成新约束、统一时间表或已经完成的资金分配。",
+      "relevance": "气候谈判应把议程、政治声明、正式决定和资金执行分开，成效需要后续可核验指标。",
+      "action": "跟踪正式会议文件和执行台账，记录责任主体、资金及期限，不用会前承诺推导企业已获具体权利。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/environment/2026/nov/08/cop31-climate-summit-deliver-progress-real-host-says",
+          "label": "The Guardian · COP31 会前采访",
+          "excerpt": "Chris Bowen, Australia’s climate and energy minister and president of negotiations for Cop31, told the Guardian in an interview: “We need a tangible outcome focused on implementation [of emissions cuts and finance] that people can see is real. We need progress, it needs to be a step forward on previous Cops.”",
+          "checked_at": "2026-11-09T08:39:09.360276+08:00"
+        }
+      ],
+      "daily_report": "2026-11-09"
+    },
+    {
+      "event_id": "6bed558bec786f8684c4",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-11T22:30:01+00:00",
+      "score": 80,
+      "headline": "英国据报任命气候安全代表，峰会目标仍待落实",
+      "short_headline": "英国据报任命气候安全代表，峰会目标仍待落实",
+      "short_summary": "Guardian 报道 Madeleine Alessandri 将承担气候安全咨询职务；计划中的峰会表态、私人融资目标与实际资金落实分别记录。",
+      "summary": "Guardian 报道英国任命气候安全特别代表 Madeleine Alessandri，职责为政府提供气候相关国家安全风险咨询，首相拟在周四峰会宣布。文章同时记录拟支持的电气化和私人融资目标及外界批评。本文未直接核对完整任命文件或峰会正式讲话，不重复“全球首个”作为独立核实结论，也不把拟议目标写成已实现减排、资金到位或新增法律义务。",
+      "relevance": "咨询人事、风险研究、政策目标和资金执行各有范围；机构设置本身不足以衡量实际适应与减排成效。",
+      "action": "核对政府正式任命、职责与峰会文件，将预算、私人融资意向及真实执行统计分开记录。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/politics/2026/nov/11/uk-appoints-worlds-first-special-representative-for-climate-security",
+          "label": "The Guardian · 英国气候安全职务报道",
+          "excerpt": "will take on the special representative job.",
+          "checked_at": "2026-11-12T08:33:08.569420+08:00"
+        }
+      ],
+      "daily_report": "2026-11-12"
+    },
+    {
+      "event_id": "e1dafa6411005a667a2b",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-12T22:00:15+00:00",
+      "score": 80,
+      "headline": "中国据报不承办 COP33，主办国尚未确定",
+      "short_headline": "中国据报不承办 COP33，主办国尚未确定",
+      "short_summary": "Guardian 称中国排除承办二〇二八年气候大会，其他亚洲国家或考虑申办；原因及最终主办决定未独立核实。",
+      "summary": "Guardian 报道据其了解，中国已排除承办二〇二八年 COP33 的可能，并称其他亚洲国家考虑申请。文章明确原因尚不清楚，专家关于美国选举周期等解释属于推测，最终主办安排仍待决定。本文未取得中方或联合国完整正式决定，不将媒体所述主办意向变化等同退出气候合作、改变减排承诺或其他候选国已经获选。",
+      "relevance": "会议承办、外交参与与具体减排和资金义务不同，主办选择不能直接推导政策后果。",
+      "action": "核对中方及联合国气候机制的公开说明，分别记录申办意向、正式遴选和会议目标，不将专家推测写作原因定论。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/environment/2026/nov/12/china-rules-out-hosting-cop33-climate-summit-in-2028",
+          "label": "The Guardian · COP33 主办安排报道",
+          "excerpt": "It is not clear why China has decided against hosting the conference",
+          "checked_at": "2026-11-13T08:26:24.115323+08:00"
+        }
+      ],
+      "daily_report": "2026-11-13"
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "bounded-parser-proof-assessment",
+      "headline": "形式化验证范围审查：从解析器扩展到协议实现",
+      "short_headline": "证明规格与实现范围的审查表",
+      "short_summary": "AlphaProof Code 新研究把人工审核的规格与实现证明结合，可扩展此前解析器研究中的假设、边界和反例检查。",
+      "category": "AI 编程",
+      "score": 81,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "DeepMind 公布对 Signal 核心实现的指定属性验证及隔离缺陷对照，给既有证明范围研究增加协议状态、编译实现和人工规格审核维度，尚不证明可直接复制到任意产品。",
+      "audience": "维护解析器、协议或关键业务状态机的开发者与小型研究团队。",
+      "first_step": "用自编无害的收发消息状态机画出不变量、输入范围和错误路径，制作规格、实现、检查器与人工审核的对应表；先读技术文档，不运行未知产物或真实通信实验。",
+      "risks": "规格遗漏、编译与系统环境假设会限制证明；作者结果未经本期复现，行数或运行天数不是整体安全保证，工具链与许可需另核。",
+      "time_window": "未来一周完成公开资料与纸面范围表，无官方报名截止。",
+      "update_reason": "十月二十六日依据解析器在输入及执行环境上限内的证明；本期新增 AlphaProof Code 的协议实现、人工逐项审核规格与隔离历史缺陷对照，将范围检查扩展到协议不变量和可信边界，复用原编号。",
+      "sources": [
+        {
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code",
+          "label": "DeepMind · 人工规格审核与机器检查",
+          "excerpt": "Every proof is checked by Lean",
+          "checked_at": "2026-11-11T08:30:48.018225+08:00"
+        }
+      ],
+      "daily_report": "2026-11-11"
+    },
+    {
+      "opportunity_id": "ai-agent-permission-observability-service",
+      "headline": "代理权限研究更新：企业发现与动作批准分层",
+      "short_headline": "企业能力发现与动作批准的台账",
+      "short_summary": "Poppy 1.0 新资料区分协议发现、OAuth 范围与企业审批，可给既有代理权限研究增加跨企业接口的检查维度。",
+      "category": "AI 编程",
+      "score": 81,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Sierra 发布 Poppy 1.0 并介绍商务扩展和企业采用，材料明确用户管理 OAuth 访问及特定动作事前批准；可补充权限台账研究，未证明全部部署或需求成熟。",
+      "audience": "开发企业连接器、客服代理及个人助手接口的独立开发者与小团队。",
+      "first_step": "用虚构店铺做纸面能力清单，分别列公开发现、只读查询、账户权限、购买准备、最终动作审批和撤销证据；不连接真实账号，不接受协议、不付款或提交。",
+      "risks": "协议声明不能代替实际权限执行，企业支持范围和版本可能不同；案例与未来计划应分开，数据流、许可及费用须另核，不承诺业务收益。",
+      "time_window": "未来一周先核对规范与虚构接口图，没有官方申请截止。",
+      "update_reason": "此前依据浏览器会话范围及原生无障碍动作研究权限和回读；本次新增 Poppy 1.0 的企业能力发现、OAuth 范围与行业动作批准，将台账扩展到跨企业接口及访问撤销，复用原编号。",
+      "sources": [
+        {
+          "url": "https://sierra.ai/blog/releasing-poppy",
+          "label": "Sierra · Poppy 商务批准要求",
+          "excerpt": "it makes the agent ask the customer before taking certain actions",
+          "checked_at": "2026-11-14T08:32:10.001207+08:00"
+        }
+      ],
+      "daily_report": "2026-11-14"
+    },
+    {
+      "opportunity_id": "bundled-git-patch-inventory",
+      "headline": "系统与应用内置 Git 的补丁覆盖清单",
+      "short_headline": "内置 Git 的补丁覆盖清单",
+      "short_summary": "Git 安全公告同时涉及系统发行包和应用内置版本，可研究自动化实际调用路径是否落在已修复版本。",
+      "category": "模型与基础设施",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Git 官方修复公告明确要求同步核对应用内置副本，而云服务和桌面应用的补丁交付状态不同，为构建执行路径与版本证据清单提供公开信号，不证明已存在付费客户需求。",
+      "audience": "维护开发机、IDE、CI 镜像及代理工具链的开发者与小团队。",
+      "first_step": "先用虚构路径和版本清单列系统包、IDE、镜像及宿主应用，映射各官方发行说明与更新时间；实际资产核对仅限本人授权范围，本期不读取系统凭据或安装更新。",
+      "risks": "维护分支版本、厂商回补和应用打包可能不同；单看大版本或云端已修复不足以判断全部本地风险，未知仓库和漏洞样例不能用于随意测试。",
+      "time_window": "近期先完成官方补丁映射与维护计划，无报名或收益承诺。",
+      "sources": [
+        {
+          "url": "https://github.blog/open-source/git/git-security-vulnerabilities-announced-7",
+          "label": "GitHub · 内置 Git 更新范围",
+          "excerpt": "updating any applications that bundle Git.",
+          "checked_at": "2026-11-11T08:30:49.182764+08:00"
+        }
+      ],
+      "daily_report": "2026-11-11"
+    },
+    {
+      "opportunity_id": "thin-router-workflow-evaluation",
+      "headline": "路由验证更新：闭集概率与回退边界",
+      "short_headline": "闭集路由的概率与回退检查",
+      "short_summary": "Decisions API 增加一次输入、多问题评分与候选概率接口，可在既有路由研究中加入校准、候选缺失和回退验收。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Google 新接口把工具选择、模型路由和量规评分作为有界选择，可补充既有轻量路由研究的概率输出及批量成本维度；厂商延迟和校准报告未独立复测，不能证明付费需求。",
+      "audience": "维护分类、客服分流或模型路由流程的开发者和小团队。",
+      "first_step": "先用自编无害请求及三种固定选项制作真值表，加入选项缺失、低置信度、提示变化和人工回退情形，定义正确率、校准与总费用记录，不调用真实客户系统。",
+      "risks": "概率会随分布与候选集变化，高置信度也可能错误；默认选项胜出不能代替操作授权，批量问题数和输入长度影响费用与延迟。",
+      "time_window": "未来一周先完成离线样例和验收规格，无官方申请截止。",
+      "update_reason": "十月二十日依据薄编排器把路由与业务推理解耦；本次新增 Decisions API 的闭集概率、多问题单次评分与计费资料，将研究扩展为候选遗漏、校准和回退边界，复用原编号。",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+          "label": "Google · 低置信度回退说明",
+          "excerpt": "route ambiguous cases to a fallback or human reviewer:",
+          "checked_at": "2026-11-12T08:33:05.457521+08:00"
+        }
+      ],
+      "daily_report": "2026-11-12"
+    },
+    {
+      "opportunity_id": "instruction-data-binding-evaluation",
+      "headline": "结构化上下文中指令与数据绑定的验收研究",
+      "short_headline": "指令与数据绑定的验收表",
+      "short_summary": "IBM LLMON 预览明确绑定指令、数据和约束，且承认学得行为不构成强制保证，可研究静态与多轮场景的差异。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "LLMON 新资料以特殊 token 和绑定关系表达上下文，并说明静态注入实验与多轮适应性攻击边界，提供格式与应用权限如何共同验收的具体入口，不证明已存在付费需求。",
+      "audience": "维护检索、文档摘要和工具代理的开发者与小团队。",
+      "first_step": "用自编无害任务、虚构文档和相互矛盾的无害提示画出指令、数据、约束及引用边界，先人工核对绑定和未绑定块；定义正确输出及拒绝越权条件，不调用真实工具或上传私密资料。",
+      "risks": "训练出的结构理解不是解析器或权限系统的强制隔离，静态测试不能覆盖多轮攻击；预览模型、依赖及许可要另核，不承诺生产安全。",
+      "time_window": "未来一周先完成公开资料与纸面验收，无官方报名截止。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite",
+          "label": "IBM Granite · 预览适用范围",
+          "excerpt": "not for production.",
+          "checked_at": "2026-11-13T08:26:22.227914+08:00"
+        }
+      ],
+      "daily_report": "2026-11-13"
+    },
+    {
+      "opportunity_id": "misconception-aware-support-evaluation",
+      "headline": "客服与排错回答中误解识别的离线评测",
+      "short_headline": "误解问题与实际目标的验收",
+      "short_summary": "XYBench 分开评价有效解法是否出现、是否成为重点和误解是否解释，可研究客服流程是否只满足错误前提。",
+      "category": "工作室业务",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Ai2 新评测显示选择好答案与主动生成以目标为中心的答案存在差距，为客服与排错回复的离线验收提供指标；英文单轮结果不证明多语言客户效果或付费需求。",
+      "audience": "维护 FAQ、技术支持和代理回复质量的小团队与开发者。",
+      "first_step": "自编六个无害排错案例，分别写明实际目标、用户误解、已知事实与可接受澄清，人工标记解法出现、回答重点和解释；不读取真实客户资料或改变线上回复。",
+      "risks": "从上下文推测目标可能过度，需允许用户坚持自己的目标；评测含大量生成样例且主要英文单轮，自动评审不代表普适真值，不用于敏感个人资格判断。",
+      "time_window": "未来一周先做离线样例与人工验收，无官方申请截止。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/allenai/xybench",
+          "label": "Ai2 · XYBench 评测边界",
+          "excerpt": "English-language queries and mainly procedural problems",
+          "checked_at": "2026-11-14T08:32:08.711293+08:00"
+        }
+      ],
+      "daily_report": "2026-11-14"
+    },
+    {
+      "opportunity_id": "long-context-state-ledger-test",
+      "headline": "状态台账更新：压缩摘要的过时与遗漏检查",
+      "short_headline": "压缩摘要的过时与遗漏检查",
+      "short_summary": "本期 billion-context 文档把长会话压缩放在模型 API 链路，可研究摘要前后状态、来源和缓存成本的一致性。",
+      "category": "AI 编程",
+      "score": 79,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "新增上下文压缩插件文档，为既有状态台账研究增加压缩边界、来源回溯及用量归因；作者节省倍率和长期会话结果未独立复测。",
+      "audience": "维护长对话、代理记忆或本地工具链的独立开发者与小团队。",
+      "first_step": "先用自编无害事件记录做纸面压缩，加入撤回与到期信息，对照确定性真值检查遗漏、旧值和来源；分别列摘要、缓存及模型费用。",
+      "risks": "压缩可能保留错误或遗漏条件，代理链路可能接触完整请求；不接入真实会话、不安装代理插件，许可、数据流和性能需单独核对。",
+      "time_window": "未来一周先做公开资料与虚构样例检查，没有官方申请截止日。",
+      "update_reason": "十一月七日更新依据 Meta 的记忆时效和更正材料；本次新增 billion-context 的增量分层压缩及 API 链路资料，将验收扩展到压缩前后来源、撤回状态和缓存费用归因，复用原编号。",
+      "sources": [
+        {
+          "url": "https://github.com/ranxianglei/billion-context",
+          "label": "billion-context · 压缩插件文档",
+          "excerpt": "billion-context sits between any agent and its model API, rewriting Anthropic/OpenAI streams with acp-kernel compression. The model decides when and what to compress into high-fidelity summaries — not a hard truncation limit.",
+          "checked_at": "2026-11-09T08:31:37.274401+08:00"
+        }
+      ],
+      "daily_report": "2026-11-09"
+    },
+    {
+      "opportunity_id": "moe-coactivation-pruning-study",
+      "headline": "MoE 剪枝的成对协作与质量验收研究",
+      "short_headline": "专家剪枝的协作验收表",
+      "short_summary": "HOPE 将成对交互纳入专家选择，可先用虚构小矩阵研究内存与任务质量如何分开评价。",
+      "category": "模型与基础设施",
+      "score": 79,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "新研究把独立专家打分扩展到成对协作，且明确高剪枝率更有优势、跨层结果仍初步；提供压缩验收的具体研究入口，尚不证明确定付费需求。",
+      "audience": "研究稀疏模型压缩和资源预算的开发者、小型研究团队。",
+      "first_step": "用四个虚构专家及共现矩阵手工比较两种保留方案，列内存、校准数据、质量和成本指标；先完成纸面验收表，不租用算力或下载权重。",
+      "risks": "任务分布和剪枝率影响结果，校准也有成本；参数减少不能直接推出时延、整机费用和泛化收益，代码及权重许可需另核。",
+      "time_window": "未来一周先读方法与限制，无官方申请截止。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+          "label": "Amazon · HOPE 方法边界",
+          "excerpt": "HOPE prunes each layer independently and does not account for cross-layer interactions.",
+          "checked_at": "2026-11-10T08:33:09.526325+08:00"
+        }
+      ],
+      "daily_report": "2026-11-10"
+    },
+    {
+      "opportunity_id": "small-multimodal-task-footprint",
+      "headline": "小模型资源验证更新：多步工具恢复成本",
+      "short_headline": "小模型的多步恢复与资源账单",
+      "short_summary": "BotPsy 新资料增加工具任务、循环和语言限制，可把原有小模型资源检查扩展为重试、回退和完整任务开销。",
+      "category": "模型与基础设施",
+      "score": 79,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "BotPsy 作者给出零点八十亿参数工具模型与多步检索弱项，并区分主要测试语言和错误边界，为既有小模型资源研究增加任务恢复与权限检查；不证明任意设备可用或整体成本必然降低。",
+      "audience": "研究端侧助手、有限工具调用及本地推理预算的独立开发者与小团队。",
+      "first_step": "用虚构文件名和自编只读工具定义十个低风险任务，先在纸面记录一步成功、缺参、空结果和多步恢复；列权重、运行时、缓存、重试与外部检索开销，不下载或连接真实服务。",
+      "risks": "参数量不能替代峰值内存和电量，多步错误及回退可能抵消单次便宜；主要英文评测不可直接外推其他语言，实际权重、许可与设备兼容需另核。",
+      "time_window": "未来一周先核对公开材料与离线验收样例，没有官方报名或现金收益承诺。",
+      "update_reason": "十月二十八日以专用多模态模型研究完整资源开销；本次 BotPsy 提供工具调用、多步检索和循环限制资料，新增恢复次数、语言和外部工具费用维度，不将本次模型称为多模态。",
+      "sources": [
+        {
+          "url": "https://huggingface.co/blog/qvac/botpsy",
+          "label": "Tether AI Research · 任务边界",
+          "excerpt": "Multi-step information retrieval is the weak spot",
+          "checked_at": "2026-11-12T08:33:04.776237+08:00"
+        }
+      ],
+      "daily_report": "2026-11-12"
+    },
+    {
+      "opportunity_id": "bounded-retry-recovery-ledger",
+      "headline": "恢复台账更新：维护变更、应用恢复与积压分开",
+      "short_headline": "维护变更后的分阶段恢复证据",
+      "short_summary": "微软恢复和航空维护报道增加变更及积压资料，可扩展重试台账，检查声明与业务完成之间的差异。",
+      "category": "模型与基础设施",
+      "score": 79,
+      "status": "research",
+      "verification_status": "media_reported",
+      "signal": "BBC 分别记录微软逐步恢复且完整复盘待发、航空通信维护后仍有调度积压，为既有重连研究增加变更来源、关键操作与业务清理维度，不证明通用故障方案。",
+      "audience": "维护 API 客户端、定时任务和外部依赖的小团队与开发者。",
+      "first_step": "用虚构事件回放连接恢复、关键操作、重复任务核对及积压清空，为每阶段列证据、幂等和最大重试条件；不向真实服务制造负载。",
+      "risks": "初步归因可能修订，厂商声明不证明每个账户恢复；重放动作可能重复，备用服务也可能共享依赖，不据案例诊断本机。",
+      "time_window": "未来一周先做虚构状态回放与维护清单，无报名或收益承诺。",
+      "update_reason": "此前依据 GitHub 复盘研究连接风暴与退避；本次新增微软维护升级后的逐步恢复及 FAA 维护后持续调度积压，把台账扩展到变更记录、恢复声明和业务清理，复用原编号。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o",
+          "label": "BBC · 微软逐步恢复",
+          "excerpt": "Microsoft said it restored services gradually",
+          "checked_at": "2026-11-15T08:30:25.498476+08:00"
+        },
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6wy9lynq4qno",
+          "label": "BBC · 调度后续影响",
+          "excerpt": "the disruption is expected to last for days.",
+          "checked_at": "2026-11-15T08:30:25.735025+08:00"
+        }
+      ],
+      "daily_report": "2026-11-15"
+    }
+  ],
+  "daily_reports": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12",
+    "2026-11-13",
+    "2026-11-14",
+    "2026-11-15"
+  ]
+}

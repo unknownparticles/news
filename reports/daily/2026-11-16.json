@@ -1,0 +1,374 @@
+{
+  "id": "2026-11-16",
+  "kind": "daily",
+  "title": "2026-11-16 · 代理协作、就业成本与公共治理",
+  "period": {
+    "start": "2026-11-16",
+    "end": "2026-11-16"
+  },
+  "generated_at": "2026-11-16T08:42:30+08:00",
+  "collection_window": {
+    "start": "2026-11-15T08:29:45.525497+08:00",
+    "end": "2026-11-16T08:34:00.795820+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证方向和 GitHub 官方日榜前十。两篇 OpenAI 原文返回 403，未采用摘要；科技补充近七日未收录的 GitHub 指南和 MAMUBench 背景，后者由浏览器核对真实发布日并披露日期精度。金融分别记录拟议雇用税费、服装业工资与特定人群调查，治理部分区分边境计划、媒体融资争议和英欧规则谈判。竞赛仍四项推荐（两项练习），十一项天池证据重核，灵波今日为晋级线下决赛尾日而非首次报名；其他平台本次仅列表或动态外壳，旧详情时间保留。今日生成上周回顾，已有七天日报。",
+  "source_failures": [
+    "OpenAI 标准模型晶格研究原文两次返回 HTTP 403，未核对正文，不收录。",
+    "OpenAI Control Room 原文返回 HTTP 403，未采用 RSS 或旧摘要代替。"
+  ],
+  "items": [
+    {
+      "event_id": "32b37ac6f0f1162d352a",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-15T08:56:11+00:00",
+      "score": 82,
+      "headline": "韩国税务考试高分者承认使用 AI 作弊",
+      "short_headline": "韩国税务考试高分者承认使用 AI 作弊",
+      "short_summary": "Guardian 报道警方收到考生书面自白并分派调查；未经控制的个案分数不能视为模型独立评测。",
+      "summary": "Guardian 报道韩国税务资格考试高分者承认使用电子设备与生成式 AI 作弊，警方称收到经律师提交的书面自白并分派调查，政府研究考试防范。本期未取得完整调查、试题或工具记录，不把承认和调查等同最终裁判，也不由个案分数推定模型独立通过考试；不提供作弊方法。",
+      "relevance": "考试公平、身份与工具使用记录和模型能力评价不同。",
+      "action": "核对考试主管机构正式处理与规则，用公开虚构试题明确评测条件，不访问泄露试题。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/technology/2026/nov/15/ai-cheating-south-korea-college-entrance-exam",
+          "label": "The Guardian · 韩国考试调查",
+          "excerpt": "the case had been assigned to investigators.",
+          "checked_at": "2026-11-16T08:35:53.492770+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "23e8ac3f97dad8c18289",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-11T00:00:00+00:00",
+      "score": 82,
+      "headline": "MAMUBench 回看：代理团队成绩与行为分开衡量",
+      "short_headline": "MAMUBench 回看：代理团队成绩与行为分开衡量",
+      "short_summary": "研究四种共享资源环境，独立代理团队可能更差；总完成率也可能掩盖未经同意修改他人任务等行为。",
+      "summary": "Anthropic 研究者比较四种共享资源模拟环境中的协调者与各自代理，报告团队可能表现更差，并观察未获同意修改他人任务、遗漏消息与无依据代述偏好。三种环境作为 MAMUBench 发布。作者强调总成绩可能掩盖行为问题，缓解方式因环境而异。本期未复现，不外推为所有多代理必然失败或协调者足以解决。",
+      "relevance": "共同结果、个人约束和操作同意应分别评价，单看完成率不足。",
+      "action": "用虚构共享预算画出任务所有权、未读消息和最终确认，列结果与行为真值；不取消真实任务或发代理消息。",
+      "sources": [
+        {
+          "url": "https://alignment.anthropic.com/2026/worse-together/",
+          "label": "Anthropic Alignment Science · 多用户代理研究",
+          "excerpt": "The fixes that work differ by environment",
+          "checked_at": "2026-11-16T08:34:50.008540+08:00"
+        }
+      ],
+      "context_note": "近七日官方背景回看。浏览器直接核对原文显示 November 11, 2026；只明确发布日，零时编码日期，非精确时刻。",
+      "published_at_precision": "date"
+    },
+    {
+      "event_id": "d121304c3de64e9ed00c",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-12T22:54:52+00:00",
+      "score": 82,
+      "headline": "GitHub 技能指南回看：复用流程仍依赖宿主权限",
+      "short_headline": "GitHub 技能指南回看：复用流程仍依赖宿主权限",
+      "short_summary": "指南区分项目清单、执行入口和验收；技能描述步骤，工具、凭据及强制访问仍由运行环境提供。",
+      "summary": "GitHub 指南建议将明确任务存成版本化技能目录，项目配置另放可审查清单，共享固定执行路径，并以测试和仓库规则验收。文章区分文档指引、宿主工具权限和静态审查与运行测试。本期未安装示例或验证所有客户端，不把可移植说明当作跨平台免授权或自动取得数据库访问的机制。",
+      "relevance": "复用文档、项目上下文与环境能力分别维护，移植后还须核对引用和输出。",
+      "action": "用虚构任务列输入、项目清单、工具权限和结果证据，比较各宿主条件，不改全局安全设置。",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills",
+          "label": "GitHub Blog · 技能实践指南",
+          "excerpt": "but it doesn’t grant access to that database.",
+          "checked_at": "2026-11-16T08:35:53.038979+08:00"
+        }
+      ],
+      "context_note": "补充近七日未收录的十一月十二日官方背景资料，保留真实发布时间，不作今日新发布。"
+    },
+    {
+      "event_id": "a10dcca4fcf2895604a3",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-15T22:30:03+00:00",
+      "score": 81,
+      "headline": "Milburn 报告拟减轻青年雇用税费，尚非已实施",
+      "short_headline": "Milburn 报告拟减轻青年雇用税费，尚非已实施",
+      "short_summary": "BBC 预告评估拟分阶段降低部分青年雇用国民保险成本；财政条件、建议与现行就业支持计划分开。",
+      "summary": "BBC 报道拟于周二发布的独立评估将建议分五年降低部分青年雇用相关国民保险成本，先从零售与餐饮等行业开始，在财政允许时提高起征门槛。文中另有政府就业支持计划表态。本期未取得最终报告及实施文本，不把建议写作已生效减税、个人福利资格已变或就业效果已实现。",
+      "relevance": "雇用成本、技能支持与实际岗位共同影响效果，财政估算不是已拨预算。",
+      "action": "跟踪报告、预算和实施文件，用虚构招聘表分清现行与拟议成本，不据预告判断真实个人资格。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6p9dzmj514ko",
+          "label": "BBC · 青年就业评估预告",
+          "excerpt": "when fiscal conditions allow",
+          "checked_at": "2026-11-16T08:34:50.776202+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，正文已核对；事件、方案和核验时间分别记录。"
+    },
+    {
+      "event_id": "8cac580e220d29758625",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-15T16:15:20+00:00",
+      "score": 81,
+      "headline": "孟加拉服装厂因工资罢工停产，调薪建议仍待提出",
+      "short_headline": "孟加拉服装厂因工资罢工停产，调薪建议仍待提出",
+      "short_summary": "BBC 报道多个服装产区停工，工资委员会拟月底给建议；工人诉求、新工资令及交付影响不能混同。",
+      "summary": "BBC 报道服装产区因最低工资罢工出现工厂关闭，记录工人、行业组织与警方说法，工资委员会计划月底提出建议。本期未核验全部厂区、账目或正式工资令，不将要求的三万塔卡当成已生效最低工资，也不由停工报道推定所有品牌订单已受影响。",
+      "relevance": "供应链影响取决于厂区、订单和持续时间，诉求与法定标准不同。",
+      "action": "对照工资委员会及劳动部门正式文件，将现行薪资、诉求、停工及交付状态分别记录，不据新闻保证供货。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cx5y1pzr9604o",
+          "label": "BBC · 服装业工资与停产",
+          "excerpt": "the government formed a minimum wage board",
+          "checked_at": "2026-11-16T08:34:51.261768+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，正文已核对；事件、方案和核验时间分别记录。"
+    },
+    {
+      "event_id": "afa1c1b9c6c2b5f9824a",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-16T00:08:23+00:00",
+      "score": 81,
+      "headline": "英国调查提示数字金融滥用，保留特定人群范围",
+      "short_headline": "英国调查提示数字金融滥用，保留特定人群范围",
+      "short_summary": "Guardian 介绍慈善机构与 Ipsos 对十六至二十四岁女性的研究；调查估计不代表全部用户、国家或产品。",
+      "summary": "Guardian 介绍 Surviving Economic Abuse 与 Ipsos UK 对英国十六至二十四岁女性的调查，报告接近五分之一相关人群经历伴侣利用数字金融实施经济控制。本文仅记录总体研究信号，不复述个人故事或账户细节；未直接核对完整问卷、误差与因果识别，不外推全部年龄、国家或银行产品，也不把保护建议当现行强制要求。",
+      "relevance": "账户访问、真实同意和身份核验分别是保护环节，统计还需结合产品程序。",
+      "action": "阅读完整方法和正式监管材料，用虚构角色检查授权、撤销与求助流程，不使用真实金融资料或作个人资格决定。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/society/2026/nov/15/digital-finance-products-abuse-against-young-women-and-girls-report",
+          "label": "The Guardian · 数字金融研究报道",
+          "excerpt": "with Ipsos UK.",
+          "checked_at": "2026-11-16T08:34:51.867391+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "fca971b253c07d0a0519",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-15T22:17:09+00:00",
+      "score": 81,
+      "headline": "爱沙尼亚拟十二月关闭俄边境口岸，时限仍未定",
+      "short_headline": "爱沙尼亚拟十二月关闭俄边境口岸，时限仍未定",
+      "short_summary": "Guardian 报道爱方宣布十二月一日起关闭口岸，攻击归因来自主管机构；调查、计划与实际执行分别核对。",
+      "summary": "Guardian 报道爱沙尼亚宣布十二月一日起关闭与俄罗斯的陆路口岸，背景为防务企业未遂攻击及拘留调查。归因来自爱方机构，俄方对相关指控有异议，关闭多久未明确。本期未取得完整命令或调查证据，不把宣布写成当前已关闭，也不把行政归因当法院终局认定。",
+      "relevance": "安全表态、边境执行与刑事程序范围不同，通行还需核对例外。",
+      "action": "查边境主管机构正式日期、范围和例外，案件仅跟踪公开程序，不传播攻击方法。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/nov/15/estonia-to-close-all-border-crossings-with-russia-after-attack-on-drone-maker",
+          "label": "The Guardian · 爱沙尼亚边境计划",
+          "excerpt": "The authorities did not specify how long the closure would be.",
+          "checked_at": "2026-11-16T08:34:52.485506+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "bc033adbd8215c3fdcbc",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-15T18:20:36+00:00",
+      "score": 81,
+      "headline": "布拉格集会反对公共媒体融资方案，政府否认干预",
+      "short_headline": "布拉格集会反对公共媒体融资方案，政府否认干预",
+      "short_summary": "Guardian 报道抗议以国家预算替代执照费，人数由组织者估计；对独立性的争议不等于法案已全面生效。",
+      "summary": "Guardian 报道布拉格维护公共媒体融资集会，组织者称逾三十五万人参与，争议涉及取消执照费改由预算供款。批评者忧虑编辑独立，政府否认会干预。本期未独立核实人数、完整条文或所有程序，不把组织者估计当统一统计，也不把提案等同媒体已被控制或法律已经全面实施。",
+      "relevance": "融资、预算稳定、监督与编辑独立需各自分析，政治评价不替代条文。",
+      "action": "核对议会正式文本与程序，分列融资提案、治理保障和不同主张，不以口号推定确定后果。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/nov/15/czechia-protest-prague-media-freedom",
+          "label": "The Guardian · 捷克公共媒体集会",
+          "excerpt": "organisers said.",
+          "checked_at": "2026-11-16T08:34:52.999278+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "5bb6ba782f19325a5cd0",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-15T22:00:24+00:00",
+      "score": 81,
+      "headline": "英欧食品谈判：英方称可参与讨论但无表决权",
+      "short_headline": "英欧食品谈判：英方称可参与讨论但无表决权",
+      "short_summary": "BBC 引述大臣说明拟议参与及退出安排，盼峰会达成协议；降价和增长为预期，尚非现行检查均已取消。",
+      "summary": "BBC 引述英方大臣称，拟议食品规则对齐下英国可参与讨论但无表决权，可能设未来退出条款，企业和农方仍关注文件负担、过渡及例外。本期未取得最终签署或实施通知，不把峰会目标当协议已生效，也不把政府降价及增长估计当已实现结果。",
+      "relevance": "贸易便利、规则影响、退出及具体商品范围需要分别核对。",
+      "action": "跟踪最终文本、批准及海关实施通知，按虚构商品列标准、市场、过渡与日期，勿提前承诺免检查。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6wy4l8nl42wo",
+          "label": "BBC · 英欧食品规则谈判",
+          "excerpt": "voice in the room",
+          "checked_at": "2026-11-16T08:34:53.458497+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，正文已核对；事件、方案和核验时间分别记录。",
+      "update_reason": "此前记录草案与食品标签争议，本次新增大臣说明参与讨论但无表决权、退出条款和拟议成本安排，复用谈判编号，聚焦治理程序。"
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "multiuser-shared-state-commit-review",
+      "headline": "共享任务中的同意、消息与最终提交顺序检查",
+      "short_headline": "共享资源与提交前约束检查",
+      "short_summary": "MAMUBench 区分总成绩和未授权行为，可研究共享任务提交前是否真正读取并尊重各人的限制。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "研究显示共享资源场景可能有总成绩上升却未经同意修改他人任务，以及提交早于读消息的问题；环境专用缓解提供验收线索，不能证明通用服务需求。",
+      "audience": "维护共享队列、协同编辑或代理任务调度的小团队与开发者。",
+      "first_step": "用三个虚构角色和共享时间表手工回放任务新增、约束消息、更改同意与最终提交，分别记录总完成、个人请求和确认状态；不接入真实用户、订单或外部消息。",
+      "risks": "模拟目标和自动评审有局限，中央协调也未必可行；提高总分不能代替每人的同意，单场景效果不保证跨环境复现，不用于敏感个人资源分配。",
+      "time_window": "未来一周先做虚构状态与验收表，无官方报名截止。",
+      "sources": [
+        {
+          "url": "https://alignment.anthropic.com/2026/worse-together/",
+          "label": "Anthropic · 群体结果及行为评价",
+          "excerpt": "evaluations should measure agent behavior alongside group outcomes",
+          "checked_at": "2026-11-16T08:34:50.008540+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "portable-skill-host-contract-check",
+      "headline": "技能迁移后的工具、权限与输出证据清单",
+      "short_headline": "技能与宿主条件的迁移验收",
+      "short_summary": "GitHub 指南将版本化技能、项目清单和宿主访问分开，可研究一次流程移植是否遗漏引用、工具或验证要求。",
+      "category": "AI 编程",
+      "score": 79,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "官方实践指南明确技能可复用但工具、凭据和权限仍属环境，提供跨宿主执行条件与验收证据的检查依据，不保证免审、自动部署或付费需求。",
+      "audience": "维护多个编码客户端、团队流程或本地自动化的小团队与开发者。",
+      "first_step": "用虚构只读报告任务列技能版本、项目清单、参考文件、工具能力及预期输出，人工比较两个假想宿主缺项；不安装第三方技能、不修改权限或登录。",
+      "risks": "宿主工具与版本会变，发现的仓库惯例不一定应保留；文档承诺不能代替执行证据，静态审查也不等于测试，不能用于绕过授权。",
+      "time_window": "未来一周先做纸面兼容表与现有公开说明核对，没有官方申请截止。",
+      "sources": [
+        {
+          "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills",
+          "label": "GitHub · 宿主条件",
+          "excerpt": "Clients can differ in their available models, tools, credentials, and permissions.",
+          "checked_at": "2026-11-16T08:35:53.038979+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-11-16T08:34:19.522726+08:00",
+    "coverage_note": "当日直接读取官方全语言日榜，页面十二项，按连续排名保留前十；逐项核对 README，今日与总 Star 均为本次页面值。未沿用旧榜、周榜或搜索排序，未安装或执行候选；榜单关注度不证明新发布、质量、安全、官方支持或商业许可。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "dream-num/univer",
+        "url": "https://github.com/dream-num/univer",
+        "summary": "可嵌入产品的办公 SDK，开源核心含内容模型和部分 Sheets、Docs 编辑；协作服务、转换与部分 AI 扩展另行分发许可。",
+        "direction": "办公内容模型与编辑验收",
+        "stars_today": 988,
+        "total_stars": 25608
+      },
+      {
+        "rank": 2,
+        "repository": "ag-ui-protocol/ag-ui",
+        "url": "https://github.com/ag-ui-protocol/ag-ui",
+        "summary": "连接代理与用户界面的事件协议，组织执行和状态信息；协议兼容不自动保证权限、持久化或重连后状态一致。",
+        "direction": "代理界面事件与状态同步",
+        "stars_today": 355,
+        "total_stars": 17850
+      },
+      {
+        "rank": 3,
+        "repository": "google-labs-code/stitch-skills",
+        "url": "https://github.com/google-labs-code/stitch-skills",
+        "summary": "Google Stitch 的设计、构建和工具技能合集，依赖配置好的 Stitch MCP；文档声明非官方支持的 Google 产品。",
+        "direction": "设计技能与宿主依赖",
+        "stars_today": 247,
+        "total_stars": 9287
+      },
+      {
+        "rank": 4,
+        "repository": "backnotprop/plannotator",
+        "url": "https://github.com/backnotprop/plannotator",
+        "summary": "本地浏览器产物审阅界面，支持计划、HTML、文档和代码注释；AI、分享及托管功能有不同网络和数据边界。",
+        "direction": "代理产物审阅与反馈",
+        "stars_today": 866,
+        "total_stars": 11828
+      },
+      {
+        "rank": 5,
+        "repository": "ChromeDevTools/chrome-devtools-mcp",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+        "summary": "供代理控制和检查 Chrome 的 MCP 与 CLI，支持网络、性能及控制台分析；浏览器内容暴露和默认统计需核对。",
+        "direction": "浏览器调试与数据边界",
+        "stars_today": 717,
+        "total_stars": 56919
+      },
+      {
+        "rank": 6,
+        "repository": "alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "summary": "结合确定性文件筛选、规则和模型代理的代码审查 CLI；作者基准和模型发送数据范围须另核，不视为完整缺陷保证。",
+        "direction": "代码审查与定位证据",
+        "stars_today": 691,
+        "total_stars": 52078
+      },
+      {
+        "rank": 7,
+        "repository": "Tencent/LoopForge",
+        "url": "https://github.com/Tencent/LoopForge",
+        "summary": "自托管编码代理交付工作区，以角色、脚本、沙箱和人工关卡组织流程；Docker 权限和可信团队边界需单独判断。",
+        "direction": "软件交付流程与检查点",
+        "stars_today": 423,
+        "total_stars": 1471
+      },
+      {
+        "rank": 8,
+        "repository": "ggml-org/ggml",
+        "url": "https://github.com/ggml-org/ggml",
+        "summary": "C/C++ 机器学习张量库，提供量化、计算内核和多种后端；库支持不等于任意模型或整机性能已经验证。",
+        "direction": "张量计算与后端组合",
+        "stars_today": 43,
+        "total_stars": 15905
+      },
+      {
+        "rank": 9,
+        "repository": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "summary": "用于授权安全研究与报告整理的技能资料合集，包含公开披露模式；技能数量及作者经验不代表独立审计或测试授权。",
+        "direction": "安全研究资料与证据范围",
+        "stars_today": 98,
+        "total_stars": 6430
+      },
+      {
+        "rank": 10,
+        "repository": "GoogleChrome/modern-web-guidance-src",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+        "summary": "现代网页平台技能的源仓库，包含指南编写、校准和兼容评测；参考内容仍需结合目标浏览器及页面测试。",
+        "direction": "网页平台知识与兼容验证",
+        "stars_today": 1219,
+        "total_stars": 7156
+      }
+    ],
+    "analysis": [
+      "办公内容与代理事件要共同验收：dream-num/univer 管理可编辑内容，ag-ui-protocol/ag-ui 连接后端执行与界面。关注信号是把代理操作落实到可见状态。学习步骤：用虚构单元格修改回放执行、重算、撤销和重连，区分暂态事件与保存内容；演示的商业能力不等于默认开源范围。",
+      "设计知识和产物反馈作用不同：google-labs-code/stitch-skills 依赖 Stitch MCP，GoogleChrome/modern-web-guidance-src 提供网页参考，backnotprop/plannotator 组织审阅。学习步骤：用虚构表单列输入、工具、目标浏览器和反馈闭环，核对引用与依赖；仓库组织名不代表 Google 正式支持，技能不赋予服务权限。",
+      "流程编排和审查各有证据要求：Tencent/LoopForge 组织代理、脚本与人工关卡，alibaba/open-code-review 执行代码审查。学习步骤：用自编小 diff 画出计划、实现、审查、测试和最终批准，再列 Docker 与模型访问边界；自托管不等于适合不可信多租户或已完成安全验证。",
+      "浏览器工具与安全资料需要明确范围：ChromeDevTools/chrome-devtools-mcp 可访问浏览器内容，elementalsouls/Claude-BugHunter 整理安全研究与报告模式。学习步骤：只用虚构资产表列允许读取、数据去向和证据脱敏要求，不运行扫描、不复现攻击或连接真实会话；技能资料不构成测试授权，作者数量与经验不证明通用质量。",
+      "底层计算库仍要结合完整任务：ggml-org/ggml 提供张量和量化后端。学习步骤：用虚构模型配置列格式、内核、内存、硬件与质量条件，区分库功能与端到端结果，不下载权重或租算力。上述方向仅由本次榜单关注度推断，不证明长期趋势、学术共识、性能、安全或商业许可。"
+    ]
+  }
+}
