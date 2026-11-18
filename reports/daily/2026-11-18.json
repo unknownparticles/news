@@ -1,0 +1,371 @@
+{
+  "id": "2026-11-18",
+  "kind": "daily",
+  "title": "2026-11-18 · 会话连续、安全交付与治理进展",
+  "period": {
+    "start": "2026-11-18",
+    "end": "2026-11-18"
+  },
+  "generated_at": "2026-11-18T08:35:18+08:00",
+  "collection_window": {
+    "start": "2026-11-16T08:34:00.795820+08:00",
+    "end": "2026-11-18T08:27:35.801639+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证方向和 GitHub 官方日榜前十。采集从十一月十六日继续，十七日无日报，跨日补采明确，不补造历史热榜；本期新闻采用近二十四小时更新。MDASH、AHP 与包供应链调查分别保留作者、研究和未知根因边界；财报预测、银行恢复及债权回收不混同已实现结果。竞赛仍四项推荐（两项练习），十项当前天池详情证据核对；跨本体平台截止变为今日，但正文仍是晋级复赛且首轮已过，不推荐新报名。其他平台动态外壳覆盖和过期核验均保留。",
+  "source_failures": [
+    "Microsoft MAI Realtime 原文的固定读取仅取得导航及其他文章信息，未确认本篇完整正文，本期不采用聚合摘要。"
+  ],
+  "items": [
+    {
+      "event_id": "c68cb5d11f8dc6196bba",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-17T18:29:29+00:00",
+      "score": 83,
+      "headline": "GitHub 安全试点：原始发现经人工复核后私下交付",
+      "short_headline": "GitHub 安全试点：原始发现经人工复核后私下交付",
+      "short_summary": "官方报告六项目试点：筛选后九十九份私密报告，五十五项已修、十四项已发布；人工投入和维护者决定仍是流程组成。",
+      "summary": "GitHub 与微软介绍 Codename MDASH 试点，先经模型筛选和七名研究者人工复核，再给六个同意参与的项目交付九十九份私密报告及建议补丁。截至十一月十五日，维护者已修五十五项、十四项进入发行版本。本期未独立审查全部报告或补丁，不将少量试点外推为扫描准确率或修复可自动规模化，也不把修复和已经发行混同。",
+      "relevance": "缺陷发现、有效性验证、维护者接受及下游获取修复是不同阶段；报告数量不代表最终价值。",
+      "action": "只用虚构缺陷记录建立重复、证据、建议补丁、复核及发布状态表；本期不扫描项目或向维护者发送报告。",
+      "sources": [
+        {
+          "url": "https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes",
+          "label": "GitHub Blog · MDASH 试点",
+          "excerpt": "maintainers received 99 private reports.",
+          "checked_at": "2026-11-18T08:28:38.572344+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "57b03ec42d31d8f48698",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-17T18:20:40+00:00",
+      "score": 83,
+      "headline": "Agent Host Protocol 介绍跨设备会话与状态确认",
+      "short_headline": "Agent Host Protocol 介绍跨设备会话与状态确认",
+      "short_summary": "GitHub 描述以宿主维护权威状态、客户端动作与回放保持会话连续；断线重连不等于所有副作用可无条件重试。",
+      "summary": "GitHub 工程文章介绍 AHP，以 URI 通道和 reducer 状态对象组织根、会话及聊天能力，宿主协调客户端动作并确认状态。作者说明 VS Code 与 GitHub 使用独立实现，在多客户端接入时发现并修正扩展及假设差异。本期只读架构资料，未独立复测互操作性，不将协议连续性等同所有工具具备幂等、所有客户端兼容或运行宿主永不停止。",
+      "relevance": "界面可重连与后台任务继续是不同能力；客户端已发送、服务端确认及业务完成需要区分。",
+      "action": "用虚构会话列断线、排队、确认、并发修改和工具副作用，核对重放与最终状态证据；不改变现有客户端或开放宿主端口。",
+      "sources": [
+        {
+          "url": "https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices",
+          "label": "GitHub Blog · AHP 工程说明",
+          "excerpt": "The server is the arbiter of the state",
+          "checked_at": "2026-11-18T08:28:40.347666+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "7dad0d8bf0fb7efc6b70",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-17T17:03:37-05:00",
+      "score": 83,
+      "headline": "Wiz 报告 agent-framework 两个恶意版本，根因未确认",
+      "short_headline": "Wiz 报告 agent-framework 两个恶意版本，根因未确认",
+      "short_summary": "研究方称 PyPI 1.26.1 与 1.26.2 带凭据窃取逻辑且已隔离；发布流程异常与入侵根因分别判断，本期未检查任何本机凭据。",
+      "summary": "Wiz 原始调查称十一月十七日 PyPI 的 agent-framework 1.26.1 与 1.26.2 带凭据窃取代码，随后被隔离，并指出仓库正式发布记录与包内容不一致。研究者明确根因尚未确认，不能与其他事件直接关联。本期未下载包、运行代码或审查账户，不传播收集及外传实现，不将研究方隔离判断等同所有受影响环境已经清理或泄露范围已完全确定。",
+      "relevance": "锁定版本、发行来源与运行环境暴露需分别核对；包移除不自动撤销已经执行的影响。",
+      "action": "仅在本人授权资产范围按官方维护者与平台通告核对锁文件和构建记录，先识别是否使用相关版本，再按既有响应流程处理；本期只查资料。",
+      "sources": [
+        {
+          "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
+          "label": "Wiz · 原始包供应链调查",
+          "excerpt": "The root cause hasn't been confirmed.",
+          "checked_at": "2026-11-18T08:30:39.516048+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "75eee0dcbc87b091d46a",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-17T23:03:39+00:00",
+      "score": 83,
+      "headline": "NVIDIA 据报季度营收一千一百五十八亿美元，董事会否认复职安排",
+      "short_headline": "NVIDIA 据报季度营收一千一百五十八亿美元，董事会否认复职安排",
+      "short_summary": "BBC 报道财报与分析师电话会，区分已实现销售、盘后反应及下季预期；治理声明不等于调查已有最终结论。",
+      "summary": "BBC 报道 NVIDIA 季度营收一千一百五十八亿美元、利润约六百五十亿美元，并引述董事会称无意恢复前 CEO 职务，永久接任仍在遴选。文中下季增长为公司预测，盘后价格变化与长期价值不同。本期未独立核对全部监管附注和电话会记录，不转述无关私人细节，也不把人事决定视为指控、调查或泄密已获证实。",
+      "relevance": "财报、预测、人事与调查是不同证据；数据中心收入也不能直接等同单个模型或客户需求。",
+      "action": "对照正式财报及公司公告核对会计期、收入构成和指导条件，不由单季数字或盘后波动作投资判断。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo",
+          "label": "BBC · NVIDIA 财报与治理进展",
+          "excerpt": "reaching $115.8bn",
+          "checked_at": "2026-11-18T08:28:42.524357+08:00"
+        }
+      ],
+      "update_reason": "此前记录独立调查及 CEO 辞任；本次新增公司季度业绩、董事会不复职表态与永久继任遴选进展，复用治理事件编号，调查结论仍未定。",
+      "context_note": "发布时间采用本次源 RSS 更新字段；正文直接核对，原始事件与更新日期分别记录。"
+    },
+    {
+      "event_id": "7127d88efd361799ee5a",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-17T15:04:24+00:00",
+      "score": 83,
+      "headline": "美国银行服务据报恢复，其他机构影响需逐项确认",
+      "short_headline": "美国银行服务据报恢复，其他机构影响需逐项确认",
+      "short_summary": "BBC 引述 Chase 称软件问题解决、并非网络安全事件；客户报障数量与全部机构真实故障范围不同，不与航空或微软事件合并归因。",
+      "summary": "BBC 报道多家美国银行客户报障及服务恢复，Chase 称问题已解决、非网络安全事件，可能仅通过交易对手关系影响其他银行；部分机构否认自身受影响。具体软件问题仍不清楚。本期未取得全部技术复盘或交易记录，不把报障平台人数视为实际受影响总量，也不与近期微软、航空故障视为同一根因或推定资金损失。",
+      "relevance": "访问、余额查看、交易受理与最终清算需分别核验，恢复声明不能替代每项交易状态。",
+      "action": "以银行正式状态通知核对本人授权范围的交易记录，避免重复提交或转账；本期不访问账户或执行支付。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cj752wvqneq6o",
+          "label": "BBC · 美国银行服务恢复",
+          "excerpt": "The exact nature of the bug was unclear.",
+          "checked_at": "2026-11-18T08:28:43.144773+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次源 RSS 更新字段；正文直接核对，原始事件与更新日期分别记录。"
+    },
+    {
+      "event_id": "64753fba297cf7c7b927",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-17T23:53:58+00:00",
+      "score": 83,
+      "headline": "David Jones 首次债权人会议披露债务，回收仍未定",
+      "short_headline": "David Jones 首次债权人会议披露债务，回收仍未定",
+      "short_summary": "Guardian 报道债务逾四亿澳元及寻找买方安排；非约束性意向、优先顺序和最终供应商回款不同，调查问题不等于已认定违规。",
+      "summary": "Guardian 报道 David Jones 首次债权人会议披露总债务逾四亿澳元，包括供应商、员工及未兑礼卡等项目，管理方表示回收金额变量太多，正征集非约束性意向。本文未直接核对完整管理人报告或债权文件，不把意向报价写成交易完成、预计失业写成全部裁员完成，也不把拟调查优惠付款或资不抵债时点等同违规已获认定。",
+      "relevance": "债权优先、经营现金和买方出价共同影响回收，继续接受礼卡不等于保证所有债权兑付。",
+      "action": "对照管理人正式通知核对债权类别、期限及真实报价阶段，不据媒体预测保证供应商回款。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/business/2026/nov/17/david-jones-creditors-meeting-debt-administrators",
+          "label": "The Guardian · David Jones 债权人会议",
+          "excerpt": "too many variables",
+          "checked_at": "2026-11-18T08:28:43.924825+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "40eecc5b10757dd4ed9a",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-17T18:27:27+00:00",
+      "score": 83,
+      "headline": "英国据报制裁定居点相关公司，另拟进口限制仍待立法",
+      "short_headline": "英国据报制裁定居点相关公司，另拟进口限制仍待立法",
+      "short_summary": "BBC 报道对八家建设地产企业等采取措施，并区分未来进口和广告禁令立法；制裁范围和关联指控应查正式名单。",
+      "summary": "BBC 报道英国对被指支持约旦河西岸定居点建设的八家企业及有关组织实施制裁，记录以方批评及巴方欢迎。文中另述进口和广告限制仍在准备立法。本期未直接取得完整指定清单或法律文本，不把拟议禁令写作已全面生效，也不由公司被列名推定所有关联交易统一适用或私人主体已获司法定罪。",
+      "relevance": "制裁指定、资产或交易限制与另行立法各有范围、生效和例外。",
+      "action": "以政府正式名单及实施文件核对主体、日期和具体措施；本期只查公开资料，不处理真实交易或提供个案法律结论。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cvglr977x3z0o",
+          "label": "BBC · 英国定居点制裁报道",
+          "excerpt": "The UK has sanctioned companies",
+          "checked_at": "2026-11-18T08:28:44.537040+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次源 RSS 更新字段；正文直接核对，原始事件与更新日期分别记录。"
+    },
+    {
+      "event_id": "0f9f4ace40a03e9c2996",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-17T22:30:17+00:00",
+      "score": 83,
+      "headline": "以色列议会据报选出新议长，组阁与立法仍待程序",
+      "short_headline": "以色列议会据报选出新议长，组阁与立法仍待程序",
+      "short_summary": "Guardian 报道 Matan Kahana 获六十六票任议长；议会人事、执政联盟形成与提案通过是不同阶段。",
+      "summary": "Guardian 报道以色列议会选出 Matan Kahana 为议长，获得六十六票，组阁谈判仍继续。反对现政府阵营提出司法及任期等立法目标，但法案仍须委员会和多轮表决。本期未核对完整议会记录，不把议长胜选等同新政府已成立、首相已交接或争议法律已被废除；该结果属于此前选举后续。",
+      "relevance": "议会职位影响议程但不替代组阁或具体法案程序。",
+      "action": "对照议会正式表决、总统组阁授权与立法进度，分别记录人事、联盟和生效状态。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/nov/17/israeli-parliament-elects-new-knesset-speaker-backed-netanyahus-opponents",
+          "label": "The Guardian · 以色列议长表决",
+          "excerpt": "He was approved as speaker with 66 votes",
+          "checked_at": "2026-11-18T08:28:45.156602+08:00"
+        }
+      ],
+      "update_reason": "此前归档以色列出口民调与多数不明；本次新增新议会实际选出议长及组阁期间的立法安排，复用选举事件编号，未把议长选举当政府已组成。"
+    },
+    {
+      "event_id": "02f16420e49fd9a82d4b",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-18T00:21:33+00:00",
+      "score": 83,
+      "headline": "美国谋杀阴谋案据报判刑三百三十个月，外部关联仍有归属",
+      "short_headline": "美国谋杀阴谋案据报判刑三百三十个月，外部关联仍有归属",
+      "short_summary": "Guardian 引述司法部及法院信息报道判刑，并记录被告证词和官员不同表述；具体裁判与更广泛国家归因不能合并。",
+      "summary": "Guardian 报道美国法院就一宗刺杀阴谋案判处被告三百三十个月监禁，引用司法部声明并保留被告关于胁迫及目标的证词。文中与伊朗的联系包含指控和官员表述。本期未直接读取完整判决及上诉状态，不把刑期报道外推成所有国家关联细节均由法院最终认定，不传播实施方法或无关家属信息。",
+      "relevance": "判刑、证词、官方归因和潜在上诉是不同证据层次。",
+      "action": "以司法部及法院公开文书核对罪名、刑期和程序，清楚标注哪些说法来自检方或被告。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/us-news/2026/nov/17/pakistani-man-jailed-trump-murder-plot",
+          "label": "The Guardian · 美国刑事判刑报道",
+          "excerpt": "330 months’ imprisonment.",
+          "checked_at": "2026-11-18T08:30:40.277617+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "session-replay-acknowledgement-check",
+      "headline": "会话重放中已发送、已确认与副作用的验收表",
+      "short_headline": "跨端会话的重放与确认检查",
+      "short_summary": "AHP 新架构资料把宿主状态与客户端动作确认分开，可研究重连是否产生重复、丢失或未经批准的任务。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "GitHub AHP 资料介绍宿主协调动作、排队与确认及跨实现差异，为会话迁移与重放验收提供具体入口，不证明任意客户端已互通或商业需求已验证。",
+      "audience": "维护多端代理界面、任务队列或长会话状态的开发者与小团队。",
+      "first_step": "用自编虚构事件列两个客户端断线、排队、服务端确认及重复提交，单独记录工具副作用和最终状态；先手工回放，不接入真实会话或开放网络入口。",
+      "risks": "协议扩展、版本和后端副作用可能不同，客户端显示成功不是业务完成；幂等、身份和批准仍须在应用层证明，不能由协议说明外推。",
+      "time_window": "未来一周先完成纸面状态表，无官方申请截止。",
+      "sources": [
+        {
+          "url": "https://github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices",
+          "label": "GitHub · AHP 动作协调",
+          "excerpt": "reconcile and acknowledge the actions before confirming them.",
+          "checked_at": "2026-11-18T08:28:40.347666+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "checked-security-fix-delivery-ledger",
+      "headline": "安全发现至补丁发行的分阶段证据台账",
+      "short_headline": "安全发现、复核与发行的证据台账",
+      "short_summary": "MDASH 试点把原始发现、复核、维护者修复和正式发行分开，可研究如何减少未经验证的报告与遗漏交付。",
+      "category": "模型与基础设施",
+      "score": 79,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "GitHub 与微软试点披露六项目、人工复核后私下交付以及修复与发行的不同数量，为报告质量和下游获得修复的追踪提供实例，未证明可无人工规模化或存在付费需求。",
+      "audience": "维护依赖、开源安全流程与质量报告的小团队和开发者。",
+      "first_step": "用五条虚构缺陷记录列范围、重复、证据、人工复核、维护者决定、补丁和版本；只做离线状态检查，不扫描外部项目或发送报告。",
+      "risks": "小样本和作者自述不能代表普遍准确率，隐私报告与公开发行需要不同处理；建议补丁不等于测试通过，修复合并不等于下游已更新，不推断漏洞细节。",
+      "time_window": "未来一周先做离线流程与验收清单，没有报名或收益承诺。",
+      "sources": [
+        {
+          "url": "https://github.blog/open-source/maintainers/maintainers-dont-need-more-ai-bug-reports-they-need-fixes",
+          "label": "GitHub · 维护者最终决定",
+          "excerpt": "Maintainers decided what to fix, how to fix it, and when.",
+          "checked_at": "2026-11-18T08:28:38.572344+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-11-18T08:28:05.929724+08:00",
+    "coverage_note": "当日直接读取官方全语言日榜，完整页面十五项，按连续原排名保留前十；逐项阅读 README，今日及总 Star 为本次页面数值。未用十七日或其他历史榜单、周榜及搜索替代，未安装执行候选。关注度不证明新发布、质量、安全或商业许可。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "summary": "授权安全研究与报告整理的技能资料合集，包含公开披露模式；作者经验与数量不代表独立安全审计，也不构成测试授权。",
+        "direction": "安全研究资料与证据范围",
+        "stars_today": 1005,
+        "total_stars": 9253
+      },
+      {
+        "rank": 2,
+        "repository": "mvanhorn/last30days-skill",
+        "url": "https://github.com/mvanhorn/last30days-skill",
+        "summary": "跨社交平台和网页收集近期资料并汇总的技能；来源依赖凭据、可选接入及版本，互动热度与预测市场不证明事实正确。",
+        "direction": "近期信息汇总与来源核验",
+        "stars_today": 696,
+        "total_stars": 69043
+      },
+      {
+        "rank": 3,
+        "repository": "alibaba/open-code-review",
+        "url": "https://github.com/alibaba/open-code-review",
+        "summary": "结合文件筛选、规则和模型代理的代码审查 CLI，能读取 diff 与关联内容；模型数据流、精度和召回取舍需单独核对。",
+        "direction": "混合代码审查与定位证据",
+        "stars_today": 763,
+        "total_stars": 53716
+      },
+      {
+        "rank": 4,
+        "repository": "Tencent/LoopForge",
+        "url": "https://github.com/Tencent/LoopForge",
+        "summary": "自托管编码代理交付工作区，用角色、脚本、沙箱与人工关卡组织流程；Docker 权限、模型费用和可信团队范围需另核。",
+        "direction": "软件交付与检查点",
+        "stars_today": 591,
+        "total_stars": 3118
+      },
+      {
+        "rank": 5,
+        "repository": "dream-num/univer",
+        "url": "https://github.com/dream-num/univer",
+        "summary": "用于嵌入产品的 Office SDK，开源核心含内容及部分编辑计算能力；协作服务、转换与部分 AI 扩展另行分发许可。",
+        "direction": "办公内容模型与许可边界",
+        "stars_today": 1774,
+        "total_stars": 28895
+      },
+      {
+        "rank": 6,
+        "repository": "getarcaneapp/arcane",
+        "url": "https://github.com/getarcaneapp/arcane",
+        "summary": "Docker 管理界面项目；文档说明主分支为 v3，2.x 发行在独立分支，实际功能、容器权限与升级路径须按版本确认。",
+        "direction": "容器管理与版本迁移",
+        "stars_today": 618,
+        "total_stars": 9317
+      },
+      {
+        "rank": 7,
+        "repository": "google-labs-code/stitch-skills",
+        "url": "https://github.com/google-labs-code/stitch-skills",
+        "summary": "面向 Google Stitch 的设计、构建与工具技能合集，依赖已配置的 Stitch MCP；文档声明非 Google 官方支持产品。",
+        "direction": "设计技能与宿主依赖",
+        "stars_today": 350,
+        "total_stars": 10094
+      },
+      {
+        "rank": 8,
+        "repository": "cursor/plugins",
+        "url": "https://github.com/cursor/plugins",
+        "summary": "Cursor 插件规范及官方插件的市场仓库，每个目录有独立清单；插件工具、服务认证及各目录许可仍需核对。",
+        "direction": "插件清单与集成边界",
+        "stars_today": 201,
+        "total_stars": 16893
+      },
+      {
+        "rank": 9,
+        "repository": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "summary": "供编码代理使用的技能与软件开发流程，组织需求、计划、测试及审查；可选可视化功能涉及远程加载，效果需实际验证。",
+        "direction": "工程方法与验收证据",
+        "stars_today": 1917,
+        "total_stars": 319320
+      },
+      {
+        "rank": 10,
+        "repository": "ag-ui-protocol/ag-ui",
+        "url": "https://github.com/ag-ui-protocol/ag-ui",
+        "summary": "连接代理后端与界面的事件协议，README 已介绍 1.0 规范及生成 SDK；向后兼容为项目声明，不等于全部应用状态和授权都已验证。",
+        "direction": "代理界面事件与版本兼容",
+        "stars_today": 1445,
+        "total_stars": 19986
+      }
+    ],
+    "analysis": [
+      "安全资料和代码审查要分清证据：elementalsouls/Claude-BugHunter 提供研究资料，alibaba/open-code-review 组织规则和模型审查。学习步骤：用虚构缺陷检查范围、引用、位置、误报和修复状态，比较召回与精度；不安装技能、运行扫描或执行攻击，资料清单不赋予测试权限。",
+      "交付方法、执行环境与插件有不同职责：Tencent/LoopForge 提供流程和沙箱，obra/superpowers 组织工程方法，cursor/plugins 提供集成清单，getarcaneapp/arcane 管理容器。学习步骤：用虚构任务列宿主、版本、工具权限、批准和验收，核对 Arcane v3 与 2.x 分支；自托管和技能方法不保证安全隔离或结果正确。",
+      "办公内容与用户事件需要一致：dream-num/univer 与 ag-ui-protocol/ag-ui 分别处理内容模型和代理事件。学习步骤：手工回放虚构单元格修改、重算、撤销及重连，区分界面事件和持久内容；AG-UI 1.0 兼容说明是项目声明，商业扩展和所有应用行为仍须另核。",
+      "设计技能与信息汇总不能替代直接核验：google-labs-code/stitch-skills 依赖 Stitch MCP，mvanhorn/last30days-skill 汇集跨平台信号。学习步骤：用虚构需求列资料来源、发布日期、宿主依赖与输出检查，区分互动热度、预测市场和官方事实；不借搜索技能替代本栏目直接官方榜单，也不接入用户账号或个人资料。",
+      "本期榜单反映工程集成、验收和来源管理受到关注。学习步骤：为上面每组项目写一项明确可证伪的问题，再对照 README 已实现范围、许可及未知项；不从一次上榜推断长期趋势、新发布、学术共识、性能、安全或商业需求。"
+    ]
+  }
+}
