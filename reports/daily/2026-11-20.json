@@ -1,0 +1,377 @@
+{
+  "id": "2026-11-20",
+  "kind": "daily",
+  "title": "2026-11-20 · 工具检索、设备核验与公共安排",
+  "period": {
+    "start": "2026-11-20",
+    "end": "2026-11-20"
+  },
+  "generated_at": "2026-11-20T08:39:16+08:00",
+  "collection_window": {
+    "start": "2026-11-19T08:26:06.333994+08:00",
+    "end": "2026-11-20T08:29:19.399259+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证方向与官方日榜前十。Tool Retrieval 记录日期精度、模式追加费用和权限；冷柜预防处理不同于已遭攻击，眼镜测试不外推品牌。Anthropic 首日交易和梵高成交复用编号，收费暂定发现不写成终局违法。国家裁判、三方声明和移民草案分别保留程序边界。竞赛仍四项推荐（两项练习），十项当前天池证据重核；跨本体首轮已过、晋级日期冲突仍在，不当新报名。其他平台覆盖及旧核验不虚刷新。",
+  "source_failures": [
+    "Ai2 Theorizer 原文固定读取未成功，未采用聚合摘要。",
+    "MIT 数据中心研究正文已读，但本次未独立确认精确原文发布日期，浏览器不可用，未作为本期新闻收录。"
+  ],
+  "items": [
+    {
+      "event_id": "056cf0b58a3dbace6833",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-19T00:00:00+00:00",
+      "score": 82,
+      "headline": "Gemini Tool Retrieval 预览按需加载参数，名称描述仍可见",
+      "short_headline": "Gemini Tool Retrieval 预览按需加载参数，名称描述仍可见",
+      "short_summary": "Google 公告延迟加载工具参数模式，已加载内容仍按普通 token 计费；工具发现、执行及应用权限不是同一步。",
+      "summary": "Google 在 Gemini Interactions API 预览 Tool Retrieval：延迟工具的名称与描述仍在上下文中，模型需要时再加载参数 schema；服务器及客户端检索有不同往返方式。功能无独立收费，固定搜索提示和已加载模式仍按普通 token 计费并影响后续对话。本期未调用或复测，不把按需加载等同所有工具开销归零、授权自动满足或任意规模都能节省。",
+      "relevance": "工具目录、参数上下文、缓存及应用执行分别影响费用和可靠性。",
+      "action": "用自编无害工具表核对描述、参数、缺失候选、许可过滤与回退，先算完整对话成本，不申请密钥或执行真实动作。",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+          "label": "Google · Tool Retrieval 预览",
+          "excerpt": "Measure it against your own traffic.",
+          "checked_at": "2026-11-20T08:30:13.599797+08:00"
+        }
+      ],
+      "context_note": "官网仅明确十一月十九日，零时用于编码日期，不是核实到分钟的发布时间；近七日官方资料收录，未改作今日发布。",
+      "published_at_precision": "date"
+    },
+    {
+      "event_id": "7f4bf20916a725c74176",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-20T00:02:07+00:00",
+      "score": 82,
+      "headline": "英国冷柜预防性修复据报展开，未见恶意活动",
+      "short_headline": "英国冷柜预防性修复据报展开，未见恶意活动",
+      "short_summary": "BBC 报道研究者、企业和主管部门推动控制器隔离及补丁；这是英国不同设备的预防行动，不证明所有冷链均已安全。",
+      "summary": "BBC 报道英国企业与主管部门对一类冷柜控制器开展预防性处理，包括隔离公开网络及发布初始补丁。厂商对风险严重性和测试前提有异议，同时称未见控制器恶意活动。本期未独立核对各设备或完整技术通告，不将欧洲既往攻击与英国新发现的潜在风险视为相同攻击链，也不把修复行动写成全部设备已无风险；不公开利用细节或设备地址。",
+      "relevance": "潜在漏洞、实际遭攻击、补丁覆盖及现场温控恢复需要分别确认。",
+      "action": "仅由设备所有者按厂商正式通知核对型号和维护记录，研究时用虚构资产清单列支持与恢复证据，不扫描或改生产设备。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6eq49zyx7p4o",
+          "label": "BBC · 英国冷柜预防行动",
+          "excerpt": "there is no sign of any malicious activity",
+          "checked_at": "2026-11-20T08:31:37.044514+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，正文已直接核对；更新、原始事件和核验时点分开。"
+    },
+    {
+      "event_id": "f4f25b9cbfc8af881a3a",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-19T16:33:17+00:00",
+      "score": 82,
+      "headline": "荷兰监管方警示 AI 眼镜，消费建议不等于禁售",
+      "short_headline": "荷兰监管方警示 AI 眼镜，消费建议不等于禁售",
+      "short_summary": "BBC 引述监管方对六款未具名设备的测试，称存在虚报动作和识读错误；未公布品牌，不能推定特定厂商或所有眼镜表现。",
+      "summary": "BBC 报道荷兰隐私监管机构 AP 建议消费者暂不购买 AI 智能眼镜，介绍六款未具名设备测试中的错误及隐私担忧。监管方未要求禁售，亦承认辅助理解环境的潜在价值。本期未直接复核全部测试协议，不把样本结果当所有产品普遍故障，也不猜测品牌。设备称已经行动与真实外部结果不同，本条不提供医疗或应急操作建议。",
+      "relevance": "产品能力、输出主张和真实动作结果需独立核验，样本范围与监管措施各有边界。",
+      "action": "先读正式测试和厂商说明，用虚构低风险“保存草稿”任务区分说已完成与结果回读；不连接设备、录制他人或依赖未核实应急承诺。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/ckq6eyrzrzy5o",
+          "label": "BBC · 荷兰 AI 眼镜测试警示",
+          "excerpt": "it stopped short of calling for them to be banned from sale.",
+          "checked_at": "2026-11-20T08:31:37.636214+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，正文已直接核对；更新、原始事件和核验时点分开。"
+    },
+    {
+      "event_id": "512576157a5827fd9d98",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-19T23:33:51+00:00",
+      "score": 82,
+      "headline": "Anthropic 据报上市首日收九十七点一七美元",
+      "short_headline": "Anthropic 据报上市首日收九十七点一七美元",
+      "short_summary": "BBC 报道股价高于八十三美元发行价、盘中波动后收盘；发行融资、股本估值与投资者成交回报口径不同。",
+      "summary": "BBC 报道 Anthropic 周四开始 Nasdaq 交易，股价一度至一百一十一点五三美元，收于九十七点一七美元，高于八十三美元发行价。本文未独立核对交易所及全部股本口径，不将盘中高点当收盘或发行价，也不从首日涨幅推定不同买入时点投资者均有相同收益、企业已盈利或未来表现。发行融资及二级市场市值分开看待。",
+      "relevance": "首日价格发现与长期经营、融资净额和投资回报不同，波动需要实际时点。",
+      "action": "核对正式交易和发行文件的价格、日期及股本，不因新闻涨幅参与申购或交易。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c3x29ggenz12o",
+          "label": "BBC · Anthropic 首日交易",
+          "excerpt": "with shares closing at $97.17.",
+          "checked_at": "2026-11-20T08:30:16.308635+08:00"
+        }
+      ],
+      "update_reason": "昨日仅记录八十三美元发行定价及预计开盘；本次新增实际开始交易、盘中及收盘价格，复用上市编号，不把首日表现外推长期回报。",
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，正文已直接核对；更新、原始事件和核验时点分开。"
+    },
+    {
+      "event_id": "5e9dbc2b190996500703",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-19T13:35:52+00:00",
+      "score": 82,
+      "headline": "CMA 初步质疑 Viagogo 隐藏收费，最终决定未出",
+      "short_headline": "CMA 初步质疑 Viagogo 隐藏收费，最终决定未出",
+      "short_summary": "BBC 引述英国监管方称总价未前置、费用后加，并明确暂定结论；企业可回应，不能写作已确认违法或已罚款。",
+      "summary": "BBC 报道英国 CMA 就 Viagogo 部分票务结账价格作出暂定发现，认为可能存在未前置完整费用的滴灌定价，企业可回应。双方均强调调查进行中、未有最终认定。本期未直接审查全部调查文件或购买流程，不将暂定发现当违法已定、具体罚款已施加，也不把其他票务案件的处理套到本案。",
+      "relevance": "比价需要完整强制费用，行政调查的证据阶段与最终处罚不同。",
+      "action": "核对 CMA 正式更新，以虚构票价列税费、服务费与展示时点，不执行购票或代投诉。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cmvg2ex7j30lo",
+          "label": "BBC · Viagogo 暂定收费发现",
+          "excerpt": "this was an initial finding",
+          "checked_at": "2026-11-20T08:30:17.261891+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，正文已直接核对；更新、原始事件和核验时点分开。"
+    },
+    {
+      "event_id": "2690d08037a4812b4a8e",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-19T00:49:19+00:00",
+      "score": 81,
+      "headline": "梵高画作据报一亿九千零四十万美元成交，来源争议达协议",
+      "short_headline": "梵高画作成交，先前来源争议达协议",
+      "short_summary": "BBC 报道实际成交及拍卖前的来源争议安排；售款、卖方净额和私人协议并不等同所有法律事项已终审。",
+      "summary": "BBC 报道梵高《开花的栗树》以一亿九千零四十万美元成交，苏富比称双方来源争议已达协议并据协议出售。买家和具体条件未明。本期未核对全部费用、结算及协议，不将售款视为卖方净收益、法院最终权属认定或所有争议均永久消除，也不外推艺术品回报。",
+      "relevance": "估价、成交、净额及来源处置有不同口径，私人协议不是司法裁判。",
+      "action": "查正式成交记录与可公开协议说明，区分收费、结算和来源状态，不据纪录价作购买判断。",
+      "update_reason": "十一月十五日仅记录估价与来源争议，本次新增成交金额及拍前协议，复用原编号，买家与协议条件未知不补造。",
+      "context_note": "源 RSS 为十一月十九日零时四十九分 UTC，拍卖在纽约周三；补采未归档成交结果，保留真实时点，不写作今日成交。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c5dj1dkwzvzwo",
+          "label": "BBC · 梵高成交与协议",
+          "excerpt": "the two families have reached a mutually satisfactory resolution",
+          "checked_at": "2026-11-20T08:35:29.240711+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "494a84273146762f54b8",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-19T13:52:10+00:00",
+      "score": 82,
+      "headline": "国际法院据报认定缅甸国家责任，履行仍待跟踪",
+      "short_headline": "国际法院据报认定缅甸国家责任，履行仍待跟踪",
+      "short_summary": "Guardian 报道 ICJ 就罗兴亚案作出裁判；国家责任与 ICC 的个人刑事程序不同，判决不等于赔偿和返还已经完成。",
+      "summary": "Guardian 报道国际法院在罗兴亚案中认定缅甸国家违反种族灭绝公约，并涉及赔偿、返还及安全回返要求。本文未直接读取完整判决，不重复“首次”等未经独立复核历史结论，也不外推其他未裁案件。ICJ 的国家责任、ICC 的个人刑事程序及最终执行分别记录；不将裁判写成补偿或安全回返已落实，不复述伤害细节或私人受害者信息。",
+      "relevance": "裁判范围、国家义务和履行机制不同，报道不能代替完整法律文本。",
+      "action": "核对法院正式文书和后续履行公告，区分已裁事项、救济与执行状态。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/nov/19/genocide-rohingya-international-court-of-justice-ruling-myanmar",
+          "label": "The Guardian · 罗兴亚 ICJ 裁判报道",
+          "excerpt": "has committed genocide against the Rohingya",
+          "checked_at": "2026-11-20T08:30:19.031319+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "09ca9a5a658a5ee8e511",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-19T17:13:23+00:00",
+      "score": 82,
+      "headline": "中俄美会后发布和平声明，未列乌克兰或伊朗战争安排",
+      "short_headline": "中俄美会后发布和平声明，未列乌克兰或伊朗战争安排",
+      "short_summary": "Guardian 报道声明涉及核风险、联合国和能源等优先事项；一般表态不等于停火、裁军框架或供应计划已经实施。",
+      "summary": "Guardian 报道中俄美会后声明包含战略稳定、核风险、联合国改革和油品供应等内容，但未提乌克兰及伊朗战争的具体安排。报道区分领导人表态与分析者评价。本期未直接核对完整共同文本或配套决定，不把一般和平语言写成停火、裁军条约、制裁解除或能源产量已增加，也不将专家推测当各方正式动机。",
+      "relevance": "会面、共同声明和约束性实施措施分别有证据，声明题名不能替代具体条款。",
+      "action": "对照三方正式声明与后续安排，将议题、承诺、执行主体和实际结果分别列明。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/nov/19/china-russia-us-agree-peace-statement-no-mention-ukraine-iran-wars",
+          "label": "The Guardian · 三国会后声明报道",
+          "excerpt": "no mention of the wars in Ukraine and Iran",
+          "checked_at": "2026-11-20T08:30:19.600757+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "3b394bd268891a4f5cef",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-19T19:02:45+00:00",
+      "score": 82,
+      "headline": "英欧据报拟就第三国遣返点对话，仍属峰会草案",
+      "short_headline": "英欧据报拟就第三国遣返点对话，仍属峰会草案",
+      "short_summary": "Guardian 据泄露文件报道拟建结构化移民对话；讨论机制、双边协议及具体个人迁移决定不同，不视作设施已启用。",
+      "summary": "Guardian 根据峰会联合声明草案报道英国与欧盟拟建立包括第三国遣返在内的结构化对话，相关来源称为近期谈判进展。文中同其他欧盟国家原则安排比较。本期未取得最终签署及具体协议，不把草案或支持原则写成英国已经加入某项目、设施可运行或任何人已经获准转送；不复述私人案件。",
+      "relevance": "政治讨论、法律协议、设施和个案程序不同，第三国选择仍有未知条件。",
+      "action": "核对正式峰会文本和后续法律文件，分别记录对话、协议与执行，不对具体个人作移民资格判断。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/uk-news/2026/nov/19/uk-eu-talks-asylum-seekers-third-country-hubs",
+          "label": "The Guardian · 英欧遣返对话草案",
+          "excerpt": "according to a leaked document.",
+          "checked_at": "2026-11-20T08:30:20.340424+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "deferred-tool-schema-cost-audit",
+      "headline": "按需工具参数的完整对话成本与许可过滤验收",
+      "short_headline": "延迟工具参数的成本与权限检查",
+      "short_summary": "Tool Retrieval 预览仍提供名称描述，已加载模式继续计费，可研究候选、许可过滤和完整对话账单是否一致。",
+      "category": "AI 编程",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Google 新预览提供参数按需加载，并说明固定输入及后续模式计费，为工具目录验收提供入口，不证明普遍节省或付费需求。",
+      "audience": "维护多连接器与工具目录的小团队和开发者。",
+      "first_step": "用六个自编只读工具纸面回放描述、参数大小、许可、加载、重复使用及回退，分列首次与全会话费用；不申请密钥或调用真实服务。",
+      "risks": "同名、描述及候选遗漏可能误选，检索不授予执行权限；缓存和追加模式改变费用，预览限制须另核。",
+      "time_window": "未来一周先做虚构目录与验收，无官方申请截止。",
+      "sources": [
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+          "label": "Google · 模式计费",
+          "excerpt": "each schema the model loads is billed as input",
+          "checked_at": "2026-11-20T08:30:13.599797+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "ai-agent-permission-observability-service",
+      "headline": "代理权限更新：设备动作声称与实际结果分开",
+      "short_headline": "已完成说法与真实动作结果的核验",
+      "short_summary": "眼镜测试记录声称已执行但外部动作未发生，可扩展既有权限台账的批准、执行和回读证据。",
+      "category": "AI 编程",
+      "score": 79,
+      "status": "research",
+      "verification_status": "media_reported",
+      "signal": "BBC 引述 AP 六款未具名设备测试，指出虚报动作，提供文字声称与真实执行不一致的证据；不外推所有设备或猜测品牌。",
+      "audience": "开发设备助手与动作审计的小团队和开发者。",
+      "first_step": "只用虚构“保存草稿”列请求、批准、返回、文件存在与确认，分开说法和观察；不录制他人或做真实医疗、应急测试。",
+      "risks": "样本与测试范围有限，回读也可能过时；权限与结果共同检查，不从失败案例推导危险操作。",
+      "time_window": "未来一周先做无害虚构台账，无官方报名截止。",
+      "update_reason": "此前依据 Poppy 1.0 研究企业能力发现、OAuth 和动作批准，本次加入眼镜虚报外部动作测试，把台账扩展到真实执行及回读，复用原编号。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/ckq6eyrzrzy5o",
+          "label": "BBC · 外部动作核验",
+          "excerpt": "but emergency services had not been contacted.",
+          "checked_at": "2026-11-20T08:31:37.636214+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-11-20T08:29:45.837133+08:00",
+    "coverage_note": "直接读取当日官方全语言日榜，页面十六项，保留原排名前十；逐项阅读 README，今日及总 Star 为本次页面值。未沿用旧榜、周榜或搜索，未安装执行候选。关注度不证明新发布、学术质量、性能、安全或商业许可。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "summary": "授权安全研究与报告整理的资料合集，包含公开披露模式；作者数量及经验不构成独立认证或测试授权。",
+        "direction": "安全资料与证据范围",
+        "stars_today": 1349,
+        "total_stars": 12509
+      },
+      {
+        "rank": 2,
+        "repository": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "summary": "以可组合技能组织需求、计划、测试和审查的工程方法；流程说明不能代替结果证据，也不授予宿主权限。",
+        "direction": "工程流程与验收",
+        "stars_today": 2028,
+        "total_stars": 322072
+      },
+      {
+        "rank": 3,
+        "repository": "HKUDS/CLI-Anything",
+        "url": "https://github.com/HKUDS/CLI-Anything",
+        "summary": "构建代理可用软件 CLI 和分发接口的工程；部分命令依赖真实上游应用，不表示所有软件已适配。",
+        "direction": "命令接口与上游依赖",
+        "stars_today": 898,
+        "total_stars": 60546
+      },
+      {
+        "rank": 4,
+        "repository": "jingyaogong/minimind",
+        "url": "https://github.com/jingyaogong/minimind",
+        "summary": "小语言模型训练链路与教程；两小时特指单张 3090 一轮 SFT，三元为对应租用成本，并非完整训练总成本。",
+        "direction": "小模型学习与阶段成本",
+        "stars_today": 238,
+        "total_stars": 66852
+      },
+      {
+        "rank": 5,
+        "repository": "cursor/plugins",
+        "url": "https://github.com/cursor/plugins",
+        "summary": "Cursor 官方插件和规范的市场仓库，各目录有清单；具体工具、服务认证和组件许可需分项核对。",
+        "direction": "插件清单与集成",
+        "stars_today": 384,
+        "total_stars": 17556
+      },
+      {
+        "rank": 6,
+        "repository": "firecrawl/firecrawl",
+        "url": "https://github.com/firecrawl/firecrawl",
+        "summary": "网页提取与知识接入工程，包含 Local、自托管与 Cloud；本地部分功能也可访问云端，主许可和部分 SDK 许可有别。",
+        "direction": "网页提取与数据流",
+        "stars_today": 825,
+        "total_stars": 204207
+      },
+      {
+        "rank": 7,
+        "repository": "nginx/nginx",
+        "url": "https://github.com/nginx/nginx",
+        "summary": "官方 NGINX 开源网页服务器、代理及负载均衡工程；模块、配置、发行和运行状态需分别核对。",
+        "direction": "网络服务与配置",
+        "stars_today": 73,
+        "total_stars": 32328
+      },
+      {
+        "rank": 8,
+        "repository": "openvinotoolkit/openvino",
+        "url": "https://github.com/openvinotoolkit/openvino",
+        "summary": "优化及部署模型推理的工具包，支持特定 CPU、Intel GPU 和 NPU 组合；兼容、转换及质量性能须实际验证。",
+        "direction": "推理优化与硬件",
+        "stars_today": 246,
+        "total_stars": 11558
+      },
+      {
+        "rank": 9,
+        "repository": "cathrynlavery/diagram-design",
+        "url": "https://github.com/cathrynlavery/diagram-design",
+        "summary": "生成单个 HTML 和 SVG 图解的设计技能，提供模板及字体行为说明；视觉输出不证明内容、数值或无障碍正确。",
+        "direction": "图解设计与内容验收",
+        "stars_today": 271,
+        "total_stars": 68626
+      },
+      {
+        "rank": 10,
+        "repository": "mvanhorn/last30days-skill",
+        "url": "https://github.com/mvanhorn/last30days-skill",
+        "summary": "汇总跨平台近期信号的研究技能，来源受工具、凭据和配置影响；热度及预测市场不能替代原文核验。",
+        "direction": "资料汇总与来源",
+        "stars_today": 954,
+        "total_stars": 70786
+      }
+    ],
+    "analysis": [
+      "方法、插件与研究资料各有职责：obra/superpowers 组织工程流程，cursor/plugins 描述集成，elementalsouls/Claude-BugHunter 整理安全资料。学习步骤：用虚构只读任务列输入、宿主、权限及验收，缺项标未知；不安装技能或扫描，资料不赋予测试授权。",
+      "命令接口与网页提取有真实依赖：HKUDS/CLI-Anything 包装上游应用，firecrawl/firecrawl 区分 Local、自托管和 Cloud，mvanhorn/last30days-skill 汇集信号。学习步骤：用虚构资料流列外部请求、依赖和原文回溯，另读 AGPL 及目录许可；本地名称不等于全部离线，不以搜索汇总代替本栏官方榜单。",
+      "训练教学与推理部署账单不同：jingyaogong/minimind 提供训练教程，openvinotoolkit/openvino 优化推理。学习步骤：用自编表列预训练、SFT、评测、转换和硬件，区分作者单张 3090 一轮 SFT 的两小时与完整训练；不租 GPU 或下载权重，阶段成本不能代表全部开销。",
+      "服务与视觉输出都要检查结果：nginx/nginx 提供网络模块，cathrynlavery/diagram-design 提供图解。学习步骤：分别用虚构路由和图表核对配置响应、数据标注、字体及阅读顺序，不启动服务或改网络；生成成功不等于业务或内容正确。",
+      "本期关注流程复用、来源与完整成本。学习步骤：每个方向写一项可证伪验收条件，再查 README 当前范围与许可，不从单日热度推断长期趋势、独立认证、性能领先或商业需求。"
+    ]
+  }
+}
