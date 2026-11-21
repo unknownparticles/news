@@ -1,0 +1,382 @@
+{
+  "id": "2026-11-21",
+  "kind": "daily",
+  "title": "2026-11-21 · 循环模型、价格核验与实施安排",
+  "period": {
+    "start": "2026-11-21",
+    "end": "2026-11-21"
+  },
+  "generated_at": "2026-11-21T08:37:17+08:00",
+  "collection_window": {
+    "start": "2026-11-20T08:29:19.399259+08:00",
+    "end": "2026-11-21T08:30:43.827801+08:00"
+  },
+  "coverage": {
+    "expected_days": 1,
+    "available_days": 1,
+    "missing_dates": []
+  },
+  "summary": "科技、金融、政治各三条，共九条，另有两个待验证方向和官方日榜前十。Inkling 2 Mini 的发布日期、资源及限制由官网模型卡核对，零时编码日期；AI 购物体验非严格性能测试，水星入轨仅为计划。银行调查保留九月样本期，游戏零售额为公司估计，Anthropic 次日与英欧峰会更新复用编号并说明实质变化。竞赛仍四项推荐（两项练习），十项当前天池证据重核；余震赛平台字段现为十一月三十日但正文仍为六月一日首轮截止，维持关闭并记录冲突，跨本体晋级尾日不当首次报名。其他平台覆盖及旧核验保留。",
+  "source_failures": [
+    "Figma Workflow Lab 页面本次仅返回导航与标题，未确认完整正文，不采用聚合摘要。"
+  ],
+  "items": [
+    {
+      "event_id": "bd3614c30b5d6b837c23",
+      "category": "科技前沿",
+      "verification_status": "project_documented",
+      "published_at": "2026-11-20T00:00:00+00:00",
+      "score": 82,
+      "headline": "Inkling 2 Mini 发布循环架构模型，笔记本运行有条件",
+      "short_headline": "Inkling 2 Mini 发布循环架构模型，笔记本运行有条件",
+      "short_summary": "Thinking Machines 公告开权重模型，模型卡列约二十 GB 权重及三十二 GB Apple silicon 条件；低激活参数不代表完整内存或行为可靠性。",
+      "summary": "Thinking Machines 发布 Inkling 2 Mini，采用循环 MoE 架构，总参数二百六十四亿、基础激活三十四亿，循环后每 token 有效计算更多。官网模型卡列约二十 GB 混合精度 checkpoint、支持三十二 GB 及以上 Apple silicon，并说明本地运行时支持较新。模型卡同时列多约束、多轮、事实及工具可靠性限制。本期只核对公告、模型卡与公开仓库，未下载运行或复现基准，不把“可在笔记本运行”外推所有设备或直接商用适配。",
+      "relevance": "完整权重、缓存、循环计算、运行时和任务重试共同决定资源；模型卡许可说明不能替代依赖与素材核查。",
+      "action": "用自编只读图文任务列内存、上下文、语言、重试和动作范围，先对照模型卡及运行时版本；不下载权重、付费调用或连接真实账户。",
+      "sources": [
+        {
+          "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+          "label": "Thinking Machines · Mini 公告",
+          "excerpt": "Inkling 2 Mini is released with open weights",
+          "checked_at": "2026-11-21T08:31:36.389215+08:00"
+        },
+        {
+          "url": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+          "label": "Thinking Machines · Mini 模型卡",
+          "excerpt": "Apple silicon devices with 32GB or more memory",
+          "checked_at": "2026-11-21T08:32:48.538737+08:00"
+        }
+      ],
+      "context_note": "官网 datePublished 为十一月二十日零时 UTC，模型卡明确发布日；零时编码日期，非核实到分钟。作为近七日官方发布回看，未改为今日新发布。",
+      "published_at_precision": "date"
+    },
+    {
+      "event_id": "2fa41ae859b1bdefb9fa",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-21T00:06:11+00:00",
+      "score": 82,
+      "headline": "BBC 试用 AI 比价遇失效链接，不能当完整性能榜",
+      "short_headline": "BBC 试用 AI 比价遇失效链接，不能当完整性能榜",
+      "short_summary": "报道在固定电视需求下比较免费助手，出现型号、库存和价格不一致；作者明示非严格科学测试，时间及渠道限制需保留。",
+      "summary": "BBC 在黑色星期五前用免费助手查找电视优惠，记录部分型号尺寸、价格、库存及链接不一致，另一工具仅查自家商店。文章明确不是严格科学评测。本期未独立重跑或比较全部版本，不由一次体验决定哪家模型普遍最佳，也不把列出的商品、价格或广告视为当前仍有效或本刊推荐。",
+      "relevance": "商品身份、容量尺寸、库存、费用、保修与数据时点共同影响“便宜”的含义。",
+      "action": "用虚构商品表检查型号、规格、更新时间、库存和完整费用，再定义原店核验步骤；不下单或注册商店。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cw8dv4jmnle2o",
+          "label": "BBC · AI 比价体验",
+          "excerpt": "this was not a rigorous scientific test",
+          "checked_at": "2026-11-21T08:31:38.215256+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，原文已核对；发布、事件和核验时点分别记录。"
+    },
+    {
+      "event_id": "50e29ab8b1b82a196e38",
+      "category": "科技前沿",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-20T05:59:56+00:00",
+      "score": 82,
+      "headline": "BepiColombo 水星入轨在即，目标与已完成结果分开",
+      "short_headline": "BepiColombo 水星入轨在即，目标与已完成结果分开",
+      "short_summary": "BBC 报道 ESA 与 JAXA 任务接近目标、拟分离两艘轨道器；入轨、分离和科学结果尚不能由计划推定已完成。",
+      "summary": "BBC 介绍 BepiColombo 八年航程后接近水星入轨阶段，说明 ESA 与 JAXA 两个轨道器及其表面、磁场和太阳环境研究方向。报道仍描述入轨及后续分离的风险与计划，本文未直接核对实时任务遥测或最新机构确认，不写作已成功入轨，也不将水冰、核心或地貌起源假说视为本次已经证实。",
+      "relevance": "航行、入轨、设备分离及实际观测是不同里程碑；科学目标不等于发现。",
+      "action": "跟踪 ESA、JAXA 正式任务状态与时间表，分列计划、已确认操作及待发表结果，不依据报道推算实时位置。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c39w9l4v1p9ro",
+          "label": "BBC · BepiColombo 任务前瞻",
+          "excerpt": "If anything goes wrong, the spacecraft could hurtle past Mercury.",
+          "checked_at": "2026-11-21T08:32:48.263829+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，原文已核对；发布、事件和核验时点分别记录。"
+    },
+    {
+      "event_id": "4b9813abbbbcba462a28",
+      "category": "金融市场",
+      "verification_status": "official_confirmed",
+      "published_at": "2026-11-20T15:00:00+00:00",
+      "score": 82,
+      "headline": "美联储发布储备余额管理调查，样本为九月回复",
+      "short_headline": "美联储发布储备余额管理调查，样本为九月回复",
+      "short_summary": "公告披露银行高管调查覆盖约四分之三系统储备余额；余额权重不是银行数量或今日流动性情况，也非新的政策决定。",
+      "summary": "美联储发布 Senior Financial Officer Survey，公告说调查与纽约联储合作，在九月十八至二十八日收集回复，参与银行当时持有约四分之三系统储备余额。范围涉及余额策略、资产负债表与存款预期和货币市场活动等。本文只确认公告和样本说明，未读取完整附件，不由样本覆盖推定全部银行或今日流动性状态，也不把预期视为已发生数据或新利率决定。",
+      "relevance": "发布日、调查期、样本余额占比与银行数量不同，调查预期不是实际市场结果。",
+      "action": "先读完整方法与表格，按调查期、样本权重、问题和单位整理，勿据公告推断未读具体结果。",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120a.htm",
+          "label": "美联储 · 银行高管调查发布",
+          "excerpt": "between September 18, 2026, and September 28, 2026",
+          "checked_at": "2026-11-21T08:31:38.651539+08:00"
+        }
+      ]
+    },
+    {
+      "event_id": "c098c8dea679626b6c1d",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-20T22:53:24+00:00",
+      "score": 82,
+      "headline": "GTA 6 首日零售额据报三十八亿美元，仍为公司估计",
+      "short_headline": "GTA 6 首日零售额据报三十八亿美元，仍为公司估计",
+      "short_summary": "BBC 引述 Take-Two 对截至周四的零售估算，并报道网络流量激增；零售额、平台下载和发行商净收入不是同一口径。",
+      "summary": "BBC 引述 Take-Two 称 GTA 6 首个完整销售日零售额约三十八亿美元，数字为截至周四的估算，并记录基础设施企业对下载及服务流量变化的观察。本文未直接核对公司完整财务定义或交易数据，不把零售估算写为审计营收或利润，也不以流量峰值推导销量，更不把行业后续预测当已兑现收益；暂不复述不同机构口径矛盾的全年预计数。",
+      "relevance": "零售流水、预售、渠道分成、确认收入和流量各自定义影响比较。",
+      "action": "查公司正式发布与后续财报，分列统计截止、毛净额、平台及地域，避免拿不同娱乐媒介口径直接推断盈利。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c9zr5nyv5dj2o",
+          "label": "BBC · GTA 6 销售估算",
+          "excerpt": "figures were based on estimates",
+          "checked_at": "2026-11-21T08:31:38.827610+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，原文已核对；发布、事件和核验时点分别记录。"
+    },
+    {
+      "event_id": "512576157a5827fd9d98",
+      "category": "金融市场",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-20T21:38:17+00:00",
+      "score": 82,
+      "headline": "Anthropic 次日股价据报回落，市场下跌原因仍多元",
+      "short_headline": "Anthropic 次日股价据报回落，市场下跌原因仍多元",
+      "short_summary": "Guardian 报道第二个交易日回落及多地科技股下跌；观察到的同步变化与分析师因果解释、未来路径需分开。",
+      "summary": "Guardian 报道 Anthropic 第二个交易日股价较首日回落至约八十八点三美元，全球多地科技及半导体股同步走弱，并引用分析师对估值、盈利及流动性的解释。本期未直接核对交易所全部收盘表，也不将文中盘中、日、周及年初比较混为一口径；同跌不证明单次 IPO 导致所有抛售，价格仍高于发行价也不保证任何买家收益或未来反弹。",
+      "relevance": "市场时段、指数权重、基准价格和因果解释不同；评论不能当作已证实驱动因素。",
+      "action": "对照同一时点正式行情及公司公告，分别记录价格事实和解释假说，不据单篇分析作个人交易。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
+          "label": "The Guardian · 上市次日与市场更新",
+          "excerpt": "fell by 9% on Friday",
+          "checked_at": "2026-11-21T08:31:38.998237+08:00"
+        }
+      ],
+      "update_reason": "昨日记录首日收九十七点一七美元；本次新增次日回落与同期科技股抛售，复用上市事件编号，日周年口径和分析师解释分别保留。"
+    },
+    {
+      "event_id": "5bb6ba782f19325a5cd0",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-20T17:49:48+00:00",
+      "score": 82,
+      "headline": "英欧宣布重置安排，立法及分项实施仍在后续",
+      "short_headline": "英欧宣布重置安排，立法及分项实施仍在后续",
+      "short_summary": "BBC 报道峰会就食品、排放交易及青年体验达成安排；二〇二八年目标和青年最晚二〇三〇年机会不同，仍非现行全部开放。",
+      "summary": "BBC 报道英欧峰会宣布涉及食品、排放交易和青年体验的安排，英国拟下周提交实施立法。食品及排放交易目标二〇二八年，青年机会力争不晚于二〇三〇年一月，学费等仍有补充谈判。本文未直接核对完整最终文本和批准程序，不写成全部已生效或青年可立即报名，政府一百七十亿英镑增长估计也非已实现收入或消费者必降价。",
+      "relevance": "政治达成、法律批准、技术实施及个人适用条件不同，多个分项日期不可互换。",
+      "action": "核对正式共同声明、国内立法和生效通知，按具体商品或青年方案分别记录；本期不替人申请或注册。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/c6jreyqgw4e9o",
+          "label": "BBC · 英欧峰会安排",
+          "excerpt": "Legislation to implement the deal is expected",
+          "checked_at": "2026-11-21T08:31:39.169149+08:00"
+        }
+      ],
+      "update_reason": "此前记录草案、参与无表决权及退出讨论；本次新增峰会实际宣布、实施立法与分项时间，复用谈判编号，不把达成安排当所有措施已运行。",
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，原文已核对；发布、事件和核验时点分别记录。"
+    },
+    {
+      "event_id": "3df0760b00a421e2f3a1",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-21T00:01:39+00:00",
+      "score": 82,
+      "headline": "纽约市长提出二〇三二年关闭 Rikers，议会尚待批准",
+      "short_headline": "纽约市长提出二〇三二年关闭 Rikers，议会尚待批准",
+      "short_summary": "BBC 报道新监狱与减少羁押人数计划，更新时间表须市议会批准；设施、目标床位和现实迁移不是已完成事项。",
+      "summary": "BBC 报道纽约市长提出二〇三二年关闭 Rikers 的新计划，包含四个替代设施及降低羁押人数、增加治疗和教育等安排，更新时间表须市议会批准。文中记录管理方支持与工会担忧。本期未取得全部预算和批准文件，不把计划写成岛上监狱已关闭、新设施已交付或人数目标已实现，也不由政治表态推断个别人的司法结果。",
+      "relevance": "设施建设、预算、司法程序和政策目标共同决定能否落地。",
+      "action": "跟踪市议会正式表决、预算与项目进度，区分宣布、批准、交付和迁移，不作个案羁押资格判断。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cmjeqv89egylo",
+          "label": "BBC · Rikers 关闭计划",
+          "excerpt": "City Council must approve the updated timeline",
+          "checked_at": "2026-11-21T08:31:39.338115+08:00"
+        }
+      ],
+      "context_note": "发布时间采用本次 BBC 源 RSS 更新字段，原文已核对；发布、事件和核验时点分别记录。"
+    },
+    {
+      "event_id": "fbfbcaa4ebc142f3316a",
+      "category": "政治与政策",
+      "verification_status": "media_reported",
+      "published_at": "2026-11-20T22:23:53+00:00",
+      "score": 82,
+      "headline": "法国警员袭击案据报有罪判刑，影像与文书证据不同",
+      "short_headline": "法国警员袭击案据报有罪判刑，影像与文书证据不同",
+      "short_summary": "Guardian 报道三名警员因二〇二〇年袭击及虚假报告被判有罪；本期未核对完整判词或上诉，不由单案推定全部制度结论。",
+      "summary": "Guardian 报道法国三名警员因二〇二〇年针对音乐制作人的袭击及伪造报告被判有罪，法院认定种族因素加重并处刑及职业限制。报道说现场影像未支持警员最初说法。本期未取得完整裁判、执行与上诉状态，不将报道写成所有程序已终结，也不重复伤害细节、私人信息或将支持者制度评价当法院全部结论。",
+      "relevance": "影像、当事人陈述、正式记录和判决各有范围；裁判与执行及潜在上诉需分开。",
+      "action": "查正式法院公开文书与后续程序，分别记录定罪、量刑、执行及上诉，不将单案泛化所有群体。",
+      "sources": [
+        {
+          "url": "https://www.theguardian.com/world/2026/nov/20/french-police-officers-found-guilty-of-racist-assault-on-black-music-producer",
+          "label": "The Guardian · 法国警员判刑报道",
+          "excerpt": "found guilty of forgery",
+          "checked_at": "2026-11-21T08:31:39.505921+08:00"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "small-multimodal-task-footprint",
+      "headline": "小模型资源验证更新：循环计算与真实代理失败边界",
+      "short_headline": "循环模型的完整资源与失败检查",
+      "short_summary": "Mini 模型卡给出三十二 GB 本地条件、重复推理和工具可靠性限制，可扩展小模型完整账单与动作验收。",
+      "category": "模型与基础设施",
+      "score": 80,
+      "status": "research",
+      "verification_status": "project_documented",
+      "signal": "Inkling 2 Mini 新模型卡说明循环计算、约二十 GB checkpoint 和具体设备条件，还记录重复推理、语言与工具限制，为已有小模型资源研究加入循环和失败恢复维度，未证明普遍节省或客户需求。",
+      "audience": "研究本地图文助手与有限工具调用的开发者及小团队。",
+      "first_step": "用六个自编只读图文任务列完整权重、缓存、循环计算、输出上限、重试、中文错误及真实结果回读，先纸面核对运行时支持；不下载模型或连接私人资料。",
+      "risks": "活跃参数不代表内存与算力总额，新增运行时速度有差异；模型卡明确可能不遵循复杂指令、误报成果或作破坏性动作，必须用真实权限和结果验证，不以模型自述保证安全或商用。",
+      "time_window": "未来一周先核对公开资料及虚构验收表，无官方申请截止。",
+      "update_reason": "十一月十二日以 BotPsy 增加多步恢复、语言和外部工具账单，本次新增 Inkling 2 Mini 的循环计算、三十二 GB 设备条件及真实动作可靠性限制，把既有资源检查扩展到重复计算、上下文和成果回读，复用原编号。",
+      "sources": [
+        {
+          "url": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+          "label": "Thinking Machines · 本地运行边界",
+          "excerpt": "speed varies by runtime and hardware.",
+          "checked_at": "2026-11-21T08:32:48.538737+08:00"
+        }
+      ]
+    },
+    {
+      "opportunity_id": "offer-identity-price-stock-audit",
+      "headline": "商品建议的型号、价格、库存与时间一致性检查",
+      "short_headline": "比价列表的商品与时点验收",
+      "short_summary": "BBC 非严格购物体验出现规格混用、失效链接和旧价格，可研究如何把推荐文本逐项对照可验证商品事实。",
+      "category": "工作室业务",
+      "score": 78,
+      "status": "research",
+      "verification_status": "media_reported",
+      "signal": "BBC 在限定电视需求的体验中记录型号尺寸、库存、价格和链接问题，为报价或商品推荐的证据验收提供实际问题信号，不证明通用模型排名或付费需求。",
+      "audience": "维护商品信息、报价表或客服选品流程的小团队及开发者。",
+      "first_step": "自编五个虚构商品及两版价格表，检查型号、容量、币种、库存、费用、保修和采集时间是否对应；对缺失和过期明确标记，不访问客户账号或下单。",
+      "risks": "价格和库存会变，商家页面与实际结账可能不同；样本是非严格体验，不代表全部模型能力，不能自动推定最便宜、真实性或售后保证。",
+      "time_window": "未来一周先做虚构表格与离线验收，没有官方报名截止。",
+      "sources": [
+        {
+          "url": "https://www.bbc.co.uk/news/articles/cw8dv4jmnle2o",
+          "label": "BBC · 规格和价格混用实例",
+          "excerpt": "a sidebar showed prices for the 50-inch version",
+          "checked_at": "2026-11-21T08:31:38.215256+08:00"
+        }
+      ]
+    }
+  ],
+  "github_trending": {
+    "source_url": "https://github.com/trending?since=daily",
+    "checked_at": "2026-11-21T08:31:03.806877+08:00",
+    "coverage_note": "本次直接读取当日官方全语言日榜，页面十六项，保留连续原排名前十；逐项阅读 README，今日和总 Star 均来自本次页面。未沿用昨日榜、周榜或搜索排序，未执行候选代码。排名关注度不证明新发布、学术质量、性能、安全或商业许可。",
+    "items": [
+      {
+        "rank": 1,
+        "repository": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "summary": "授权安全研究与报告整理的技能资料合集，包含公开披露模式；数量与作者经验不构成独立认证或测试授权。",
+        "direction": "安全资料与证据范围",
+        "stars_today": 1622,
+        "total_stars": 14249
+      },
+      {
+        "rank": 2,
+        "repository": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "summary": "以技能组织需求、计划、测试及审查的软件工程方法；描述流程不等于结果已验证或宿主权限自动满足。",
+        "direction": "工程流程与验收",
+        "stars_today": 890,
+        "total_stars": 322836
+      },
+      {
+        "rank": 3,
+        "repository": "HKUDS/CLI-Anything",
+        "url": "https://github.com/HKUDS/CLI-Anything",
+        "summary": "构建代理可用 CLI 及分发接口的工程；部分命令依赖真实上游应用，不代表所有软件及其能力均已适配。",
+        "direction": "命令接口与软件依赖",
+        "stars_today": 773,
+        "total_stars": 61376
+      },
+      {
+        "rank": 4,
+        "repository": "jingyaogong/minimind",
+        "url": "https://github.com/jingyaogong/minimind",
+        "summary": "小型语言模型训练与学习教程；文档两小时指单张 3090 一轮 SFT，三元为该阶段租用成本，不是完整训练账单。",
+        "direction": "小模型学习与阶段成本",
+        "stars_today": 847,
+        "total_stars": 67681
+      },
+      {
+        "rank": 5,
+        "repository": "cursor/plugins",
+        "url": "https://github.com/cursor/plugins",
+        "summary": "Cursor 官方插件与清单规范市场，各目录含独立 manifest；服务认证、工具范围及依赖许可需分别核对。",
+        "direction": "插件清单与集成",
+        "stars_today": 299,
+        "total_stars": 17844
+      },
+      {
+        "rank": 6,
+        "repository": "firecrawl/firecrawl",
+        "url": "https://github.com/firecrawl/firecrawl",
+        "summary": "网页资料提取和知识接入工程，含 Local、自托管及 Cloud 路径；部分本地功能访问云端，主项目与 SDK 许可不同。",
+        "direction": "网页提取与数据流",
+        "stars_today": 1241,
+        "total_stars": 205263
+      },
+      {
+        "rank": 7,
+        "repository": "nginx/nginx",
+        "url": "https://github.com/nginx/nginx",
+        "summary": "NGINX 官方开源服务器、代理和负载均衡项目；发行版本、模块、配置和实际服务状态需分项确认。",
+        "direction": "网络服务与配置",
+        "stars_today": 246,
+        "total_stars": 32564
+      },
+      {
+        "rank": 8,
+        "repository": "openvinotoolkit/openvino",
+        "url": "https://github.com/openvinotoolkit/openvino",
+        "summary": "优化和部署深度学习推理的工具包，支持特定 CPU、Intel GPU 和 NPU 等组合；兼容、精度与完整性能须场景验证。",
+        "direction": "推理优化与硬件组合",
+        "stars_today": 217,
+        "total_stars": 11785
+      },
+      {
+        "rank": 9,
+        "repository": "cathrynlavery/diagram-design",
+        "url": "https://github.com/cathrynlavery/diagram-design",
+        "summary": "生成自包含 HTML+SVG 图解的技能，提供模板及字体网络行为说明；视觉效果不能代替内容、数值和无障碍验收。",
+        "direction": "图解设计与内容验收",
+        "stars_today": 636,
+        "total_stars": 69272
+      },
+      {
+        "rank": 10,
+        "repository": "mvanhorn/last30days-skill",
+        "url": "https://github.com/mvanhorn/last30days-skill",
+        "summary": "跨平台收集近期信号并汇总的研究技能，来源依赖配置和授权；互动数、预测市场及招聘信号不能当已确认事实。",
+        "direction": "资料汇总与来源核验",
+        "stars_today": 681,
+        "total_stars": 71444
+      }
+    ],
+    "analysis": [
+      "流程方法、插件和安全资料是不同层：obra/superpowers 组织工程步骤，cursor/plugins 提供清单，elementalsouls/Claude-BugHunter 整理研究模式。学习步骤：用虚构只读任务列版本、输入、工具、权限和可观察结果，分清文件齐全与真实验收；不安装插件、扫描目标或将资料当测试授权。",
+      "命令接口和信息提取仍需上游与来源：HKUDS/CLI-Anything 包装软件，firecrawl/firecrawl 区分本地及云端，mvanhorn/last30days-skill 汇总平台信号。学习步骤：用虚构资料流程图标依赖、外部请求、采集时间和原文链接，另核 AGPL 及目录许可；本地名称不等于全程离线，聚合搜索也不能替代本栏官方榜单。",
+      "教学训练和部署推理要各算账：jingyaogong/minimind 与 openvinotoolkit/openvino 分别提供训练链路和推理优化。学习步骤：用自编表列预训练、SFT、评测、转换、缓存和硬件条件，明确两小时是某 3090 一轮 SFT；不租算力或下载权重，不把阶段成本、平台支持当任意设备的完整收益。",
+      "网络运行与图解发布都要检查实际内容：nginx/nginx 提供服务配置，cathrynlavery/diagram-design 提供图解。学习步骤：用虚构路由和图表分别列响应、缓存、数据标注、字体与阅读顺序，检查图的关系是否真实；不启动服务或改网络，生成成功不证明业务和叙述正确。",
+      "榜单前十与昨天相同，本期仅保存今天真实排名和热度，不据两次快照断言长期趋势。学习步骤：为每个方向列一个可证伪问题并查当前 README 范围、许可与未知项；关注不证明新发布、独立质量、安全认证、性能领先或已验证需求。"
+    ]
+  }
+}
